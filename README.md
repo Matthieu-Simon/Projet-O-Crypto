@@ -4,7 +4,7 @@
 ## ROLES  
   
 **Product Owner** : Florent  
-**Srum master** : Fabiano  
+**Scrum master** : Fabiano  
 **Lead developer front** : Mathieu  
 **Lead developer back** : Quentin  
 **Git master** : Hugo  
@@ -55,6 +55,7 @@ V2
 - Possibilité de link son wallet (ledger, metamask, trust wallet, ect)
 
 <br />
+
 ### Arborescence 
 
 ![Arborescence o'crypto](/Assets/images/Arborescence%20O'Crypto%402x.png)
