@@ -1,0 +1,23 @@
+API CRYPTOS EXT : code crypto
+ENVOIE COURS EN TEMPS REEL, 0N API CRYPTOS EXT, 1N CRYPTOMONNAIES  
+CRYPTOMONNAIES : code cryptos, nom
+PEUT AJOUTER, 1N UTILISATEUR, 0N CRYPTOMONNAIES
+
+ADMIN : code admin, mail, mot de passe
+PEUT AJOUTER ET MODIFIER, 0N ADMIN, 1N LEXIQUE, 1N ARTICLES, 1N CRYPTOMONNAIES, 0N CHALLENGES
+ARTICLES : code article, nom, auteur, texte, niveau
+PEUT CONSULTER, 0N UTILISATEUR, 0N LEXIQUE, 0N ARTICLES, 0N CRYPTOMONNAIES
+UTILISATEUR : code utilisateur, pseudo, mail, mot de passe, crypto favoris, niveau, points
+
+LEXIQUE : nom mot, texte
+
+CHALLENGES : nom, niveau, récompense, code articles, texte, code quizz
+PEUT PARTICIPER, 1N UTILISATEUR, 01 CHALLENGES
+
+DIRIGE VERS, 1N CHALLENGES, 1N QUESTION
+QUESTION : code question, code reponse
+APPARTENIR,  1N REPONSE, 11 QUESTION
+REPONSE : code reponse, code question, texte
+
+
+
