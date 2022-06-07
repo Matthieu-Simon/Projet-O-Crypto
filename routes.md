@@ -2,7 +2,7 @@
 
 ## Route principale
 * Route vers la page d'accueil :
-`http://localhost/home`
+`http://localhost/`
 
 ## Routes de la page d'accueil
 * Route vers la fonction de recherche interne :

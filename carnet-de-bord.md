@@ -20,3 +20,14 @@ Prochaines étapes :
 * Liste des routes
 * Choix des technologies à utiliser dans le projet
 * Définir les conventions du projet
+
+### Jour 3 - 07/06/22
+Nous avons commencé la journée par la création des user stories. Une fois nos idées mises en commun, nous avons rédigé le document final.
+
+Une fois les user stories faites, nous avons rédigé le MCD et le dictionnaire de données.
+
+Enfin, nous avons rédigé la liste des routes présentes dans notre application.
+
+Prochaines étapes :
+* Choix des technologies à utiliser dans le projet
+* Définir les conventions du projet
