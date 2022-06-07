@@ -5,6 +5,7 @@
 |Visiteur|Consulter la page d'accuei|---|
 |Visiteur|Créer un profil|---|
 |Visiteur|Consulter des articles|---|
+|Visiteur|Consulter la liste des articles|---|
 |Visiteur|Consulter le cours des cryptos|---|
 |Visiteur|Rechercher des cryptos|---|
 |Visiteur|Rechercher des articles|---|
