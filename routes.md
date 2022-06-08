@@ -1,58 +1,45 @@
 # Routes
 
-## Route principale
-* Route vers la page d'accueil :
-`http://localhost/`
+## Routes de la partie front :
 
-## Routes de la page d'accueil
-* Route vers la fonction de recherche interne :
-`http://localhost/search`
+|Description|Préfixe|Route|
+|---|---|---|
+|Route principale|http://localhost|/|
+|Route vers le lexique|http://localhost|/lexicon|
+|Route vers la page d’inscription|http://localhost|/sign-in|
+|Route vers la page de connexion|http://localhost|/log-in|
+|Route vers la page “à propos”|http://localhost|/about|
+|Route vers la page “équipe”|http://localhost|/team|
+|Route vers la page “copyright”|http://localhost|/copyright|
+|Route vers la page “faq”|http://localhost|/faq|
+|Route vers le profil utilisateur|http://localhost|/profile|
+|Route vers la page de modification du profil utilisateur|http://localhost|/profile/update|
+|Route vers la page de déconnexion|http://localhost|/log-out|
+|Route vers le parcours d’apprentissage|http://localhost|/learning|
+|Route vers un challenge id : paramètre se rapportant à l’id d’un challenge en bdd|http://localhost|/learning/challenge/(id)|
+|Route vers la page de crypto monnaie favorites|http://localhost|/favorites-currencies|
+|Route vers la liste des articles|http://localhost|/articles|
+|Route vers un article id-article : paramètre se rapportant à l’id d’un article en bdd|http://localhost|/article/(id-article)|
+|Route vers la liste des crypto monnaies|http://localhost|/cryptocurrencies|
+|Route vers une crypto monnaie name : paramètre se rapportant au nom de la crypto monnaie qui sera renvoyé par une api externe|http://localhost|/cryptocurrency/(name)|
 
-* Route vers la page de lexique :
-`http://localhost/lexicon`
+## Routes de la partie back :
 
-* Route vers la page d'inscription au site :
-`http://localhost/sign-in`
+|Description|Préfixe|Route|Méthode|
+|---|---|---|---|
+|Route principale|http://localhost|/|GET|
+|Route vers le lexique|http://localhost|/lexicon|GET|
+|Route vers la page d’inscription|http://localhost|/sign-in|POST|
+|Route vers la page de connexion|http://localhost|/log-in|POST|
+|Route vers le profil utilisateur|http://localhost|/profile|GET|
+|Route vers la page de modification du profil utilisateur|http://localhost|/profile/update|PATCH|
+|Route vers la page de déconnexion|http://localhost|/log-out||
+|Route vers le parcours d’apprentissage|http://localhost|/learning|GET|
+|Route vers un challenge id : paramètre se rapportant à l’id d’un challenge en bdd|http://localhost|/learning/challenge/(id)|GET|
+|Route vers la page de crypto monnaie favorites|http://localhost|/favorites-currencies|GET|
+|Route vers la liste des articles|http://localhost|/articles|GET|
+|Route vers un article id-article : paramètre se rapportant à l’id d’un article en bdd|http://localhost|/article/(id-article)|GET|
+|Route vers la liste des crypto monnaies|http://localhost|/cryptocurrencies|GET|
+|Route vers une crypto monnaie name : paramètre se rapportant au nom de la crypto monnaie qui sera renvoyé par une api externe|http://localhost|/cryptocurrency/(name)|GET|
 
-* Route vers la page de connexion au site:
-`http://localhost/log-in`
-
-* Route vers la page "à propos" :
-`http://localhost/about`
-
-* Route vers la page de présentation de l'equipe de developpement :
-`http://localhost/team`
-
-## Routes de la page profile (utilisateur connecté)
-* Route vers la page affichant le profil utilisateur :
-`http://localhost/profile`
-
-* Route vers la page de modification du profil utilisateur :
-`http://localhost/update-profile`
-
-* Route vers la page de déconnexion :
-`http://localhost/log-out`
-
-* Route vers le dashboard lié au profil du membre:
-`http://localhost/dashboard`
-
-* Route vers le parcours d'apprentissage :
-`http://localhost/learning`
-
-* Route vers la liste des cryptomonnaie mise en favoris par l'utilisateur :
-`http://localhost/cryptocurrencies/favorites-list`
-
-
-## Routes communes aux simples visiteurs et aux membres (page d'accueil et page profile)
-* Route vers la liste des articles :
-`http://localhost/articles`
-
-* Route vers un article :
-`http://localhost/article/(id-article)`
-
-* Route vers la liste des cryptomonnaies :
-`http://localhost/cryptocurrencies`
-
-* Route vers une cryptomonnaie :
-`http://localhost/cryptocurrency/(name)`
 
