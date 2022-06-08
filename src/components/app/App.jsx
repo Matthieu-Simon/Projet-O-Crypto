@@ -1,7 +1,7 @@
 import './App.scss';
 import React from 'react';
 
-import logo from '/Users/florent/Desktop/projet-28-Ocrypto/src/assets/Logo.png';
+import logo from '../../assets/Logo.png';
 
 function App() {
   return (
@@ -10,7 +10,6 @@ function App() {
       <img src={logo} className="App-logo" alt="logo" />
       </header>
     </div>
-  );
+  );  
 }
-
 export default App;
