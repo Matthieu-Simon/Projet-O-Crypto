@@ -1,0 +1,62 @@
+.App-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.App-nav {
+    padding: 20px 0px 20px 20px;
+} 
+
+.App-link {
+    color: #424C7C;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px;
+    margin: 8px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 0 #424C7C;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+ .App-link:hover {
+    box-shadow: inset 250px 0 0 0 #424C7C;
+    color: white;
+  }
+
+.App-button-login {
+    background-color: #424C7C;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.App-button-signin {
+    background-color: white;
+    color: #424C7C;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+
+.App-button-login:hover {
+    color: #424C7C;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #424C7C;
+    transition: ease-in .1s;
+}
+
+.App-button-signin:hover {
+    color: #424C7C;
+    border-radius: 8px;
+    border: 1px solid #424C7C;
+    transition: ease-out .1s;
+}
+
