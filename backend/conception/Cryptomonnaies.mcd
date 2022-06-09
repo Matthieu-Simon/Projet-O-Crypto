@@ -1,0 +1,26 @@
+FAVORIS : code utilisateur, code cryptomonnaies
+
+LEXIQUE : nom mot, texte
+ETRE AFFILIE, 0N CRYPTOMONNAIES, 0N FAVORIS
+PEUT AJOUTER, 0N UTILISATEUR, 0N FAVORIS
+
+ADMIN : code admin, mail, mot de passe
+PEUT AJOUTER ET MODIFIER, 0N ADMIN, 1N LEXIQUE, 1N ARTICLES, 1N CRYPTOMONNAIES, 0N CHALLENGES
+CRYPTOMONNAIES : code cryptos, nom
+PEUT CONSULTER, 0N UTILISATEUR, 0N LEXIQUE, 0N ARTICLES, 0N CRYPTOMONNAIES
+UTILISATEUR : code utilisateur, pseudo, mail, mot de passe, niveau, points
+
+ASSOCIER, 0N CRYPTOMONNAIES, 0N ARTICLES
+
+APPARAIT, 0N ARTICLES, 0N CHALLENGES
+ARTICLES : code article, nom, auteur, texte, niveau
+
+NIVEAU : code niveau, nom
+CORRESPOND, 11 CHALLENGES, 1N NIVEAU
+CHALLENGES : nom, niveau, récompense, code articles, texte, 
+PEUT PARTICIPER, 0N UTILISATEUR, 01 CHALLENGES
+
+POSSEDE, 0N CHALLENGES, 11 QUESTION
+QUESTION : code question, code reponse
+APPARTENIR,  1N REPONSE, 11 QUESTION
+REPONSE : code reponse, code question, texte
