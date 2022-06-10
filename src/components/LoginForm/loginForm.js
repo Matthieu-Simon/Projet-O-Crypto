@@ -7,16 +7,24 @@ function LoginForm() {
   return (
     <div className="container">
       <div className="register-left">
-        <TextField id="outlined-basic" label="Pseudo" variant="outlined" />
-        <TextField id="outlined-basic" label="Email" variant="outlined" />
-        <TextField id="outlined-basic" label="Mot de passe" variant="outlined" />
-        <TextField id="outlined-basic" label="Confirmer mot de passe" variant="outlined" />
+        <h2>Inscription</h2>
+        <TextField label="Pseudo" />
+        <TextField label="Email" variant="outlined" />
+        <TextField label="Mot de passe" />
+        <TextField label="Confirmer mot de passe" />
         <Button variant="contained">S'enregistrer</Button>
       </div>
+      <span className="vertical" />
       <div className="register-right">
-        <TextField id="outlined-basic" label="Email" variant="outlined" />
-        <TextField id="outlined-basic" label="Mot de passe" variant="outlined" />
+        <h2>Connexion</h2>
+        <TextField label="Email" variant="outlined" />
+        <TextField label="Mot de passe" variant="outlined" />
         <Button variant="contained">Connexion</Button>
+        <div className="input-reset">
+          <input type="checkbox" id="memories" />
+          <label htmlFor="memories">Se souvenir de moi</label>
+          <a href="#">Mot de passe oublié ?</a>
+        </div>
       </div>
     </div>
   );
