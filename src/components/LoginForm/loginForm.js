@@ -1,3 +1,4 @@
+import React from 'react';
 import './loginFormStyles.scss';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -20,4 +21,4 @@ function LoginForm() {
     </div>
   );
 }
-export default LoginForm;
+export default React.memo(LoginForm);

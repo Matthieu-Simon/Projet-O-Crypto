@@ -1,6 +1,3 @@
-#root {
-  height: 100vh;
-}
 .container {
   height: 100%;
   display: flex;
@@ -16,4 +13,7 @@
 .register-right {
   display: flex;
   flex-direction: column;
+}
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  padding: 20px;
 }
