@@ -21,7 +21,7 @@ function menu(){
         <button className="App-button-login">Connexion</button>
     </div>
         <SearchBar />
-        <label for="toggle" className="label-hamburger">☰</label>
+        <label htmlFor="toggle" className="label-hamburger">☰</label>
         <input type="checkbox" id="toggle" />
    </menu>
    );
