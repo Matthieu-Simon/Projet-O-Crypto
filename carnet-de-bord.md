@@ -48,7 +48,7 @@ Prochaines étapes :
 * Présentation de fin de sprint
 * Développement des premières fonctionnalités du site
 
-## Sprint 0
+## Sprint 1
 
 ### Jour 1 - 09/06/22
 Après avoir présenté notre projet aux autres groupe dans des conditions similaires à celles de de la présentation finale, nous avons commencé à développer les premiers éléments de notre application.
