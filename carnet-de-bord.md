@@ -43,6 +43,20 @@ En fin de journée nous nous somme réunis avec le personnel de l'équipe pédag
 Ils nous ont prodigué beaucoup de conseils et ont mis en évidence certains points à corriger ou à ameliorer.
 
 Prochaines étapes : 
+
 * Mettre en place les différents correctifs
 * Présentation de fin de sprint
 * Développement des premières fonctionnalités du site
+
+## Sprint 0
+
+### Jour 1 - 09/06/22
+Après avoir présenté notre projet aux autres groupe dans des conditions similaires à celles de de la présentation finale, nous avons commencé à développer les premiers éléments de notre application.
+Les developpeurs frontend ont commencé par réaliser la page d'accueil.
+Tandis que les developpeurs backend ont la création de la base de données et du serveur web de l'api.
+
+Prochaines étapes : 
+
+* Faire un point sur l'avancement du projet dans github project
+* Déterminer avec l'équipe frontend et backend les éléments à développer en priorité
+* Développer les élements priorisé par l'équipe de developpement
