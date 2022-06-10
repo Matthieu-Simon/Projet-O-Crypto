@@ -1,9 +1,50 @@
-.App-menu {
-    width: 100%;
+// RESPONSIVE MENU
+@media all and (max-width: 991px) {
+    .App-nav {
+        display: none;
+    }
+    .App-button {
+        display: none;
+    }
+    .search-box {
+        display: none;
+    }
+    .label-hamburger
+    {
+    width: 50px;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    margin-left: auto;
+    font-size: 40px;
+    color: #424C7C;
+    cursor: pointer;
+    }
+    #toggle:checked + .App-menu {
+    display: flex;
+    }
+}
+
+label, #toggle
+{
+display: none;
+}
+
+@media all and (max-width: 991px)
+{
+
+
+}
+
+// DESKTOP MENU
+.App-menu {
+    font-size: 1.1rem;
+    padding: 5px;
+    margin: 8px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .App-nav {
@@ -11,11 +52,9 @@
 } 
 
 .App-link {
+    margin: 8px;
     color: #424C7C;
     text-decoration: none;
-    font-size: 1.1rem;
-    padding: 5px;
-    margin: 8px;
     border-radius: 8px;
     box-shadow: inset 0 0 0 0 #424C7C;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
@@ -59,4 +98,5 @@
     border: 1px solid #424C7C;
     transition: ease-out .1s;
 }
+
 

@@ -38,6 +38,7 @@
 .App-article-preview {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 25%;
@@ -56,7 +57,7 @@
 }
 
 .App-article-preview-title-text {
-    font-size: 3.5rem;
+    font-size: 3.5vw;
     font-weight: bold;
     text-align: center;
     color: #424C7C;
@@ -68,7 +69,7 @@
 }
 
 .App-article-preview-text{
-    text-align: justify;
+    font-size: 1.5vw;
 }
 // END CARD ARTICLE
 
@@ -187,3 +188,33 @@
 }
 // END DASHBOARD PREVIEW SECTION
 
+//RESPONSIVE 
+@media all and (max-width: 991px) {
+    .App-main-title  {
+        font-size: 2rem;
+        width: 100%;
+    }
+    .App-main-text {
+        font-size: 0.9rem;
+        width: 90%;
+    }
+    .App-article-preview {
+        width: 100%;
+    }
+    .App-article-preview-title-text {
+        font-size: 2.5rem;
+    }
+    .App-article-preview-text {
+        font-size: 0.9rem;
+    }
+    .App-learning-preview-title {
+        width: auto;
+        text-align: start;
+    }
+    .App-dashboard-preview-title {
+        width: 100%;
+    }
+    .button-signin {
+        width: auto;
+    }
+}

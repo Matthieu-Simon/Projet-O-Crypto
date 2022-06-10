@@ -8,7 +8,7 @@ import './headerStyles.scss';
 function header(){
    return (
     <header className="App-header">
-       <a href="/">
+       <a href="/" className='App-logo-container'>
         <img  src={logo} className="App-logo" alt="logo" />
         </a>
         <Menu />
