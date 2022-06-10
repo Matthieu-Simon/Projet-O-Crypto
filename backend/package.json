@@ -6,9 +6,7 @@
   "scripts": {
     "installAllDepedencies": "npm install npm install --save-dev",
     "installProjectDependencies": "npm install",
-    "run": "npx nodemon",
-    "initDB": "sqitch deploy sqitch verify"
-    
+    "runServer": "npx nodemon"    
   },
   "repository": {
     "type": "git",
