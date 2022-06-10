@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "installAllDepedencies": "npm install npm install --save-dev",
+    "installProjectDependencies": "npm install",
     "run": "npx nodemon"
   },
   "repository": {
@@ -25,8 +26,9 @@
     "pg": "^8.7.3"
   },
   "devDependencies": {
-    "chalk": "^5.0.1",
+    "install": "^0.13.0",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "npm": "^8.12.1"
   }
 }

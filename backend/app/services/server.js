@@ -12,7 +12,7 @@ function initServer (port, message) {
     app.use(logger);
     app.get('/', (request,response) =>{
         response.send(message);
-    });    
+    });
     
     app.listen((PORT),()=>{
         console.log(`http://localhost:${PORT}`)
