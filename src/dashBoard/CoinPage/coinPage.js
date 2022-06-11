@@ -7,6 +7,7 @@ function CoinPage() {
   const { id } = useParams();
   const [coin, setCoin] = useState({});
 
+  console.log(coin);
   const fetchCoin = async () => {
     const { data } = await axios.get(SingleCoin(id));
     setCoin(data);
@@ -21,6 +22,9 @@ function CoinPage() {
       <div className="coin-page">
         <img src={coin?.image?.large} alt="coin" />
         <h1>{coin?.name}</h1>
+        <p>{coin?.description?.en.split('. ')[0]}</p>
+        <p>{coin?.market_data?.current_price.eur} €</p>
+
       </div>
   );
 }
