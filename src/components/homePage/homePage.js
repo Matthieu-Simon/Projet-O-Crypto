@@ -1,17 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import './homePageStyles.scss';
-import Footer from './footer/footer';
-import Main from './main/main';
+import Footer from './Footer/footer';
+import Main from './Main/main';
 
-function homePage(){
-   return (
+function homePage() {
+  return (
     <div className="App-homePage">
-        <Main />
-        <Footer />
+      <Main />
+      <Footer />
     </div>
-   );
-};
+  );
+}
 
 export default React.memo(homePage);

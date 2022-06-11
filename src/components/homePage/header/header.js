@@ -1,19 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import Menu from './menu/menu';
+import Menu from './Menu/menu';
 import logo from '../../../assets/Logo.png';
 import './headerStyles.scss';
 
-function header(){
-   return (
+function header() {
+  return (
     <header className="App-header">
-       <a href="/" className='App-logo-container'>
-        <img  src={logo} className="App-logo" alt="logo" />
-        </a>
-        <Menu />
+      <a href="/" className="App-logo-container">
+        <img src={logo} className="App-logo" alt="logo" />
+      </a>
+      <Menu />
     </header>
-   );
-};
+  );
+}
 
 export default React.memo(header);

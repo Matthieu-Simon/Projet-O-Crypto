@@ -1,10 +1,10 @@
 import './App.scss';
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Header from '../homePage/header/header';
-import HomePage from '../homePage/homePage';
-import DashBoard from '../../dashBoard/dashBoard';
+import Header from '../HomePage/Header/header';
+import HomePage from '../HomePage/homePage';
+import DashBoard from '../../DashBoard/dashBoard';
+import CoinPage from '../../DashBoard/CoinPage/coinPage';
 
 function App() {
   return (
@@ -13,8 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/dashboard" element={<DashBoard />} />
+        <Route path="/coin/:id" element={<CoinPage />} />
       </Routes>
     </div>
-  );  
+  );
 }
 export default App;
