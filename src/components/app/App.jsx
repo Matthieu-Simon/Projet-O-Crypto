@@ -3,8 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 
 import Header from '../HomePage/Header/header';
 import HomePage from '../HomePage/homePage';
-import DashBoard from '../../DashBoard/dashBoard';
-import CoinPage from '../../DashBoard/CoinPage/coinPage';
+import DashBoard from '../DashBoard/dashBoard';
+import CoinPage from '../DashBoard/CoinPage/coinPage';
 
 function App() {
   return (

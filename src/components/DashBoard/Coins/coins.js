@@ -10,12 +10,12 @@ function Coin({
   return (
     <div className="coin-cointainer">
       <div className="coin-row">
-        <div className="add-favourite" onClick={onClick}>
+        <div className="add-favourite">
           <StarBorderIcon className="star-icon" />
         </div>
         <div className="coin">
           <p className="coin-rank">{rank}</p>
-          <img src={image} alt="crypto" />
+          <img onClick={onClick} src={image} alt="crypto" />
           <h1 onClick={onClick}>{name}</h1>
           <p className="coin-symbol">{symbol}</p>
         </div>

@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './dashBoardStyles.scss';
-import { CoinList } from '../config/api';
+import { CoinList } from '../../config/api';
 import Coin from './Coins/coins';
-import Footer from '../components/HomePage/Footer/footer';
+import Footer from '../HomePage/Footer/footer';
 
 function dashBoard() {
   const [coins, setCoins] = useState([]);
