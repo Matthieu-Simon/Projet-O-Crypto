@@ -1,10 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 import './menuStyles.scss';
-import SearchBar from '../SearchBar/searchBar';
+import SearchBar from '../searchBar/searchBar';
 
 function menu() {
+  const navigate = useNavigate();
   return (
     <menu className="App-menu">
       <nav className="App-nav">
@@ -15,8 +16,8 @@ function menu() {
         <a className="App-link" href="/faq">FAQ</a>
       </nav>
       <div className="App-button">
-        <button type="button" className="App-button-signin">S'inscrire</button>
-        <button type="button" className="App-button-login">Connexion</button>
+        <button type="button" className="App-button-signin" onClick={() => navigate('/log-in')}>S'inscrire</button>
+        <button type="button" className="App-button-login" onClick={() => navigate('/log-in')}>Connexion</button>
       </div>
       <SearchBar />
       <label htmlFor="toggle" className="label-hamburger">☰</label>

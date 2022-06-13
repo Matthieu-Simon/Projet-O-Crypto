@@ -1,25 +1,39 @@
 import React from 'react';
 import './loginFormStyles.scss';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 
 function LoginForm() {
   return (
     <div className="container">
       <div className="register-left">
         <h2>Inscription</h2>
-        <TextField label="Pseudo" />
-        <TextField label="Email" variant="outlined" />
-        <TextField label="Mot de passe" />
-        <TextField label="Confirmer mot de passe" />
-        <Button variant="contained">S'enregistrer</Button>
+        <form action="" method="get" className="form-inscription">
+          <div className="form-example">
+            <input type="text" name="name" id="pseudo" placeholder="Pseudo" />
+          </div>
+          <div className="form-example">
+            <input type="email" name="email" id="email" placeholder="Email" />
+          </div>
+          <div className="form-example">
+            <input type="password" name="password" id="password" placeholder="Mot de passe" />
+          </div>
+          <div className="form-example">
+            <input type="password" name="password" id="confirm" placeholder="Confirmer mot de passe" />
+          </div>
+          <div className="form-example">
+            <input type="submit" value="Valider" />
+          </div>
+        </form>
       </div>
       <span className="vertical" />
       <div className="register-right">
         <h2>Connexion</h2>
-        <TextField label="Email" variant="outlined" />
-        <TextField label="Mot de passe" variant="outlined" />
-        <Button variant="contained">Connexion</Button>
+        <div className="form-example">
+          <input type="email" name="email" id="email" placeholder="Email" />
+        </div>
+        <div className="form-example">
+          <input type="password" name="password" id="password" placeholder="Mot de passe" />
+        </div>
+        <button type="submit">Connexion</button>
         <div className="input-reset">
           <input type="checkbox" id="memories" />
           <label htmlFor="memories">Se souvenir de moi</label>
