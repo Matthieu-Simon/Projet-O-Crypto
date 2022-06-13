@@ -7,16 +7,16 @@ const router = require('../routers/index');
  * @param {number} port - http port
  * @param {string} message - set a text to the main route
  */
-function initServer (port, message) {
+function initServer(port, message) {
     const PORT = port;
     const app = express();
 
     app.use(logger);
     app.use(router);
-    
-    app.listen((PORT),()=>{
-        console.log(`http://localhost:${PORT}`)
-    });
-};
 
-module.exports = {initServer};
+    app.listen((PORT), () => {
+        console.log(`http://localhost:${PORT}`);
+    });
+}
+
+module.exports = { initServer };
