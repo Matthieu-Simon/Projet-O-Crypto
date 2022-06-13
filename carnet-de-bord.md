@@ -60,3 +60,13 @@ Prochaines étapes :
 * Faire un point sur l'avancement du projet dans github project
 * Déterminer avec l'équipe frontend et backend les éléments à développer en priorité
 * Développer les élements priorisé par l'équipe de developpement
+  
+### Jour 2 - 10/06/22
+Nous avons continué le développement de notre application. Le front s'est affairé à réaliser le responsive de la page d'accueil, ainsi que les pages desktop du dashboard et du détail des crypto.
+
+Prochaines étapes : 
+
+* Finir le CRUD des users
+* Commencer le CRUD des articles 
+* Finaliser la gestion des graph sur les crypto
+* Finaliser le responsive des pages réalisées
