@@ -2,6 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './mainStyles.scss';
+import { useNavigate } from 'react-router-dom';
 import btclogo from '../../../assets/btc.png';
 import dashboardlogo from '../../../assets/Dashboard.png';
 
