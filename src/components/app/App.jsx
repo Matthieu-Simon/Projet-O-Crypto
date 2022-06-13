@@ -1,15 +1,21 @@
 import './App.scss';
-import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import logo from '../../assets/Logo.png';
+import Header from '../HomePage/Header/header';
+import HomePage from '../HomePage/homePage';
+import DashBoard from '../DashBoard/dashBoard';
+import CoinPage from '../DashBoard/CoinPage/coinPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/dashboard" element={<DashBoard />} />
+        <Route path="/coin/:id" element={<CoinPage />} />
+      </Routes>
     </div>
-  );  
+  );
 }
 export default App;
