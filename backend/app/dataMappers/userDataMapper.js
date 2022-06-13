@@ -13,13 +13,13 @@ module.exports = {
             VALUES ('${newUser.name}', '${newUser.email}', '${newUser.password}');
             `);
 
-        return console.log('User creation successfull');
+        return console.log(`User creation successfull${result}`);
     },
 
     async loginUser(user) {
         /* check if the user is already registered */
         const isUniqueChecking = await client.query(`SELECT * FROM "user" WHERE email= ${newUser.email}`);
-        if (isUniqueChecking.rows.lenght == 0) {
+        if (isUniqueChecking.rows.lenght !== 0) {
             return 'This user is not registered';
         }
         const result = await client.query(`
