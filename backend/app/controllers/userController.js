@@ -13,4 +13,16 @@ module.exports = {
         return response.json(userLogin);
     },
 
+    async deleteUser(request, response) {
+        const user = request.body;
+        const userDeleting = await userDatamapper.deleteUser(user);
+        return response.json(userDeleting);
+    },
+
+    async updateUser(request, response) {
+        const userModification = request.body;
+        const userUpdating = await userDatamapper.modifyUser(userModification);
+        return response.json(userUpdating);
+    },
+
 };

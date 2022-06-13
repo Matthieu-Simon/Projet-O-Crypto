@@ -42,7 +42,7 @@ Dans le cas où rien est renseigné, le port par défaut sera le port 3000.
 
 Une fois cette étape faite vous pouvez d’ores et déjà lancer le serveur en tapant dans votre terminal la commande suivante : 
 ```bash
-npm run
+npm run runServer
 ```
 Dans le cas où vous avez installé à la fois les dépendences nécéssaires et les dépendences de developpement, vous verrez apparaître dans votre console les log de chaques requêtes qui seront effectuées au serveur.
 Si vous souhaitez modifier les informations renseignées par ces log il faudra le faire depuis le fichier présent dans `app/helpers/logger.js` en vous référant à la documentation technique de [Morgan](https://github.com/expressjs/morgan#readme).
