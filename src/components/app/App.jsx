@@ -2,6 +2,7 @@ import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 
 import Header from '../header/header';
+
 import Footer from '../footer/footer';
 import HomePage from '../homePage/homePage';
 import DashBoard from '../DashBoard/dashBoard';
@@ -17,6 +18,7 @@ import OurTeam from '../OurTeam/ourTeam';
 import Profil from '../Profil/profil';
 import Update from '../Profil/Update/update';
 import Challenge from '../LearningJourney/Challenge/challenge';
+
 
 function App() {
   return (

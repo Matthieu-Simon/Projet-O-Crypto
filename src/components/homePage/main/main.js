@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './mainStyles.scss';
 import { useNavigate } from 'react-router-dom';
 import btclogo from '../../../assets/btc.png';
@@ -78,7 +79,7 @@ function main() {
           <h2 className="App-learning-preview-title">
             Devenez un expert en rejoignant notre parcours d'apprentissage !
           </h2>
-          <button type="button" className="button-signin" onClick={() => navigate('/log-in')}>
+          <button onClick={() => navigate('/log-in')} type="button" className="button-signin">
             S'inscrire ici !
           </button>
         </div>
