@@ -1,5 +1,5 @@
 module.exports = {
-    displayHomepage (_, response) {
+    displayHomepage(_, response) {
         return response.send('hello world');
-    }
+    },
 };
