@@ -1,7 +1,6 @@
 const { Pool } = require('pg');
 require('dotenv').config();
 
-function lauchDB () {
     /*Create new pool*/
     /*Pool works like Client but it allow many connection in same time*/
     const client = new Pool({
@@ -16,7 +15,9 @@ function lauchDB () {
         .connect()
         .then(()=>{console.log('Connection successful')})
         .catch(error => console.log('Connection failed '+ error));
-};
 
-module.exports = {lauchDB};
+   
+
+
+module.exports = client;
 
