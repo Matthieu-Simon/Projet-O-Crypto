@@ -11,6 +11,6 @@ module.exports = {
         const user = request.body;
         const userLogin = await userDatamapper.loginUser(user);
         return response.json(userLogin);
-    }
-    
+    },
+
 };
