@@ -6,7 +6,7 @@ BEGIN;
 CREATE TABLE "user" (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     pseudo text NOT NULL,      
-    email text NOT NULL,
+    email text NOT NULL UNIQUE,
     password text NOT NULL,    
     level text NOT NULL DEFAULT 'novice',
     reward int NOT NULL DEFAULT 0,
