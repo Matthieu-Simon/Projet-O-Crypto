@@ -14,7 +14,7 @@ module.exports = {
         if (oneArticle.rows.length !== 0) {
             return 'Article does not exist';
         }
-        return oneArticle.rows;
+        return oneArticle.rows[0];
     },
 
 };

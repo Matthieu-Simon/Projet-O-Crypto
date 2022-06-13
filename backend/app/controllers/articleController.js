@@ -2,8 +2,7 @@ const articleDatamapper = require('../dataMappers/articleDataMapper');
 
 module.exports = {
     async getAllArticle(request, response) {
-        const allArticle = request.body;
-        const getAllArticle = await articleDatamapper.getAllArticle(allArticle);
+        const getAllArticle = await articleDatamapper.getAllArticle();
         return response.json(getAllArticle);
     },
 
