@@ -33,9 +33,9 @@ function LoginForm() {
         </div>
         <button className="btn-form" type="submit">Connexion</button>
         <div className="input-reset">
-          <input className="input-form" type="checkbox" id="memories" />
-          <a href="#">Se souvenir de moi</a>
-          <a href="#">Mot de passe oublié ?</a>
+          <input type="checkbox" id="memories" />
+          <a className="a-form" href="#">Se souvenir de moi</a>
+          <a className="a-form" href="#">Mot de passe oublié ?</a>
         </div>
       </div>
     </div>

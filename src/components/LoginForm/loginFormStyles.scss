@@ -1,5 +1,4 @@
 @import '/src/styles/vars';
-// rajouter la font-family & aligner les h2, modifier la position du checkbox
 .container {
   height: 100vh;
   width: 100%;
@@ -30,12 +29,14 @@ h2 {
   padding: 18px;
   border: none;
   background-color: #EAEAEA;
+  width: 100%;
 }
 .btn-form {
   border-radius: 20px;
   padding: 15px;
   border: none;
   background-color: #B3B3B3;
+  width: 100%;
 }
 .register-right {
   display: flex;
@@ -52,4 +53,7 @@ h2 {
   margin: 10px;
   padding: 5px;
   font-size: small;
+}
+.a-form {
+  margin-left: 10px;
 }
