@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 // import parse from 'html-react-parser';
 import { SingleCoin } from '../../../config/api';
-import Footer from '../../HomePage/Footer/footer';
+import Footer from '../../footer/footer';
 
 import './coinPageStyles.scss';
 

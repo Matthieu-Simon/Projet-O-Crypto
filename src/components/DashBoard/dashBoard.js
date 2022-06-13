@@ -5,7 +5,7 @@ import axios from 'axios';
 import './dashBoardStyles.scss';
 import { CoinList } from '../../config/api';
 import Coin from './Coins/coins';
-import Footer from '../HomePage/Footer/footer';
+import Footer from '../footer/footer';
 
 function dashBoard() {
   const [coins, setCoins] = useState([]);

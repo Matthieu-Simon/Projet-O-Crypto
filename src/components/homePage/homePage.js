@@ -1,14 +1,12 @@
 import React from 'react';
 
 import './homePageStyles.scss';
-import Footer from './Footer/footer';
-import Main from './Main/main';
+import Main from './main/main';
 
 function homePage() {
   return (
     <div className="App-homePage">
       <Main />
-      <Footer />
     </div>
   );
 }

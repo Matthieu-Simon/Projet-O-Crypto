@@ -1,10 +1,12 @@
 /* eslint-disable max-len */
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './mainStyles.scss';
 import btclogo from '../../../assets/btc.png';
 import dashboardlogo from '../../../assets/Dashboard.png';
 
 function main() {
+  const navigate = useNavigate();
   return (
     <main className="App-main">
       <div className="App-main-content">
@@ -76,7 +78,7 @@ function main() {
           <h2 className="App-learning-preview-title">
             Devenez un expert en rejoignant notre parcours d'apprentissage !
           </h2>
-          <button type="button" className="button-signin">
+          <button onClick={() => navigate('/log-in')} type="button" className="button-signin">
             S'inscrire ici !
           </button>
         </div>

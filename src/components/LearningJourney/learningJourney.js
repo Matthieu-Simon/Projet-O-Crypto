@@ -3,7 +3,7 @@ import './learningJourneyStyles.scss';
 import CircularProgress from '@mui/material/CircularProgress';
 import Avatar from '@mui/material/Avatar';
 
-function Card() {
+function LearningJourney() {
   return (
     <div className="card-container">
       <div className="container-test">
@@ -69,4 +69,4 @@ function Card() {
   );
 }
 
-export default React.memo(Card);
+export default React.memo(LearningJourney);
