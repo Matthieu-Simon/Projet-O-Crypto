@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './Header';
 import FAQ from './FAQ';
 
+
 function App () {
 
   const [faqs, setfaqs] = useState([
@@ -18,6 +19,21 @@ function App () {
     {
       question: 'Mes données personnelles sont elles enregistrées?',
       answer: 'Vous ne rentrez aucune donnée personnelle a part votre mail. En plus on vous conseille de créer un nouveau pour ce but.',
+      open: false
+    },
+    {
+      question: 'Quelle est la team la plus incroyable?',
+      answer: `La team O'crypto, bien évidemment.`,
+      open: true
+    },
+    {
+      question: `Qui sont ces garçons?`,
+      answer: 'Product Owner : Fabiano , Scrum master : Florent , Lead developer front : Matthieu , Lead developer back : Quentin , et le Git master JEDI: Hugo !',
+      open: false
+    },
+    {
+      question: `Finiront ils ce projet à temps?`,
+      answer: 'En tout cas ils travaillent durement pour ça !.',
       open: false
     }
   ]);
@@ -44,11 +60,6 @@ function App () {
       </div>
     </div>
   );
-
-
-
-
-
 
  
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import './FAQ.scss';
 
 function FAQ ({faq, index, toggleFAQ}) {
 	return (
