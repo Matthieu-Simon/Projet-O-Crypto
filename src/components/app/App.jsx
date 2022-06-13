@@ -33,12 +33,10 @@ function App() {
         <Route path="/articles" element={<Articles />} />
         <Route path="/article/:id" element={<Article />} />
         <Route path="/lexicon" element={<Lexicon />} />
-        <Route path="/articles" element={<Articles />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<OurTeam />} />
         <Route path="/profile" element={<Profil />} />
-        <Route path="/profile/update" element={<Update />} />
-        <Route path="/profile/update/:id" element={<Update />} /> */}
+        <Route path="/profile/update" element={<Update />} /> */}
       </Routes>
       <Footer />
     </div>
