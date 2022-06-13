@@ -7,7 +7,6 @@ import { SingleCoin } from '../../../config/api';
 import Footer from '../../footer/footer';
 import CoinChart from './CoinChart/coinChart';
 
-
 import './coinPageStyles.scss';
 
 function CoinPage() {
