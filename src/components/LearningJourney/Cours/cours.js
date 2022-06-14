@@ -3,18 +3,17 @@ import './coursStyles.scss';
 
 function Cours() {
   return (
-    <main className="main">
+    <main className="main-cours">
       <header className="head-menu">
         <div>
-          <button className="left-btn" type="submit">Quitter le cours</button>
-          <button className="menu-btn" type="submit">Menu</button>
+          <button className="btn-menu" type="submit">Quitter le cours</button>
+          <button className="btn-menu" type="submit">Menu</button>
         </div>
         <h3>Expert trader - niveau 3 (2022)</h3>
         <div>
           <span>ProgressBar 75 %</span>
         </div>
       </header>
-      <span className="separator" />
       <div className="cours">
         <div className="title-cours">
           <h5>Comment investir au bon moment ?</h5>
@@ -40,9 +39,9 @@ function Cours() {
       </div>
       <footer className="footer-container">
         <div className="btn-footer">
-          <button type="submit">Retour</button>
-          <p>13/17</p>
-          <button type="submit">Suivant</button>
+          <button className="btn-cours" type="submit">Retour</button>
+          <p className="numberPage">13/17</p>
+          <button className="btn-cours" type="submit">Suivant</button>
         </div>
       </footer>
     </main>
