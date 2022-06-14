@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import './selectedButtonStyles.scss';
 
 function SelectButton({ children, onClick }) {
   return (

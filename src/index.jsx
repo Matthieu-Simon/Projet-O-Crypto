@@ -4,14 +4,17 @@ import { BrowserRouter } from 'react-router-dom';
 import './styles/index.scss';
 import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
+import { WatchListContextProvider } from './context/watchListContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
+    <WatchListContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </WatchListContextProvider>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

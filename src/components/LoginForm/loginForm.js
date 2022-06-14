@@ -1,7 +1,7 @@
 import React from 'react';
 import './loginFormStyles.scss';
-import Login from './Login/login';
 import Signin from './Signin/signin';
+import Login from './Login/login';
 
 function LoginForm() {
   return (

@@ -1,0 +1,92 @@
+.profil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.profil-header {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.profil-title{
+    color: #424C7C;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+    width: 50%;
+}
+
+.profil-card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: #424C7C;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.profil-update {
+    background-color: #424C7C;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.profil-update:hover {
+    color: #424C7C;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #424C7C;
+    transition: ease-in .1s;
+}
+
+.profil-scoreState {
+    padding: 30px;
+    color: #424C7C;
+    font-size: 1.6rem;
+}
+
+.add-favourite-coin {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    background-color: #EAEAEA;
+    height: 50px;
+}
+
+.add-favourite-coin-text {
+    color: #424C7C;
+    font-size: 1.6rem;
+    padding: 10px;
+    margin: auto;
+}
+
+.add-favourite-button {
+    position: absolute;
+    height: 5.2%;
+    background-color: #424C7C;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.add-favourite-button:hover {
+    color: #424C7C;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #424C7C;
+    transition: ease-in .1s;
+}

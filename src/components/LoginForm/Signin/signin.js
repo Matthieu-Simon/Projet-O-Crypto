@@ -1,26 +1,61 @@
-import React from 'react';
 
-function Signin() {
-  return (
-    <div className="register-left">
-      <h2>Inscription</h2>
-      <form action="" method="get" className="form-inscription">
-        <div className="form-example">
-          <input className="input-form" type="text" name="name" placeholder="Pseudo" />
-        </div>
-        <div className="form-example">
-          <input className="input-form" type="email" name="email" placeholder="Email" />
-        </div>
-        <div className="form-example">
-          <input className="input-form" type="password" name="password" placeholder="Mot de passe" />
-        </div>
-        <div className="form-example">
-          <input className="input-form" type="password" name="password" placeholder="Confirmer mot de passe" />
-        </div>
-        <button className="btn-form" type="submit">S'enregistrer</button>
-      </form>
-    </div>
-  );
-}
+// import React, { useState } from 'react';
+// import Axios from 'axios';
 
-export default React.memo(Signin);
+// function Signin() {
+//   const [usernameReg, setUserNameReg] = useState('');
+//   const [usermailReg, setUserMailReg] = useState('');
+//   const [passwordReg, setPasswordReg] = useState('');
+
+//   // POST REGISTER AN USER
+//   // const register = () => {
+//   //   Axios.post('/register', {
+//   //     username: usernameReg,
+//   //     email: usermailReg,
+//   //     password: passwordReg
+//   //   })
+//   //     .then((response) => {
+//   //       console.log(response);
+//   //     });
+//   // };
+//   return (
+//     <div className="register-left">
+//       <h2 className="signin">Inscription</h2>
+//       <form action="" method="get" className="form-inscription">
+//         <div className="form-example">
+//           <input
+//             className="input-form"
+//             type="text"
+//             placeholder="Pseudo"
+//             onChange={(e) => {
+//               setUserNameReg(e.target.value);
+//             }}
+//           />
+//         </div>
+//         <div className="form-example">
+//           <input
+//             className="input-form"
+//             type="email"
+//             placeholder="Email"
+//             onChange={(e) => {
+//               setUserMailReg(e.target.value);
+//             }}
+//           />
+//         </div>
+//         <div className="form-example">
+//           <input
+//             className="input-form"
+//             type="password"
+//             placeholder="Mot de passe"
+//             onChange={(e) => {
+//               setPasswordReg(e.target.value);
+//             }}
+//           />
+//         </div>
+//         <button className="btn-form" type="submit" /*onClick={register}*/>S'enregistrer</button>
+//       </form>
+//     </div>
+//   );
+// }
+
+// export default React.memo(Signin);
