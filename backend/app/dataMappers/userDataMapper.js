@@ -15,7 +15,6 @@ module.exports = {
                 `);
                 const result = await client.query(`SELECT * FROM "user" WHERE email= '${newUser.email}';`);
 
-                console.log(result)
     
             return result.rows[0];
 
@@ -65,7 +64,6 @@ module.exports = {
                 SET "${Object.keys(userModification)[0]}"='${Object.values(userModification)[0]}'
                 WHERE email='${userModification.email}';
             `);
-            const result = client.query(``)
         return 'User successfully modified' ;
             
         } catch (error) {
