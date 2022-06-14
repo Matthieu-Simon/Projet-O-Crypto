@@ -6,16 +6,16 @@ function Signin() {
       <h2>Inscription</h2>
       <form action="" method="get" className="form-inscription">
         <div className="form-example">
-          <input className="input-form" type="text" name="name" id="pseudo" placeholder="Pseudo" />
+          <input className="input-form" type="text" name="name" placeholder="Pseudo" />
         </div>
         <div className="form-example">
-          <input className="input-form" type="email" name="email" id="email" placeholder="Email" />
+          <input className="input-form" type="email" name="email" placeholder="Email" />
         </div>
         <div className="form-example">
-          <input className="input-form" type="password" name="password" id="password" placeholder="Mot de passe" />
+          <input className="input-form" type="password" name="password" placeholder="Mot de passe" />
         </div>
         <div className="form-example">
-          <input className="input-form" type="password" name="password" id="confirm" placeholder="Confirmer mot de passe" />
+          <input className="input-form" type="password" name="password" placeholder="Confirmer mot de passe" />
         </div>
         <button className="btn-form" type="submit">S'enregistrer</button>
       </form>
