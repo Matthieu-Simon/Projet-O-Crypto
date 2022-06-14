@@ -3,35 +3,77 @@ import './learningJourneyStyles.scss';
 
 function LearningJourney() {
   return (
-    <div className="main-container">
-      <h2>Parcours d'apprentissage</h2>
-      <div className="card-container">
-        <div className="card-parcours">
-          <h3>Expert trader - niveau 3 2022</h3>
-          <p>300 pts</p>
+    <main className="App-main">
+      <div>
+        <div>
+          <h2>Parcours d'apprentissage</h2>
         </div>
-        <div className="card-parcours">
-          <h3>Expert trader - niveau 3 2022</h3>
-          <p>300 pts</p>
+        <span className="top-separator" />
+      </div>
+      <div className="card-main">
+        <div className="card">
+          <div>
+            <div>
+              <h3>Expert trader - niveau 3</h3>
+              <p>Progrès</p>
+            </div>
+            <main>
+              <h4 className="card-name">Expert trader - niveau 3 2022</h4>
+              <p className="card-description">300 pts</p>
+            </main>
+            <footer className="card-footer">
+              <span className="card-progress">ProgressBar</span>
+              <span className="card-time">30 minutes</span>
+            </footer>
+          </div>
         </div>
-        <div className="card-parcours">
-          <h3>Expert trader - niveau 3 2022</h3>
-          <p>300 pts</p>
+        <div className="card">
+          <div>
+            <div>
+              <h3>Expert trader - niveau 3</h3>
+              <p>Progrès</p>
+            </div>
+            <main>
+              <h4 className="card-name">Expert trader - niveau 3 2022</h4>
+              <p className="card-description">300 pts</p>
+            </main>
+            <footer className="card-footer">
+              <span className="card-progress">ProgressBar</span>
+              <span className="card-time">30 minutes</span>
+            </footer>
+          </div>
+        </div>
+        <div className="card">
+          <div>
+            <div>
+              <h3>Expert trader - niveau 3</h3>
+              <p>Progrès</p>
+            </div>
+            <main>
+              <h4 className="card-name">Expert trader - niveau 3 2022</h4>
+              <p className="card-description">300 pts</p>
+            </main>
+            <footer className="card-footer">
+              <span className="card-progress">ProgressBar</span>
+              <span className="card-time">30 minutes</span>
+            </footer>
+          </div>
         </div>
       </div>
-      <div className="container-cours">
+      <span className="mid-separator" />
+      <div className="cours-container">
         <div className="title-cours">
-          <h3>Parcourir les cours</h3>
+          <h3 className="title-footer">Parcourir les cours</h3>
         </div>
-        <div className="lien-parcours">
-          <a href="#">Blockchain</a>
-          <a href="#">Cryptos</a>
-          <a href="#">Trading</a>
-          <a href="#">NFT</a>
-          <a href="#">Tout afficher</a>
+        <div className="link-container">
+          <a className="lien" href="#">Blockchain</a>
+          <a className="lien" href="#">Cryptos</a>
+          <a className="lien" href="#">Trading</a>
+          <a className="lien" href="#">NFT</a>
+          <a className="lien" href="#">Tout afficher</a>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

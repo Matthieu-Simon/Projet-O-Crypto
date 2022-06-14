@@ -2,7 +2,6 @@ import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 
 import Header from '../header/header';
-
 import Footer from '../footer/footer';
 import HomePage from '../homePage/homePage';
 import DashBoard from '../DashBoard/dashBoard';
@@ -10,13 +9,14 @@ import CoinPage from '../DashBoard/CoinPage/coinPage';
 import LoginForm from '../LoginForm/loginForm';
 import LearningJourney from '../LearningJourney/learningJourney';
 import FAQ from '../FAQ/FAQ';
+import Cours from '../LearningJourney/Cours/cours';
+import Profil from '../Profil/profil';
 // import Articles from '../Articles/articles';
 // import Article from '../Articles/Article/article';
 // import Lexicon from '../Lexicon/lexicon';
 // import About from '../About/about';
 // import OurTeam from '../OurTeam/ourTeam';
-import Profil from '../Profil/profil';
-// import Challenge from '../LearningJourney/Challenge/challenge';
+
 
 function App() {
   return (
@@ -29,6 +29,7 @@ function App() {
         <Route path="/log-in" element={<LoginForm />} />
         <Route path="/learning" element={<LearningJourney />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/Cours" element={<Cours />} />
         <Route path="/profile" element={<Profil />} />
         {/* <Route path="/learning/challenge/:id" element={<Challenge />} />
          <Route path="/articles" element={<Articles />} />
