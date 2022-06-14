@@ -1,0 +1,60 @@
+
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    // background-image: url('../../assets/team1.png');
+}
+
+h3{
+    font-weight: bold;
+}
+
+h1{
+    text-align: center;
+	font-size: 28px;
+	font-weight: 700;
+	text-transform: uppercase;
+    display: flex;
+	justify-content: center;
+	align-content: center;
+	padding: 50px;
+	color: #424C7C;
+}
+
+.team1{
+    width: 400px;
+  
+}
+.team2{
+    width: 400px;
+}
+
+.container1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+.container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+
+
+.text1{
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
+    color: #424C7C;
+}
+
+.text2{
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
+    color: #424C7C;
+}
