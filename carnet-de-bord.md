@@ -70,3 +70,24 @@ Prochaines étapes :
 * Commencer le CRUD des articles 
 * Finaliser la gestion des graph sur les crypto
 * Finaliser le responsive des pages réalisées
+
+### Jour 3 - 13/06/22
+Après notre réunion journalière nous nous somme mis à travailler sur nos différentes tâche.
+Le front s'est occupé de finaliser la page de détail des crypto monnaies ainsi que des pages de login et de log out.
+Quand au back, les routes utilisateur et articles ont été finalisées.
+
+Prochaines étapes : 
+
+* Tester le CRUD des routes utilisateur
+* Finaliser les pages de login, de logout et de modification du profil utilisateur
+* Relier le front et le back concernant la partie utilisateur
+* Mettre en ligne le back
+
+### Jour 4 - 14/06/22
+Le test des routes back ainsi que la mise en ligne ont pris une bonne partie de la journée à l'équipe back pour rendre cette partie totalement fonctionnelle.
+L'équipe front a continué à réaliser et à améliorer les différentes pages nécéssaire à la présentation de fin de sprint.
+En fin de journée que ce soit au front ou au back, la partie utilisateur est fonctionnelle.
+
+Prochaines étapes : 
+
+* Lier la partie fron et back
