@@ -53,7 +53,10 @@ function CoinChart() {
               datasets: [
                 {
                   data: historicData.map((coin) => coin[1]),
-                  label: `Price ( Past ${days} Days ) in €`,
+                  label: `Prix ( Dernier ${days} jours )  €`,
+                  borderColor: '#424C7C',
+                  fill: false,
+                  color: '#424C7C',
                 },
               ],
             }}

@@ -15,8 +15,7 @@ import FAQ from '../FAQ/FAQ';
 // import Lexicon from '../Lexicon/lexicon';
 // import About from '../About/about';
 // import OurTeam from '../OurTeam/ourTeam';
-// import Profil from '../Profil/profil';
-// import Update from '../Profil/Update/update';
+import Profil from '../Profil/profil';
 // import Challenge from '../LearningJourney/Challenge/challenge';
 
 function App() {
@@ -30,14 +29,14 @@ function App() {
         <Route path="/log-in" element={<LoginForm />} />
         <Route path="/learning" element={<LearningJourney />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/profile" element={<Profil />} />
         {/* <Route path="/learning/challenge/:id" element={<Challenge />} />
          <Route path="/articles" element={<Articles />} />
         <Route path="/article/:id" element={<Article />} />
         <Route path="/lexicon" element={<Lexicon />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<OurTeam />} />
-        <Route path="/profile" element={<Profil />} />
-        <Route path="/profile/update" element={<Update />} /> */}
+         */}
       </Routes>
       <Footer />
     </div>
