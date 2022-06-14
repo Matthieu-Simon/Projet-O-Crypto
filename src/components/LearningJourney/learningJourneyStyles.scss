@@ -1,26 +1,48 @@
 @import './src/styles/vars';
 
+.learning-main {
+  width: 100%;
+  margin: auto;
+  height: 74vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-learn {
+  font-size: 2em;
+  font-weight: bold;
+  color: $blueLogo;
+  padding: 30px;
+}
 .card-main {
   display: flex;
-  padding: 30px;
 }
 .card {
   display: flex;
-  border: 2px solid red;
+  border: 2px solid rgb(214, 214, 214);
+  margin-right: 10px;
+  padding: 10px;
+}
+.head-card {
+  padding: 10px 0;
+}
+.main-card {
+  padding: 10px 0;
 }
 .card-name {
   font-weight: normal;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 10px 0;
 }
 .card-description {
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 10px 0;
 }
 .card-footer {
-  background-color: black;
+  background-color: $blueLogo;
   color: white;
-  padding: 20px 15px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -39,19 +61,11 @@
   justify-content: space-evenly;
   width: 100%;
   background-color: $grey;
-  padding: 15px 0 12px;
-  color: blue;
+  padding: 10px 0;
+  color: rgb(0, 140, 255);
 }
 .lien {
   border: 1px solid black;
   border-radius: 20px;
-  padding: 5px;
-}
-.top-separator {
-  display: flex;
-  padding: 35px;
-}
-.mid-separator {
-  display: flex;
-  padding: 35px;
+  padding: 7px;
 }

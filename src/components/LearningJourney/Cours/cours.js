@@ -38,7 +38,6 @@ function Cours() {
           </p>
         </div>
       </div>
-      <span className="separator" />
       <footer className="footer-container">
         <div className="btn-footer">
           <button type="submit">Retour</button>
