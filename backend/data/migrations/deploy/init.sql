@@ -17,7 +17,7 @@ CREATE TABLE "user" (
 
 CREATE TABLE article (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    name text NOT NULL UNIQUE,
+    name text NOT NULL,
     author text NOT NULL DEFAULT 'unknown',
     abstract text NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
@@ -49,7 +49,7 @@ CREATE TABLE lexicon (
 
 CREATE TABLE "level" (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    name text NOT NULL UNIQUE,
+    name text NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
