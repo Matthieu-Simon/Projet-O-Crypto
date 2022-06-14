@@ -8,6 +8,6 @@ const articleController = require('../controllers/articleController');
 router.route('/articles').get(articleController.getAllArticle);
 
 /* Route to get one article */
-router.route('/article').post(articleController.getOneArticle);
+router.route('/article/:name').get(articleController.getOneArticle);
 
 module.exports = router;
