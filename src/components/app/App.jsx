@@ -14,9 +14,8 @@ import Profil from '../Profil/profil';
 // import Articles from '../Articles/articles';
 // import Article from '../Articles/Article/article';
 // import Lexicon from '../Lexicon/lexicon';
-// import About from '../About/about';
-// import OurTeam from '../OurTeam/ourTeam';
-
+import About from '../About/about';
+import OurTeam from '../OurTeam/ourTeam';
 
 function App() {
   return (
@@ -31,12 +30,12 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/Cours" element={<Cours />} />
         <Route path="/profile" element={<Profil />} />
+        <Route path="/team" element={<OurTeam />} />
+        <Route path="/about" element={<About />} />
         {/* <Route path="/learning/challenge/:id" element={<Challenge />} />
          <Route path="/articles" element={<Articles />} />
         <Route path="/article/:id" element={<Article />} />
         <Route path="/lexicon" element={<Lexicon />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/team" element={<OurTeam />} />
          */}
       </Routes>
       <Footer />
