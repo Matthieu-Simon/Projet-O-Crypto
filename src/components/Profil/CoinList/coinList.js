@@ -1,25 +1,49 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { MarketCoin } from '../../../config/api';
+/* eslint-disable arrow-body-style */
+/* eslint-disable react/function-component-definition */
+import { useEffect, useState, useContext } from 'react';
+import coinGecko from '../../../config/coinGecko';
+import { WatchListContext } from '../../../context/watchListContext';
+import Coin from './coin';
 import './coinListStyles.scss';
 
-function coinList() {
+const CoinList = () => {
   const [coins, setCoins] = useState([]);
+  const { watchList, deleteCoin } = useContext(WatchListContext);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
-    const fetchCoins = async () => {
-      const { data } = await axios.get(MarketCoin());
-      setCoins(data);
+    const fetchData = async () => {
+      setIsLoading(true);
+      const response = await coinGecko.get('/coins/markets/', {
+        params: {
+          vs_currency: 'eur',
+          ids: watchList.join(','),
+        },
+      });
+      setCoins(response.data);
+      setIsLoading(false);
     };
-    fetchCoins();
-  }, []);
 
-  console.log(coins);
+    if (watchList.length > 0) {
+      fetchData();
+    }
+    else setCoins([]);
+  }, [watchList]);
 
-  return (
-    <div>
-      <h3>CoinList</h3>
-    </div>
-  );
-}
+  const renderCoins = () => {
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
 
-export default React.memo(coinList);
+    return (
+      <ul className="coinlist list-group ">
+        {coins.map((coin) => {
+          return <Coin key={coin.id} coin={coin} deleteCoin={deleteCoin} />;
+        })}
+      </ul>
+    );
+  };
+
+  return <div>{renderCoins()}</div>;
+};
+
+export default CoinList;

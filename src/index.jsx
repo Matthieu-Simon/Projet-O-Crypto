@@ -4,13 +4,16 @@ import { BrowserRouter } from 'react-router-dom';
 import './styles/index.scss';
 import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
+import { WatchListContextProvider } from './context/watchListContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <WatchListContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </WatchListContextProvider>
   </React.StrictMode>
 );
 

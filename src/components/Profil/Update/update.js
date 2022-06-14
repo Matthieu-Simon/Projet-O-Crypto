@@ -17,6 +17,7 @@ const style = {
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  color: '#424C7C',
 };
 
 export default function Update() {
@@ -39,16 +40,16 @@ export default function Update() {
           <Typography component="h3" id="modal-modal-description" sx={{ mt: 2 }}>
             <p>
               <form>
-                <input type="text" placeholder="Pseudo" />
-                <button type="submit">Valider</button>
+                <input className="input-modifier" type="text" placeholder="Pseudo" />
+                <button className="button-modifier" type="submit">Valider</button>
               </form>
               <form>
-                <input type="email" placeholder="Email" />
-                <button type="submit">Valider</button>
+                <input className="input-modifier" type="email" placeholder="Email" />
+                <button className="button-modifier" type="submit">Valider</button>
               </form>
               <form>
-                <input type="password" placeholder="Mot de passe" />
-                <button type="submit">Valider</button>
+                <input className="input-modifier" type="password" placeholder="Mot de passe" />
+                <button className="button-modifier" type="submit">Valider</button>
               </form>
             </p>
           </Typography>

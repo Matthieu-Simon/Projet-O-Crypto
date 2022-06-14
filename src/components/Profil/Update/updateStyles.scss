@@ -1,11 +1,33 @@
-.update {
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    box-shadow: 0px 0px 10px white;
+.input-modifier {
+    color: #424C7C;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    border: #424C7C 2px solid;
     padding: 10px;
-    width: 300px;
-    transition: all 0.3s ease-out;
-    margin: auto;
-    margin-top: 20px;
+    margin: 10px;
+
+    &::placeholder {
+        color: #424C7C;
+        font-size: 0.8rem;
+    }
+}
+
+.button-modifier {
+    background-color: #424C7C;
+    color: #fff;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    border: #424C7C 2px solid;
+    padding: 10px;
+    margin: 10px;
+
+    &:hover {
+        background-color: #fff;
+        color: #424C7C;
+        font-size: 0.8rem;
+        border-radius: 5px;
+        border: #424C7C 2px solid;
+        padding: 10px;
+        margin: 10px;
+    }
 }
