@@ -3,7 +3,7 @@ const userDatamapper = require('../dataMappers/userDataMapper');
 module.exports = {
     async insertNewUser(request, response) {
         const newUser = request.body;
-        const addUser = await userDatamapper.insertNewUser(newUser);
+        const addUser = await userDatamapper.createUser(newUser);
         return response.json(addUser);
     },
 
@@ -19,10 +19,10 @@ module.exports = {
         return response.json(userDeleting);
     },
 
-    async updateUser(request, response) {
+    async updateUser (request, response) {
         const userModification = request.body;
         const userUpdating = await userDatamapper.modifyUser(userModification);
         return response.json(userUpdating);
-    },
-
+    }
+    
 };
