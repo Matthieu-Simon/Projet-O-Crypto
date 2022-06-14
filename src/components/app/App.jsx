@@ -9,6 +9,7 @@ import CoinPage from '../DashBoard/CoinPage/coinPage';
 import LoginForm from '../LoginForm/loginForm';
 import LearningJourney from '../LearningJourney/learningJourney';
 import FAQ from '../FAQ/FAQ';
+import Cours from '../LearningJourney/Cours/cours';
 /* import Articles from '../Articles/articles';
 import Article from '../Articles/Article/article';
 import Lexicon from '../Lexicon/lexicon';
@@ -29,6 +30,7 @@ function App() {
         <Route path="/log-in" element={<LoginForm />} />
         <Route path="/learning" element={<LearningJourney />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/Cours" element={<Cours />} />
 
         {/* <Route path="/learning/challenge/:id" element={<Challenge />} />
         <Route path="/articles" element={<Articles />} />
