@@ -17,6 +17,7 @@ import OurTeam from '../OurTeam/ourTeam';
 import Profil from '../Profil/profil';
 import Update from '../Profil/Update/update';
 import Challenge from '../LearningJourney/Challenge/challenge';
+import PageNotFound from '../404/PageNotFound';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="/profile" element={<Profil />} />
         <Route path="/profile/update" element={<Update />} />
         <Route path="/profile/update/:id" element={<Update />} />
+        <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </div>
