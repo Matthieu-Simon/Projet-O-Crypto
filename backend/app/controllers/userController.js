@@ -10,10 +10,13 @@ module.exports = {
     async loginUser(request, response) {
         const user = request.body;
         const userLogin = await userDatamapper.loginUser(user);
-        request.session.user = userLogin;
-        console.log(request.session.user)
-        console.log(request.session)
-        return response.json(userLogin);
+
+        if (userLogin.passwordChecking) {
+            request.session.user = userLogin
+            return response.send({user:userLogin,loggedIn: userLogin.loggedIn ,user: request.session.user});
+        } else {
+            return response.send({user:userLogin,loggedIn: userLogin.loggedIn});
+        };
     },
 
     async deleteUser(request, response) {

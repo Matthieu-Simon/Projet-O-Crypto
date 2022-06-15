@@ -1,5 +1,6 @@
 const client = require('../services/database');
 const bcrypt = require('bcrypt');
+const { request } = require('express');
 const saltRounds = 10;
 
 module.exports = {
@@ -42,15 +43,14 @@ module.exports = {
                         SELECT * FROM "user" WHERE email= '${user.email}';
                     `);
                 /*Password checking*/
-                const passwordChecking = await bcrypt.compare(`${user.password}`, `${result.rows[0].password}`)
-                console.log(passwordChecking);
+                const passwordChecking = await bcrypt.compare(`${user.password}`, `${result.rows[0].password}`);
 
                 if (passwordChecking!== true) {
-                    const message = {message:'Mauvaise combinaison mot de passe / adresse email'};
-                    return message;
+                    const message = 'Mauvaise combinaison mot de passe / adresse email';
+                    return {message:message, loggedIn:passwordChecking};
                 }                                
-                const message = {message:'Utilisateur connecté'};        
-                return [result.rows[0], message];
+                const message = 'Utilisateur connecté';
+                return {userData:result.rows[0], message:message, loggedIn:passwordChecking};
             }
         } catch (error) {
             return error;

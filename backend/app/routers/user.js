@@ -7,7 +7,9 @@ const userController = require('../controllers/userController');
 router.route('/sign-in').post(userController.insertNewUser);
 
 /*Route to login a user*/
-router.route('/log-in').post(userController.loginUser);
+router.route('/log-in')
+    .post(userController.loginUser)
+    .get(userController.loginUser);
 
 /*Route to get profile information from a connected user*/
 router.route('/profile').get(userController.loginUser);
