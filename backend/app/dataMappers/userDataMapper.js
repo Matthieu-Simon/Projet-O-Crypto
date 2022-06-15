@@ -48,7 +48,7 @@ module.exports = {
                 if (passwordChecking!== true) {
                     const message = {message:'Mauvaise combinaison mot de passe / adresse email'};
                     return message;
-                }                 
+                }                                
                 const message = {message:'Utilisateur connecté'};        
                 return [result.rows[0], message];
             }

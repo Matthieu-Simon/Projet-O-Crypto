@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+var session = require('express-session');
 const logger = require('../helpers/logger');
 const router = require('../routers/index');
 
@@ -20,6 +21,18 @@ function initServer (port, message) {
 
     /*Enable handling CORS*/
     app.use(cors());
+
+    /*Enable cookies*/
+    app.use(session({
+        key:"userId",
+        secret: 'ocrypto',
+        resave: false,
+        saveUninitialized: false,
+        cookie: { 
+            secure: true,
+            expires: 1800000,
+        }
+      }));    
 
     app.use(router);
     

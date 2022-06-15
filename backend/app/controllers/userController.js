@@ -10,6 +10,9 @@ module.exports = {
     async loginUser(request, response) {
         const user = request.body;
         const userLogin = await userDatamapper.loginUser(user);
+        request.session.user = userLogin;
+        console.log(request.session.user)
+        console.log(request.session)
         return response.json(userLogin);
     },
 
