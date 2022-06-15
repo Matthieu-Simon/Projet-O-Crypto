@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/O-clock-Blob/projet-28-Ocrypto#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "eslint": "^8.17.0",
