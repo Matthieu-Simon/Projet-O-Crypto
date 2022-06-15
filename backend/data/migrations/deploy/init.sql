@@ -11,7 +11,7 @@ CREATE TABLE "user" (
     level text NOT NULL DEFAULT 'novice',
     reward int NOT NULL DEFAULT 0,
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
-    "delete_at" TIMESTAMPTZ DEFAULT now()
+    "delete_at" TIMESTAMPTZ 
 );
 
 
@@ -21,7 +21,7 @@ CREATE TABLE article (
     author text NOT NULL DEFAULT 'unknown',
     abstract text NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    delete_at TIMESTAMPTZ DEFAULT now()
+    delete_at TIMESTAMPTZ 
 );
 
 CREATE TABLE challenge (
@@ -31,14 +31,14 @@ CREATE TABLE challenge (
     article_id integer NOT NULL,
     abstract text NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    delete_at TIMESTAMPTZ DEFAULT now()
+    delete_at TIMESTAMPTZ 
 );
 
 CREATE TABLE crypto_currencies (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name text NOT NULL UNIQUE,
     issued_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    delete_at TIMESTAMPTZ DEFAULT now()
+    delete_at TIMESTAMPTZ 
 );
 
 CREATE TABLE lexicon (
@@ -71,7 +71,7 @@ CREATE TABLE favoris (
     user_id int NOT NULL,
     crypto_currencies_id int NOT NULL,
     created_at timestamptz NOT NULL DEFAULT now(),
-    delete_at timestamptz NOT NULL DEFAULT now()    
+    delete_at timestamptz     
 );
 
 ALTER TABLE answer
