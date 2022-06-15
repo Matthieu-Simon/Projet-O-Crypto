@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const logger = require('../helpers/logger');
 const router = require('../routers/index');
 
@@ -14,7 +15,11 @@ function initServer (port, message) {
     /*Enable custom logger for developper team*/
     app.use(logger);
 
+    /*Enable handling JSON files*/
     app.use(express.json());
+
+    /*Enable handling CORS*/
+    app.use(cors());
 
     app.use(router);
     
