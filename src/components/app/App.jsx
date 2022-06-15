@@ -16,6 +16,13 @@ import Profil from '../Profil/profil';
 // import Lexicon from '../Lexicon/lexicon';
 import About from '../About/about';
 import OurTeam from '../OurTeam/ourTeam';
+<<<<<<< HEAD
+import Profil from '../Profil/profil';
+import Update from '../Profil/Update/update';
+import Challenge from '../LearningJourney/Challenge/challenge';
+import PageNotFound from '../404/PageNotFound';
+=======
+>>>>>>> Front
 
 function App() {
   return (
@@ -36,7 +43,17 @@ function App() {
          <Route path="/articles" element={<Articles />} />
         <Route path="/article/:id" element={<Article />} />
         <Route path="/lexicon" element={<Lexicon />} />
+<<<<<<< HEAD
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/team" element={<OurTeam />} />
+        <Route path="/profile" element={<Profil />} />
+        <Route path="/profile/update" element={<Update />} />
+        <Route path="/profile/update/:id" element={<Update />} />
+        <Route path="/*" element={<PageNotFound />} />
+=======
          */}
+>>>>>>> Front
       </Routes>
       <Footer />
     </div>
