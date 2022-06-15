@@ -7,8 +7,8 @@ module.exports = {
     },
 
     async getOneArticle(request, response) {
-        const oneArticle = request.body;
-        const getOneArticle = await articleDatamapper.getOneArticle(oneArticle);
+        const article = request.params.name;
+        const getOneArticle = await articleDatamapper.getOneArticle(article);
         return response.json(getOneArticle);
     },
 

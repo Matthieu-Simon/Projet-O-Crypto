@@ -11,6 +11,7 @@ module.exports = {
         // Get all the challenges
         const dataAllChallenges = await client.query('SELECT * FROM challenge;');
         console.log('data recovery of all challenges');
+        console.log(dataAllChallenges);
         return dataAllChallenges;
     },
 

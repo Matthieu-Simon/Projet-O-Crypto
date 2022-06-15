@@ -14,6 +14,9 @@ INSERT INTO lexicon(name, abstract)VALUES
 ('wallet','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s');
 
 INSERT INTO "level"(name)VALUES
-('intermediate');
+('intermediate'),
+('noob');
 
+INSERT INTO challenge(name, level_id, reward, article_id, abstract) VALUES
+('Hello les Noobs', 1, 300, 1, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. ');
 COMMIT;
