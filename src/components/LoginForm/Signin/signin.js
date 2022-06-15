@@ -8,15 +8,12 @@ function Signin() {
 
   const register = () => {
     axios.post('https://ocrypto-backend.herokuapp.com/sign-in', {
-      username: usernameReg,
+      pseudo: usernameReg,
       email: usermailReg,
       password: passwordReg
     })
       .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
+        console.log(response);
       });
   };
 

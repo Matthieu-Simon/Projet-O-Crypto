@@ -1,0 +1,27 @@
+.App-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    padding: 0;
+    margin: auto;
+}
+.App-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: auto;
+}
+
+.App-article-title {
+    margin: 40px 0;
+    font-size: 3rem;
+    color: #424C7C;
+}
+

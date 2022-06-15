@@ -11,8 +11,8 @@ import LearningJourney from '../LearningJourney/learningJourney';
 import FAQ from '../FAQ/FAQ';
 import Cours from '../LearningJourney/Cours/cours';
 import Profil from '../Profil/profil';
-// import Articles from '../Articles/articles';
-// import Article from '../Articles/Article/article';
+import Articles from '../Articles/articles';
+import Article from '../Articles/Article/article';
 // import Lexicon from '../Lexicon/lexicon';
 import About from '../About/about';
 import OurTeam from '../OurTeam/ourTeam';
@@ -25,11 +25,13 @@ import PageNotFound from '../404/PageNotFound';
 >>>>>>> Front
 
 function App() {
+  const isLogged = localStorage.getItem('isLogged');
   return (
     <div className="App">
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        {isLogged && <Route path="/profile" element={<Profil />} />}
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/coin/:id" element={<CoinPage />} />
         <Route path="/log-in" element={<LoginForm />} />
@@ -39,9 +41,9 @@ function App() {
         <Route path="/profile" element={<Profil />} />
         <Route path="/team" element={<OurTeam />} />
         <Route path="/about" element={<About />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/articles/:name" element={<Article />} />
         {/* <Route path="/learning/challenge/:id" element={<Challenge />} />
-         <Route path="/articles" element={<Articles />} />
-        <Route path="/article/:id" element={<Article />} />
         <Route path="/lexicon" element={<Lexicon />} />
 <<<<<<< HEAD
         <Route path="/articles" element={<Articles />} />
