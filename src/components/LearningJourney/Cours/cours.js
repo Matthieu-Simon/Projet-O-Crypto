@@ -9,10 +9,11 @@ function Cours() {
           <button className="btn-menu" type="submit">Quitter le cours</button>
           <button className="btn-menu" type="submit">Menu</button>
         </div>
-        <h3>Expert trader - niveau 3 (2022)</h3>
         <div>
-          <div className="progress-cours" />
-          <div>75 %</div>
+          <h3>Expert trader - niveau 3 (2022)</h3>
+        </div>
+        <div>
+          <div>Progress Bar 75%</div>
         </div>
       </header>
       <div className="cours">

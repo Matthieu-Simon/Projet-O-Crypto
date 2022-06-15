@@ -1,4 +1,5 @@
 @import '/src/styles/vars';
+
 .main-cours {
   height: 75vh;
   display: flex;
@@ -16,6 +17,7 @@
 .btn-menu {
   margin-right: 10px;
 }
+
 .cours {
   border: 1px solid $grey;
   border-radius: 15px;

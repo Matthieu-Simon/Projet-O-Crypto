@@ -8,8 +8,9 @@ import DashBoard from '../DashBoard/dashBoard';
 import CoinPage from '../DashBoard/CoinPage/coinPage';
 import LoginForm from '../LoginForm/loginForm';
 import LearningJourney from '../LearningJourney/learningJourney';
-import FAQ from '../FAQ/FAQ';
+import Challenge from '../LearningJourney/Challenge/challenge';
 import Cours from '../LearningJourney/Cours/cours';
+import FAQ from '../FAQ/FAQ';
 import Profil from '../Profil/profil';
 // import Articles from '../Articles/articles';
 // import Article from '../Articles/Article/article';
@@ -32,11 +33,11 @@ function App() {
         <Route path="/profile" element={<Profil />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<OurTeam />} />
+        <Route path="challenge" element={<Challenge />} />
         {/* <Route path="/learning/challenge/:id" element={<Challenge />} />
          <Route path="/articles" element={<Articles />} />
         <Route path="/article/:id" element={<Article />} />
-        <Route path="/lexicon" element={<Lexicon />} />
-         */}
+  <Route path="/lexicon" element={<Lexicon />} /> */}
       </Routes>
       <Footer />
     </div>
