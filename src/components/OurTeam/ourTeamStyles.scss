@@ -1,45 +1,15 @@
-// * {
-// 	margin: 0;
-// 	padding: 0;
-// 	box-sizing: border-box;
-// }
+// HEADER
+h1{
+    color: #424C7C;
+	font-size: 28px;
+	font-weight: 700;
+    display: flex;
+	justify-content: center;
+	align-content: center;
+	padding: 15px;
+}
 
-// body {
-//   font-family: 'Lexend Deca', sans-serif;
-//   font-family: 'Open Sans', sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   background-color: white;
-// }
 
-// code {
-//   font-family: 'Lexend Deca', sans-serif;
-// }
-
-// h3{
-//     font-weight: bold;
-// }
-
-// .mec1{
-//     padding: 30px;
-// }
-
-// .mec2{
-//     padding: 30px;
-// }
-
-// .container1 {
-//     color: #424C7C;
-//     display:grid;
-    
-// }
-
-// .fabiano{
-//     padding: 30px;
-// }
-// .florent{
-//     padding: 30px;
-// }
 // CARD TEAM
 .team-preview {
     width: 25%;
@@ -59,10 +29,17 @@
     justify-content: center;
 }
 
+.team-preview-title-text {
+    font-size: 2rem;
+}
+
 
 //RESPONSIVE 
 @media all and (max-width: 991px) {
     
+    h1{
+        font-size: 3rem;
+    }
     .team-preview {
         width: 100%;
     }

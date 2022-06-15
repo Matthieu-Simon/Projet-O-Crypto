@@ -53,3 +53,22 @@
     text-align: justify;
     color: #424C7C;
 }
+
+
+//RESPONSIVE 
+@media all and (max-width: 991px) {
+    
+    h1{
+        font-size: 3rem;
+    }
+    .team1 {
+        width: 200px;
+    }
+    .team2 {
+        width: 200px;
+    }
+    .text1 {
+        font-size: 0.9rem;
+    }
+
+}
