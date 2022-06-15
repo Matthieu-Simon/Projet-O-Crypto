@@ -1,21 +1,12 @@
 import React from 'react';
+import Menu from '../Menu/menu';
+import ChangeBar from '../ChangeBar/changeBar';
 import './coursStyles.scss';
 
 function Cours() {
   return (
     <main className="main-cours">
-      <header className="head-menu">
-        <div>
-          <button className="btn-menu" type="submit">Quitter le cours</button>
-          <button className="btn-menu" type="submit">Menu</button>
-        </div>
-        <div>
-          <h3>Expert trader - niveau 3 (2022)</h3>
-        </div>
-        <div>
-          <div>Progress Bar 75%</div>
-        </div>
-      </header>
+      <Menu />
       <div className="cours">
         <div className="title-cours">
           <h5>Comment investir au bon moment ?</h5>
@@ -39,13 +30,7 @@ function Cours() {
           </p>
         </div>
       </div>
-      <footer className="footer-container">
-        <div className="btn-footer">
-          <button className="btn-cours" type="submit">Retour</button>
-          <p className="numberPage">13/17</p>
-          <button className="btn-cours" type="submit">Suivant</button>
-        </div>
-      </footer>
+      <ChangeBar />
     </main>
   );
 }

@@ -6,18 +6,6 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.head-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: rgb(201, 201, 201) 1px solid;
-  width: 90%;
-  margin: 0 auto;
-}
-.btn-menu {
-  margin-right: 10px;
-}
-
 .cours {
   border: 1px solid $grey;
   border-radius: 15px;
@@ -50,25 +38,4 @@
 }
 .input-answer {
   margin-right: 20px;
-}
-.footer-container {
-  //margin: 0 auto;
-  width: 100%;
-  padding: 20px;
-  background-color: rgb(201, 201, 201);
-}
-.btn-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.btn-cours {
-  background-color: $blueLogo;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 20px;
-}
-.numberPage {
-  padding: 0 40px;
 }

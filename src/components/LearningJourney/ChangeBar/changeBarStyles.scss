@@ -1,0 +1,23 @@
+@import './src/styles/vars';
+
+.footer-container {
+  //margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(201, 201, 201);
+}
+.btn-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-cours {
+  background-color: $blueLogo;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+.numberPage {
+  padding: 0 40px;
+}
