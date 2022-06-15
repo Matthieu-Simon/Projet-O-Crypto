@@ -5,12 +5,17 @@
   margin: 0 auto;
   height: 100vh;
 }
+.card-main {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
 .title-learn {
   font-size: 2em;
   font-weight: bold;
   text-align: center; 
   color: $blueLogo;
-  padding: 30px;
+  padding: 50px;
 }
 .main-parcours {
   position: relative;
@@ -35,7 +40,13 @@
   align-items: center;
 }
 .btn-profil-card {
-  display: flex;
+  border: none;
+}
+.btn-profil-card:hover {
+  box-shadow: inset 250px 0 0 0 $blueLogo;
+  border-radius: 5px;
+  color: white;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 // Partie Card
