@@ -44,22 +44,19 @@ CREATE TABLE crypto_currencies (
 CREATE TABLE lexicon (
     name text NOT NULL UNIQUE,
     abstract text NOT NULL,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    delete_at TIMESTAMPTZ 
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
 CREATE TABLE "level" (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name text NOT NULL UNIQUE,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    delete_at TIMESTAMPTZ 
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
 CREATE TABLE question (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     answer_id integer NOT NULL,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    delete_at TIMESTAMPTZ 
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
 CREATE TABLE answer (
