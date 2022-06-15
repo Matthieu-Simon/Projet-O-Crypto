@@ -4,10 +4,8 @@ import './learningJourneyStyles.scss';
 function LearningJourney() {
   return (
     <main className="learning-main">
-      <div>
-        <h2 className="title-learn">Parcours d'apprentissage</h2>
-      </div>
-      <div className="card-main">
+      <h2 className="title-learn">Parcours d'apprentissage</h2>
+      <div className="main-parcours">
         <div className="card">
           <div>
             <div className="head-card">
@@ -62,8 +60,8 @@ function LearningJourney() {
           <h3 className="title-footer">Parcourir les cours</h3>
         </div>
         <div className="link-container">
-          <a className="lien" href="#">Blockchain</a>
-          <a className="lien" href="#">Cryptos</a>
+          <a className="lien" href="/Cours/">Cours</a>
+          <a className="lien" href="/Challenge">Challenge</a>
           <a className="lien" href="#">Trading</a>
           <a className="lien" href="#">NFT</a>
           <a className="lien" href="#">Tout afficher</a>
