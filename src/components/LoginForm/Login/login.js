@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { CloseOutlined } from '@material-ui/icons';
 
 function Login() {
   const navigate = useNavigate();
@@ -17,21 +18,30 @@ function Login() {
       password: password
     })
       .then((response) => {
-        if (response.data.message) {
-          setLoginStatus(response.data.message);
+        console.log(response);
+        setLoginStatus(response.data.user.message);
+        if (response.data.user.message === 'Utilisateur connecté') {
+          setLoginStatus(response.data.user.message);
+          console.log(response.data.user.userData);
         }
         else {
-          setLoginStatus(response.data[0].pseudo);
+          setLoginStatus(response.data.user.message);
         }
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
+  //   GET LOGIN AN USER
   useEffect(() => {
     axios.get('https://ocrypto-backend.herokuapp.com/log-in')
       .then((response) => {
-        if (response.data.loggedIn === true) {
-          setLoginStatus(response.data[0].pseudo);
-        }
+        console.log(response);
+        setLoginStatus(response.data.user.message);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }, []);
 
