@@ -8,21 +8,17 @@ import DashBoard from '../DashBoard/dashBoard';
 import CoinPage from '../DashBoard/CoinPage/coinPage';
 import LoginForm from '../LoginForm/loginForm';
 import LearningJourney from '../LearningJourney/learningJourney';
-import FAQ from '../FAQ/FAQ';
+import Challenge from '../LearningJourney/Challenge/challenge';
 import Cours from '../LearningJourney/Cours/cours';
+import FAQ from '../FAQ/FAQ';
 import Profil from '../Profil/profil';
 import Articles from '../Articles/articles';
 import Article from '../Articles/Article/article';
 // import Lexicon from '../Lexicon/lexicon';
 import About from '../About/about';
 import OurTeam from '../OurTeam/ourTeam';
-<<<<<<< HEAD
-import Profil from '../Profil/profil';
 import Update from '../Profil/Update/update';
-import Challenge from '../LearningJourney/Challenge/challenge';
 import PageNotFound from '../404/PageNotFound';
-=======
->>>>>>> Front
 
 function App() {
   const isLogged = localStorage.getItem('isLogged');
@@ -39,13 +35,17 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/Cours" element={<Cours />} />
         <Route path="/profile" element={<Profil />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/team" element={<OurTeam />} />
+        <Route path="challenge" element={<Challenge />} />
+        {/* <Route path="/learning/challenge/:id" element={<Challenge />} />
+        <Route path="/lexicon" element={<Lexicon />} /> */}
         <Route path="/team" element={<OurTeam />} />
         <Route path="/about" element={<About />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:name" element={<Article />} />
         {/* <Route path="/learning/challenge/:id" element={<Challenge />} />
         <Route path="/lexicon" element={<Lexicon />} />
-<<<<<<< HEAD
         <Route path="/articles" element={<Articles />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<OurTeam />} />
@@ -53,9 +53,9 @@ function App() {
         <Route path="/profile/update" element={<Update />} />
         <Route path="/profile/update/:id" element={<Update />} />
         <Route path="/*" element={<PageNotFound />} />
-=======
+
          */}
->>>>>>> Front
+
       </Routes>
       <Footer />
     </div>

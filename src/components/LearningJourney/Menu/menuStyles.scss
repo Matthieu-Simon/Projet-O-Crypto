@@ -1,0 +1,13 @@
+@import './src/styles/vars';
+
+.head-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: rgb(201, 201, 201) 1px solid;
+  width: 90%;
+  margin: 0 auto;
+}
+.btn-menu {
+  margin-right: 10px;
+}

@@ -3,21 +3,18 @@ import './learningJourneyStyles.scss';
 
 function LearningJourney() {
   return (
-    <main className="App-main">
+    <main className="learning-main">
       <div>
-        <div>
-          <h2>Parcours d'apprentissage</h2>
-        </div>
-        <span className="top-separator" />
+        <h2 className="title-learn">Parcours d'apprentissage</h2>
       </div>
       <div className="card-main">
         <div className="card">
           <div>
-            <div>
+            <div className="head-card">
               <h3>Expert trader - niveau 3</h3>
               <p>Progrès</p>
             </div>
-            <main>
+            <main className="main-card">
               <h4 className="card-name">Expert trader - niveau 3 2022</h4>
               <p className="card-description">300 pts</p>
             </main>
@@ -29,11 +26,11 @@ function LearningJourney() {
         </div>
         <div className="card">
           <div>
-            <div>
+            <div className="head-card">
               <h3>Expert trader - niveau 3</h3>
               <p>Progrès</p>
             </div>
-            <main>
+            <main className="main-card">
               <h4 className="card-name">Expert trader - niveau 3 2022</h4>
               <p className="card-description">300 pts</p>
             </main>
@@ -45,11 +42,11 @@ function LearningJourney() {
         </div>
         <div className="card">
           <div>
-            <div>
+            <div className="head-card">
               <h3>Expert trader - niveau 3</h3>
               <p>Progrès</p>
             </div>
-            <main>
+            <main className="main-card">
               <h4 className="card-name">Expert trader - niveau 3 2022</h4>
               <p className="card-description">300 pts</p>
             </main>
@@ -60,7 +57,6 @@ function LearningJourney() {
           </div>
         </div>
       </div>
-      <span className="mid-separator" />
       <div className="cours-container">
         <div className="title-cours">
           <h3 className="title-footer">Parcourir les cours</h3>
