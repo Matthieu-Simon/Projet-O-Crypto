@@ -34,7 +34,7 @@ function main() {
           </p>
         </div>
         <div className="App-articles">
-          <div onClick={() => navigate(`/articles/${articles.id}`)} className="App-article-preview">
+          <div onClick={() => navigate(`/articles/${articles.name}`)} className="App-article-preview">
             <div className="App-article-preview-title">
               <h2 className="App-article-preview-title-text">
                 Bitcoin

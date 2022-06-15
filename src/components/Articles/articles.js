@@ -39,8 +39,7 @@ function Articles() {
       </div>
       <div className="App-articles">
         {filteredArtciles.map((article) => (
-
-          <div onClick={() => navigate(`/articles/${article.id}`)} className="App-article-preview">
+          <div key={articles.id} onClick={() => navigate(`/articles/${article.name}`)} className="App-article-preview">
             <div className="App-article-preview-title">
               <h2 className="App-article-preview-title-text">
                 {article.name}

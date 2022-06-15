@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -22,10 +22,18 @@ function Login() {
         }
         else {
           setLoginStatus(response.data[0].pseudo);
-          navigate('/profile');
         }
       });
   };
+
+  useEffect(() => {
+    axios.get('https://ocrypto-backend.herokuapp.com/log-in')
+      .then((response) => {
+        if (response.data.loggedIn === true) {
+          setLoginStatus(response.data[0].pseudo);
+        }
+      });
+  }, []);
 
   return (
 

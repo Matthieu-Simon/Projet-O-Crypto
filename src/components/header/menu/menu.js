@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 import './menuStyles.scss';
-import SearchBar from '../searchBar/searchBar';
+// import SearchBar from '../searchBar/searchBar';
 
 function menu() {
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ function menu() {
           <button onClick={() => navigate('/log-in')} type="button" className="App-button-login">Connexion</button>
         </div>
       )}
-      <SearchBar />
+      {/* <SearchBar /> */}
       <label htmlFor="toggle" className="label-hamburger">☰</label>
       <input type="checkbox" id="toggle" />
     </menu>
