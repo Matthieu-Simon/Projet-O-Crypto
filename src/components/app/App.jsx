@@ -17,7 +17,6 @@ import Article from '../Articles/Article/article';
 // import Lexicon from '../Lexicon/lexicon';
 import About from '../About/about';
 import OurTeam from '../OurTeam/ourTeam';
-import Update from '../Profil/Update/update';
 import PageNotFound from '../404/PageNotFound';
 
 function App() {
@@ -38,23 +37,12 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<OurTeam />} />
         <Route path="challenge" element={<Challenge />} />
-        {/* <Route path="/learning/challenge/:id" element={<Challenge />} />
-        <Route path="/lexicon" element={<Lexicon />} /> */}
         <Route path="/team" element={<OurTeam />} />
         <Route path="/about" element={<About />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:name" element={<Article />} />
-        {/* <Route path="/learning/challenge/:id" element={<Challenge />} />
-        <Route path="/lexicon" element={<Lexicon />} />
-        <Route path="/articles" element={<Articles />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/team" element={<OurTeam />} />
-        <Route path="/profile" element={<Profil />} />
-        <Route path="/profile/update" element={<Update />} />
-        <Route path="/profile/update/:id" element={<Update />} />
-        <Route path="/*" element={<PageNotFound />} />
-
-         */}
+        <Route path="*" element={<PageNotFound />} />
+        {/* <Route path="/lexicon" element={<Lexicon />} /> */}
 
       </Routes>
       <Footer />
