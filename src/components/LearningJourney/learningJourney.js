@@ -4,10 +4,8 @@ import './learningJourneyStyles.scss';
 function LearningJourney() {
   return (
     <main className="learning-main">
-      <div>
-        <h2 className="title-learn">Parcours d'apprentissage</h2>
-      </div>
-      <div className="card-main">
+      <h2 className="title-learn">Parcours d'apprentissage</h2>
+      <div className="main-parcours">
         <div className="card">
           <div>
             <div className="head-card">

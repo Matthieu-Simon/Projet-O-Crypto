@@ -6,7 +6,7 @@ function Menu() {
   return (
     <header className="head-menu">
       <div>
-        <button className="btn-menu" type="submit">Quitter le cours</button>
+        <a className="btn-menu" href="/learning">Quitter le cours</a>
         <button className="btn-menu" type="submit">Menu</button>
       </div>
       <div>

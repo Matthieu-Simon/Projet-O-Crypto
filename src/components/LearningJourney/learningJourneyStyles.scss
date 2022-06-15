@@ -2,24 +2,24 @@
 
 .learning-main {
   width: 100%;
-  margin: auto;
-  height: 74vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
 }
 .title-learn {
   font-size: 2em;
   font-weight: bold;
+  text-align: center; 
   color: $blueLogo;
   padding: 30px;
 }
-.card-main {
+.main-parcours {
+  position: relative;
+  top: 20%;
   display: flex;
+  justify-content: center;
 }
+// Partie Card
 .card {
-  display: flex;
   border: 2px solid rgb(214, 214, 214);
   margin-right: 10px;
   padding: 10px;
@@ -46,12 +46,13 @@
   display: flex;
   justify-content: space-between;
 }
+// Partie Footer
 .cours-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $grey;
+  position: fixed;
+  bottom: 30px;
   width: 100%;
+  text-align: center;
+  background-color: $grey;
 }
 .title-footer {
   color: black;
