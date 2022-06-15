@@ -17,14 +17,14 @@ CREATE TABLE "user" (
 
 CREATE TABLE article (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    name text NOT NULL,
+    name text NOT NULL UNIQUE,
     author text NOT NULL DEFAULT 'unknown',
     abstract text NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     delete_at TIMESTAMPTZ DEFAULT now()
 );
 
-CREATE TABLE challenges (
+CREATE TABLE challenge (
     name text NOT NULL UNIQUE,
     level_id integer NOT NULL,
     reward int NOT NULL DEFAULT 0,
@@ -49,7 +49,7 @@ CREATE TABLE lexicon (
 
 CREATE TABLE "level" (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    name text NOT NULL,
+    name text NOT NULL UNIQUE,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
@@ -80,10 +80,10 @@ ALTER TABLE answer
 ALTER TABLE favoris
 ADD FOREIGN KEY (crypto_currencies_id) REFERENCES crypto_currencies(id);
 
-ALTER TABLE challenges
+ALTER TABLE challenge
 ADD FOREIGN KEY (level_id) REFERENCES level(id);
 
-ALTER TABLE challenges
+ALTER TABLE challenge
 ADD FOREIGN KEY (article_id) REFERENCES article(id);
 
 ALTER TABLE question
