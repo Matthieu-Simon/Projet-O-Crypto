@@ -1,15 +1,10 @@
 
 
-body {
-    font-family: 'Lexend Deca', sans-serif;
-    // background-image: url('../../assets/team1.png');
-}
-
-h3{
+.about-title{
     font-weight: bold;
 }
 
-h1{
+.about{
     text-align: center;
 	font-size: 28px;
 	font-weight: 700;
@@ -57,4 +52,23 @@ h1{
     padding-right: 10%;
     text-align: justify;
     color: #424C7C;
+}
+
+
+//RESPONSIVE 
+@media all and (max-width: 991px) {
+    
+    h1{
+        font-size: 3rem;
+    }
+    .team1 {
+        width: 200px;
+    }
+    .team2 {
+        width: 200px;
+    }
+    .text1 {
+        font-size: 0.9rem;
+    }
+
 }
