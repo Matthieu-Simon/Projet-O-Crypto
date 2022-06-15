@@ -30,11 +30,6 @@ label, #toggle
 display: none;
 }
 
-@media all and (max-width: 991px)
-{
-
-
-}
 
 // DESKTOP MENU
 .App-menu {
@@ -85,7 +80,6 @@ display: none;
     cursor: pointer;
 }
 
-
 .App-button-login:hover {
     color: #424C7C;
     background-color: white;
@@ -99,6 +93,23 @@ display: none;
     border-radius: 8px;
     border: 1px solid #424C7C;
     transition: ease-out .1s;
+}
+
+.App-button-profile {
+    background-color: #424C7C;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.App-button-profile:hover {
+    color: #424C7C;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #424C7C;
+    transition: ease-in .1s;
 }
 
 

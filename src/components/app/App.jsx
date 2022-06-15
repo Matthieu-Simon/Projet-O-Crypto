@@ -18,11 +18,13 @@ import About from '../About/about';
 import OurTeam from '../OurTeam/ourTeam';
 
 function App() {
+  const isLogged = localStorage.getItem('isLogged');
   return (
     <div className="App">
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        {isLogged && <Route path="/profile" element={<Profil />} />}
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/coin/:id" element={<CoinPage />} />
         <Route path="/log-in" element={<LoginForm />} />
