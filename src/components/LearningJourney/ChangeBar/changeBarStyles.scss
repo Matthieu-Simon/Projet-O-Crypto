@@ -2,6 +2,8 @@
 
 .footer-container {
   //margin: 0 auto;
+  position: fixed;
+  bottom: 30px;
   width: 100%;
   padding: 20px;
   background-color: rgb(201, 201, 201);
@@ -21,3 +23,15 @@
 .numberPage {
   padding: 0 40px;
 }
+/*
+.App-footer {
+    background-color: #424C7C;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-top: 1px solid #424C7C;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+*/
