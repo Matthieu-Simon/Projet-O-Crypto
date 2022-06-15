@@ -30,8 +30,12 @@ function LearningJourney() {
               <p className="card-description">300 pts</p>
             </main>
             <footer className="card-footer">
-              <span className="card-progress">ProgressBar</span>
-              <span className="card-time">30 minutes</span>
+              <div className="card-progress">
+                <div className="first-card-progress" />
+              </div>
+              <div>
+                <div className="card-time">100%</div>
+              </div>
             </footer>
           </div>
         </div>
@@ -46,8 +50,10 @@ function LearningJourney() {
               <p className="card-description">300 pts</p>
             </main>
             <footer className="card-footer">
-              <span className="card-progress">ProgressBar</span>
-              <span className="card-time">30 minutes</span>
+              <div className="card-progress">
+                <div className="second-card-progress" />
+              </div>
+              <span className="card-time">30%</span>
             </footer>
           </div>
         </div>
@@ -62,8 +68,10 @@ function LearningJourney() {
               <p className="card-description">300 pts</p>
             </main>
             <footer className="card-footer">
-              <span className="card-progress">ProgressBar</span>
-              <span className="card-time">30 minutes</span>
+              <div className="card-progress">
+                <div className="third-card-progress" />
+              </div>
+              <span className="card-time">80%</span>
             </footer>
           </div>
         </div>
