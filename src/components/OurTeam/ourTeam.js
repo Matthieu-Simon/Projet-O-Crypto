@@ -47,7 +47,7 @@ function ourTeam() {
         <div className="team-preview">
           <div className="team-preview-title">
             <h2 className="team-preview-title-text">
-              Matthieu
+              Hugo
             </h2>
           </div>
           <div className="team-preview-image">
@@ -63,7 +63,7 @@ function ourTeam() {
         <div className="team-preview">
           <div className="team-preview-title">
             <h2 className="team-preview-title-text">
-              Quentin
+              Matthieu
             </h2>
           </div>
           <div className="team-preview-image">
@@ -79,7 +79,7 @@ function ourTeam() {
         <div className="team-preview">
           <div className="team-preview-title">
             <h2 className="team-preview-title-text">
-              Hugo
+              Quentin
             </h2>
           </div>
           <div className="team-preview-image">

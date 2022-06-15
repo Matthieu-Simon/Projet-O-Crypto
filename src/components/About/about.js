@@ -6,12 +6,12 @@ import team2 from '../../assets/team2.png';
 function About() {
   return (
     <div className="title">
-      <h1>A propos de nous</h1>
+      <h1 className="about">A propos de nous</h1>
 
       <div className="container1">
 
         <div className="text1">
-          <h3>Notre origine</h3>
+          <h3 className="about-title">Notre origine</h3>
           <p>Cras facilisis urna ornare ex volutpat, et
             convallis erat elementum. Ut aliquam, ipsum vitae
             gravida suscipit, metus dui bibendum est, eget rhoncus nibh
@@ -30,7 +30,7 @@ function About() {
       <div className="container2">
 
         <div className="text2">
-          <h3>Notre mission</h3>
+          <h3 className="about-title">Notre mission</h3>
           <p>Cras facilisis urna ornare ex volutpat, et
             convallis erat elementum. Ut aliquam, ipsum vitae
             gravida suscipit, metus dui bibendum est, eget rhoncus nibh

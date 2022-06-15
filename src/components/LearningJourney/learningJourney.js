@@ -81,8 +81,8 @@ function LearningJourney() {
           <h3 className="title-footer">Parcourir les cours</h3>
         </div>
         <div className="link-container">
-          <a className="lien" href="#">Blockchain</a>
-          <a className="lien" href="#">Cryptos</a>
+          <a className="lien" href="/Cours/">Cours</a>
+          <a className="lien" href="/Challenge">Challenge</a>
           <a className="lien" href="#">Trading</a>
           <a className="lien" href="#">NFT</a>
           <a className="lien" href="#">Tout afficher</a>

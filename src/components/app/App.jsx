@@ -8,21 +8,26 @@ import DashBoard from '../DashBoard/dashBoard';
 import CoinPage from '../DashBoard/CoinPage/coinPage';
 import LoginForm from '../LoginForm/loginForm';
 import LearningJourney from '../LearningJourney/learningJourney';
-import FAQ from '../FAQ/FAQ';
+import Challenge from '../LearningJourney/Challenge/challenge';
 import Cours from '../LearningJourney/Cours/cours';
+import FAQ from '../FAQ/FAQ';
 import Profil from '../Profil/profil';
-// import Articles from '../Articles/articles';
-// import Article from '../Articles/Article/article';
+import Articles from '../Articles/articles';
+import Article from '../Articles/Article/article';
 // import Lexicon from '../Lexicon/lexicon';
 import About from '../About/about';
 import OurTeam from '../OurTeam/ourTeam';
+import Update from '../Profil/Update/update';
+import PageNotFound from '../404/PageNotFound';
 
 function App() {
+  const isLogged = localStorage.getItem('isLogged');
   return (
     <div className="App">
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        {isLogged && <Route path="/profile" element={<Profil />} />}
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/coin/:id" element={<CoinPage />} />
         <Route path="/log-in" element={<LoginForm />} />
@@ -32,11 +37,25 @@ function App() {
         <Route path="/profile" element={<Profil />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<OurTeam />} />
+        <Route path="challenge" element={<Challenge />} />
         {/* <Route path="/learning/challenge/:id" element={<Challenge />} />
-         <Route path="/articles" element={<Articles />} />
-        <Route path="/article/:id" element={<Article />} />
+        <Route path="/lexicon" element={<Lexicon />} /> */}
+        <Route path="/team" element={<OurTeam />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/articles/:name" element={<Article />} />
+        {/* <Route path="/learning/challenge/:id" element={<Challenge />} />
         <Route path="/lexicon" element={<Lexicon />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/team" element={<OurTeam />} />
+        <Route path="/profile" element={<Profil />} />
+        <Route path="/profile/update" element={<Update />} />
+        <Route path="/profile/update/:id" element={<Update />} />
+        <Route path="/*" element={<PageNotFound />} />
+
          */}
+
       </Routes>
       <Footer />
     </div>
