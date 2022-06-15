@@ -10,4 +10,17 @@
 }
 .btn-menu {
   margin-right: 10px;
+  border: none;
+}
+.btn-menu:hover {
+  box-shadow: inset 250px 0 0 0 $blueLogo;
+  color: white;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.progressBar {
+  width: 10%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: pink;
+  color: green;
 }

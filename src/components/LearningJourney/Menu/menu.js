@@ -11,8 +11,8 @@ function Menu() {
       <div>
         <h3>Expert trader - niveau 3 (2022)</h3>
       </div>
-      <div>
-        <div>Progress Bar 75%</div>
+      <div className="progressBar">
+        <div className="levelBar" />
       </div>
     </header>
   );
