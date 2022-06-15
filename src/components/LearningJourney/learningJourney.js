@@ -42,11 +42,11 @@ function LearningJourney() {
         <div className="card">
           <div>
             <div className="head-card">
-              <h3>Expert trader - niveau 3</h3>
-              <p>Progrès</p>
+              <h3>Expert trader - niveau 3 2022</h3>
+              <p>250pts avant le niveau 48</p>
             </div>
             <main className="main-card">
-              <h4 className="card-name">Expert trader - niveau 3 2022</h4>
+              <h4 className="card-name">Expert trader - niveau 4 2022</h4>
               <p className="card-description">300 pts</p>
             </main>
             <footer className="card-footer">
@@ -60,12 +60,12 @@ function LearningJourney() {
         <div className="card">
           <div>
             <div className="head-card">
-              <h3>Expert trader - niveau 3</h3>
-              <p>Progrès</p>
+              <h3>Expert trader - niveau 3 2022</h3>
+              <p>700pts gagnés cette semaine</p>
             </div>
             <main className="main-card">
               <h4 className="card-name">Expert trader - niveau 3 2022</h4>
-              <p className="card-description">300 pts</p>
+              <p className="card-description">400 pts</p>
             </main>
             <footer className="card-footer">
               <div className="card-progress">
