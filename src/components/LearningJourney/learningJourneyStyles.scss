@@ -112,21 +112,31 @@
   bottom: 30px;
   width: 100%;
   text-align: center;
-  background-color: $grey;
+  background-color: $greyLight;
+  padding-top: 20px;
 }
 .title-footer {
-  color: black;
+  color: $blueLogo;
+  font-size: 1.5rem;
 }
 .link-container {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  background-color: $grey;
-  padding: 10px 0;
-  color: rgb(0, 140, 255);
+  background-color: $greyLight;
+  padding: 40px 0;
+  color: $blueLogo;
 }
 .lien {
-  border: 1px solid black;
+  border: 1px solid $blueLogo;
   border-radius: 20px;
   padding: 7px;
+  width: 10%;
+  font-size: 1.1rem;
+}
+
+.lien:hover {
+  background-color: $blueLogo;
+  color: white;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
