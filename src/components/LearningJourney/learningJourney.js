@@ -4,22 +4,19 @@ import './learningJourneyStyles.scss';
 function LearningJourney() {
   return (
     <main className="learning-main">
-      <h2 className="title-learn">Parcours d'apprentissage</h2>
-      <div className="main-parcours">
-        <div className="card">
-          <div>
-            <div className="head-card">
-              <h3>Expert trader - niveau 3</h3>
-              <p>Progrès</p>
+      <div>
+        <h2 className="title-learn">Parcours d'apprentissage</h2>
+      </div>
+      <div className="card-main">
+        <div className="profil-learn">
+          <div className="test-learn">
+            <div className="profil-head-card">
+              <span className="img-profil-card">Photo</span>
             </div>
-            <main className="main-card">
-              <h4 className="card-name">Expert trader - niveau 3 2022</h4>
-              <p className="card-description">300 pts</p>
+            <main className="profil-main-card">
+              <h5 className="profil-card-name">Lemaitre Investissor</h5>
+              <button className="btn-profil-card" type="submit">modifier</button>
             </main>
-            <footer className="card-footer">
-              <span className="card-progress">ProgressBar</span>
-              <span className="card-time">30 minutes</span>
-            </footer>
           </div>
         </div>
         <div className="card">
@@ -33,24 +30,48 @@ function LearningJourney() {
               <p className="card-description">300 pts</p>
             </main>
             <footer className="card-footer">
-              <span className="card-progress">ProgressBar</span>
-              <span className="card-time">30 minutes</span>
+              <div className="card-progress">
+                <div className="first-card-progress" />
+              </div>
+              <div>
+                <div className="card-time">100%</div>
+              </div>
             </footer>
           </div>
         </div>
         <div className="card">
           <div>
             <div className="head-card">
-              <h3>Expert trader - niveau 3</h3>
-              <p>Progrès</p>
+              <h3>Expert trader - niveau 3 2022</h3>
+              <p>250pts avant le niveau 48</p>
             </div>
             <main className="main-card">
-              <h4 className="card-name">Expert trader - niveau 3 2022</h4>
+              <h4 className="card-name">Expert trader - niveau 4 2022</h4>
               <p className="card-description">300 pts</p>
             </main>
             <footer className="card-footer">
-              <span className="card-progress">ProgressBar</span>
-              <span className="card-time">30 minutes</span>
+              <div className="card-progress">
+                <div className="second-card-progress" />
+              </div>
+              <span className="card-time">30%</span>
+            </footer>
+          </div>
+        </div>
+        <div className="card">
+          <div>
+            <div className="head-card">
+              <h3>Expert trader - niveau 3 2022</h3>
+              <p>700pts gagnés cette semaine</p>
+            </div>
+            <main className="main-card">
+              <h4 className="card-name">Expert trader - niveau 3 2022</h4>
+              <p className="card-description">400 pts</p>
+            </main>
+            <footer className="card-footer">
+              <div className="card-progress">
+                <div className="third-card-progress" />
+              </div>
+              <span className="card-time">80%</span>
             </footer>
           </div>
         </div>
