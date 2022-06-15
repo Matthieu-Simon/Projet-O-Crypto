@@ -11,7 +11,8 @@ function Cours() {
         </div>
         <h3>Expert trader - niveau 3 (2022)</h3>
         <div>
-          <span>ProgressBar 75 %</span>
+          <div className="progress-cours" />
+          <div>75 %</div>
         </div>
       </header>
       <div className="cours">
