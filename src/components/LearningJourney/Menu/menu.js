@@ -11,7 +11,7 @@ function Menu() {
           <button className="btn-menu" type="submit">Menu</button>
         </div>
         <div>
-          <h3>Expert trader - niveau 3 (2022)</h3>
+          <h3 className="title-head-menu">Expert trader - niveau 3 (2022)</h3>
         </div>
         <div className="leftHead-container">
           <p className="titleProgress">Progression du cours</p>

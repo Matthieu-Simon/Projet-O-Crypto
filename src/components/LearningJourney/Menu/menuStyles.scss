@@ -10,19 +10,24 @@
   justify-content: space-around;
   align-items: center;
   padding: 20px;
+  color: $grey;
 }
 .btn-menu {
   margin-right: 10px;
   border: none;
+  color: $grey;
+  background-color: white;
 }
 .btn-menu:hover {
   box-shadow: inset 250px 0 0 0 $blueLogo;
   color: white;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
+.title-head-menu {
+  font-size: 1.1em;
+}
 .titleProgress {
   font-size: small;
-  color: $grey;
 }
 .leftHead-container {
   display: flex;
@@ -40,7 +45,4 @@
   width: 50%;
   height: 10px;
   border-radius: 10px;
-}
-.score {
-  color: $grey;
 }
