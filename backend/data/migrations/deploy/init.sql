@@ -10,6 +10,7 @@ CREATE TABLE "user" (
     password text NOT NULL,    
     level text NOT NULL DEFAULT 'novice',
     reward int NOT NULL DEFAULT 0,
+    image text NOT NULL DEFAULT 'unknown',
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
     "delete_at" TIMESTAMPTZ 
 );
@@ -20,6 +21,7 @@ CREATE TABLE article (
     name text NOT NULL UNIQUE,
     author text NOT NULL DEFAULT 'unknown',
     abstract text NOT NULL,
+    image text NOT NULL DEFAULT 'unknown',
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     delete_at TIMESTAMPTZ 
 );
