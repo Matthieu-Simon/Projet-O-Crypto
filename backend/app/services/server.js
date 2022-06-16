@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
+
 const session = require('express-session');
-const cookieParser = require('cookie-parser');
+const cookieSession = require('cookie-session');
 
 const logger = require('../helpers/logger');
 const router = require('../routers/index');
@@ -41,8 +42,14 @@ function initServer (port, message) {
        }
    }));
    
-   /*Enable cookie parser*/
-   app.use(cookieParser());
+   app.use(cookieSession({
+    name: 'session',
+    keys: ['ocrypto'],
+  
+    // Cookie Options
+    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+  }))
+
 
     app.use(router);
     

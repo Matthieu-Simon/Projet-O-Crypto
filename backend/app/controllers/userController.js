@@ -16,7 +16,7 @@ module.exports = {
 
             console.log(request.session.user)
             // return response.send({userData:userLogin.userData});
-            return response.cookie('email',request.session.user.email, 'password', request.session.user.password).send({user:userLogin.userData})
+            return response.cookie(request.session.views).send({user:userLogin.userData})
         } else {
             console.log(userLogin.userData)
             return response.send({test:'test'});
