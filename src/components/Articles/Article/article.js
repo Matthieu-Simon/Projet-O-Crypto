@@ -9,18 +9,19 @@ function Article() {
   const [articles, setArticles] = useState([]);
 
   const fetchArticles = async () => {
-    const { data } = await axios.get('  https://ocrypto-backend.herokuapp.com/articles');
+    const { data } = await axios.get('https://ocrypto-backend.herokuapp.com/articles');
     setArticles(data);
   };
 
   useEffect(() => {
     fetchArticles();
   }, []);
+
   return (
-    <div className="App-main-content">
+    <div className="App-article-main-content">
       {articles.map((article) => (
         <>
-          <div className="App-article">
+          <div key={article.id} className="App-article">
             <div className="App-article-header">
               <h1 className="App-article-title">
                 {article.name}

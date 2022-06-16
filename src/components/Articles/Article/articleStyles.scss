@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 90%;
     margin: auto;
     height: 100vh;
@@ -11,11 +10,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 100%;
     padding: 0;
-    margin: auto;
 }
 
 .App-article-title {
@@ -24,10 +20,17 @@
     color: #424C7C;
 }
 
-.article-image {
-    width: 50%;
-    height: auto;
+.App-article-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin: auto;
+    align-items: center;
+}
+.article-image {
+    width: 20%;
+    height: auto;
+    margin: 20px 0; 
 }
 
 .article-text {
@@ -35,7 +38,7 @@
     align-items: center;
     font-weight: 300;
     margin: 40px auto;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #424C7C;
     width: 60%;
     text-align: justify;
@@ -60,11 +63,15 @@
     border: #424C7C 1px solid;
     padding: 30px;
     background-color: #EAEAEA;
-   width: 60%;
-   margin: auto;
-   align-items: center;
+    width: 60%;
+    align-items: center;
 }
-
+.App-pub-title {
+    padding-bottom: 10px;
+}
+.App-pub-text{
+    padding-bottom: 10px;
+}
 .App-pub-button {
     background-color: #424C7C;
     color: white;
@@ -75,7 +82,6 @@
     margin: auto;
     font-size: 1.2rem;
 }
-
 .App-pub-button:hover {
     color: #424C7C;
     background-color: white;

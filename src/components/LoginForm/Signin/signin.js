@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function Signin() {
+  const navigate = useNavigate();
   const [usernameReg, setUserNameReg] = useState('');
   const [usermailReg, setUserMailReg] = useState('');
   const [passwordReg, setPasswordReg] = useState('');
 
-  const register = () => {
+  const register = (e) => {
+    e.preventDefault();
     axios.post('https://ocrypto-backend.herokuapp.com/sign-in', {
       pseudo: usernameReg,
       email: usermailReg,
@@ -14,6 +17,7 @@ function Signin() {
     })
       .then((response) => {
         console.log(response);
+        navigate('/profile');
       });
   };
 
@@ -51,7 +55,14 @@ function Signin() {
             }}
           />
         </div>
-        <button className="btn-form" type="submit" onClick={register}>S'enregistrer</button>
+        <button
+          className="btn-form"
+          type="submit"
+          onClick={(e) => {
+            register(e);
+          }}
+        >S'enregistrer
+        </button>
       </form>
     </div>
   );

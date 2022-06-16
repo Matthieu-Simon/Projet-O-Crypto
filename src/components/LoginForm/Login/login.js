@@ -11,6 +11,7 @@ function Login() {
   const [password, setPassword] = useState('');
   const [loginStatus, setLoginStatus] = useState('');
 
+  axios.defaults.withCredentials = true;
   //   POST LOGIN AN USER
   const login = () => {
     axios.post('https://ocrypto-backend.herokuapp.com/log-in', {

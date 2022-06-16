@@ -22,6 +22,17 @@ function Articles() {
   const handleChange = (event) => {
     setSearch(event.target.value);
   };
+  const words = [
+    'alakazam',
+    'abracadabra',
+    'b',
+    'c',
+    'd',
+  ];
+
+  const filteredA = words.filter((word) => word.includes('a'));
+
+  console.log(filteredA);
 
   const filteredArtciles = articles.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()));
 
@@ -39,7 +50,7 @@ function Articles() {
       </div>
       <div className="App-articles">
         {filteredArtciles.map((article) => (
-          <div key={articles.id} onClick={() => navigate(`/articles/${article.name}`)} className="App-article-preview">
+          <div key={article.id} onClick={() => navigate(`/articles/${article.name}`)} className="App-article-preview">
             <div className="App-article-preview-title">
               <h2 className="App-article-preview-title-text">
                 {article.name}

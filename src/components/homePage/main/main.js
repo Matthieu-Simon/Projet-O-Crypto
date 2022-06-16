@@ -18,7 +18,6 @@ function main() {
   useEffect(() => {
     fetchArticles();
   }, []);
-
   return (
     <main className="App-main">
       <div className="App-main-content">
@@ -34,7 +33,7 @@ function main() {
           </p>
         </div>
         <div className="App-articles">
-          <div onClick={() => navigate(`/articles/${articles.name}`)} className="App-article-preview">
+          <div onClick={() => navigate(`/articles/${articles[0].name}`)} className="App-article-preview">
             <div className="App-article-preview-title">
               <h2 className="App-article-preview-title-text">
                 Bitcoin

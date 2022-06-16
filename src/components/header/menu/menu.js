@@ -18,7 +18,10 @@ function menu() {
         <a className="App-link" href="/faq">FAQ</a>
       </nav>
       {isLogged ? (
-        <button onClick={() => navigate('/profile')} type="button" className="App-button-profile">Profil</button>
+        <>
+          <button onClick={() => navigate('/profile')} type="button" className="App-button-profile">Profil</button>
+          <button type="button" className="App-button-logout">Déconnexion</button>
+        </>
       ) : (
         <div className="App-button">
           <button onClick={() => navigate('/log-in')} type="button" className="App-button-signin">S'inscrire</button>
