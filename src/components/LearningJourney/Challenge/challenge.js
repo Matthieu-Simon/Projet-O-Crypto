@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import Menu from '../Menu/menu';
 import ChangeBar from '../ChangeBar/changeBar';
@@ -18,19 +19,23 @@ function Challenge() {
             eius voluptatem sint expedita.
           </p>
           <div className="answer-container">
-            <input className="input-answer" type="radio" />
+            <input className="input-answer" type="radio" id="answer1" name="answer" value="1" />
+            <label htmlFor="answer1" />
+            <p>Lorem</p>
+          </div>
+          <div className="answer-container">
+            <input className="input-answer" type="radio" id="answer2" name="answer" value="2" />
+            <label htmlFor="answer2" />
             <p>Lorem Ipsum dolor sit amet, consectetuer adipiscing elt,nonummy nibh eulsmod</p>
           </div>
           <div className="answer-container">
-            <input className="input-answer" type="radio" />
+            <input className="input-answer" type="radio" id="answer3" name="answer" value="3" />
+            <label htmlFor="answer1" />
             <p>Lorem Ipsum dolor sit amet, consectetuer adipiscing elt,nonummy nibh eulsmod</p>
           </div>
           <div className="answer-container">
-            <input className="input-answer" type="radio" />
-            <p>Lorem Ipsum dolor sit amet, consectetuer adipiscing elt,nonummy nibh eulsmod</p>
-          </div>
-          <div className="answer-container">
-            <input className="input-answer" type="radio" />
+            <input className="input-answer" type="radio" id="answer4" name="answer" value="4" />
+            <label htmlFor="answer1" />
             <p>Lorem Ipsum dolor sit amet, consectetuer adipiscing elt,nonummy nibh eulsmod</p>
           </div>
         </div>

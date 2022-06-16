@@ -87,7 +87,7 @@ function LearningJourney() {
         <div className="link-container">
           <a className="lien" href="/Cours/">Cours</a>
           <a className="lien" href="/Challenge">Challenge</a>
-          <a className="lien" href="#">Trading</a>
+          <a className="lien" href="/Dashboard">Trading</a>
           <a className="lien" href="#">NFT</a>
           <a className="lien" href="#">Tout afficher</a>
         </div>
