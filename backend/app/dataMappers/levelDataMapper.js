@@ -1,11 +1,15 @@
 const client = require('../services/database');
 
 module.exports = {
-    async getLevel(level) {
-        // get level
-        const chooseLevel = await client.query(`SELECT * FROM level where name = ${level.name};`);
-        console.log('choose level');
-        return chooseLevel.rows;
+    async getLevel() {
+        try {
+            // collect all level
+            const allLevel = await client.query('SELECT * FROM level;');
+
+            return allLevel.rows;
+        } catch (error) {
+            return error;
+        }
     },
 
 };

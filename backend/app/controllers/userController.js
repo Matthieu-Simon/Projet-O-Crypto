@@ -19,10 +19,10 @@ module.exports = {
         return response.json(userDeleting);
     },
 
-    async updateUser (request, response) {
+    async updateUser(request, response) {
         const userModification = request.body;
         const userUpdating = await userDatamapper.modifyUser(userModification);
         return response.json(userUpdating);
-    }
-    
+    },
+
 };
