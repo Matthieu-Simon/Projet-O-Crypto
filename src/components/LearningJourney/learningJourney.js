@@ -8,13 +8,13 @@ function LearningJourney() {
       <div className="card-main">
         <div className="profil-learn">
           <div className="test-learn">
-            <div className="profil-head-card">
+            <div>
               <span className="img-profil-card">Photo</span>
             </div>
-            <main className="profil-main-card">
+            <div className="profil-main-card">
               <h5 className="profil-card-name">Lemaitre Investissor</h5>
-              <button className="btn-profil-card" type="submit">modifier</button>
-            </main>
+            </div>
+            <button className="btn-profil-card" type="submit">modifier</button>
           </div>
         </div>
         <div className="card-container">
