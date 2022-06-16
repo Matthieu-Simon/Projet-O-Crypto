@@ -9,12 +9,11 @@ function LearningJourney() {
         <div className="profil-learn">
           <div className="test-learn">
             <div>
-              <a className="img-profil-card" href="/Profile">Photo</a>
+              <a className="img-profil-card">Photo</a>
             </div>
             <div className="profil-main-card">
               <h5 className="profil-card-name">Lemaitre Investissor</h5>
             </div>
-            <a className="btn-profil-card" href="/Profile">modifier</a>
           </div>
         </div>
         <div className="card-container">
