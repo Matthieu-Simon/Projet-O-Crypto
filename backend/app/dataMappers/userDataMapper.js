@@ -1,6 +1,5 @@
 const client = require('../services/database');
 const bcrypt = require('bcrypt');
-const { request } = require('express');
 const saltRounds = 10;
 
 module.exports = {

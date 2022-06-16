@@ -11,11 +11,15 @@ module.exports = {
         const user = request.body;
         const userLogin = await userDatamapper.loginUser(user);
 
-        if (userLogin.passwordChecking) {
-            request.session.user = userLogin
-            return response.send({user:userLogin,loggedIn: userLogin.loggedIn ,user: request.session.user});
+        if (userLogin.loggedIn == true) {
+            request.session.user = userLogin.userData
+
+            console.log(request.session.user)
+            // return response.send({userData:userLogin.userData});
+            return response.cookie('email',request.session.user.email, 'password', request.session.user.password).send({user:userLogin.userData})
         } else {
-            return response.send({user:userLogin,loggedIn: userLogin.loggedIn});
+            console.log(userLogin.userData)
+            return response.send({test:'test'});
         };
     },
 
