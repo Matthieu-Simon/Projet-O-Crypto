@@ -22,17 +22,6 @@ function Articles() {
   const handleChange = (event) => {
     setSearch(event.target.value);
   };
-  const words = [
-    'alakazam',
-    'abracadabra',
-    'b',
-    'c',
-    'd',
-  ];
-
-  const filteredA = words.filter((word) => word.includes('a'));
-
-  console.log(filteredA);
 
   const filteredArtciles = articles.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()));
 

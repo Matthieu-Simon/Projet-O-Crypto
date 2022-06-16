@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { CloseOutlined } from '@material-ui/icons';
+import heroku from '../../../config/api/heroku';
 
 function Login() {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ function Login() {
   axios.defaults.withCredentials = true;
   //   POST LOGIN AN USER
   const login = () => {
-    axios.post('https://ocrypto-backend.herokuapp.com/log-in', {
+    heroku.post('/log-in', {
       email: usermail,
       password: password
     })
@@ -22,6 +22,8 @@ function Login() {
         console.log(response);
         setLoginStatus(response.data.user.message);
         if (response.data.user.message === 'Utilisateur connecté') {
+          // axios.defaults.headers.common['authorization'] = `Bearer ${response.data.accesToken}`;
+          // loadUserInfos();
           setLoginStatus(response.data.user.message);
           console.log(response.data.user.userData);
         }
@@ -34,17 +36,15 @@ function Login() {
       });
   };
 
+  function loadUserInfos() {
+    axios.get('/log-in').then((response) => {
+      console.log(response.data);
+    }).catch((error) => {
+      console.log(error.response.status);
+    });
+  }
+
   //   GET LOGIN AN USER
-  useEffect(() => {
-    axios.get('https://ocrypto-backend.herokuapp.com/log-in')
-      .then((response) => {
-        console.log(response);
-        setLoginStatus(response.data.user.message);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
 
   return (
 

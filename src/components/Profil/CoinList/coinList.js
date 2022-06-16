@@ -1,7 +1,7 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable react/function-component-definition */
 import { useEffect, useState, useContext } from 'react';
-import coinGecko from '../../../config/coinGecko';
+import coinGecko from '../../../config/api/coinGecko';
 import { WatchListContext } from '../../../context/watchListContext';
 import Coin from './coin';
 import './coinListStyles.scss';

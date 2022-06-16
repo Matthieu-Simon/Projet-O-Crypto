@@ -8,7 +8,7 @@ import { Line, Chart } from 'react-chartjs-2';
 import { Chart as ChartJS, registerables } from 'chart.js';
 import { CircularProgress } from '@material-ui/core';
 import { useParams } from 'react-router-dom';
-import { HistoricalChart } from '../../../../config/api';
+import { HistoricalChart } from '../../../../config/api/api';
 import { chartDays } from '../../../../config/data';
 import SelectButton from './SelectedButton/selectedButton';
 import './coinChartStyles.scss';
