@@ -9,8 +9,8 @@ import mec5 from '../../assets/mec5.png';
 
 function ourTeam() {
   return (
-    <div className="title">
-      <h1>La crypto team</h1>
+    <div className="title-container">
+      <h1 className="title-page">La crypto team</h1>
       <div className="container-team">
         <div className="team-preview">
           <div className="team-preview-title">

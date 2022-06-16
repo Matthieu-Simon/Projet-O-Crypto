@@ -1,12 +1,11 @@
-.App-main-content {
+.App-article-main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 90%;
-    height: 100%;
-    padding: 0;
     margin: auto;
+    height: 100vh;
 }
 .App-article {
     display: flex;
@@ -23,5 +22,65 @@
     margin: 40px 0;
     font-size: 3rem;
     color: #424C7C;
+}
+
+.article-image {
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+
+.article-text {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    margin: 40px auto;
+    font-size: 1.5rem;
+    color: #424C7C;
+    width: 60%;
+    text-align: justify;
+}
+
+.App-article-author {
+    font-size: 0.8rem;
+    color: #424C7C;
+    font-weight: 300;
+    border-radius: 5px;
+    border: #424C7C 1px solid;
+    padding: 5px;
+}
+
+.App-pub {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    color: #424C7C;
+    font-weight: bold;
+    border-radius: 5px;
+    border: #424C7C 1px solid;
+    padding: 30px;
+    background-color: #EAEAEA;
+   width: 60%;
+   margin: auto;
+   align-items: center;
+}
+
+.App-pub-button {
+    background-color: #424C7C;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid white;
+    cursor: pointer;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+.App-pub-button:hover {
+    color: #424C7C;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #424C7C;
+    transition: ease-in .1s;
 }
 

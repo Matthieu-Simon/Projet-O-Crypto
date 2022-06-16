@@ -16,37 +16,43 @@ function Article() {
   useEffect(() => {
     fetchArticles();
   }, []);
-
-  console.log(articles);
-
   return (
     <div className="App-main-content">
-      <div className="App-article">
-        <div className="App-article-header">
-          <h1 className="App-article-title">
-            Bitcoin
-          </h1>
-        </div>
-        <div className="App-article-image">
-          <img src={btclogo} alt="bitcoin" className="article-img" />
-        </div>
-        <div className="App-article-text">
-          <p>
-            ARTICLE text
-          </p>
-        </div>
-      </div>
-      <div className="App-pub">
-        <h2 className="App-pub-title">
-          C'est quoi la différence entre ehteur, ether et ETH ?
-        </h2>
-        <p className="App-pub-text">
-          Suivez notre parcours d'apprentissage pour tout comprendre !
-        </p>
-        <button onClick={() => navigate('/log-in')} type="button" className="App-pub-button">
-          S'inscrire ici !
-        </button>
-      </div>
+      {articles.map((article) => (
+        <>
+          <div className="App-article">
+            <div className="App-article-header">
+              <h1 className="App-article-title">
+                {article.name}
+              </h1>
+            </div>
+            <div className="App-article-image">
+              <img src={btclogo} alt="bitcoin" className="article-image" />
+            </div>
+            <div className="App-article-author">
+              <h3 className="App-article-author-name">
+                Ecrit par {article.author}
+              </h3>
+            </div>
+            <div className="App-article-text">
+              <p className="article-text">
+                {article.abstract}
+              </p>
+            </div>
+          </div>
+          <div className="App-pub">
+            <h2 className="App-pub-title">
+              C'est quoi la différence entre Ethereum, Ether et ETH ?
+            </h2>
+            <p className="App-pub-text">
+              Suivez notre parcours d'apprentissage pour tout comprendre !
+            </p>
+            <button onClick={() => navigate('/log-in')} type="button" className="App-pub-button">
+              S'inscrire ici !
+            </button>
+          </div>
+        </>
+      ))}
     </div>
   );
 }
