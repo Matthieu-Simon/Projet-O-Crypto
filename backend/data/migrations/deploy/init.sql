@@ -44,6 +44,7 @@ CREATE TABLE crypto_currencies (
 );
 
 CREATE TABLE lexicon (
+    letter text NOT NULL,
     name text NOT NULL UNIQUE,
     abstract text NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
