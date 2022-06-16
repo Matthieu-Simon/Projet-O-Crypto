@@ -28,7 +28,9 @@ function About() {
       </div>
 
       <div className="container2">
-
+        <div className="image2">
+          <img src={team2} alt="team2" className="team2" />
+        </div>
         <div className="text2">
           <h3 className="about-title">Notre mission</h3>
           <p>Cras facilisis urna ornare ex volutpat, et
@@ -39,11 +41,6 @@ function About() {
             dis parturient montes, nascetur ridiculus mus.
           </p>
         </div>
-
-        <div className="image2">
-          <img src={team2} alt="team2" className="team2" />
-        </div>
-
       </div>
     </div>
 

@@ -5,11 +5,6 @@
   margin: 0 auto;
   height: 100vh;
 }
-.card-main {
-  display: flex;
-  justify-content: center;
-  padding-top: 100px;
-}
 .title-learn {
   font-size: 2em;
   font-weight: bold;
@@ -17,18 +12,26 @@
   color: $blueLogo;
   padding: 50px;
 }
-.main-parcours {
-  position: relative;
-  top: 20%;
+.card-main {
   display: flex;
   justify-content: center;
+  padding-top: 100px;
 }
-
+// Partie Profil
 .profil-learn {
   display: flex;
   flex-direction: column;
   justify-content: space-around; // à retirer après ajout de la photo
   margin-right: 50px;
+}
+.profil-card-name {
+  color: $blueLogo;
+  font-weight: bold;
+}
+.test-learn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .img-profil-card {
   display: flex;
@@ -38,9 +41,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px 0 15px;
 }
 .btn-profil-card {
-  border: none;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: small;
 }
 .btn-profil-card:hover {
   box-shadow: inset 250px 0 0 0 $blueLogo;
@@ -51,16 +58,27 @@
 
 // Partie Card
 
-.card {
-  border: 2px solid rgb(214, 214, 214);
+.card-container {
+  display: flex;
+  border: 2px solid rgb(184, 184, 184);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   margin-right: 10px;
   padding: 10px;
 }
+.card-structure {
+  padding: 20px 0 0;
+}
 .head-card {
+  padding-bottom: 10px;
+}
+.separator {
+  width: 100%;
+  border-top: 1px solid $grey;
   padding: 10px 0;
 }
 .main-card {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 .card-name {
   font-weight: normal;
@@ -71,10 +89,11 @@
   font-size: 1rem;
   margin: 10px 0;
 }
-.card-footer {
+.card-footer-learn {
   background-color: $blueLogo;
-  color: white;
+  border-radius: 10px;
   padding: 10px;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
