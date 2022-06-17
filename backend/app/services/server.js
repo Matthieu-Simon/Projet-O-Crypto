@@ -1,8 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 
-const session = require('express-session');
-const cookieSession = require('cookie-session');
+// const session = require('express-session');
+
 
 const logger = require('../helpers/logger');
 const router = require('../routers/index');
@@ -21,6 +21,7 @@ function initServer (port, message) {
 
     /*Enable handling JSON files*/
     app.use(express.json());   
+    app.use(express.urlencoded({ extended: true }));
 
    /*Enable handling CORS in server*/
    const corsOptions = {
@@ -31,25 +32,16 @@ function initServer (port, message) {
    app.use(cors(corsOptions));
 
    /*Enable cookies*/
-   app.use(session({
-       key:"userId",
-       secret: 'ocrypto',
-       resave: false,
-       saveUninitialized: false,
-       cookie: { 
-           secure: true,
-           expires: 1800000,
-       }
-   }));
-   
-   app.use(cookieSession({
-    name: 'session',
-    keys: ['ocrypto'],
-  
-    // Cookie Options
-    maxAge: 24 * 60 * 60 * 1000 // 24 hours
-  }))
-
+//    app.use(session({
+//        key:"userId",
+//        secret: 'ocrypto',
+//        resave: false,
+//        saveUninitialized: false,
+//        cookie: { 
+//            secure: true,
+//            expires: 1800000,
+//        }
+//    }));
 
     app.use(router);
     
