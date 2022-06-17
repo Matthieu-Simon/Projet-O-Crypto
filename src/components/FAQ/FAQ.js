@@ -10,13 +10,13 @@ function FAQ() {
       open: true
     },
     {
-      question: 'J\'ai besoin de conaître le monde des finances?',
-      answer: 'Non. Vous êtes là pour aprendre la technologie derrière les cryptomonnaies.',
+      question: 'J\'ai besoin de connaître le monde des finances?',
+      answer: 'Non. Vous êtes là pour apprendre la technologie derrière les cryptomonnaies.',
       open: false
     },
     {
       question: 'Mes données personnelles sont elles enregistrées?',
-      answer: 'Vous ne rentrez aucune donnée personnelle a part votre mail. En plus on vous conseille de créer un nouveau pour ce but.',
+      answer: 'Vous ne rentrez aucune donnée personnelle a part votre mail.',
       open: false
     },
     {

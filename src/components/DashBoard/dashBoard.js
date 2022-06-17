@@ -3,13 +3,14 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './dashBoardStyles.scss';
-import { CoinList } from '../../config/api';
+import { CoinList } from '../../config/api/api';
 import Coin from './Coins/coins';
 import Footer from '../footer/footer';
 
 function dashBoard() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState('');
+  const [slice, setSlice] = useState(10);
   const navigate = useNavigate();
 
   const fetchCoins = async () => {
@@ -27,6 +28,9 @@ function dashBoard() {
 
   const filteredCoins = coins.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()));
 
+  const moreResult = () => {
+    setSlice(slice + 10);
+  };
   return (
     <div className="coin-app">
       <h1 className="coin-text">Cours des cryptomonnaie</h1>
@@ -43,7 +47,7 @@ function dashBoard() {
         <p className="coin-percent-description">24h</p>
         <p className="coin-marketcap-description">Capitalisation Boursière</p>
       </div>
-      {filteredCoins.map((coin) => (
+      {filteredCoins.slice(0, slice).map((coin) => (
         <Coin
           key={coin.id}
           onClick={() => navigate(`/coin/${coin.id}`)}
@@ -57,6 +61,7 @@ function dashBoard() {
           rank={coin.market_cap_rank}
         />
       ))}
+      <button type="button" className="more-crypto" onClick={moreResult}>Plus de résultats</button>
       <Footer />
     </div>
   );

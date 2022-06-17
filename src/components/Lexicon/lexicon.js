@@ -50,6 +50,7 @@ function lexicon() {
         <a href="#y">Y</a>&nbsp;&nbsp;
         <a href="#z">Z</a>&nbsp;&nbsp;
       </div>
+
       <div className="divAll">
         {words.map((word) => (
           <>

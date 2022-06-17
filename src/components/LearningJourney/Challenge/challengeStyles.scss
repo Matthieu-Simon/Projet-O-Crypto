@@ -1,0 +1,38 @@
+@import '/src/styles/vars';
+
+.main-challenge {
+  border: 1px solid $grey;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+}
+.title-cours {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  color: $grey;
+  font-size: medium;
+}
+.question {
+  letter-spacing: 1px;
+  font-size: small;
+  font-weight: 400;
+  color: black;
+  padding-bottom: 10px;
+}
+.answer-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.input-answer {
+  margin-right: 20px;
+}

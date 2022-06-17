@@ -1,12 +1,28 @@
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './mainStyles.scss';
 import btclogo from '../../../assets/btc.png';
 import dashboardlogo from '../../../assets/Dashboard.png';
 
 function main() {
   const navigate = useNavigate();
+  const [articles, setArticles] = useState([]);
+
+  const fetchArticles = async () => {
+    const { data } = await axios.get('https://ocrypto-backend.herokuapp.com/articles');
+    setArticles(data);
+  };
+
+  useEffect(() => {
+    fetchArticles();
+  }, []);
+
+  const randomArticles = articles.sort(() => Math.random() - 0.5);
+  // const randomArticles = articles.sort(() => Math.random() - 0.5);
+
+  console.log(randomArticles);
   return (
     <main className="App-main">
       <div className="App-main-content">
@@ -22,55 +38,26 @@ function main() {
           </p>
         </div>
         <div className="App-articles">
-          <div className="App-article-preview">
-            <div className="App-article-preview-title">
-              <h2 className="App-article-preview-title-text">
-                Bitcoin
-              </h2>
+          {randomArticles.slice(2).map((article) => (
+            <div key={article.name} onClick={() => navigate(`/articles/${article.name}`)} className="App-article-preview">
+              <div className="App-article-preview-title">
+                <h2 className="App-article-preview-title-text">
+                  {article.name}
+                </h2>
+              </div>
+              <div className="App-article-preview-image">
+                <img src={btclogo} alt="bitcoin" className="article-img" />
+              </div>
+              <div className="App-article-preview-text">
+                <p>
+                  {article.abstract.slice(0, 100)}...
+                </p>
+              </div>
             </div>
-            <div className="App-article-preview-image">
-              <img src={btclogo} alt="bitcoin" className="article-img" />
-            </div>
-            <div className="App-article-preview-text">
-              <p>
-                La première cryptomonnaies largement adoptée dans le monde. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
-          </div>
-          <div className="App-article-preview">
-            <div className="App-article-preview-title">
-              <h2 className="App-article-preview-title-text">
-                Bitcoin
-              </h2>
-            </div>
-            <div className="App-article-preview-image">
-              <img src={btclogo} className="article-img" alt="bitcoin" />
-            </div>
-            <div className="App-article-preview-text">
-              <p>
-                La première cryptomonnaies largement adoptée dans le monde. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
-          </div>
-          <div className="App-article-preview">
-            <div className="App-article-preview-title">
-              <h2 className="App-article-preview-title-text">
-                Bitcoin
-              </h2>
-            </div>
-            <div className="App-article-preview-image">
-              <img src={btclogo} className="article-img" alt="bitcoin" />
-            </div>
-            <div className="App-article-preview-text">
-              <p>
-                La première cryptomonnaies largement adoptée dans le monde. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
         <div className="App-more-articles">
-          <button type="button" className="button-more-articles">
+          <button onClick={() => navigate('/articles')} type="button" className="button-more-articles">
             Plus d'articles...
           </button>
         </div>

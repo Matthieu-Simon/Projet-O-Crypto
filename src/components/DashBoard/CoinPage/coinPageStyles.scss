@@ -1,6 +1,5 @@
 .coin-page {
     display: flex;
-    flex-direction: column;
     width: 90%;
     margin: auto;
     margin-top: 30px;
@@ -61,6 +60,20 @@
     color: white;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
     border-radius: 5px;
+}
+
+.btn-previous-page {
+    background-color: #424C7C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 155px;
+    width: 10%;
 }
 
 

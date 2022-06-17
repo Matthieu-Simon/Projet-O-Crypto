@@ -6,12 +6,16 @@
     justify-content: center;
 }
 
+.App-main-content {
+    margin-bottom: 50px;
+}
+
 .App-main-title {
     color: #424C7C;;
     font-size: 2rem;
     font-weight: bold;
     margin: auto;
-    padding: 50px;
+    padding-top: 50px;
     text-align: center;
     width: 50%;
 }
@@ -22,14 +26,14 @@
     width: 50%;
     margin: auto;
     color: #424C7C;
-    padding-bottom: 50px;
+    padding: 50px;
+
 }
 // ARTICLES SECTION
 .App-articles {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
     width: 80%;
     margin: auto;
@@ -38,17 +42,17 @@
 .App-article-preview {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 25%;
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     border-radius: 10px;
     background-color: #EAEAEA;
     color: #424C7C;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    cursor: pointer;
 }
 
 .App-article-preview:hover {

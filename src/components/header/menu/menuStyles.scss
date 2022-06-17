@@ -9,32 +9,12 @@
     .search-box {
         display: none;
     }
-    .label-hamburger
-    {
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    font-size: 40px;
-    color: #424C7C;
-    cursor: pointer;
-    }
-    #toggle:checked + .App-menu {
-    display: flex;
-    }
 }
 
-label, #toggle
-{
+.App-menu-icon{
 display: none;
 }
 
-@media all and (max-width: 991px)
-{
-
-
-}
 
 // DESKTOP MENU
 .App-menu {
@@ -48,8 +28,13 @@ display: none;
 }
 
 .App-nav {
+    margin-left: auto;
     padding: 20px 0px 20px 20px;
 } 
+
+.App-button {
+    margin-left: auto;
+}
 
 .App-link {
     margin: 8px;
@@ -85,7 +70,6 @@ display: none;
     cursor: pointer;
 }
 
-
 .App-button-login:hover {
     color: #424C7C;
     background-color: white;
@@ -99,6 +83,23 @@ display: none;
     border-radius: 8px;
     border: 1px solid #424C7C;
     transition: ease-out .1s;
+}
+
+.App-button-profile {
+    background-color: #424C7C;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.App-button-profile:hover {
+    color: #424C7C;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #424C7C;
+    transition: ease-in .1s;
 }
 
 
