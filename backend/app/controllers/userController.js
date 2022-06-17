@@ -35,10 +35,10 @@ module.exports = {
            const accessToken = generateAccessToken (user);          
            const checkToken = authenticateToken (accessToken);
 
-            return response.send({user:userLogin.userData, accessToken : accessToken, checkToken:{pseudo:checkToken.pseudo, email:checkToken.email, iat:checkToken.iat, exp:checkToken.exp}})
+            return response.send({user:userLogin.userData,message:userLogin.message ,accessToken : accessToken, checkToken:{pseudo:checkToken.pseudo, email:checkToken.email, iat:checkToken.iat, exp:checkToken.exp}})
 
         } else {
-            return response.send({user:userLogin});
+            return response.send({user:userLogin, message:userLogin.message});
         };
     },
 
