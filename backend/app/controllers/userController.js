@@ -1,5 +1,13 @@
 const userDatamapper = require('../dataMappers/userDataMapper');
 
+const express = require('express');
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
+
+
 module.exports = {
     async insertNewUser(request, response) {
         const newUser = request.body;
@@ -9,17 +17,28 @@ module.exports = {
 
     async loginUser(request, response) {
         const user = request.body;
+
+        /*Create a token at login*/
+        function generateAccessToken (user) {
+            return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1800s' });
+        };   
+        
+        /*Check the generate token*/
+        function authenticateToken (token) {
+            return jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+        }
+
         const userLogin = await userDatamapper.loginUser(user);
 
         if (userLogin.loggedIn == true) {
-            request.session.user = userLogin.userData
 
-            console.log(request.session.user)
-            // return response.send({userData:userLogin.userData});
-            return response.send({user:userLogin.userData})
+           const accessToken = generateAccessToken (user);          
+           const checkToken = authenticateToken (accessToken);
+
+            return response.send({user:userLogin.userData, accessToken : accessToken, checkToken:{pseudo:checkToken.pseudo, email:checkToken.email, iat:checkToken.iat, exp:checkToken.exp}})
+
         } else {
-            console.log(userLogin.userData)
-            return response.send({test:'test'});
+            return response.send({user:userLogin});
         };
     },
 

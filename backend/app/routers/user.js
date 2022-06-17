@@ -1,6 +1,21 @@
 const express = require('express');
 const router = express.Router();
 
+
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
+
+
+// function authenticateToken(token, userData) {
+//     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET)
+    
+//         return userData;
+    
+// }
+
 const userController = require('../controllers/userController');
 
 /*Route to sign in a new user*/
