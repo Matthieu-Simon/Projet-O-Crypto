@@ -9,13 +9,13 @@ Une fois ce repo téléchargé et ouvert dans votre éditeur de code, merci de s
 
 Si vous souhaitez simplement utiliser cette api sans y apporter de modifications, tapez la commande suivante dans votre terminal: 
 ```bash
-npm installProjectDepedencies
+npm run installProjectDepedencies
 ```
 Elle vous permettra d'installer toutes les dépendences nécéssaires au bon fonctionnement de l'api.
 
 Dans le cas où vous souhtez y apporter des modifications, tapez plutôt la commande suivante :
 ```bash
-npm installAllDependencies
+npm run installAllDependencies
 ```
 Cette commande permet d'installer à la fois les dépendences necessaires ainsi que les dépendences de developpement.
 
@@ -42,7 +42,7 @@ Dans le cas où rien est renseigné, le port par défaut sera le port 3000.
 
 Une fois cette étape faite vous pouvez d’ores et déjà lancer le serveur en tapant dans votre terminal la commande suivante : 
 ```bash
-npm run runServer
+npm run server
 ```
 Dans le cas où vous avez installé à la fois les dépendences nécéssaires et les dépendences de developpement, vous verrez apparaître dans votre console les log de chaques requêtes qui seront effectuées au serveur.
 Si vous souhaitez modifier les informations renseignées par ces log il faudra le faire depuis le fichier présent dans `app/helpers/logger.js` en vous référant à la documentation technique de [Morgan](https://github.com/expressjs/morgan#readme).
