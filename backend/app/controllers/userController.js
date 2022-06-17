@@ -10,7 +10,17 @@ module.exports = {
     async loginUser(request, response) {
         const user = request.body;
         const userLogin = await userDatamapper.loginUser(user);
-        return response.json(userLogin);
+
+        if (userLogin.loggedIn == true) {
+            request.session.user = userLogin.userData
+
+            console.log(request.session.user)
+            // return response.send({userData:userLogin.userData});
+            return response.send({user:userLogin.userData})
+        } else {
+            console.log(userLogin.userData)
+            return response.send({test:'test'});
+        };
     },
 
     async deleteUser(request, response) {
