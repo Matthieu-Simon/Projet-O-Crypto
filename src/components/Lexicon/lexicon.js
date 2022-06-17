@@ -1,14 +1,20 @@
+/* eslint-disable react/jsx-closing-tag-location */
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './lexiconStyles.scss';
-// import axios from 'axios';
+import axios from 'axios';
 
 function lexicon() {
-  // const [words, setWords] = useState('');
-  // const fetchLexicon = async () => {
-  //   const { data } = await axios.get('https://ocrypto-backend.herokuapp.com/lexicon');
-  //   setWords(data);
-  // };
+  const [words, setWords] = useState([]);
+  const fetchLexicon = async () => {
+    const { data } = await axios.get('https://ocrypto-backend.herokuapp.com/lexicon');
+    setWords(data);
+  };
+  useEffect(() => {
+    fetchLexicon();
+  }, []);
+
+  console.log(words);
 
   return (
     <div id="parent">
@@ -17,95 +23,50 @@ function lexicon() {
       </header>
       <div className="lefttop">
         <br />
-        <a href="#a">A</a>
-        <a href="#b">B</a>
-        <a href="#c">C</a>
-        <a href="#d">D</a>
-        <a href="#e">E</a>
-        <a href="#f">F</a>
-        <a href="#g">G</a>
-        <a href="#h">H</a>
-        <a href="#i">I</a>
-        <a href="#j">J</a>
-        <a href="#k">K</a>
-        <a href="#l">L</a>
-        <a href="#m">M</a>
-        <a href="#n">N</a>
-        <a href="#o">O</a>
-        <a href="#p">P</a>
-        <a href="#q">Q</a>
-        <a href="#r">R</a>
-        <a href="#s">S</a>
-        <a href="#t">T</a>
-        <a href="#u">U</a>
-        <a href="#v">V</a>
-        <a href="#w">W</a>
-        <a href="#x">X</a>
-        <a href="#y">Y</a>
-        <a href="#z">Z</a>
+        <a href="#a">A</a>&nbsp;&nbsp;
+        <a href="#b">B</a>&nbsp;&nbsp;
+        <a href="#c">C</a>&nbsp;&nbsp;
+        <a href="#d">D</a>&nbsp;&nbsp;
+        <a href="#e">E</a>&nbsp;&nbsp;
+        <a href="#f">F</a>&nbsp;&nbsp;
+        <a href="#g">G</a>&nbsp;&nbsp;
+        <a href="#h">H</a>&nbsp;&nbsp;
+        <a href="#i">I</a>&nbsp;&nbsp;
+        <a href="#j">J</a>&nbsp;&nbsp;
+        <a href="#k">K</a>&nbsp;&nbsp;
+        <a href="#l">L</a>&nbsp;&nbsp;
+        <a href="#m">M</a>&nbsp;&nbsp;
+        <a href="#n">N</a>&nbsp;&nbsp;
+        <a href="#o">O</a>&nbsp;&nbsp;
+        <a href="#p">P</a>&nbsp;&nbsp;
+        <a href="#q">Q</a>&nbsp;&nbsp;
+        <a href="#r">R</a>&nbsp;&nbsp;
+        <a href="#s">S</a>&nbsp;&nbsp;
+        <a href="#t">T</a>&nbsp;&nbsp;
+        <a href="#u">U</a>&nbsp;&nbsp;
+        <a href="#v">V</a>&nbsp;&nbsp;
+        <a href="#w">W</a>&nbsp;&nbsp;
+        <a href="#x">X</a>&nbsp;&nbsp;
+        <a href="#y">Y</a>&nbsp;&nbsp;
+        <a href="#z">Z</a>&nbsp;&nbsp;
       </div>
       <div className="divAll-A">
-        <div className="divletter-A">
-          <p>
-            <a name="a">
-              <b className="lettersolo">A</b>
+        {words.map((word) => (
+          <>
+            <div key={word.created_at} className="divletter-A">
+              <p>
+                <a name="a">
+                  <b className="lettersolo">{word.letter}</b>
+                </a>
+              </p>
+            </div><a className="descriptionLetter-A">
+              <h2 className="titleDescription">{word.name}</h2>
+              <div className="descriptionNude">
+                {word.abstract}
+              </div>
             </a>
-          </p>
-        </div>
-        <a className="descriptionLetter-A">
-          <h2 className="titleDescription">Alorem</h2>
-          <div className="descriptionNude">
-            "Alorem ipsum ipsum ipsum"
-          </div>
-          <h2 className="titleDescription-A-2">Avirticon</h2>
-          <div className="descriptionNude2">
-            "Ascop ipsum ipsum ipsum"
-          </div>
-        </a>
-      </div>
-
-      <hr className="horizontal" />
-
-      <div className="divAll-B">
-        <div className="divletter-B">
-          <p>
-            <a name="b">
-              <b className="lettersolo-B">B</b>
-            </a>
-          </p>
-        </div>
-        <a className="descriptionLetter-B">
-          <h2 className="titleDescription">Bloberibon</h2>
-          <div className="descriptionNude">
-            "Blorem ipsum ipsum ipsum"
-          </div>
-          <h2 className="titleDescription-B-2">Biscoterum</h2>
-          <div className="descriptionNude2">
-            "Bscop ipsum ipsum ipsum"
-          </div>
-        </a>
-      </div>
-
-      <hr className="horizontal" />
-
-      <div className="divAll-C">
-        <div className="divletter-C">
-          <p>
-            <a name="c">
-              <b className="lettersolo-C">C</b>
-            </a>
-          </p>
-        </div>
-        <a className="descriptionLetter-C">
-          <h2 className="titleDescription">Castorium</h2>
-          <div className="descriptionNude">
-            "Clorem ipsum ipsum ipsum"
-          </div>
-          <h2 className="titleDescription-C-2">Conespiton</h2>
-          <div className="descriptionNude2">
-            "Cscop ipsum ipsum ipsum"
-          </div>
-        </a>
+          </>
+        ))}
       </div>
 
     </div>
