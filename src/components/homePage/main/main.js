@@ -20,6 +20,7 @@ function main() {
   }, []);
 
   const randomArticles = articles.sort(() => Math.random() - 0.5);
+  // const randomArticles = articles.sort(() => Math.random() - 0.5);
 
   console.log(randomArticles);
   return (
@@ -53,7 +54,7 @@ function main() {
                 </p>
               </div>
             </div>
-          ))};
+          ))}
         </div>
         <div className="App-more-articles">
           <button onClick={() => navigate('/articles')} type="button" className="button-more-articles">

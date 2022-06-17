@@ -9,24 +9,9 @@
     .search-box {
         display: none;
     }
-    .label-hamburger
-    {
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    font-size: 40px;
-    color: #424C7C;
-    cursor: pointer;
-    }
-    #toggle:checked + .App-menu {
-    display: flex;
-    }
 }
 
-label, #toggle
-{
+.App-menu-icon{
 display: none;
 }
 
@@ -43,8 +28,13 @@ display: none;
 }
 
 .App-nav {
+    margin-left: auto;
     padding: 20px 0px 20px 20px;
 } 
+
+.App-button {
+    margin-left: auto;
+}
 
 .App-link {
     margin: 8px;

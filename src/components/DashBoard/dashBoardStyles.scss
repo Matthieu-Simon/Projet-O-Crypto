@@ -12,8 +12,7 @@
     width: 90%;
     margin: auto;
     color: #424C7C;
-    height: 100vh;
-    overflow: scroll;
+    margin-bottom: 50px;
   }
 
   .row-description {
@@ -83,3 +82,22 @@
     width: 380px;
     text-align: end;
   }
+  .more-crypto {
+    color: #424C7C;
+    background-color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #424C7C;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.more-crypto:hover {
+    background-color: #424C7C;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid #424C7C;
+    transition: ease-in .1s;
+    text-align: center;
+}
