@@ -8,7 +8,7 @@ function Challenge() {
   return (
     <main className="main-cours">
       <Menu />
-      <div className="cours">
+      <div className="main-challenge">
         <div className="title-cours">
           <h5>Question 1 sur 10</h5>
         </div>

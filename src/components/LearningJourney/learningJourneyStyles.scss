@@ -1,21 +1,18 @@
 @import './src/styles/vars';
 
-.learning-main {
-  width: 100%;
-  margin: 0 auto;
-  height: 100vh;
-}
 .title-learn {
   font-size: 2em;
   font-weight: bold;
   text-align: center; 
   color: $blueLogo;
-  padding: 50px;
+  padding: 20px 0;
 }
 .card-main {
   display: flex;
-  justify-content: center;
-  padding-top: 100px;
+  position: absolute;
+  top: 55%;
+  left: 47%;
+  transform: translate(-50%,-50%);
 }
 // Partie Profil
 .profil-learn {
