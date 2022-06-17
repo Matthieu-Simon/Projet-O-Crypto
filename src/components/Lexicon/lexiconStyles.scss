@@ -1,4 +1,4 @@
-h1{
+.titleh1{
     color: #424C7C;
 	font-size: 28px;
 	font-weight: 700;
@@ -7,23 +7,19 @@ h1{
 	align-content: center;
 	padding: 15px;
 }
-h2{
-    text-align: left;
-    font-weight: bold;
-    padding-bottom: 15px;
-    color: #424C7C;
-}
+
 
 .parent{
     width: 500px;
-  margin: auto;
+    margin: auto;
 }
 
-hr {
+.SB {
     border-top: 2px solid;
     color: rgba(0, 0, 0, 0.185); 
     width: 1000px;
     margin: auto;
+    opacity: 50%;
 }
 
 .lettersolo{
@@ -50,23 +46,26 @@ hr {
     flex-direction: column;
 }
 
-//DIV LETTER----------------------------------
+//DIV LETTER-----------------------------------
 .divletter{
     font-size: 3rem;
-    padding: 10px;
     font-weight: bold;
     display: flex;
-    vertical-align: baseline;
+    margin-top: 39px;
 }
 
 //DESCRIPTION LETTER----------------------------------
 .descriptionLetter{
     padding: 20px;
+    flex-direction: column;
 }
 
 //TITLE DESCRIPTION----------------------------------
 
 .titleDescription{
-    
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 15px;
+    color: #424C7C;
     font-size: 2rem;
 }
