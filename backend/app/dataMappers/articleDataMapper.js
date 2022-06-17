@@ -2,19 +2,31 @@ const client = require('../services/database');
 
 module.exports = {
     async getAllArticle() {
-        // collect all Articles
-        const allArticle = await client.query('SELECT * FROM article;');
-        console.log('get All Article');
-        return allArticle.rows;
+        try {
+            // collect all Articles
+            const allArticle = await client.query('SELECT * FROM article;');
+
+            return allArticle.rows;
+        } catch (error) {
+            return error;
+        }
     },
 
     async getOneArticle(article) {
-        // collect one article by name
-        const oneArticle = await client.query(`SELECT * From where name = ${article.name};`);
-        if (oneArticle.rows.length !== 0) {
+        try {
+            // collect one article by name
+            const oneArticle = await client.query(`SELECT * FROM article WHERE name = '${article}';`);
+            /* if the name of the article called corresponds to
+        one of the article names of the database then I return the line */
+
+            if (article === oneArticle.rows[0].name) {
+                return oneArticle.rows[0];
+            }
+            // else i send a message
             return 'Article does not exist';
+        } catch (error) {
+            return error;
         }
-        return oneArticle.rows[0];
     },
 
 };

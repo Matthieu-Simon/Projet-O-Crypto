@@ -2,6 +2,6 @@
 
 BEGIN;
 
-DROP TABLE favoris, answer, question, level, lexicon, crypto_currencies, challenges, article, "user";
+DROP TABLE favoris, answer, question, level, lexicon, crypto_currencies, challenge, article, "user";
 
 COMMIT;

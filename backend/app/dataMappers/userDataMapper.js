@@ -12,6 +12,7 @@ module.exports = {
                 return message;
             }
 
+
             /*Password encryption*/
             const hashedPassword = await bcrypt.hash(newUser.password, saltRounds);
 
@@ -22,11 +23,10 @@ module.exports = {
             `);
             const result = await client.query(`SELECT * FROM "user" WHERE email= '${newUser.email}';`);
     
-            return result.rows[0];
 
-        } catch (error){
+        } catch (error) {
             return error;
-        };
+        }
     },
 
     /* Get profile user informations or allow connection to the app */
@@ -35,6 +35,7 @@ module.exports = {
             /* check if the user is already registered */
             const isUniqueChecking = await client.query(`SELECT * FROM "user" WHERE email= '${user.email}';`);
             if (isUniqueChecking.rows.length === 0) {
+
                 const message = {message:`Cet utilisateur n'est pas enregistré`};
                 return message;
             } else {                
@@ -51,9 +52,11 @@ module.exports = {
                 const message = 'Utilisateur connecté';
                 return {userData:result.rows[0], message:message, loggedIn:passwordChecking};
             }
+
+
         } catch (error) {
             return error;
-        };
+        }
     },
 
     async deleteUser(user) {
@@ -66,7 +69,7 @@ module.exports = {
             return message;
         } catch (error) {
             return error;
-        };
+        }
     },
 
     /* Modify one value in table user */
@@ -77,11 +80,14 @@ module.exports = {
                 SET "${Object.keys(userModification)[0]}"='${Object.values(userModification)[0]}'
                 WHERE email='${userModification.email}';
             `);
+
             const message = {message:'Cet utilisateur à été modifié'};
             return message;
             
+
+
         } catch (error) {
             return error;
-        }        
+        }
     },
 };

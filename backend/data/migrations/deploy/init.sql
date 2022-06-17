@@ -10,8 +10,9 @@ CREATE TABLE "user" (
     password text NOT NULL,    
     level text NOT NULL DEFAULT 'novice',
     reward int NOT NULL DEFAULT 0,
+    image text NOT NULL DEFAULT 'unknown',
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
-    "delete_at" TIMESTAMPTZ DEFAULT now()
+    "delete_at" TIMESTAMPTZ 
 );
 
 
@@ -20,8 +21,9 @@ CREATE TABLE article (
     name text NOT NULL UNIQUE,
     author text NOT NULL DEFAULT 'unknown',
     abstract text NOT NULL,
+    image text NOT NULL DEFAULT 'unknown',
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    delete_at TIMESTAMPTZ DEFAULT now()
+    delete_at TIMESTAMPTZ 
 );
 
 CREATE TABLE challenge (
@@ -31,32 +33,36 @@ CREATE TABLE challenge (
     article_id integer NOT NULL,
     abstract text NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    delete_at TIMESTAMPTZ DEFAULT now()
+    delete_at TIMESTAMPTZ 
 );
 
 CREATE TABLE crypto_currencies (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name text NOT NULL UNIQUE,
     issued_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    delete_at TIMESTAMPTZ DEFAULT now()
+    delete_at TIMESTAMPTZ 
 );
 
 CREATE TABLE lexicon (
+    letter text NOT NULL,
     name text NOT NULL UNIQUE,
     abstract text NOT NULL,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    delete_at TIMESTAMPTZ 
 );
 
 CREATE TABLE "level" (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name text NOT NULL UNIQUE,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    delete_at TIMESTAMPTZ 
 );
 
 CREATE TABLE question (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     answer_id integer NOT NULL,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    delete_at TIMESTAMPTZ 
 );
 
 CREATE TABLE answer (
@@ -71,7 +77,7 @@ CREATE TABLE favoris (
     user_id int NOT NULL,
     crypto_currencies_id int NOT NULL,
     created_at timestamptz NOT NULL DEFAULT now(),
-    delete_at timestamptz NOT NULL DEFAULT now()    
+    delete_at timestamptz     
 );
 
 ALTER TABLE answer
