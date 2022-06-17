@@ -19,7 +19,7 @@ function lexicon() {
   return (
     <div id="parent">
       <header>
-        <h1 className="title-lexique">Lexique</h1>
+        <h1 className="titleh1">Lexique</h1>
       </header>
       <div className="lefttop">
         <br />
@@ -50,22 +50,23 @@ function lexicon() {
         <a href="#y">Y</a>&nbsp;&nbsp;
         <a href="#z">Z</a>&nbsp;&nbsp;
       </div>
-      <div className="divAll-A">
+
+      <div className="divAll">
         {words.map((word) => (
           <>
-            <div key={word.created_at} className="divletter-A">
+            <div key={word.created_at} className="divletter">
               <p>
                 <a name="a">
                   <b className="lettersolo">{word.letter}</b>
                 </a>
               </p>
-            </div>
-            <a className="descriptionLetter-A">
+            </div><a className="descriptionLetter">
               <h2 className="titleDescription">{word.name}</h2>
               <div className="descriptionNude">
                 {word.abstract}
               </div>
             </a>
+            <hr className="SB" />
           </>
         ))}
       </div>

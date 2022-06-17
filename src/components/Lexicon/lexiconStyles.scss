@@ -1,4 +1,4 @@
-.title-lexique{
+.titleh1{
     color: #424C7C;
 	font-size: 28px;
 	font-weight: 700;
@@ -7,19 +7,25 @@
 	align-content: center;
 	padding: 15px;
 }
-.titleDescription{
-    text-align: left;
-    font-weight: bold;
-    padding-bottom: 15px;
-    color: #424C7C;
-}
+
+
 .parent{
     width: 500px;
-  margin: auto;
+    margin: auto;
 }
+
+.SB {
+    border-top: 2px solid;
+    color: rgba(0, 0, 0, 0.185); 
+    width: 1000px;
+    margin: auto;
+    opacity: 50%;
+}
+
 .lettersolo{
     margin: 20px;
 }
+
 .lefttop{
     padding: 45px;
     display: flex;
@@ -30,91 +36,36 @@
 .SB {
     text-align: center;
 }
+
 //DIV ALL----------------------------------
-.divAll-A{
-    
-    display: flex;
-    
-    color: #424C7C;
-    
-    width: 1000px;
-    margin-left: 260px;
-    
-}
-.divAll-B{
+.divAll{
     display: flex;
     color: #424C7C;
     width: 1000px;
     margin-left: 260px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-.divAll-C{
-    display: flex;
-    color: #424C7C;
-    width: 1000px;
-    margin-left: 260px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    flex-direction: column;
 }
 
-//DIV LETTER----------------------------------
-.divletter-A{
+//DIV LETTER-----------------------------------
+.divletter{
     font-size: 3rem;
-    padding: 10px;
     font-weight: bold;
     display: flex;
-    vertical-align: baseline;
-}
-.divletter-B{
-    font-size: 3rem;
-    padding: 30px;
-    font-weight: bold;
-    display: flex;
-    vertical-align: baseline;
-}
-.divletter-C{
-    font-size: 3rem;
-    padding: 30px;
-    font-weight: bold;
-    display: flex;
-    vertical-align: baseline;
+    margin-top: 39px;
 }
 
 //DESCRIPTION LETTER----------------------------------
-.descriptionLetter-A{
+.descriptionLetter{
     padding: 20px;
-}
-.descriptionLetter-B{
-    padding: 20px;
-}
-.descriptionLetter-C{
-    padding: 20px;
-}
-
-.titleDescription{
-    
-    font-size: 2rem;
+    flex-direction: column;
 }
 
 //TITLE DESCRIPTION----------------------------------
-.titleDescription-A-2{
-    border-radius: 16px;
-    display: block;
-    padding-top: 24px;
-    font-size: 2rem;
-}
-.titleDescription-B-2{
-    border-radius: 16px;
-    display: block;
-    padding-top: 24px;
-    font-size: 2rem;
-}
-.titleDescription-C-2{
-    border-radius: 16px;
-    display: block;
-    padding-top: 24px;
-    font-size: 2rem;
-}
 
-
+.titleDescription{
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 15px;
+    color: #424C7C;
+    font-size: 2rem;
+}
