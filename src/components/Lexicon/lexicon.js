@@ -1,14 +1,20 @@
+/* eslint-disable react/jsx-closing-tag-location */
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './lexiconStyles.scss';
-// import axios from 'axios';
+import axios from 'axios';
 
 function lexicon() {
-  // const [words, setWords] = useState('');
-  // const fetchLexicon = async () => {
-  //   const { data } = await axios.get('https://ocrypto-backend.herokuapp.com/lexicon');
-  //   setWords(data);
-  // };
+  const [words, setWords] = useState([]);
+  const fetchLexicon = async () => {
+    const { data } = await axios.get('https://ocrypto-backend.herokuapp.com/lexicon');
+    setWords(data);
+  };
+  useEffect(() => {
+    fetchLexicon();
+  }, []);
+
+  console.log(words);
 
   return (
     <div id="parent">
@@ -44,69 +50,24 @@ function lexicon() {
         <a href="#y">Y</a>&nbsp;&nbsp;
         <a href="#z">Z</a>&nbsp;&nbsp;
       </div>
-
-      <div className="divAll-A">
-        <div className="divletter-A">
-          <p>
-            <a name="a">
-              <b className="lettersolo">A</b>
+      <div className="divAll">
+        {words.map((word) => (
+          <>
+            <div key={word.created_at} className="divletter">
+              <p>
+                <a name="a">
+                  <b className="lettersolo">{word.letter}</b>
+                </a>
+              </p>
+            </div><a className="descriptionLetter">
+              <h2 className="titleDescription">{word.name}</h2>
+              <div className="descriptionNude">
+                {word.abstract}
+              </div>
             </a>
-          </p>
-        </div>
-        <a className="descriptionLetter-A">
-          <h2 className="titleDescription">Alorem</h2>
-          <div className="descriptionNude">
-            "Alorem ipsum ipsum ipsum"
-          </div>
-          <h2 className="titleDescription-A-2">Avirticon</h2>
-          <div className="descriptionNude2">
-            "Ascop ipsum ipsum ipsum"
-          </div>
-        </a>
-      </div>
-
-      <hr className="horizontal" />
-
-      <div className="divAll-B">
-        <div className="divletter-B">
-          <p>
-            <a name="b">
-              <b className="lettersolo-B">B</b>
-            </a>
-          </p>
-        </div>
-        <a className="descriptionLetter-B">
-          <h2 className="titleDescription">Bloberibon</h2>
-          <div className="descriptionNude">
-            "Blorem ipsum ipsum ipsum"
-          </div>
-          <h2 className="titleDescription-B-2">Biscoterum</h2>
-          <div className="descriptionNude2">
-            "Bscop ipsum ipsum ipsum"
-          </div>
-        </a>
-      </div>
-
-      <hr className="horizontal" />
-
-      <div className="divAll-C">
-        <div className="divletter-C">
-          <p>
-            <a name="c">
-              <b className="lettersolo-C">C</b>
-            </a>
-          </p>
-        </div>
-        <a className="descriptionLetter-C">
-          <h2 className="titleDescription">Castorium</h2>
-          <div className="descriptionNude">
-            "Clorem ipsum ipsum ipsum"
-          </div>
-          <h2 className="titleDescription-C-2">Conespiton</h2>
-          <div className="descriptionNude2">
-            "Cscop ipsum ipsum ipsum"
-          </div>
-        </a>
+            <hr className="SB" />
+          </>
+        ))}
       </div>
 
     </div>
