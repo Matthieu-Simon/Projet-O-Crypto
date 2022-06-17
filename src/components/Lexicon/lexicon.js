@@ -17,33 +17,34 @@ function lexicon() {
       </header>
       <div className="lefttop">
         <br />
-        <a href="#a">A</a>
-        <a href="#b">B</a>
-        <a href="#c">C</a>
-        <a href="#d">D</a>
-        <a href="#e">E</a>
-        <a href="#f">F</a>
-        <a href="#g">G</a>
-        <a href="#h">H</a>
-        <a href="#i">I</a>
-        <a href="#j">J</a>
-        <a href="#k">K</a>
-        <a href="#l">L</a>
-        <a href="#m">M</a>
-        <a href="#n">N</a>
-        <a href="#o">O</a>
-        <a href="#p">P</a>
-        <a href="#q">Q</a>
-        <a href="#r">R</a>
-        <a href="#s">S</a>
-        <a href="#t">T</a>
-        <a href="#u">U</a>
-        <a href="#v">V</a>
-        <a href="#w">W</a>
-        <a href="#x">X</a>
-        <a href="#y">Y</a>
-        <a href="#z">Z</a>
+        <a href="#a">A</a>&nbsp;&nbsp;
+        <a href="#b">B</a>&nbsp;&nbsp;
+        <a href="#c">C</a>&nbsp;&nbsp;
+        <a href="#d">D</a>&nbsp;&nbsp;
+        <a href="#e">E</a>&nbsp;&nbsp;
+        <a href="#f">F</a>&nbsp;&nbsp;
+        <a href="#g">G</a>&nbsp;&nbsp;
+        <a href="#h">H</a>&nbsp;&nbsp;
+        <a href="#i">I</a>&nbsp;&nbsp;
+        <a href="#j">J</a>&nbsp;&nbsp;
+        <a href="#k">K</a>&nbsp;&nbsp;
+        <a href="#l">L</a>&nbsp;&nbsp;
+        <a href="#m">M</a>&nbsp;&nbsp;
+        <a href="#n">N</a>&nbsp;&nbsp;
+        <a href="#o">O</a>&nbsp;&nbsp;
+        <a href="#p">P</a>&nbsp;&nbsp;
+        <a href="#q">Q</a>&nbsp;&nbsp;
+        <a href="#r">R</a>&nbsp;&nbsp;
+        <a href="#s">S</a>&nbsp;&nbsp;
+        <a href="#t">T</a>&nbsp;&nbsp;
+        <a href="#u">U</a>&nbsp;&nbsp;
+        <a href="#v">V</a>&nbsp;&nbsp;
+        <a href="#w">W</a>&nbsp;&nbsp;
+        <a href="#x">X</a>&nbsp;&nbsp;
+        <a href="#y">Y</a>&nbsp;&nbsp;
+        <a href="#z">Z</a>&nbsp;&nbsp;
       </div>
+
       <div className="divAll-A">
         <div className="divletter-A">
           <p>
