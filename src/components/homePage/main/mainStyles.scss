@@ -6,12 +6,16 @@
     justify-content: center;
 }
 
+.App-main-content {
+    margin-bottom: 50px;
+}
+
 .App-main-title {
     color: #424C7C;;
     font-size: 2rem;
     font-weight: bold;
     margin: auto;
-    padding: 50px;
+    padding-top: 50px;
     text-align: center;
     width: 50%;
 }
@@ -29,7 +33,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
     width: 80%;
     margin: auto;
@@ -38,11 +41,10 @@
 .App-article-preview {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 25%;
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     border-radius: 10px;
     background-color: #EAEAEA;
