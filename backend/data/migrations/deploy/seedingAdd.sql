@@ -189,7 +189,7 @@ avoir d’impact sur le prix global du marché.'),
 ('L','Liquidity Pool :',' En DeFi, une pool de liquidité est un ensemble de jetons verrouillés et
 conservés dans un smart contract, afin de faciliter la négociation de paires numériques 
 sur les plateformes d’échange décentralisé (DEX)'),
-('L','Long :',' Investir sur la hausse du prix d’un actif en appliquant un effet de levier.')
+('L','Long :',' Investir sur la hausse du prix d’un actif en appliquant un effet de levier.'),
 ('L','Lower High :',' Un plus haut, plus bas que le précédent.'),
 ('L','Lower Low :',' Un plus bas, plus bas que le précédent.'),
 
