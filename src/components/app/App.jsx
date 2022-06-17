@@ -1,5 +1,6 @@
 import './App.scss';
 import { Routes, Route } from 'react-router-dom';
+import authService from '../LoginForm/auth.service';
 
 import Header from '../header/header';
 import Footer from '../footer/footer';
@@ -20,7 +21,7 @@ import OurTeam from '../OurTeam/ourTeam';
 import PageNotFound from '../404/PageNotFound';
 
 function App() {
-  const isLogged = localStorage.getItem('isLogged');
+  const isLogged = authService.getCurrentUser();
   return (
     <div className="App">
       <Header />
@@ -33,7 +34,6 @@ function App() {
         <Route path="/learning" element={<LearningJourney />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/Cours" element={<Cours />} />
-        <Route path="/profile" element={<Profil />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<OurTeam />} />
         <Route path="challenge" element={<Challenge />} />

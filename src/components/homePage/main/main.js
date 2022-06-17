@@ -20,6 +20,7 @@ function main() {
   }, []);
 
   const randomArticles = articles.sort(() => Math.random() - 0.5);
+  // const randomArticles = articles.sort(() => Math.random() - 0.5);
 
   console.log(randomArticles);
   return (

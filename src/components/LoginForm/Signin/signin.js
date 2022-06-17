@@ -1,37 +1,46 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import AuthService from '../auth.service';
 
 function Signin() {
+  const [username, setUserName] = useState('');
+  const [email, setUserMail] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  const [usernameReg, setUserNameReg] = useState('');
-  const [usermailReg, setUserMailReg] = useState('');
-  const [passwordReg, setPasswordReg] = useState('');
+  axios.defaults.withCredentials = true;
 
-  const register = (e) => {
+  const handleSignin = async (e) => {
     e.preventDefault();
-    axios.post('https://ocrypto-backend.herokuapp.com/sign-in', {
-      pseudo: usernameReg,
-      email: usermailReg,
-      password: passwordReg
-    })
-      .then((response) => {
-        console.log(response);
-        navigate('/profile');
-      });
+    try {
+      await AuthService.signup(username, email, password).then(
+        (response) => {
+          console.log('Bien enregistré', response);
+          navigate('/profile');
+          window.location.reload();
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    }
+    catch (error) {
+      console.log(error);
+    }
   };
 
   return (
     <div className="register-left">
       <h2 className="signin">Inscription</h2>
-      <form action="" method="get" className="form-inscription">
+      <form onSubmit={handleSignin} className="form-inscription">
         <div className="form-example">
           <input
             className="input-form"
             type="text"
+            value={username}
             placeholder="Pseudo"
             onChange={(e) => {
-              setUserNameReg(e.target.value);
+              setUserName(e.target.value);
             }}
           />
         </div>
@@ -39,9 +48,10 @@ function Signin() {
           <input
             className="input-form"
             type="email"
+            value={email}
             placeholder="Email"
             onChange={(e) => {
-              setUserMailReg(e.target.value);
+              setUserMail(e.target.value);
             }}
           />
         </div>
@@ -49,18 +59,16 @@ function Signin() {
           <input
             className="input-form"
             type="password"
+            value={password}
             placeholder="Mot de passe"
             onChange={(e) => {
-              setPasswordReg(e.target.value);
+              setPassword(e.target.value);
             }}
           />
         </div>
         <button
           className="btn-form"
           type="submit"
-          onClick={(e) => {
-            register(e);
-          }}
         >S'enregistrer
         </button>
       </form>
