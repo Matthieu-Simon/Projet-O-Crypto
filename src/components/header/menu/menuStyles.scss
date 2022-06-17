@@ -9,24 +9,9 @@
     .search-box {
         display: none;
     }
-    .label-hamburger
-    {
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    font-size: 40px;
-    color: #424C7C;
-    cursor: pointer;
-    }
-    #toggle:checked + .App-menu {
-    display: flex;
-    }
 }
 
-label, #toggle
-{
+.App-menu-icon{
 display: none;
 }
 

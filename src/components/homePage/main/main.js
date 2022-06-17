@@ -53,7 +53,7 @@ function main() {
                 </p>
               </div>
             </div>
-          ))};
+          ))}
         </div>
         <div className="App-more-articles">
           <button onClick={() => navigate('/articles')} type="button" className="button-more-articles">
