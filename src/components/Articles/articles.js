@@ -25,6 +25,10 @@ function Articles() {
 
   const filteredArtciles = articles.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()));
 
+  const randomArticles = articles.sort(() => Math.random() - 0.5);
+
+  console.log(randomArticles);
+
   return (
     <div className="App-main-content">
       <div className="App-main-header">
@@ -46,7 +50,7 @@ function Articles() {
               </h2>
             </div>
             <div className="App-article-preview-image">
-              <img src={btclogo} alt="bitcoin" className="article-img" />
+              <img src={btclogo} alt="img" className="article-img" />
             </div>
             <div className="App-article-preview-text">
               <p>

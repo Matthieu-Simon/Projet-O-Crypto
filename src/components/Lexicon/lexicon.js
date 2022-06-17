@@ -19,7 +19,7 @@ function lexicon() {
   return (
     <div id="parent">
       <header>
-        <h1>Lexique</h1>
+        <h1 className="title-lexique">Lexique</h1>
       </header>
       <div className="lefttop">
         <br />
@@ -59,7 +59,8 @@ function lexicon() {
                   <b className="lettersolo">{word.letter}</b>
                 </a>
               </p>
-            </div><a className="descriptionLetter-A">
+            </div>
+            <a className="descriptionLetter-A">
               <h2 className="titleDescription">{word.name}</h2>
               <div className="descriptionNude">
                 {word.abstract}

@@ -18,8 +18,6 @@ function Article() {
     fetchArticles();
   }, []);
 
-  console.log(articles);
-
   return (
     <div className="App-article-main-content">
       <div key={articles.id} className="App-article">
