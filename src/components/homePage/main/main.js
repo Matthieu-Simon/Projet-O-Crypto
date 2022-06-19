@@ -2,12 +2,15 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import authService from '../../LoginForm/auth.service';
 import './mainStyles.scss';
 import btclogo from '../../../assets/btc.png';
 import dashboardlogo from '../../../assets/Dashboard.png';
 
 function main() {
   const navigate = useNavigate();
+
+  const [isLogged, setIsLogged] = useState(false);
   const [articles, setArticles] = useState([]);
 
   const fetchArticles = async () => {
@@ -19,10 +22,14 @@ function main() {
     fetchArticles();
   }, []);
 
-  const randomArticles = articles.sort(() => Math.random() - 0.5);
-  // const randomArticles = articles.sort(() => Math.random() - 0.5);
+  useEffect(() => {
+    if (authService.getCurrentUser()) {
+      setIsLogged(true);
+    }
+  }, [isLogged]);
 
-  console.log(randomArticles);
+  const randomArticles = articles.sort(() => Math.random() - 0.5);
+  // Mettre les derniers articles en premier ?
   return (
     <main className="App-main">
       <div className="App-main-content">
@@ -31,10 +38,8 @@ function main() {
             C'est quoi les cryptomonnaies ?
           </h1>
           <p className="App-main-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+            Les crypto-monnaies sont des devises numériques qui reposent sur la technologie de la blockchain pour assurer la sécurité,
+            la transparence et la fiabilité des transactions. C'est un actif qui s'échange de pair-à-pair (P2P) sans tiers de confiance comme les banques. Elles n'ont pas de support physique comme des pièces ou des billets.
           </p>
         </div>
         <div className="App-articles">
@@ -65,9 +70,15 @@ function main() {
           <h2 className="App-learning-preview-title">
             Devenez un expert en rejoignant notre parcours d'apprentissage !
           </h2>
-          <button onClick={() => navigate('/log-in')} type="button" className="button-signin">
-            S'inscrire ici !
-          </button>
+          {isLogged ? (
+            <button onClick={() => navigate('/learning')} type="button" className="button-signin">
+              Démarrer maintenant
+            </button>
+          ) : (
+            <button onClick={() => navigate('/log-in')} type="button" className="button-signin">
+              S'inscrire ici !
+            </button>
+          )}
         </div>
         <div className="App-dashboard-preview">
           <div className="App-dashboard-preview-title">

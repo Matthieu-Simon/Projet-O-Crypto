@@ -1,24 +1,36 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useEffect, useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
 import authService from '../../LoginForm/auth.service';
-
 import './menuStyles.scss';
-// import SearchBar from '../searchBar/searchBar';
 
 function menu() {
+  // state to set the user logged in or not
   const [isLogged, setIsLogged] = useState(false);
+
+  const [showLinks, setShowLinks] = useState(false);
+
+  const handleShowLinks = () => {
+    setShowLinks(!showLinks);
+  };
+
+  const handleCloseMenu = () => {
+    setShowLinks(false);
+  };
 
   const navigate = useNavigate();
 
+  // Funtion to logout, redirect to homepage
   const handleLogout = () => {
     authService.logout();
     setIsLogged(false);
     navigate('/');
+    window.location.reload();
   };
-  // check if user is logged
+
+  // useEffect to check if any user is logged
   useEffect(() => {
     if (authService.getCurrentUser()) {
       setIsLogged(true);
@@ -27,12 +39,22 @@ function menu() {
 
   return (
     <menu className="App-menu">
-      <nav className="App-nav">
-        <NavLink className="App-link" to="/dashboard">Cours des Cryptomonnaies</NavLink>
-        <a className="App-link" href="/articles">Articles</a>
-        <a className="App-link" href="/lexicon">Lexique</a>
-        <a className="App-link" href="/learning">Parcours d'apprentissage</a>
-        <a className="App-link" href="/faq">FAQ</a>
+      <nav className={`App-nav ${showLinks ? 'show-nav' : 'hide-nav'}`}>
+        <li className="App-nav-item">
+          <NavLink className="App-link" to="/dashboard" onClick={handleCloseMenu}>Cours des cryptomonnaies</NavLink>
+        </li>
+        <li className="App-nav-item">
+          <NavLink className="App-link" to="/articles" onClick={handleCloseMenu}>Articles</NavLink>
+        </li>
+        <li className="App-nav-item">
+          <NavLink className="App-link" to="/lexicon" onClick={handleCloseMenu}>Lexique</NavLink>
+        </li>
+        <li className="App-nav-item">
+          <NavLink className="App-link" to="/learning" onClick={handleCloseMenu}>Parcours d'apprentissage</NavLink>
+        </li>
+        <li className="App-nav-item">
+          <NavLink className="App-link" to="/faq" onClick={handleCloseMenu}>FAQ</NavLink>
+        </li>
       </nav>
       {isLogged ? (
         <div className="App-button">
@@ -45,7 +67,9 @@ function menu() {
           <button onClick={() => navigate('/log-in')} type="button" className="App-button-login">Connexion</button>
         </div>
       )}
-      {/* <SearchBar /> */}
+      <button className="App-nav-burger" type="button" onClick={handleShowLinks}>
+        <span className="burger-bar" />
+      </button>
       <div />
     </menu>
   );

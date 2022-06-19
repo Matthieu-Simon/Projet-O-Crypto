@@ -1,19 +1,31 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './coinStyles.scss';
-import StarBorderIcon from '@mui/icons-material/StarBorder';
 import { useNavigate } from 'react-router-dom';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import authService from '../../LoginForm/auth.service';
+import './coinStyles.scss';
 
 function Coin({
   name, image, symbol, price, volume, priceChange, marketcap, rank, onClick
 }) {
+  const [isLogged, setIsLogged] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (authService.getCurrentUser()) {
+      setIsLogged(true);
+    }
+  }, [isLogged]);
   return (
     <div className="coin-cointainer">
       <div className="coin-row">
         <div className="add-favourite">
-          <StarBorderIcon onClick={() => navigate('/log-in')} className="star-icon" />
+          {isLogged ? (
+            <StarBorderIcon onClick={() => navigate('/profile')} className="star-icon" />
+          ) : (
+            <StarBorderIcon onClick={() => navigate('/log-in')} className="star-icon" />
+          )}
         </div>
         <div className="coin">
           <p className="coin-rank">{rank}</p>
