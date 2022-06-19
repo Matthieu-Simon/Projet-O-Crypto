@@ -23,3 +23,10 @@
   font-weight: 400;
   color: black;
 }
+// Responsive Cours
+@media screen and (max-width: 991px) {
+  .homepage-cours {
+    width: 90%;
+    padding: 10px;
+  }
+}

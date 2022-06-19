@@ -36,3 +36,10 @@
 .input-answer {
   margin-right: 20px;
 }
+// Responsive Challenge
+@media screen and (max-width: 991px) {
+  .main-challenge {
+    width: 90%;
+    padding: 10px;
+  }
+}

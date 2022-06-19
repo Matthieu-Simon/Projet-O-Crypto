@@ -78,3 +78,27 @@
   color: red;
   text-align: center;
 }
+// Responsive
+@media screen and (max-width: 991px) {
+  .form-container {
+    width: 100%;
+  }
+  .register-left {
+    width: 82%;
+  }
+  .register-right {
+    width: 85%;
+  }
+  .vertical {
+    border: none;
+    display: none;
+  }
+  .horizontal {
+    border-bottom: 1px solid $greyLight;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+  }
+}
