@@ -1,3 +1,4 @@
+const { response } = require('express');
 const client = require('../services/database');
 
 module.exports = {
@@ -7,8 +8,8 @@ module.exports = {
                 SELECT * FROM question
                 WHERE id=${id};
             `);
-            if (!question) {
-                return 'There is no question with this id'
+            if (question.rows.length!==1) {
+                return 'There is no question with this id';
             }
             return question.rows[0];
 
