@@ -35,12 +35,7 @@ const logout = () => {
 
 const getCurrentUser = () => JSON.parse(localStorage.getItem('user'));
 
-const setCurrentUser = (user) => {
-  localStorage.setItem('user', JSON.stringify(user));
-};
-
 const authService = {
-  setCurrentUser,
   signup,
   login,
   logout,

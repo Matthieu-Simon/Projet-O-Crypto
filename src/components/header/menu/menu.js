@@ -27,7 +27,6 @@ function menu() {
     authService.logout();
     setIsLogged(false);
     navigate('/');
-    window.location.reload();
   };
 
   // useEffect to check if any user is logged

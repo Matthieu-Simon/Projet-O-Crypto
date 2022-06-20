@@ -38,7 +38,7 @@ export default function Update() {
       nickname,
     }).then((res) => {
       console.log(res);
-      setNickname(res.data.user.pseudo);
+      console.log(res.data.user.pseudo);
     }).catch((err) => {
       console.log(err);
     });
@@ -46,7 +46,7 @@ export default function Update() {
 
   const handleSubmitEmail = (e) => {
     e.preventDefault();
-    heroku.patch(`/${user.id}`, {
+    heroku.patch(`profile/${user.id}`, {
       email,
     })
       .then((res) => {
@@ -59,7 +59,7 @@ export default function Update() {
 
   const handleSubmitPassword = (e) => {
     e.preventDefault();
-    heroku.patch(`/${user.id}`, {
+    heroku.patch(`profile/${user.id}`, {
       password,
     })
       .then((res) => {
@@ -69,6 +69,17 @@ export default function Update() {
         console.log(err);
       });
   };
+
+  const handleDeleteAccount = (e) => {
+    e.preventDefault();
+    heroku.delete(`/profile/${user.id}`)
+      .then((res) => {
+        console.log(res);
+      }).catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div>
       <Button onClick={handleOpen}>Modifier</Button>
@@ -97,7 +108,7 @@ export default function Update() {
                 <button className="button-modifier" type="submit">Valider</button>
               </form>
               <form>
-                <button className="button-modifier delete-account" type="submit">Supprimer mon compte</button>
+                <button className="button-modifier delete-account" type="submit" onClick={handleDeleteAccount}>Supprimer mon compte</button>
               </form>
             </p>
           </Typography>
