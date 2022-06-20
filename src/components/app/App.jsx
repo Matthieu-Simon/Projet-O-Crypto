@@ -22,12 +22,13 @@ import PageNotFound from '../404/PageNotFound';
 
 function App() {
   const isLogged = authService.getCurrentUser();
+
   return (
     <div className="App">
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {isLogged && <Route path="/profile" element={<Profil />} />}
+        {isLogged && (<Route path="/profile" element={<Profil />} />)}
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/coin/:id" element={<CoinPage />} />
         <Route path="/log-in" element={<LoginForm />} />
@@ -41,9 +42,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:name" element={<Article />} />
-        <Route path="*" element={<PageNotFound />} />
         <Route path="/lexicon" element={<Lexicon />} />
-
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </div>

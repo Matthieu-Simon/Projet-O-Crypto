@@ -23,6 +23,9 @@ const login = (email, password) => heroku
     if (response.data.accessToken) {
       localStorage.setItem('user', JSON.stringify(response.data));
     }
+    else {
+      console.log(response.data.message);
+    }
     return response.data;
   });
 
@@ -32,7 +35,12 @@ const logout = () => {
 
 const getCurrentUser = () => JSON.parse(localStorage.getItem('user'));
 
+const setCurrentUser = (user) => {
+  localStorage.setItem('user', JSON.stringify(user));
+};
+
 const authService = {
+  setCurrentUser,
   signup,
   login,
   logout,
