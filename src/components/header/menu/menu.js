@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useEffect, useState } from 'react';
 import { useNavigate, NavLink } from 'react-router-dom';
+import ReactSwitch from 'react-switch';
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
 import authService from '../../LoginForm/auth.service';
@@ -9,6 +10,7 @@ import './menuStyles.scss';
 function menu() {
   // state to set the user logged in or not
   const [isLogged, setIsLogged] = useState(false);
+  const [theme, setTheme] = useState('light');
 
   const [showLinks, setShowLinks] = useState(false);
 
@@ -18,6 +20,10 @@ function menu() {
 
   const handleCloseMenu = () => {
     setShowLinks(false);
+  };
+
+  const toogleTheme = () => {
+    setTheme((currentTheme) => (currentTheme === 'light' ? 'dark' : 'light'));
   };
 
   const navigate = useNavigate();
@@ -69,6 +75,9 @@ function menu() {
       <button className="App-nav-burger" type="button" onClick={handleShowLinks}>
         <span className="burger-bar" />
       </button>
+      <div className="switch-container">
+        <ReactSwitch onChange={toogleTheme} checked={theme === 'dark'} />
+      </div>
       <div />
     </menu>
   );
