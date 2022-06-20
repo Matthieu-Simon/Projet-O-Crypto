@@ -1,7 +1,7 @@
 @import './src/styles/vars';
 
 .learning-main {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 .title-learn {
@@ -123,7 +123,7 @@
 .cours-container {
   position: fixed;
   bottom: 30px;
-  width: 90%;
+  width: 100%;
   text-align: center;
   background-color: $greyLight;
   padding-top: 20px;
@@ -156,7 +156,7 @@
 // RESPONSIVE Parcours
 @media all and (max-width: 991px) {
   .learning-main {
-    width: 90%;
+    //width: 90%;
     justify-content: center;
     margin: auto;
     align-items: center;
@@ -176,10 +176,11 @@
     width: 100%;
   }
   .card-container {
-    width: 100%;
+    width: 90%;
     align-items: center;
     justify-content: center;
     margin: auto;
+    margin-bottom: 20px;
   }
   // Partie Footer
   .cours-container {
