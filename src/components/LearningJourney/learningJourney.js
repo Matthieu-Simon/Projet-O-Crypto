@@ -6,16 +6,6 @@ function LearningJourney() {
     <main className="learning-main">
       <h2 className="title-learn">Parcours d'apprentissage</h2>
       <div className="card-main">
-        <div className="profil-learn">
-          <div className="test-learn">
-            <div>
-              <a className="img-profil-card">Photo</a>
-            </div>
-            <div className="profil-main-card">
-              <h5 className="profil-card-name">Lemaitre Investissor</h5>
-            </div>
-          </div>
-        </div>
         <div className="card-container">
           <div className="card-structure">
             <div className="head-card">

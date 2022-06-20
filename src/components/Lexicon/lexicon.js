@@ -6,6 +6,8 @@ import axios from 'axios';
 
 function lexicon() {
   const [words, setWords] = useState([]);
+  const [search, setSearch] = useState('');
+  const [slice, setSlice] = useState(10);
   const fetchLexicon = async () => {
     const { data } = await axios.get('https://ocrypto-backend.herokuapp.com/lexicon');
     setWords(data);
@@ -14,63 +16,44 @@ function lexicon() {
     fetchLexicon();
   }, []);
 
-  console.log(words);
+  const handleChange = (event) => {
+    setSearch(event.target.value);
+  };
 
+  const filteredWords = words.filter((word) => word.name.toLowerCase().includes(search.toLowerCase()));
+
+  const moreResult = () => {
+    setSlice(slice + 10);
+  };
   return (
-    <div id="parent">
+    <div className="lexicon-container">
       <header>
-        <h1 className="titleh1">Lexique</h1>
+        <h1 className="lexicon-title">Lexique</h1>
       </header>
-      <div className="lefttop">
-        <br />
-        <a href="#a">A</a>&nbsp;&nbsp;
-        <a href="#b">B</a>&nbsp;&nbsp;
-        <a href="#c">C</a>&nbsp;&nbsp;
-        <a href="#d">D</a>&nbsp;&nbsp;
-        <a href="#e">E</a>&nbsp;&nbsp;
-        <a href="#f">F</a>&nbsp;&nbsp;
-        <a href="#g">G</a>&nbsp;&nbsp;
-        <a href="#h">H</a>&nbsp;&nbsp;
-        <a href="#i">I</a>&nbsp;&nbsp;
-        <a href="#j">J</a>&nbsp;&nbsp;
-        <a href="#k">K</a>&nbsp;&nbsp;
-        <a href="#l">L</a>&nbsp;&nbsp;
-        <a href="#m">M</a>&nbsp;&nbsp;
-        <a href="#n">N</a>&nbsp;&nbsp;
-        <a href="#o">O</a>&nbsp;&nbsp;
-        <a href="#p">P</a>&nbsp;&nbsp;
-        <a href="#q">Q</a>&nbsp;&nbsp;
-        <a href="#r">R</a>&nbsp;&nbsp;
-        <a href="#s">S</a>&nbsp;&nbsp;
-        <a href="#t">T</a>&nbsp;&nbsp;
-        <a href="#u">U</a>&nbsp;&nbsp;
-        <a href="#v">V</a>&nbsp;&nbsp;
-        <a href="#w">W</a>&nbsp;&nbsp;
-        <a href="#x">X</a>&nbsp;&nbsp;
-        <a href="#y">Y</a>&nbsp;&nbsp;
-        <a href="#z">Z</a>&nbsp;&nbsp;
+      <div className="lexicon-search">
+        <form>
+          <input type="text" className="articles-input" placeholder="Rechercher un terme" onChange={handleChange} />
+        </form>
       </div>
 
       <div className="divAll">
-        {words.map((word) => (
-          <>
-            <div key={word.created_at} className="divletter">
-              <p>
-                <a name="a">
-                  <b className="lettersolo">{word.letter}</b>
-                </a>
-              </p>
-            </div><a className="descriptionLetter">
-              <h2 className="titleDescription">{word.name}</h2>
-              <div className="descriptionNude">
-                {word.abstract}
-              </div>
-            </a>
+        {filteredWords.slice(0, slice).map((word) => (
+          <div key={word.name} className="divWord">
+            <div>
+              <a className="descriptionLetter">
+                <h2 className="lexicon-word-title">{word.name}</h2>
+                <div className="lexicon-word-description">
+                  {word.abstract}
+                </div>
+              </a>
+            </div>
             <hr className="SB" />
-          </>
+          </div>
         ))}
       </div>
-
+      <div className="lexicon-more">
+        <button type="button" className="more-words" onClick={moreResult}>Plus de résultats</button>
+      </div>
     </div>
 
   );

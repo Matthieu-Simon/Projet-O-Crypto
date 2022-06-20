@@ -76,6 +76,25 @@
     width: 10%;
 }
 
+@media screen and (max-width: 768px) {
+    .coin-page {
+        width: 100%;
+        flex-direction: column;
+    }
+    .coin-page-header {
+        width: 100%;
+        margin: 0;
+    }
+    .coin-page-img {
+        width: 30%;
+    }
+    .coin-page-name {
+        font-size: 3rem;
+    }
+    .coin-chart-container {
+        width: 100%;
+    }
+}
 
 
 
