@@ -15,6 +15,10 @@
     margin-bottom: 50px;
   }
 
+  #dark .coin-app {
+    color: white;
+  }
+
   .row-description {
     display: flex;
     flex-direction: row;
@@ -22,6 +26,7 @@
     font-size: 1.1rem;
     font-weight: bold;
   }
+
   
   .coin-search {
     margin: 64px;

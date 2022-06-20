@@ -47,7 +47,7 @@ function main() {
             <div key={article.name} onClick={() => navigate(`/articles/${article.name}`)} className="App-article-preview">
               <div className="App-article-preview-title">
                 <h2 className="App-article-preview-title-text">
-                  {article.name}
+                  {article.name.toUpperCase()}
                 </h2>
               </div>
               <div className="App-article-preview-image">

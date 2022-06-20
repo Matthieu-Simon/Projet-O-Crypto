@@ -23,7 +23,7 @@ function Article() {
       <div key={articles.id} className="App-article">
         <div className="App-article-header">
           <h1 className="App-article-title">
-            {articles.name}
+            {articles.name.toUpperCase()}
           </h1>
         </div>
         <div className="App-article-image">

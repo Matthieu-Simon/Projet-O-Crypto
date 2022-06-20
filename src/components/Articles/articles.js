@@ -33,7 +33,7 @@ function Articles() {
     <div className="App-main-content">
       <div className="App-main-header">
         <h1 className="App-main-title">
-          Articles
+          ARTICLES
         </h1>
         <div className="articles-search">
           <form>
@@ -46,7 +46,7 @@ function Articles() {
           <div key={article.id} onClick={() => navigate(`/articles/${article.name}`)} className="App-article-preview">
             <div className="App-article-preview-title">
               <h2 className="App-article-preview-title-text">
-                {article.name}
+                {article.name.toUpperCase()}
               </h2>
             </div>
             <div className="App-article-preview-image">

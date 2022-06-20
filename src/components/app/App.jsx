@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
 import './App.scss';
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ReactSwitch from 'react-switch';
 import authService from '../LoginForm/auth.service';
@@ -31,7 +31,15 @@ function App() {
 
   const toogleTheme = () => {
     setTheme((currentTheme) => (currentTheme === 'light' ? 'dark' : 'light'));
+    localStorage.setItem('theme', theme);
   };
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem('theme');
+    if (localTheme) {
+      setTheme(localTheme);
+    }
+  }, []);
 
   return (
     <Themecontext.Provider value={{ theme, toogleTheme }}>

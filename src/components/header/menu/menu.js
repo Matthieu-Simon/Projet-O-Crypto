@@ -58,7 +58,7 @@ function menu() {
       </nav>
       {isLogged ? (
         <div className="App-button">
-          <button onClick={() => navigate('/profile')} type="button" className="App-button-signin"><PersonIcon baseClassName="light-icon" fontSize="large" style={{ color: '#424C7C' }} /></button>
+          <button onClick={() => navigate('/profile')} type="button" className="App-button-signin"><PersonIcon fontSize="large" /></button>
           <button onClick={handleLogout} type="button" className="App-button-login"><LogoutIcon fontSize="medium" /></button>
         </div>
       ) : (

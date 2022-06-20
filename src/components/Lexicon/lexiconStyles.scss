@@ -1,5 +1,4 @@
 .lexicon-title{
-    color: #424C7C;
 	font-size: 2rem;
 	font-weight: 700;
     display: flex;
@@ -8,9 +7,13 @@
 	padding: 40px;
 }
 
+#dark .lexicon-title{
+    color: white;
+}
 
 .lexicon-container{
     width: 90%;
+    color: #424C7C;
     margin: auto;
 }
 
@@ -22,16 +25,25 @@
     opacity: 50%;
 }
 
+#dark .SB {
+    color: white;
+}
+
 .lexicon-word-title {
-    color: #424C7C;
     font-size: 1.5rem;
     font-weight: bold;
     padding-top: 20px;
 }
+
+#dark .lexicon-word-title {
+    color: white;
+}
 .lexicon-word-description {
-    color: #424C7C;
     font-size: 1.1rem;
     margin: 20px 0;
+}
+#dark .lexicon-word-description {
+    color: white;
 }
 //DIV ALL----------------------------------
 .divAll{

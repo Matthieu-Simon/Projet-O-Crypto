@@ -8,8 +8,9 @@
 	align-content: center;
 	padding: 15px;
 }
-
-
+#dark .title-page {
+    color: white;
+}
 // CARD TEAM
 .team-preview {
     width: 25%;
@@ -20,6 +21,12 @@
     color: #424C7C;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#dark .team-preview {
+    background-color: rgb(0, 0, 82);
+    color: white;
+    box-shadow: darkblue 0px 10px 36px 0px, darkblue 0px 0px 0px 1px;
 }
 .container-team{
     display: flex;

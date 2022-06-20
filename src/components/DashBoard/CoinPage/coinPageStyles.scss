@@ -7,6 +7,10 @@
     color: #424C7C;
 }
 
+#dark .coin-page {
+    color: white;
+}
+
 .coin-page-header {
     display: flex;
     flex-direction: column;
@@ -16,6 +20,10 @@
     border-right: 1px solid #424C7C;
     margin: 30px 0;
     padding: 0px 20px;
+}
+
+#dark .coin-page-header {
+    border-right: 1px solid white;
 }
 
 .coin-page-img {
@@ -59,6 +67,13 @@
     box-shadow: inset 250px 0 0 0 #424C7C;
     color: white;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    border-radius: 5px;
+}
+
+#dark .coin-page-link:hover {
+    box-shadow: inset 250px 0 0 0 white;
+    color: #424C7C;
+    transition: color .3s ease-in-out, box-shadow .7s ease-in-out;
     border-radius: 5px;
 }
 

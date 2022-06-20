@@ -127,12 +127,10 @@
     align-items: center;
     font-size: 0.8rem;
 }
-
 label { 
     margin-right: 10px;
 }
-
-#dark .light-icon {
+.material-icons{
     color: white;
 }
 // RESPONSIVE MENU
@@ -147,6 +145,10 @@ label {
         height: 100vh;
         background-color: white;
         visibility: hidden;
+    }
+    #dark .App-nav {
+        background-color: #424C7C;
+
     }
     .show-nav, .App-link {
         right: 0;
@@ -177,6 +179,9 @@ label {
         border-radius: 3px;
         background-color: #424C7C;
         transition: all .5s ease-in-out;
+    }
+    #dark .burger-bar, #dark .burger-bar::before, #dark .burger-bar::after {
+        background-color: white;
     }
     .burger-bar::before, .burger-bar::after {
         content: '';

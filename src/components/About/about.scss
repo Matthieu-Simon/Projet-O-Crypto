@@ -5,6 +5,10 @@
     padding-bottom: 20px;
 }
 
+#dark .about-title {
+    color: white;
+}
+
 .about{
     text-align: center;
 	font-size: 28px;
@@ -15,6 +19,10 @@
 	align-content: center;
 	padding: 50px;
 	color: #424C7C;
+}
+
+#dark .about {
+    color: white;
 }
 
 .team1{
@@ -39,23 +47,16 @@
     padding: 5%;
 }
 
-
-
-.text1{
+.text{
     padding-left: 10%;
     padding-right: 10%;
     text-align: justify;
     color: #424C7C;
 }
 
-.text2{
-    padding-left: 10%;
-    padding-right: 10%;
-    text-align: justify;
-    color: #424C7C;
+#dark .text {
+    color: white;
 }
-
-
 //RESPONSIVE 
 @media all and (max-width: 991px) {
     

@@ -11,7 +11,7 @@ function About() {
 
       <div className="container1">
 
-        <div className="text1">
+        <div className="text">
           <h3 className="about-title">O'crypto, qu'est-ce que c'est ?</h3>
           <p>Le site “O’Crypto” est destiné à apprendre les bases de l’univers des crypto-monnaies et de la technologie Blockchain.
             O’Crypto met à disposition des visiteurs des articles qui leur permettra d’en savoir plus sur certains sujets de la cryptomonnaie.
@@ -32,7 +32,7 @@ function About() {
         <div className="image2">
           <img src={team2} alt="team2" className="team2" />
         </div>
-        <div className="text2">
+        <div className="text">
           <h3 className="about-title">Notre objectif</h3>
           <p>Aujourd’hui, il existe de nombreux sites répertoriant des informations sur les crypto-monnaies et la technologie blockchain,
             mais aucun n’est destiné aux débutants, il y a souvent trop d’informations et des chiffres qui peuvent paraître effrayants à première vue.
