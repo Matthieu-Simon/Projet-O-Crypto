@@ -8,6 +8,7 @@ const articleRouter = require('./article');
 const lexiconRouter = require('./lexicon');
 const levelRouter = require('./level');
 const challengeRouter = require('./challenge');
+const questionRouter = require('./question');
 
 router.use(homepageRouter);
 router.use(userRouter);
@@ -15,5 +16,6 @@ router.use(articleRouter);
 router.use(lexiconRouter);
 router.use(levelRouter);
 router.use(challengeRouter);
+router.use(questionRouter)
 
 module.exports = router;
