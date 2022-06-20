@@ -28,8 +28,7 @@ CREATE TABLE article (
 
 CREATE TABLE challenge (
     name text NOT NULL UNIQUE,
-    level_id integer NOT NULL,
-    reward int NOT NULL DEFAULT 0,
+    level_id integer NOT NULL,    
     article_id integer NOT NULL,
     abstract text NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
@@ -60,6 +59,7 @@ CREATE TABLE "level" (
 
 CREATE TABLE question (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    reward int NOT NULL DEFAULT 30,
     answer_id integer NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     delete_at TIMESTAMPTZ 
@@ -81,7 +81,7 @@ CREATE TABLE favoris (
 );
 
 ALTER TABLE answer
-    ADD FOREIGN KEY (question_id) REFERENCES question(id);
+ADD FOREIGN KEY (question_id) REFERENCES question(id);
 
 ALTER TABLE favoris
 ADD FOREIGN KEY (crypto_currencies_id) REFERENCES crypto_currencies(id);
