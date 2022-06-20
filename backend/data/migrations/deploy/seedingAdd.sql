@@ -382,12 +382,117 @@ INSERT INTO "level"(name)VALUES
 ('intermediate'),
 ('junior');
 
-INSERT INTO challenge(name, level_id, article_id, abstract) VALUES
-('challenge 1', 1, 1, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
-('challenge 2', 2, 1, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
-('challenge 3', 2, 1, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
-('challenge 4', 3, 1, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
-('challenge 5', 3, 1, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. ');
+INSERT INTO challenge(name, level_id, abstract) VALUES
+('Blockchain', 1, 'La blockchain (chaîne de blocs) est une technologie de stockage et de transmission 
+d’informations, sécurisée par des outils cryptographiques, infalsifiable, transparente car distribuée 
+chez tous ses utilisateurs et sans organe central de contrôle. C’est une sorte de registre mondial
+de données, qui contient l’historique de tous les échanges réalisés entre ses utilisateurs depuis sa 
+création.
+Les actifs peuvent être des biens corporels (maison, voiture, espèces, terrain) ou des actifs 
+incorporels tels que des éléments de propriété intellectuelle tels que des brevets, des droits 
+d''auteur ou des marques.
+Les réseaux blockchain permettent de suivre et d''échanger pratiquement n''importe quel produit 
+de valeur, réduisant ainsi les risques et les coûts pour toutes les parties impliquées.
+Une blockchain constitue une base de données qui contient l’historique de tous les échanges 
+effectués entre ses utilisateurs, et ce, depuis sa création. Pour se la représenter, l’image du grand 
+livre est fréquemment utilisée : la blockchain peut être comparée à un vaste registre public 
+intégrant l’ensemble des échanges effectués par ses utilisateurs depuis sa création. Une de ses 
+caractéristiques principales est qu’elle ne peut pas être modifiée. Les blocs sont protégés par 
+plusieurs procédés cryptographiques innovants qui rendent la modification impossible a 
+posteriori. C’est ce qui donne à cette technologie son caractère transparent : on peut uniquement 
+ajouter des opérations, mais pas les modifier ni les supprimer, elles sont infalsifiables.
+Cette technologie repose sur un système de pair-à-pair décentralisé : les données ne sont pas 
+hébergées par un serveur unique mais distribuées entre les utilisateurs, sans intermédiaire. Une 
+partie des utilisateurs détient des copies de la blockchain, qui se trouve donc présente partout 
+dans le monde. Ces centaines de copies sont sans cesse mises à jour simultanément. 
+Contrairement aux bases de données traditionnelles, qui sont administrées par des opérateurs 
+centralisés, la blockchain est administrée collectivement, par tous les nœuds du réseau. Ces 
+nœuds obéissent tous à un même protocole informatique, qui définit les procédures à suivre, ainsi 
+que les conditions à respecter pour mettre à jour la base de données.
+Concrètement, la technologie blockchain prend la forme d’un registre qui recense des données, 
+généralement des transactions, regroupées dans des blocs reliés entre eux. Un bloc est 
+simplement un ensemble d’informations mis ensemble, et les blocs sont reliés entre eux de 
+manière irréversible (par les chaînes). Chaque bloc est validé par les nœuds du réseau, des 
+utilisateurs-validateurs appelés les “mineurs”. Une fois validés, les blocs sont horodatés et 
+intégrés à la chaîne de blocs, accessible à tous les utilisateurs. La transaction est alors visible 
+pour le récepteur ainsi que l’ensemble du réseau. Les mineurs sont rémunérés via des tokens. Le 
+seul moyen de modifier la blockchain est d''ajouter un bloc : il n''est pas possible de changer un 
+bloc existant ou de modifier les chaînes.
+Plusieurs caractéristiques sont associées à la blockchain : désintermédiation, traçabilité, 
+transparence, consensus distribué, ineffaçable, structure distribuée, résilience, sécurité et 
+confiance. Toutes ces caractéristiques constituent le potentiel innovateur de la blockchain.
+Les caractéristiques principales de la technologie blockchain sont :
+- La désintermédiation 
+La technologie blockchain permet d’échanger sans le contrôle d’un tiers. La validation et l’ajout 
+d’un bloc résultent d’un consensus entre les utilisateurs-validateurs, qui repose sur la possibilité
+de vérifier leur travail de validation et qui rend inutile le contrôle par une institution de référence. 
+Tout est effectué sans l’intervention d’une autorité centrale, les utilisateurs opèrent la surveillance, 
+et se contrôlent mutuellement, assurant la certification des sauvegardes et leurs cohérences.
+Le tiers de confiance, une banque par exemple, est traditionnellement le seul moyen de s’assurer 
+qu’une transaction est valide, c’est-à-dire que les données (de la monnaie le plus souvent) ont 
+effectivement été transférées d’une personne A à une personne B, et que la personne A n’est 
+donc plus en possession des données initiales. La blockchain permet de faire reposer la 
+confiance uniquement sur la technologie et sur la possibilité pour tous et à tout moment de 
+contrôler les opérations et leur validation. La confiance est ici distribuée et ne nécessite plus 
+d’intermédiaire.
+La blockchain est ainsi décentralisée tant sur le plan politique (personne ne la contrôle) que sur le 
+plan architectural (pas d’infrastructure centrale).
+Cependant, aussi prometteuse soit-elle, cette désintermédiation poussée à l’extrême peut poser 
+de nombreux problèmes. L’absence de contrôle et de régulation par un tiers facilite des 
+comportements litigieux comme par exemple le blanchiment d’activités illégales. De même, se 
+pose la question de l’arbitrage en cas de litige, étant donné qu’il n’y a personne, aucune 
+institution vers laquelle se tourner en cas de dysfonctionnement.
+- La transparence 
+Une fois qu’un document est inscrit sur la blockchain, cela suffit à prouver que ce dernier existe 
+bien à l’instant T et qu’il n’a pas été modifié. La blockchain est qualifiée de transparente car tout 
+le monde peut la télécharger dans son intégralité et vérifier à tout moment son honnêteté. Tous 
+les utilisateurs de la blockchain peuvent ainsi voir les transactions présentes et passées.
+Si la transparence est assurée pour les transactions, l’anonymisation des utilisateurs remet 
+cependant en cause cette caractéristique. En effet, l’anonymat possible sur la blockchain peut 
+être utilisé pour des activités frauduleuses, difficiles voire impossibles à détecter et à réguler.
+- La sécurité
+L’hébergement décentralisé fait également de la blockchain une technologie sûre : elle rend 
+quasi- impossible la suppression de toutes les copies des documents, qui existent sur une 
+multitude de serveurs à travers le monde. La blockchain a une grande résistance, car toutes les 
+données sont copiées dans les différents serveurs. Cela la rend résistante aux cyber-attaques ou 
+au contrôle de l’État. En effet, s’il est possible de s’attaquer à un ou plusieurs ordinateurs, il est 
+plus compliqué de s’attaquer aux blocs d’informations copiés dans l’ensemble des ordinateurs 
+connectés au réseau. Cela offre à la blockchain un haut niveau de sécurité. La blockchain est 
+donc considérée comme inattaquable et inviolable. Cependant, cela la rend également 
+difficilement régulable.
+- L’autonomie 
+La puissance de calcul et l’espace d’hébergement sont fournis par les nœuds du réseau, c’est-à-
+dire les utilisateurs eux-mêmes. Il n’y a donc pas besoin d’infrastructures centrales. Au sein d’une 
+blockchain, l’infrastructure n’est plus concentrée dans les mains d’une organisation mais est, au 
+contraire, éclatée dans l’ensemble des points du réseau. Une blockchain est donc autoportante et 
+indépendante de services tiers.
+La blockchain est l’architecture sous-jacente de la cryptomonnaie bitcoin, qui reste aujourd’hui le 
+cas d’usage le plus connu. La première fonction de la blockchain a donc été le transfert d’actifs 
+financiers. Mais cette technologie ne cesse d’évoluer et est à la base de bien d’autres 
+applications qu’un réseau de paiement. Elle est aujourd’hui utilisée aussi par d’autres acteurs et 
+les opérations et données ne sont pas nécessairement financières.
+Son potentiel peut en effet s’appliquer à tous les domaines qui impliquent un échange, une 
+sauvegarde ou même une preuve et pourrait donner lieu à des usages révolutionnaires pour la 
+santé, l’énergie, l’industrie musicale, les politiques publiques, l’agriculture etc. Parmi les 
+applications possibles :
+- Les « smart contract » exécutent automatiquement des actions validées au préalable par les 
+parties prenantes : le groupe d’assurance Axa a par exemple testé le remboursement 
+automatique des vols retardés via ce type de contrat.
+- Le vote électronique a été testé par la ville de Zoug (Suisse) en 2018.
+- La certification des droits d’auteurs, comme le propose la start-up Mediachain qui permet aux 
+artistes de déposer leurs créations sur la base de données, et tout en gardant le contrôle
+sur elles et sur leur authenticité.
+- La traçabilité des produits proposée par la plateforme Provenance.
+- La blockchain peut être un outil pour la mise en œuvre de monnaies locales complémentaires
+(MLC) numériques, à l’image du Léman, une MLC utilisée dans plusieurs communes françaises et 
+suisses. Cela permet de mieux répondre aux besoins spécifiques des entreprises du réseau et de 
+garantir une meilleure traçabilité.
+- Elle peut également être utilisée pour mettre en place des systèmes de collaboration et de 
+gouvernance plus démocratiques, comme nous le verrons plus loin dans cette note.'),
+('challenge 2', 2, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
+('challenge 3', 2, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
+('challenge 4', 3, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
+('challenge 5', 3, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. ');
 
 
 
