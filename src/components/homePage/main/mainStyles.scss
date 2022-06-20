@@ -20,6 +20,10 @@
     width: 50%;
 }
 
+#dark .App-main-title {
+    color: white;
+}
+
 .App-main-text {
     text-align: center;
     justify-content: center;
@@ -27,7 +31,10 @@
     margin: auto;
     color: #424C7C;
     padding: 50px;
+}
 
+#dark .App-main-text {
+    color: white;
 }
 // ARTICLES SECTION
 .App-articles {
@@ -55,6 +62,12 @@
     cursor: pointer;
 }
 
+#dark .App-article-preview {
+    background-color: rgb(0, 0, 82);
+    color: white;
+    box-shadow: darkblue 0px 10px 36px 0px, darkblue 0px 0px 0px 1px;
+}
+
 .App-article-preview:hover {
     transform: scale3d(1.05, 1.05, 1.05);
     transition: transform 0.2s ease-in-out;
@@ -66,6 +79,10 @@
     font-weight: bold;
     text-align: center;
     color: #424C7C;
+}
+
+#dark .App-article-preview-title-text {
+    color: white;
 }
 
 .article-img {
@@ -129,6 +146,12 @@
     background-color: #424C7C;
     color: white;
     text-align: center;
+}
+
+#dark .App-learning-preview {
+    background-color: rgb(0, 0, 82);
+    color: white;
+    box-shadow: darkblue 0px 10px 36px 0px, darkblue 0px 0px 0px 1px;
 }
 
 .learning-img {

@@ -27,10 +27,20 @@
     padding: 5px;
 }
 
+#dark .App-link {
+    color: white;
+}
+
  .App-link:hover {
     box-shadow: inset 350px 0 0 0 #424C7C;
     color: white;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+
+#dark .App-link:hover {
+    box-shadow: inset 350px 0 0 0 white;
+    color: #424C7C;
+    transition: color .3s ease-in-out, box-shadow .7s ease-in-out;
   }
 
 .App-button-login {
@@ -51,6 +61,16 @@
     cursor: pointer;
 }
 
+#dark .App-button-signin {
+    background-color: #424C7C;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
 .App-button-login:hover {
     color: #424C7C;
     background-color: white;
@@ -64,6 +84,14 @@
     border-radius: 8px;
     border: 1px solid #424C7C;
     transition: ease-out .1s;
+}
+
+#dark .App-button-signin:hover {
+    color: #424C7C;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #424C7C;
+    transition: ease-in .1s;
 }
 
 .App-button-profile {
@@ -104,6 +132,9 @@ label {
     margin-right: 10px;
 }
 
+#dark .light-icon {
+    color: white;
+}
 // RESPONSIVE MENU
 @media all and (max-width: 1300px) {
     .App-nav {
