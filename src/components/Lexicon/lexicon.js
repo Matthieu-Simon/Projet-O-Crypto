@@ -38,8 +38,8 @@ function lexicon() {
 
       <div className="divAll">
         {filteredWords.slice(0, slice).map((word) => (
-          <>
-            <div key={word.letter} className="divWord">
+          <div key={word.name} className="divWord">
+            <div>
               <a className="descriptionLetter">
                 <h2 className="lexicon-word-title">{word.name}</h2>
                 <div className="lexicon-word-description">
@@ -48,7 +48,7 @@ function lexicon() {
               </a>
             </div>
             <hr className="SB" />
-          </>
+          </div>
         ))}
       </div>
       <div className="lexicon-more">

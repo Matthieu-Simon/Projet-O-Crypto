@@ -101,3 +101,20 @@
     transition: ease-in .1s;
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    .coin-app {
+        width: 100%;
+        overflow: scroll;
+    }
+    .coin-search {
+        margin: 64px;
+    }
+    .row-description {
+      visibility: hidden;
+    }
+    .coin-container {
+      overflow: scroll;
+    }
+  
+}
