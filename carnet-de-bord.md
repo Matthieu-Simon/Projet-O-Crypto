@@ -91,3 +91,36 @@ En fin de journée que ce soit au front ou au back, la partie utilisateur est fo
 Prochaines étapes : 
 
 * Lier la partie fron et back
+
+### Jour 5 - 15/06/22
+Comme à notre habitude nous avons fait notre daily meeting afin de préparer notre journée de travail.
+Le front s'est occupé de l'intégration du parcours d'apprentissage et de la gestion de la connexion au compte utilisateur.
+Quand à l'équipe back, elle s'est occupée de l'ajout de données dans le léxique, de la gestion de l'encryption des mots de passe lors de l'incription et de la vérification du mot de passe lors de la connexion.
+
+Prochaines étapes : 
+
+* Mise en ligne de la partie front
+* Ajout de la gestion des cookies sur le back
+
+## Sprint 2
+
+### Jour 1 - 16/06/22
+Nous avons commencé notre journée par choisir la personne qui s'occupera de présenter le projet au reste de la promotion.
+Une fois cette personne choisie, et la présentation préparée nous nous somme mis au travail.
+Concernant la partie back, plusieurs librairies de gestion des cookies ont été testées. En fin de journée l'équipe back, rencontrant des difficultées, n'a pas pu choisir définitevement un module de gestion des cookies.
+L'équipe back a en plus apportée des modififactions à la bdd (tables article et lexicon).
+Quand à l'équipe front, elle s'est occupée de corriger les quelques soucis présents sur le parcours d'apprentissage et l'ajout d'un léxique fonctionnel.
+
+Prochaines étapes : 
+
+* Choix définitif du module de gestion des cookies
+
+### Jour 2 - 17/06/22
+L'équipe back s'est arrêté sur le module jwt pour la gestion des cookies. L'intégration de ce module leur aura pris une grande partie de la journée.
+Ils  ont en plus ajouté des données de seeding en bdd afin de rendre les test de communications entre back et front plus faciles.
+Tandis que l'équipe front s'est occupée de finaliser le parcours d'apprentissage, le léxique, les test d'incriptions et de connexion avec la gestion des cookies et la gestion du responsive.
+
+Prochaines étapes : 
+
+* Mise en place d'un parcours d'apprentissage fonctionnel
+* Intégration du calcul de points et de l'évolution du niveau de l'utilisateur
