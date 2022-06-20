@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import './articleStyles.scss';
-import btclogo from '../../../assets/btc.png';
+import btclogo from '../../../assets/images/btc.png';
 
 function Article() {
   const { name } = useParams();

@@ -5,7 +5,7 @@ import React from 'react';
 import './profilStyles.scss';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-import ProfilLogo from '../../assets/profilLogo.png';
+import ProfilLogo from '../../assets/images/profilLogo.png';
 import CoinSummary from './CoinList/coinSummary';
 import Update from './Update/update';
 import authService from '../LoginForm/auth.service';

@@ -1,16 +1,16 @@
 /* eslint-disable max-len */
 import React from 'react';
 import './ourTeamStyles.scss';
-import mec1 from '../../assets/mec1.png';
-import mec2 from '../../assets/mec2.png';
-import mec3 from '../../assets/mec3.png';
-import mec4 from '../../assets/mec4.png';
-import mec5 from '../../assets/mec5.png';
+import mec1 from '../../assets/images/mec1.png';
+import mec2 from '../../assets/images/mec2.png';
+import mec3 from '../../assets/images/mec3.png';
+import mec4 from '../../assets/images/mec4.png';
+import mec5 from '../../assets/images/mec5.png';
 
 function ourTeam() {
   return (
     <div className="title-container">
-      <h1 className="title-page">La crypto team</h1>
+      <h1 className="title-page">Notre équipe</h1>
       <div className="container-team">
         <div className="team-preview">
           <div className="team-preview-title">

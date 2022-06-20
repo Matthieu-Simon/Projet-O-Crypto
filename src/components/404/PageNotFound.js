@@ -1,6 +1,6 @@
 import React from 'react';
 import './404Styles.scss';
-import introuvable from '../../assets/introuvable.png';
+import introuvable from '../../assets/images/introuvable.png';
 
 function PageNotFound() {
   return (

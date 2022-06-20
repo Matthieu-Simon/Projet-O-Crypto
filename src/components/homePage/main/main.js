@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import authService from '../../LoginForm/auth.service';
 import './mainStyles.scss';
-import btclogo from '../../../assets/btc.png';
-import dashboardlogo from '../../../assets/Dashboard.png';
+import btclogo from '../../../assets/images/btc.png';
+import dashboardlogo from '../../../assets/images/Dashboard.png';
 
 function main() {
   const navigate = useNavigate();
