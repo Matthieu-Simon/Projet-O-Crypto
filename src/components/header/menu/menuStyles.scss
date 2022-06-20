@@ -143,8 +143,10 @@ label {
         right: -100vw;
         bottom: 0;
         height: 100vh;
+        padding: 2rem;
         background-color: white;
         visibility: hidden;
+        transition: all .8s ease-out;
     }
     #dark .App-nav {
         background-color: #424C7C;
@@ -154,16 +156,29 @@ label {
         right: 0;
         width: 100vw;
         visibility: visible;
-        z-index: 1;
+        //z-index: 1;
     }
     .App-link {
         display: block;
         padding: 1.5rem;
         font-size: 5vw;
         color: #424C7C;
+        text-align: center;
+    }
+    .App-nav-item::after {
+        display: block;
+        content: "";
+        margin: 0 auto;
+        width: 3vw;
+        height: 1px;
+        background: #424C7C;
+    }
+    .App-nav-item:last-child::after {
+        display: none;
     }
     .App-nav-burger {
         display: block;
+        position: fixed;
         top: 1rem;
         right: 1rem;
         z-index: 1;
@@ -172,7 +187,7 @@ label {
         cursor: pointer;
     }
     .burger-bar, .burger-bar::before, .burger-bar::after {
-       display: block;
+        display: block;
         width: 40px;
         height: 3px;
         position: relative;
@@ -184,7 +199,7 @@ label {
         background-color: white;
     }
     .burger-bar::before, .burger-bar::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
     }
@@ -193,6 +208,37 @@ label {
     }
     .burger-bar::after {
         transform: translateY(12px);
+    }
+    .show-nav .burger-bar {
+        width: 0;
+        background: transparent;
+    }
+    .show-nav .burger-bar::before {
+        transform: rotate(45deg);
+    }
+    .show-nav .burger-bar::after {
+        transform: rotate(-45deg);
+    }
+    .App-nav-item {
+        transform: translateY(100vh);
+    }
+    .show-nav .App-nav-item {
+        transform: translateY(0);
+    }
+    .show-nav .slideInDown-1 {
+        transition: all 1s ease-out;
+    }
+    .show-nav .slideInDown-2 {
+        transition: all 1.1s ease-out;
+    }
+    .show-nav .slideInDown-3 {
+        transition: all 1.2s ease-out;
+    }
+    .show-nav .slideInDown-4 {
+        transition: all 1.3s ease-out;
+    }
+    .show-nav .slideInDown-5 {
+        transition: all 1.4s ease-out;
     }
 }
 
