@@ -39,19 +39,19 @@ function menu() {
   return (
     <menu className="App-menu">
       <nav className={`App-nav ${showLinks ? 'show-nav' : 'hide-nav'}`}>
-        <li className="App-nav-item">
+        <li className="App-nav-item slideInDown-1">
           <NavLink className="App-link" to="/dashboard" onClick={handleCloseMenu}>Cours des cryptomonnaies</NavLink>
         </li>
-        <li className="App-nav-item">
+        <li className="App-nav-item slideInDown-2">
           <NavLink className="App-link" to="/articles" onClick={handleCloseMenu}>Articles</NavLink>
         </li>
-        <li className="App-nav-item">
+        <li className="App-nav-item slideInDown-3">
           <NavLink className="App-link" to="/lexicon" onClick={handleCloseMenu}>Lexique</NavLink>
         </li>
-        <li className="App-nav-item">
+        <li className="App-nav-item slideInDown-4">
           <NavLink className="App-link" to="/learning" onClick={handleCloseMenu}>Parcours d'apprentissage</NavLink>
         </li>
-        <li className="App-nav-item">
+        <li className="App-nav-item slideInDown-5">
           <NavLink className="App-link" to="/faq" onClick={handleCloseMenu}>FAQ</NavLink>
         </li>
       </nav>
