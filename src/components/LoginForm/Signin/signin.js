@@ -16,7 +16,7 @@ function Signin() {
       await AuthService.signup(username, email, password).then(
         (response) => {
           console.log('Bien enregistré', response);
-          navigate('/profile');
+          navigate('/');
           window.location.reload();
         },
         (error) => {

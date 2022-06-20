@@ -28,7 +28,7 @@
 }
 
  .App-link:hover {
-    box-shadow: inset 250px 0 0 0 #424C7C;
+    box-shadow: inset 350px 0 0 0 #424C7C;
     color: white;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   }
@@ -89,6 +89,7 @@
     color: inherit;
     display: none;
     border: none;
+    margin-left: 30px;
 }
 
 // RESPONSIVE MENU
@@ -107,7 +108,7 @@
     .show-nav, .App-link {
         right: 0;
         width: 100vw;
-        visiJbility: visible;
+        visibility: visible;
     }
     .App-link {
         display: block;
