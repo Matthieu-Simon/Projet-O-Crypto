@@ -12,14 +12,15 @@ module.exports = {
         }
     },
 
-    async getOneArticle(article) {
+    async getOneArticle(articleId) {
         try {
-            // collect one article by name
-            const oneArticle = await client.query(`SELECT * FROM article WHERE name = '${article}';`);
-            /* if the name of the article called corresponds to
-        one of the article names of the database then I return the line */
+            // collect one article by id
+            const oneArticle = await client.query(`SELECT * FROM article WHERE id = '${articleId}';`);
+            /* if the id of the article called corresponds to
+            one of the article ids of the database then I return the line */
 
-            if (article === oneArticle.rows[0].name) {
+            // eslint-disable-next-line eqeqeq
+            if (articleId == oneArticle.rows[0].id) {
                 return oneArticle.rows[0];
             }
             // else i send a message

@@ -7,7 +7,7 @@ module.exports = {
     },
 
     async getOneArticle(request, response) {
-        const article = request.params.name;
+        const article = request.params.id;
         const getOneArticle = await articleDataMapper.getOneArticle(article);
         return response.json(getOneArticle);
     },
