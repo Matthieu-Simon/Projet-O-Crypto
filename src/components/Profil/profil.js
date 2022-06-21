@@ -43,7 +43,7 @@ function Profil() {
 
           <div className="coin-cointainer-profil">
             {coin.map((coins) => (
-              <div key={coins.id} className="coin-row-profil">
+              <div key={coins.name} className="coin-row-profil">
                 <div className="coin">
                   <p className="coin-rank">{coins.rank}</p>
                   <img src={coins.image} alt="crypto" />
