@@ -7,7 +7,7 @@ function FAQ() {
     {
       question: 'La formation est payante?',
       answer: 'Non. Tout est gratuit.',
-      open: true
+      open: false
     },
     {
       question: 'J\'ai besoin de connaître le monde des finances?',
@@ -22,7 +22,7 @@ function FAQ() {
     {
       question: 'Quelle est la team la plus incroyable?',
       answer: 'La team O\'crypto, bien évidemment.',
-      open: true
+      open: false
     },
     {
       question: 'Qui sont ces garçons?',

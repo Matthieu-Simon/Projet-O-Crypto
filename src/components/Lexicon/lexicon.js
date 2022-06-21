@@ -60,7 +60,8 @@ function lexicon() {
                   <b className="lettersolo">{word.letter}</b>
                 </a>
               </p>
-            </div><a className="descriptionLetter">
+            </div>
+            <a className="descriptionLetter">
               <h2 className="titleDescription">{word.name}</h2>
               <div className="descriptionNude">
                 {word.abstract}
