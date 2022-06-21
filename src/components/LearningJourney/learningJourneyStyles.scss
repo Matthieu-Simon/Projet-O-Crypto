@@ -17,8 +17,8 @@
 }
 .card-main {
   display: flex;
- justify-content: center;
- margin-top: 40px;
+  justify-content: center;
+  margin-top: 40px;
 }
 // Partie Profil
 .profil-learn {
@@ -168,7 +168,7 @@
 }
 
 #dark .lien {
-  border: 1px solid white;
+  //border: 1px solid white;
   color: white;
 }
 
@@ -185,6 +185,7 @@
     margin: auto;
     align-items: center;
     padding-bottom: 50px;
+    height: 100%;
   }
   // Partie Title
   .title-learn {

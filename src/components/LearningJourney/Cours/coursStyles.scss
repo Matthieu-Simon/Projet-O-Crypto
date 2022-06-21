@@ -1,5 +1,9 @@
 @import '/src/styles/vars';
 
+.App {
+  height: 100vh;
+}
+
 .homepage-cours {
   border: 1px solid $grey;
   border-radius: 15px;
@@ -22,6 +26,28 @@
   font-size: medium;
   font-weight: 400;
   color: black;
+}
+#dark .homepage-cours {
+  color: white;
+}
+#dark .lesson {
+  color: white;
+}
+#dark .btn-menu {
+  background-color: $blueLogo;
+  color: white;
+}
+#dark .head-menu {
+  color: white;
+}
+#dark .title-cours {
+  color: white;
+}
+#dark .footer-container {
+  background-color: $blueLogo;
+}
+#dark .btn-cours {
+  border: 1px solid white;
 }
 // Responsive Cours
 @media screen and (max-width: 991px) {

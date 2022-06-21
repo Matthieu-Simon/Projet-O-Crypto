@@ -95,6 +95,9 @@
 }
 // Responsive
 @media screen and (max-width: 991px) {
+  .container {
+    height: 100%;
+  }
   .form-container {
     width: 100%;
   }
