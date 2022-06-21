@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .profil-title{
     color: #424C7C;
     font-size: 2rem;
@@ -19,6 +20,10 @@
     padding: 40px;
     text-align: center;
     width: 50%;
+}
+
+#dark .profil-title {
+    color: white;
 }
 
 .profil-card{
@@ -32,14 +37,13 @@
     text-align: center;
     font-size: 1.6rem;
 }
-.profil-update {
-    background-color: #424C7C;
+#dark .profil-card {
     color: white;
-    padding: 5px;
-    border-radius: 8px;
-    border: 1px solid white;
-    cursor: pointer;
-    font-size: 0.8rem;
+}
+
+#dark .profil-update {
+    background-color: white;
+    color: #424C7C;
 }
 
 .profil-update:hover {
@@ -50,10 +54,20 @@
     transition: ease-in .1s;
 }
 
+#dark .MuiButton-root{
+    padding: 1px;
+    background-color: white;
+    color: #424C7C;
+}
+
 .profil-scoreState {
     padding: 30px;
     color: #424C7C;
     font-size: 1.6rem;
+}
+
+#dark .profil-scoreState {
+    color: white;
 }
 
 .add-favourite-coin {

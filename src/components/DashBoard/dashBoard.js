@@ -33,7 +33,7 @@ function dashBoard() {
   };
   return (
     <div className="coin-app">
-      <h1 className="coin-text">Cours des cryptomonnaie</h1>
+      <h1 className="coin-text">COURS DES CRYPTOMONNAIES</h1>
       <div className="coin-search">
         <form>
           <input type="text" className="coin-input" placeholder="Entrez le nom de la cryptomonnaie" onChange={handleChange} />

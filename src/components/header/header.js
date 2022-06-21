@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Menu from './menu/menu';
-import logo from '../../assets/Logo.png';
+import logo from '../../assets/images/Logo.png';
 import './headerStyles.scss';
 
 function header() {

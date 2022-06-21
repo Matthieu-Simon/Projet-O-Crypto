@@ -4,7 +4,7 @@
     align-items: center;
     width: 90%;
     margin: auto;
-    height: 100vh;
+    margin-bottom: 50px;
 }
 .App-article {
     display: flex;
@@ -18,6 +18,10 @@
     margin: 40px 0;
     font-size: 3rem;
     color: #424C7C;
+}
+
+#dark .App-article-title {
+    color: white;
 }
 
 .App-article-image {
@@ -44,6 +48,10 @@
     text-align: justify;
 }
 
+#dark .article-text {
+    color: white;
+}
+
 .App-article-author {
     font-size: 0.8rem;
     color: #424C7C;
@@ -51,6 +59,10 @@
     border-radius: 5px;
     border: #424C7C 1px solid;
     padding: 5px;
+}
+
+#dark .App-article-author {
+    color: white;
 }
 
 .App-pub {
@@ -65,6 +77,12 @@
     background-color: #EAEAEA;
     width: 60%;
     align-items: center;
+}
+
+#dark .App-pub {
+    background-color: rgb(0, 0, 82);
+    color: white;
+    box-shadow: darkblue 0px 10px 36px 0px, darkblue 0px 0px 0px 1px;
 }
 .App-pub-title {
     padding-bottom: 10px;

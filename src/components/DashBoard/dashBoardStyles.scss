@@ -15,6 +15,10 @@
     margin-bottom: 50px;
   }
 
+  #dark .coin-app {
+    color: white;
+  }
+
   .row-description {
     display: flex;
     flex-direction: row;
@@ -22,6 +26,7 @@
     font-size: 1.1rem;
     font-weight: bold;
   }
+
   
   .coin-search {
     margin: 64px;
@@ -100,4 +105,21 @@
     border: 1px solid #424C7C;
     transition: ease-in .1s;
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .coin-app {
+        width: 100%;
+        overflow: scroll;
+    }
+    .coin-search {
+        margin: 64px;
+    }
+    .row-description {
+      visibility: hidden;
+    }
+    .coin-container {
+      overflow: scroll;
+    }
+  
 }

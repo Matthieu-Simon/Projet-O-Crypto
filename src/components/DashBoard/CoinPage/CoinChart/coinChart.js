@@ -18,7 +18,6 @@ function CoinChart() {
   const [historicData, setHistoricData] = useState();
   const [days, setDays] = useState(1);
   const { id } = useParams();
-  console.log(id);
 
   const fetchHistoricData = async () => {
     const { data } = await axios.get(HistoricalChart(id, days));
@@ -28,7 +27,6 @@ function CoinChart() {
     fetchHistoricData();
   }, [days]);
 
-  console.log(historicData);
   return (
 
     <div className="coin-chart-container">
@@ -52,15 +50,19 @@ function CoinChart() {
 
               datasets: [
                 {
+                  defaultFontColor: '#424C7C',
                   data: historicData.map((coin) => coin[1]),
                   label: `Prix ( Dernier ${days} jours )  €`,
                   borderColor: '#424C7C',
-                  fill: false,
-                  color: '#424C7C',
+                  fill: true,
+                  drawBorder: true,
+                  color: 'white',
+                  backgroundColor: 'white',
                 },
               ],
             }}
             options={{
+              responsive: true,
               elements: {
                 point: {
                   radius: 1,

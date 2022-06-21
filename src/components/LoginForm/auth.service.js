@@ -23,6 +23,9 @@ const login = (email, password) => heroku
     if (response.data.accessToken) {
       localStorage.setItem('user', JSON.stringify(response.data));
     }
+    else {
+      console.log(response.data.message);
+    }
     return response.data;
   });
 

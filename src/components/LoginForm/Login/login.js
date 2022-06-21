@@ -9,13 +9,19 @@ function Login() {
   axios.defaults.withCredentials = true;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       await AuthService.login(email, password).then(() => {
-        navigate('/profile');
-        window.location.reload();
+        if (AuthService.getCurrentUser()) {
+          navigate('/');
+          window.location.reload();
+        }
+        else {
+          setMessage('Le mot de passe ou l\'adresse email est incorrect');
+        }
       }, (error) => {
         console.log(error);
       });
@@ -25,8 +31,6 @@ function Login() {
     }
   };
 
-  // check is user is logged
-  console.log(AuthService.getCurrentUser());
   return (
 
     <div className="register-right">
@@ -58,9 +62,9 @@ function Login() {
         </div>
         <button className="btn-form" type="submit">Connexion</button>
       </form>
+      <p className="message">{message}</p>
       <div className="input-reset">
         <input type="checkbox" id="memories" />
-        <a className="a-form" href="#">Se souvenir de moi</a>
         <a className="a-form" href="#">Mot de passe oublié ?</a>
       </div>
     </div>

@@ -14,3 +14,9 @@
         transform: scale3d(1.2, 1.2, 1.2);
     }
 }
+
+#dark .selected-button {
+    background-color: white;
+    color: #424C7C;
+    border: 1px solid #424C7C;
+}
