@@ -111,7 +111,7 @@
         right: 0;
         width: 100vw;
         visibility: visible;
-        //z-index: 1;
+        z-index: 1;
     }
     .App-link {
         display: block;
@@ -136,7 +136,7 @@
         position: fixed;
         top: 1rem;
         right: 1rem;
-        z-index: 1;
+        //z-index: 1;
     }
     .App-nav-burger:hover {
         cursor: pointer;
@@ -157,9 +157,11 @@
     }
     .burger-bar::before {
         transform: translateY(-12px);
+        //transform: rotate(45deg);
     }
     .burger-bar::after {
         transform: translateY(12px);
+        //transform: rotate(-45deg);
     }
     .show-nav .burger-bar {
         width: 0;

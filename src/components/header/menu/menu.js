@@ -54,6 +54,9 @@ function menu() {
         <li className="App-nav-item slideInDown-5">
           <NavLink className="App-link" to="/faq" onClick={handleCloseMenu}>FAQ</NavLink>
         </li>
+        <button className="App-nav-burger" type="button" onClick={handleShowLinks}>
+          <span className="burger-bar" />
+        </button>
       </nav>
       {isLogged ? (
         <div className="App-button">
