@@ -1,10 +1,15 @@
+/* eslint-disable no-constant-condition */
+/* eslint-disable react/self-closing-comp */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import './App.scss';
-import { createContext, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import ReactSwitch from 'react-switch';
+import useLocalStorage from 'use-local-storage';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import IconButton from '@mui/material/IconButton';
 import authService from '../LoginForm/auth.service';
-
+import darkmodelogo from '../../assets/images/darkmodelogo.png';
+import logo from '../../assets/images/Logo.png';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 import HomePage from '../homePage/homePage';
@@ -23,54 +28,42 @@ import About from '../About/about';
 import OurTeam from '../OurTeam/ourTeam';
 import PageNotFound from '../404/PageNotFound';
 
-export const Themecontext = createContext(null);
-
 function App() {
   const isLogged = authService.getCurrentUser();
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light');
 
-  const toogleTheme = () => {
-    setTheme((currentTheme) => (currentTheme === 'light' ? 'dark' : 'light'));
-    localStorage.setItem('theme', theme);
+  const switchTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
   };
 
-  useEffect(() => {
-    const localTheme = localStorage.getItem('theme');
-    if (localTheme) {
-      setTheme(localTheme);
-    }
-  }, []);
-
   return (
-    <Themecontext.Provider value={{ theme, toogleTheme }}>
-      <div className="App" id={theme}>
-        <Header />
-        <div className="switch-container">
-          <label> {theme === 'light' ? 'Mode Clair' : 'Mode Sombre'}</label>
-          <ReactSwitch onChange={toogleTheme} checked={theme === 'dark'} offColor="#424C7C" onColor="#FFFFFF" onHandleColor="#424C7C" />
-        </div>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          {isLogged && (<Route path="/profile" element={<Profil />} />)}
-          <Route path="/dashboard" element={<DashBoard />} />
-          <Route path="/coin/:id" element={<CoinPage />} />
-          <Route path="/log-in" element={<LoginForm />} />
-          <Route path="/learning" element={<LearningJourney />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/Cours" element={<Cours />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/team" element={<OurTeam />} />
-          <Route path="challenge" element={<Challenge />} />
-          <Route path="/team" element={<OurTeam />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/articles/:name" element={<Article />} />
-          <Route path="/lexicon" element={<Lexicon />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-        <Footer />
+    <div className="App" id={theme}>
+      <Header logoTheme={theme === 'light' ? logo : darkmodelogo} />
+      <div className="theme-toggle">
+        <IconButton type="button" onClick={switchTheme}>{theme === 'dark' ? <Brightness7Icon style={{ color: '#EC8B35' }} /> : <Brightness4Icon style={{ color: '#424C7C' }} />}</IconButton>
       </div>
-    </Themecontext.Provider>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {isLogged && (<Route path="/profile" element={<Profil />} />)}
+        <Route path="/dashboard" element={<DashBoard />} />
+        <Route path="/coin/:id" element={<CoinPage />} />
+        <Route path="/log-in" element={<LoginForm />} />
+        <Route path="/learning" element={<LearningJourney />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/Cours" element={<Cours />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/team" element={<OurTeam />} />
+        <Route path="challenge" element={<Challenge />} />
+        <Route path="/team" element={<OurTeam />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/articles/:name" element={<Article />} />
+        <Route path="/lexicon" element={<Lexicon />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 export default App;

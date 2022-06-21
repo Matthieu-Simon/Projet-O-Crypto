@@ -1,14 +1,12 @@
 import React from 'react';
-
 import Menu from './menu/menu';
-import logo from '../../assets/images/Logo.png';
 import './headerStyles.scss';
 
-function header() {
+function header({ logoTheme }) {
   return (
     <header className="App-header">
       <a href="/" className="App-logo-container">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logoTheme} className="App-logo" alt="logo" />
       </a>
       <Menu />
     </header>
