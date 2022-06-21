@@ -161,8 +161,8 @@ compte des hauts et des bas. En effet, le dernier prix à la hausse ne signifie 
 que la volatilité de l’Ethereum a entièrement disparu.
 En résumé, pour s’éviter des migraines, il vaut mieux ignorer le battage médiatique autour 
 des nouveaux records à la hausse ou à la baisse de l’Ethereum et plutôt viser une 
-stratégie sur le long terme telle que la DCA.', 'ethereum-down'),
-("Pizza au Bitcoin. Un gout de richesse ! ", "Kevin Witter", "Le 22 mai 2010, le développeur Laszlo Hanyecz a payé le petite somme de 10.000 
+stratégie sur le long terme telle que la DCA.', 'ethereum-down-1'),
+('Pizza au Bitcoin. Un gout de richesse ! ', 'Kevin Witter', 'Le 22 mai 2010, le développeur Laszlo Hanyecz a payé le petite somme de 10.000 
 bitcoins pour se faire livrer 2 pizzas. Ce jour est connu comme le « Bitcoin Pizza Day ». 
 Une des premières fois que la cryptomonnaie a pu acquérir un bien réel.
 Même après 12 ans, l’histoire de l’achat de deux pizzas contre 10.000 bitcoins continue 
@@ -183,7 +183,7 @@ De simple protocole expérimental, elle est devenue une monnaie potentielle et p
 que rien ne se serait passé comme tel s’il n’avait pas eu un petit creux. Depuis, les 
 utilisateurs de Bitcoin sont à leur tour invités à s’offrir une pizza le 22 mai pour célébrer 
 cet événement.
-", "bitcoin-pizza-day");
+', 'bitcoin-pizza-day');
 
 
 INSERT INTO lexicon(letter, name, abstract)VALUES
