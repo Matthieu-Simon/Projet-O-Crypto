@@ -2,7 +2,7 @@
   font-family: 'Lexend Deca', sans-serif;
   width: 100%;
   scroll-behavior: smooth;
-  overflow: scroll;
+  //overflow: scroll;
 }
 button:focus,
 .btn:active,
@@ -24,4 +24,5 @@ li{
 #dark {
   background-color: #424C7C;
   color: white;
+  height: 100%;
 }

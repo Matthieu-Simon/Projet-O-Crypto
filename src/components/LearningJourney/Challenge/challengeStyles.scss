@@ -21,7 +21,7 @@
   letter-spacing: 1px;
   font-size: small;
   font-weight: 400;
-  color: black;
+  color: $blueLogo;
   padding-bottom: 10px;
 }
 .answer-container {
@@ -35,6 +35,9 @@
 }
 .input-answer {
   margin-right: 20px;
+}
+#dark .question {
+  color: white;
 }
 // Responsive Challenge
 @media screen and (max-width: 991px) {
