@@ -5,8 +5,8 @@ import './ourTeamStyles.scss';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MailIcon from '@mui/icons-material/Mail';
-import mec1 from '../../assets/images/mec1.png';
-import mec2 from '../../assets/images/mec2.png';
+import mec1 from '../../assets/images/mec1.jpg';
+import mec2 from '../../assets/images/mec2.jpg';
 import mec3 from '../../assets/images/mec3.png';
 import mec4 from '../../assets/images/mec4.png';
 import mec5 from '../../assets/images/mec5.png';
@@ -23,16 +23,22 @@ function ourTeam() {
             </h2>
           </div>
           <div className="team-preview-image">
-            <img src={mec1} alt="Fabiano" className="article-img" />
+            <div className="box box1">
+              <img src={mec1} alt="Fabiano" />
+            </div>
           </div>
           <nav className="team-social-links">
-            <a className="linkdin" href="" target="_blank"><LinkedInIcon /></a>
-            <a className="mail" href="" target="_blank"><MailIcon /></a>
-            <a className="github" href="" target="_blank"><GitHubIcon /></a>
+            <a className="linkdin" href="https://www.linkedin.com/in/fabiano-albuquerque-6604391b/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+            <a className="mail" href="mailto: falbuquerque.code@gmail.com" target="_blank" rel="noreferrer"><MailIcon /></a>
+            <a className="github" href="https://github.com/falbuquerquecode" target="_blank" rel="noreferrer"><GitHubIcon /></a>
           </nav>
           <div className="team-preview-text">
             <p>
-              La première cryptomonnaies largement adoptée dans le monde. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Développeur Full Stack.
+              <br />
+              Passionné de games de simulation, de la voile, la bonne littérature et des cryptos.
+              <br />
+              Ouvert à des bonnes idées !
             </p>
           </div>
         </div>
@@ -43,7 +49,9 @@ function ourTeam() {
             </h2>
           </div>
           <div className="team-preview-image">
-            <img src={mec2} alt="Fabiano" className="article-img" />
+            <div className="box box2">
+              <img src={mec2} alt="Florent" />
+            </div>
           </div>
           <nav className="team-social-links">
             <a className="linkdin" href="https://www.linkedin.com/in/florentbreux/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
@@ -70,7 +78,9 @@ function ourTeam() {
             </h2>
           </div>
           <div className="team-preview-image">
-            <img src={mec3} alt="Fabiano" className="article-img" />
+            <div className="box box2">
+              <img src={mec3} alt="Hugo" />
+            </div>
           </div>
           <nav className="team-social-links">
             <a className="linkdin" href="" target="_blank"><LinkedInIcon /></a>
@@ -90,7 +100,9 @@ function ourTeam() {
             </h2>
           </div>
           <div className="team-preview-image">
-            <img src={mec4} alt="Fabiano" className="article-img" />
+            <div className="box box2">
+              <img src={mec4} alt="Matthieu" />
+            </div>
           </div>
           <nav className="team-social-links">
             <a className="linkdin" href="" target="_blank"><LinkedInIcon /></a>
@@ -110,7 +122,9 @@ function ourTeam() {
             </h2>
           </div>
           <div className="team-preview-image">
-            <img src={mec5} alt="Fabiano" className="article-img" />
+            <div className="box box2">
+              <img src={mec5} alt="Quentin" />
+            </div>
           </div>
           <nav className="team-social-links">
             <a className="linkdin" href="" target="_blank"><LinkedInIcon /></a>
