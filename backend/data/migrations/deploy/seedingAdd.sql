@@ -389,6 +389,63 @@ INSERT INTO challenge(name, level_id, article_id, abstract) VALUES
 ('challenge 4', 3, 1, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
 ('challenge 5', 3, 1, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. ');
 
+INSERT INTO question (description)
+VALUES 
+('Qu’est-ce que la Blockchain ?'),
+('Qu’est-ce que la Blockchain fait ?'),
+('Concrètement elle fonctionne comment cette technologie ?'),
+('La désintermédiation, c’est quoi ça ?'),
+('Ça veut dire quoi la transparence ?'),
+('Et la sécurité ?'),
+('Comment la blockchain est autonome ?'),
+('Ça veut dire quoi « pair-à-pair » ?'),
+('Qui controle la blockchain ?'),
+('Quels sont les avantages de la blockchain?');
+
+INSERT INTO answer (description, question_id)
+VALUES
+('Une chaine financière mondiale accessible par des ordinateurs.', 1),
+('Des blocs des valeurs minables par des cartes graphiques', 1),
+('Une chaîne de blocs technologiques de stockage et de transmission d’infos.', 1),
+('Un système de business d’échange de valeurs numériques.', 1),
+('Centralise les clés d’un coffre virtuel.', 2),
+('Exécute le code du bitcoin et d’autre cryptomonnaies', 2),
+('Trace, distribue et résilie la sécurité bancaire.', 2),
+('Stock, transmet l’info par des outils cryptographiques décentralisé.', 2),
+('C’est un registre des transactions regroupées dans des blocs reliés entre eux', 3),
+('Est un ensemble d’informations qui ne peuvent pas être réécrites.', 3),
+('Les blocs intégrés sont accessibles à tous les utilisateurs.', 3),
+('Toutes les réponses précédentes.', 3),
+('C’est la validation et ajout des blocs sans avoir un contrôle d’une institution centrale.', 4),
+('C’est assurance d’avoir une institution de référence qui contrôle les opérations.', 4),
+('C’est la promesse d’une régulation pour éviter les comportements litigieux.', 4),
+('C’est un groupe de geeks qui laissent les monnaies virtuelles prendre la valeur.', 4),
+('Une technologie où le code est transparent.', 5),
+('Ça veut dire que tout le monde peut télécharger son intégralité à tout moment.', 5),
+('L’anonymat est requis et les utilisateur n’utilisent pas leur vrai prénom.', 5),
+('C’est transparent mais pas trop, les chiffres sont cachés.', 5),
+('Uniquement si on installe un antivirus.', 6),
+('La blockchain est piratable car on a déjà vu des bitcoins volés.', 6),
+('La technologie est inattaquable et inviolable car personne ne peux changer les blocs.', 6),
+('La résistance aux attaques est douteuse puisque un ordi puissant peux la détruire.', 6),
+('Les calculs et l’hébergement sont fournis par des neufs du réseaux. Donc autonome.', 7),
+('Les geeks sont chez eux donc oui, plus ou moins.', 7),
+('Les blocs n’ont besoin de personne pour leurs dire si c’est bon. Pas de validation.', 7),
+('L’architecture sous-jacente du bitcoin est fourni par l’internet. Donc c’est bon quoi ! ', 7),
+('C’est des doublons de codes de calcul qui s’échangent entre eux.', 8),
+("Un réseau informatique d'égal à égal entre ordinateurs.", 8),
+("C’est un pas de danse !", 8),
+('Un calcul informatique.', 8),
+('Le bitcoin.', 9),
+('Le gouvernement.', 9),
+('Les banques.', 9),
+('Personne.*', 9),
+('La rapidité des transactions.', 10),
+('La sécurité du système.', 10),
+('Les gains de productivité et d’efficacité', 10),
+('Toutes les réponses sont bonnes.', 10);
+
+
 
 
 
