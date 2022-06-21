@@ -43,7 +43,7 @@ function main() {
           </p>
         </div>
         <div className="App-articles">
-          {randomArticles.slice(2).map((article) => (
+          {randomArticles.slice(3).map((article) => (
             <div key={article.name} onClick={() => navigate(`/articles/${article.name}`)} className="App-article-preview">
               <div className="App-article-preview-title">
                 <h2 className="App-article-preview-title-text">
