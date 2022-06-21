@@ -34,12 +34,6 @@ CREATE TABLE challenge (
     delete_at TIMESTAMPTZ 
 );
 
-CREATE TABLE crypto_currencies (
-    id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    name text NOT NULL UNIQUE,
-    issued_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    delete_at TIMESTAMPTZ 
-);
 
 CREATE TABLE lexicon (
     letter text NOT NULL,
@@ -74,7 +68,7 @@ CREATE TABLE answer (
 
 CREATE TABLE favoris (
     user_id int NOT NULL,
-    crypto_currencies_id int NOT NULL,
+    cryptoName text NOT NULL,
     created_at timestamptz NOT NULL DEFAULT now(),
     delete_at timestamptz     
 );
@@ -82,12 +76,11 @@ CREATE TABLE favoris (
 ALTER TABLE answer
 ADD FOREIGN KEY (question_id) REFERENCES question(id);
 
-ALTER TABLE favoris
-ADD FOREIGN KEY (crypto_currencies_id) REFERENCES crypto_currencies(id);
-
 ALTER TABLE challenge
 ADD FOREIGN KEY (level_id) REFERENCES level(id);
 
+ALTER TABLE favoris
+ADD FOREIGN KEY (user_id) REFERENCES "user"(id);
 
 ALTER TABLE question
 ADD FOREIGN KEY (answer_id) REFERENCES answer(id);

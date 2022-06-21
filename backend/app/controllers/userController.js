@@ -1,12 +1,12 @@
 const userDatamapper = require('../dataMappers/userDataMapper');
 
 const express = require('express');
+
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
-
 
 module.exports = {
     async insertNewUser(request, response) {
@@ -18,28 +18,32 @@ module.exports = {
     async loginUser(request, response) {
         const user = request.body;
 
-        /*Create a token at login*/
-        function generateAccessToken (user) {
+        /* Create a token at login */
+        function generateAccessToken(user) {
             return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1800s' });
-        };   
-        
-        /*Check the generate token*/
-        function authenticateToken (token) {
+        }
+
+        /* Check the generate token */
+        function authenticateToken(token) {
             return jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
         }
 
         const userLogin = await userDatamapper.loginUser(user);
 
         if (userLogin.loggedIn == true) {
+            const accessToken = generateAccessToken(user);
+            const checkToken = authenticateToken(accessToken);
 
-           const accessToken = generateAccessToken (user);          
-           const checkToken = authenticateToken (accessToken);
-
-            return response.send({user:userLogin.userData,message:userLogin.message ,accessToken : accessToken, checkToken:{pseudo:checkToken.pseudo, email:checkToken.email, iat:checkToken.iat, exp:checkToken.exp}})
-
-        } else {
-            return response.send({user:userLogin, message:userLogin.message});
-        };
+            return response.send({
+                user: userLogin.userData,
+                message: userLogin.message,
+                accessToken,
+                checkToken: {
+                    pseudo: checkToken.pseudo, email: checkToken.email, iat: checkToken.iat, exp: checkToken.exp,
+                },
+            });
+        }
+        return response.send({ user: userLogin, message: userLogin.message });
     },
 
     async deleteUser(request, response) {
