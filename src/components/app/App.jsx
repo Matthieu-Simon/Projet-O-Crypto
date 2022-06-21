@@ -4,6 +4,9 @@
 import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 import useLocalStorage from 'use-local-storage';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import IconButton from '@mui/material/IconButton';
 import authService from '../LoginForm/auth.service';
 import darkmodelogo from '../../assets/images/darkmodelogo.png';
 import logo from '../../assets/images/Logo.png';
@@ -38,7 +41,7 @@ function App() {
     <div className="App" id={theme}>
       <Header logoTheme={theme === 'light' ? logo : darkmodelogo} />
       <div className="theme-toggle">
-        <button type="button" onClick={switchTheme}>{theme} theme</button>
+        <IconButton type="button" onClick={switchTheme}>{theme === 'dark' ? <Brightness7Icon style={{ color: '#EC8B35' }} /> : <Brightness4Icon style={{ color: '#424C7C' }} />}</IconButton>
       </div>
       <Routes>
         <Route path="/" element={<HomePage />} />
