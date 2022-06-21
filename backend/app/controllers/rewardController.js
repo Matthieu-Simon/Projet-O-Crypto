@@ -17,6 +17,7 @@ module.exports = {
 
             await rewardDataMapper.insertReward(newUserReward, 4);
 
+            /*Change the user level*/
             const levels = ['Novice','Confirmé', 'Expert', 'Tech Fibre'];
     
             if (newUserReward>0 && newUserReward<299) { 

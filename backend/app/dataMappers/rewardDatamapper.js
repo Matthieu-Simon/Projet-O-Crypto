@@ -33,7 +33,7 @@ module.exports = {
     },
 
     async insertReward (newUserReward, user_id) {
-        const insertReward = await client.query(`
+        await client.query(`
             UPDATE "user"
             SET reward= ${newUserReward}
             WHERE id= ${user_id};
@@ -42,7 +42,7 @@ module.exports = {
 
     async insertLevel (newUserLevel, user_id) {
         console.log(newUserLevel)
-        const insertLevel = await client.query(`
+        await client.query(`
             UPDATE "user"
             SET level= '${newUserLevel}'
             WHERE id= ${user_id};
