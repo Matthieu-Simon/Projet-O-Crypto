@@ -1,7 +1,7 @@
 /* eslint-disable no-bitwise */
 /* eslint-disable no-shadow */
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 // eslint-disable-next-line no-unused-vars
 import { Line, Chart } from 'react-chartjs-2';
@@ -96,4 +96,4 @@ function CoinChart() {
   );
 }
 
-export default CoinChart;
+export default React.memo(CoinChart);

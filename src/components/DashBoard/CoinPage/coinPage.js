@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-closing-tag-location */
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import parse from 'html-react-parser';
 import { SingleCoin } from '../../../config/api/api';
@@ -45,4 +45,4 @@ function CoinPage() {
     </>
   );
 }
-export default CoinPage;
+export default React.memo(CoinPage);

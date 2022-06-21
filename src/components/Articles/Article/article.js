@@ -5,12 +5,12 @@ import './articleStyles.scss';
 import btclogo from '../../../assets/images/btc.png';
 
 function Article() {
-  const { name } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
   const [articles, setArticles] = useState([]);
 
   const fetchArticles = async () => {
-    const { data } = await axios.get(`https://ocrypto-backend.herokuapp.com/article/${name}`);
+    const { data } = await axios.get(`https://ocrypto-backend.herokuapp.com/article/${id}`);
     setArticles(data);
   };
 

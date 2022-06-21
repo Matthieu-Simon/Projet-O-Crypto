@@ -2,6 +2,7 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import './App.scss';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import useLocalStorage from 'use-local-storage';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
@@ -58,7 +59,7 @@ function App() {
         <Route path="/team" element={<OurTeam />} />
         <Route path="/about" element={<About />} />
         <Route path="/articles" element={<Articles />} />
-        <Route path="/articles/:name" element={<Article />} />
+        <Route path="/article/:id" element={<Article />} />
         <Route path="/lexicon" element={<Lexicon />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
@@ -66,4 +67,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default React.memo(App);

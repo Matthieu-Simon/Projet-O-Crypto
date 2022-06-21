@@ -44,7 +44,7 @@ function main() {
         </div>
         <div className="App-articles">
           {randomArticles.slice(3).map((article) => (
-            <div key={article.name} onClick={() => navigate(`/articles/${article.name}`)} className="App-article-preview">
+            <div key={article.name} onClick={() => navigate(`/article/${article.id}`)} className="App-article-preview">
               <div className="App-article-preview-title">
                 <h2 className="App-article-preview-title-text">
                   {article.name.toUpperCase()}

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import React from 'react';
 import './selectedButtonStyles.scss';
 
 function SelectButton({ children, onClick }) {
@@ -14,4 +15,4 @@ SelectButton.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
-export default SelectButton;
+export default React.memo(SelectButton);

@@ -43,7 +43,7 @@ function Articles() {
       </div>
       <div className="App-articles">
         {filteredArtciles.map((article) => (
-          <div key={article.id} onClick={() => navigate(`/articles/${article.name}`)} className="App-article-preview">
+          <div key={article.id} onClick={() => navigate(`/article/${article.id}`)} className="App-article-preview">
             <div className="App-article-preview-title">
               <h2 className="App-article-preview-title-text">
                 {article.name.toUpperCase()}
