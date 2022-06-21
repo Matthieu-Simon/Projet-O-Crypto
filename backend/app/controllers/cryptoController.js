@@ -11,5 +11,13 @@ module.exports = {
         const CryptoNameForUserId = cryptoName;
         return response.json(CryptoNameForUserId);
     },
+    async deleteOneCryptoFavoris(request, response) {
+        const cryptoDelete = request.params.cryptos;
+        const checkUserId = request.params.userId;
+        // eslint-disable-next-line max-len
+        const cryptoName = await cryptoDataMapper.deleteOneCryptoFavoris(cryptoDelete, checkUserId);
+        const CryptoNameDeleteForUserId = cryptoName;
+        return response.json(CryptoNameDeleteForUserId);
+    },
 
 };
