@@ -37,23 +37,18 @@ function lexicon() {
       </div>
 
       <div className="divAll">
-        {words.map((word) => (
+        {filteredWords.slice(0, slice).map((word) => (
           <>
-            <div key={word.created_at} className="divletter">
-              <p>
-                <a name="a">
-                  <b className="lettersolo">{word.letter}</b>
-                </a>
-              </p>
+            <div key={word.letter} className="divWord">
+              <a className="descriptionLetter">
+                <h2 className="lexicon-word-title">{word.name}</h2>
+                <div className="lexicon-word-description">
+                  {word.abstract}
+                </div>
+              </a>
             </div>
-            <a className="descriptionLetter">
-              <h2 className="titleDescription">{word.name}</h2>
-              <div className="descriptionNude">
-                {word.abstract}
-              </div>
-            </a>
             <hr className="SB" />
-          </div>
+          </>
         ))}
       </div>
       <div className="lexicon-more">
