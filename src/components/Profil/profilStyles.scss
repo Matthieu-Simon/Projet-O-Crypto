@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
 }
 .profil-header {
     width: 90%;
@@ -11,7 +12,6 @@
     align-items: center;
     justify-content: center;
 }
-
 .profil-title{
     color: #424C7C;
     font-size: 2rem;
@@ -21,11 +21,9 @@
     text-align: center;
     width: 50%;
 }
-
 #dark .profil-title {
     color: white;
 }
-
 .profil-card{
     display: flex;
     flex-direction: column;
@@ -40,12 +38,10 @@
 #dark .profil-card {
     color: white;
 }
-
 #dark .profil-update {
     background-color: white;
     color: #424C7C;
 }
-
 .profil-update:hover {
     color: #424C7C;
     background-color: white;
@@ -53,54 +49,46 @@
     border: 1px solid #424C7C;
     transition: ease-in .1s;
 }
-
 #dark .MuiButton-root{
     padding: 1px;
     background-color: white;
     color: #424C7C;
 }
-
 .profil-scoreState {
     padding: 30px;
     color: #424C7C;
     font-size: 1.6rem;
 }
-
 #dark .profil-scoreState {
     color: white;
 }
-
-.add-favourite-coin {
+.coin-cointainer-profil {
     display: flex;
-    justify-content: flex-end;
-    width: 90%;
-    background-color: #EAEAEA;
-    height: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+.coin-row-profil {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #d7d7d7;
+}
+.profil-favorites {
+    margin-bottom: 30px;
 }
 
-.add-favourite-coin-text {
+.profil-favorites-title {
     color: #424C7C;
     font-size: 1.6rem;
-    padding: 10px;
+    font-weight: bold;
     margin: auto;
+    padding: 30px;
+    text-align: center;
+    width: 50%;
 }
 
-.add-favourite-button {
-    position: absolute;
-    height: 5.2%;
-    background-color: #424C7C;
+#dark .profil-favorites-title {
     color: white;
-    padding: 5px;
-    border-radius: 8px;
-    border: 1px solid white;
-    cursor: pointer;
-    font-size: 0.8rem;
-}
-
-.add-favourite-button:hover {
-    color: #424C7C;
-    background-color: white;
-    border-radius: 8px;
-    border: 1px solid #424C7C;
-    transition: ease-in .1s;
 }

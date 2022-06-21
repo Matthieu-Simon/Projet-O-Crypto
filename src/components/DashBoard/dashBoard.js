@@ -28,9 +28,11 @@ function dashBoard() {
 
   const filteredCoins = coins.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()));
 
+  // increment result by 10
   const moreResult = () => {
     setSlice(slice + 10);
   };
+
   return (
     <div className="coin-app">
       <h1 className="coin-text">COURS DES CRYPTOMONNAIES</h1>

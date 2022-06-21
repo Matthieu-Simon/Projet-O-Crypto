@@ -1,30 +1,49 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
-import authService from '../../LoginForm/auth.service';
+import StarIcon from '@mui/icons-material/Star';
 import './coinStyles.scss';
+import authService from '../../LoginForm/auth.service';
 
 function Coin({
   name, image, symbol, price, volume, priceChange, marketcap, rank, onClick
 }) {
-  const [isLogged, setIsLogged] = useState(false);
+  // get favorites from local storage or empty array
   const navigate = useNavigate();
+  const [favorites, setFavorites] = useState(JSON.parse(localStorage.getItem('favorites')) || []);
 
-  useEffect(() => {
-    if (authService.getCurrentUser()) {
-      setIsLogged(true);
+  const user = authService.getCurrentUser();
+
+  const isFavorite = favorites.some((coin) => coin.name === name);
+
+  const handleClick = () => {
+    if (isFavorite) {
+      // remove coin from favorites
+      setFavorites(favorites.filter((coin) => coin.name !== name));
     }
-  }, [isLogged]);
+    else {
+      // add coin to favorites
+      setFavorites([...favorites, {
+        name, image, symbol, price, volume, priceChange, marketcap, rank
+      }]);
+    }
+  };
+
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+
+  console.log(localStorage.getItem('favorite'));
+
   return (
     <div className="coin-cointainer">
       <div className="coin-row">
         <div className="add-favourite">
-          {isLogged ? (
-            <StarBorderIcon onClick={() => navigate('/profile')} className="star-icon" />
+          {isFavorite && user ? (
+            <StarIcon onClick={handleClick} style={{ color: '#EC8B35' }} />
           ) : (
-            <StarBorderIcon onClick={() => navigate('/log-in')} className="star-icon" />
+            <StarBorderIcon onClick={handleClick} />
           )}
         </div>
         <div className="coin">
