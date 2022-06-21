@@ -10,6 +10,7 @@ const levelRouter = require('./level');
 const challengeRouter = require('./challenge');
 const questionRouter = require('./question');
 const answerRouter = require('./answer');
+const rewardRouter = require('./reward');
 
 router.use(homepageRouter);
 router.use(userRouter);
@@ -19,5 +20,6 @@ router.use(levelRouter);
 router.use(challengeRouter);
 router.use(questionRouter);
 router.use(answerRouter);
+router.use(rewardRouter);
 
 module.exports = router;
