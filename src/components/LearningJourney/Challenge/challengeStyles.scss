@@ -1,5 +1,8 @@
 @import '/src/styles/vars';
 
+#root{
+  height: 100vh;
+}
 .main-challenge {
   border: 1px solid $grey;
   border-radius: 15px;

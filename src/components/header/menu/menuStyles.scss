@@ -157,7 +157,7 @@ label {
         right: 0;
         width: 100vw;
         visibility: visible;
-        z-index: 1;
+        z-index: 1; // commenter pour retirer le burger menu et le bouton dark mode quand on affiche le menu
     }
     .App-link {
         display: block;
@@ -208,11 +208,9 @@ label {
     }
     .burger-bar::before {
         transform: translateY(-12px);
-        //transform: rotate(45deg);
     }
     .burger-bar::after {
         transform: translateY(12px);
-        //transform: rotate(-45deg);
     }
     .show-nav .burger-bar {
         width: 0;
