@@ -3,6 +3,7 @@
 BEGIN;
 
 
+
 INSERT INTO "user"(pseudo, email, password) VALUES
 ('hugo', 'hugo@outlook.fr', 'azerty'),
 ('papi', 'papi@hotmail.fr', 'azerty123'),
@@ -494,7 +495,9 @@ gouvernance plus démocratiques, comme nous le verrons plus loin dans cette not
 ('challenge 4', 3, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
 ('challenge 5', 3, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. ');
 
-
+INSERT INTO favoris("user_id", cryptoName)VALUES
+('1', 'bitcoin'),
+('1', 'xrp');
 
 
 

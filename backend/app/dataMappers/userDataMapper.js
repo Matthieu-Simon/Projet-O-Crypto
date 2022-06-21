@@ -1,5 +1,6 @@
-const client = require('../services/database');
 const bcrypt = require('bcrypt');
+const client = require('../services/database');
+
 const saltRounds = 10;
 
 module.exports = {
@@ -8,22 +9,19 @@ module.exports = {
             /* check if the new user is already registered */
             const isUniqueChecking = await client.query(`SELECT * FROM "user" WHERE email= '${newUser.email}';`);
             if (isUniqueChecking.rows.length !== 0) {
-                const message = {message:'Cet utilisateur est déjà enregistré'};
+                const message = { message: 'Cet utilisateur est déjà enregistré' };
                 return message;
             }
 
-
-            /*Password encryption*/
+            /* Password encryption */
             const hashedPassword = await bcrypt.hash(newUser.password, saltRounds);
 
-            /* Insert into database new user */            
+            /* Insert into database new user */
             await client.query(`
                 INSERT INTO "user" (pseudo, email, password)
                 VALUES ('${newUser.pseudo}', '${newUser.email}', '${hashedPassword}');
             `);
             const result = await client.query(`SELECT * FROM "user" WHERE email= '${newUser.email}';`);
-    
-
         } catch (error) {
             return error;
         }
@@ -35,25 +33,21 @@ module.exports = {
             /* check if the user is already registered */
             const isUniqueChecking = await client.query(`SELECT * FROM "user" WHERE email= '${user.email}';`);
             if (isUniqueChecking.rows.length === 0) {
-
-                const message = {message:`Cet utilisateur n'est pas enregistré`};
+                const message = { message: 'Cet utilisateur n\'est pas enregistré' };
                 return message;
-            } else {                
-                const result = await client.query(`
+            }
+            const result = await client.query(`
                         SELECT * FROM "user" WHERE email= '${user.email}';
                     `);
-                /*Password checking*/
-                const passwordChecking = await bcrypt.compare(`${user.password}`, `${result.rows[0].password}`);
+                /* Password checking */
+            const passwordChecking = await bcrypt.compare(`${user.password}`, `${result.rows[0].password}`);
 
-                if (passwordChecking!== true) {
-                    const message = 'Mauvaise combinaison mot de passe / adresse email';
-                    return {message:message, loggedIn:passwordChecking};
-                }                                
-                const message = 'Utilisateur connecté';
-                return {userData:result.rows[0], message:message, loggedIn:passwordChecking};
+            if (passwordChecking !== true) {
+                const message = 'Mauvaise combinaison mot de passe / adresse email';
+                return { message, loggedIn: passwordChecking };
             }
-
-
+            const message = 'Utilisateur connecté';
+            return { userData: result.rows[0], message, loggedIn: passwordChecking };
         } catch (error) {
             return error;
         }
@@ -65,7 +59,7 @@ module.exports = {
             DELETE FROM "user"
             WHERE email='${user.email}';
             `);
-            const message = {message:'Cet utilisateur à été supprimé'};
+            const message = { message: 'Cet utilisateur à été supprimé' };
             return message;
         } catch (error) {
             return error;
@@ -81,11 +75,8 @@ module.exports = {
                 WHERE email='${userModification.email}';
             `);
 
-            const message = {message:'Cet utilisateur à été modifié'};
+            const message = { message: 'Cet utilisateur à été modifié' };
             return message;
-            
-
-
         } catch (error) {
             return error;
         }
