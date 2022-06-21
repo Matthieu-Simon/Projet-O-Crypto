@@ -5,8 +5,7 @@
     margin: 8px;
     width: 90%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: baseline; 
 }
 
 .App-nav {
@@ -117,8 +116,9 @@
     color: inherit;
     display: none;
     border: none;
-    position: fixed;
-    margin-left: 30px;
+    padding-top: 40px;
+    //position: fixed;
+    //margin-left: 30px;
 }
 .switch-container {
     position: absolute;
@@ -174,12 +174,14 @@ label {
         height: 1px;
         background: #424C7C;
     }
+    #dark .App-nav-item::after {
+        background-color: white;
+    }
     .App-nav-item:last-child::after {
         display: none;
     }
     .App-nav-burger {
-        display: block;
-        position: fixed;
+        display: flex;
         top: 1rem;
         right: 1rem;
         //z-index: 1;
