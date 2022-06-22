@@ -94,4 +94,7 @@ module.exports = {
             return error;
         }
     },
+
+    /*Recovery password*/
+    
 };
