@@ -533,6 +533,112 @@ INSERT INTO "level"(name)VALUES
 ('intermediate'),
 ('junior');
 
+INSERT INTO question (description)
+VALUES 
+('Qu’est-ce que la Blockchain ?'),
+('Qu’est-ce que la Blockchain fait ?'),
+('Concrètement elle fonctionne comment cette technologie ?'),
+('La désintermédiation, c’est quoi ça ?'),
+('Ça veut dire quoi la transparence ?'),
+('Et la sécurité ?'),
+('Comment la blockchain est autonome ?'),
+('Ça veut dire quoi « pair-à-pair » ?'),
+('Qui controle la blockchain ?'),
+('Quels sont les avantages de la blockchain?');
+
+INSERT INTO answer (description, question_id)
+VALUES
+('Une chaine financière mondiale accessible par des ordinateurs.', 1),
+('Des blocs des valeurs minables par des cartes graphiques', 1),
+('Une chaîne de blocs technologiques de stockage et de transmission d’infos.', 1),
+('Un système de business d’échange de valeurs numériques.', 1);
+UPDATE question
+SET answer_id = 3
+WHERE id=1;
+INSERT INTO answer (description, question_id)
+VALUES
+('Centralise les clés d’un coffre virtuel.', 2),
+('Exécute le code du bitcoin et d’autre cryptomonnaies', 2),
+('Trace, distribue et résilie la sécurité bancaire.', 2),
+('Stock, transmet l’info par des outils cryptographiques décentralisé.', 2);
+UPDATE question
+SET answer_id = 8
+WHERE id=2;
+INSERT INTO answer (description, question_id)
+VALUES
+('C’est un registre des transactions regroupées dans des blocs reliés entre eux', 3),
+('Est un ensemble d’informations qui ne peuvent pas être réécrites.', 3),
+('Les blocs intégrés sont accessibles à tous les utilisateurs.', 3),
+('Toutes les réponses précédentes.', 3);
+UPDATE question
+SET answer_id = 12
+WHERE id=3;
+INSERT INTO answer (description, question_id)
+VALUES
+('C’est la validation et ajout des blocs sans avoir un contrôle d’une institution centrale.', 4),
+('C’est assurance d’avoir une institution de référence qui contrôle les opérations.', 4),
+('C’est la promesse d’une régulation pour éviter les comportements litigieux.', 4),
+('C’est un groupe de geeks qui laissent les monnaies virtuelles prendre la valeur.', 4);
+UPDATE question
+SET answer_id = 13
+WHERE id=4;
+INSERT INTO answer (description, question_id)
+VALUES
+('Une technologie où le code est transparent.', 5),
+('Ça veut dire que tout le monde peut télécharger son intégralité à tout moment.', 5),
+('L’anonymat est requis et les utilisateur n’utilisent pas leur vrai prénom.', 5),
+('C’est transparent mais pas trop, les chiffres sont cachés.', 5);
+UPDATE question
+SET answer_id = 18
+WHERE id=5;
+INSERT INTO answer (description, question_id)
+VALUES
+('Uniquement si on installe un antivirus.', 6),
+('La blockchain est piratable car on a déjà vu des bitcoins volés.', 6),
+('La technologie est inattaquable et inviolable car personne ne peux changer les blocs.', 6),
+('La résistance aux attaques est douteuse puisque un ordi puissant peux la détruire.', 6);
+UPDATE question
+SET answer_id = 23
+WHERE id=6;
+INSERT INTO answer (description, question_id)
+VALUES
+('Les calculs et l’hébergement sont fournis par des neufs du réseaux. Donc autonome.', 7),
+('Les geeks sont chez eux donc oui, plus ou moins.', 7),
+('Les blocs n’ont besoin de personne pour leurs dire si c’est bon. Pas de validation.', 7),
+('L’architecture sous-jacente du bitcoin est fourni par l’internet. Donc c’est bon quoi ! ', 7);
+UPDATE question
+SET answer_id = 25
+WHERE id=7;
+INSERT INTO answer (description, question_id)
+VALUES
+('C’est des doublons de codes de calcul qui s’échangent entre eux.', 8),
+('Un réseau informatique d’égal à égal entre ordinateurs.', 8),
+('C’est un pas de danse !', 8),
+('Un calcul informatique.', 8);
+UPDATE question
+SET answer_id = 30
+WHERE id=8;
+
+INSERT INTO answer (description, question_id)
+VALUES
+('Le bitcoin.', 9),
+('Le gouvernement.', 9),
+('Les banques.', 9),
+('Personne.*', 9);
+UPDATE question
+SET answer_id = 36
+WHERE id=9;
+
+INSERT INTO answer (description, question_id)
+VALUES
+('La rapidité des transactions.', 10),
+('La sécurité du système.', 10),
+('Les gains de productivité et d’efficacité', 10),
+('Toutes les réponses sont bonnes.', 10);
+UPDATE question
+SET answer_id = 40
+WHERE id=10;
+
 INSERT INTO challenge(name, level_id, abstract) VALUES
 ('Blockchain', 1, 'La blockchain (chaîne de blocs) est une technologie de stockage et de transmission 
 d’informations, sécurisée par des outils cryptographiques, infalsifiable, transparente car distribuée 
@@ -648,6 +754,7 @@ gouvernance plus démocratiques, comme nous le verrons plus loin dans cette not
 INSERT INTO favoris("user_id", cryptoName)VALUES
 ('1', 'bitcoin'),
 ('1', 'xrp');
+
 
 
 

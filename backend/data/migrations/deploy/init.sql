@@ -52,6 +52,7 @@ CREATE TABLE "level" (
 
 CREATE TABLE question (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    description text NOT NULL,
     reward int NOT NULL DEFAULT 30,
     answer_id integer,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),

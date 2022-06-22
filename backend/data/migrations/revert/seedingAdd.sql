@@ -2,6 +2,6 @@
 
 BEGIN;
 
-TRUNCATE challenge, "level", lexicon, article, "user" RESTART IDENTITY CASCADE;
+TRUNCATE challenge, "level", lexicon, article, "user", question, answer RESTART IDENTITY CASCADE;
 
 COMMIT;
