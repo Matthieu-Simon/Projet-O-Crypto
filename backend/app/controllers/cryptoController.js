@@ -2,7 +2,7 @@ const cryptoDataMapper = require('../dataMappers/cryptoDataMapper');
 
 module.exports = {
     async addOneCryptoFavoris(request, response) {
-        const newCryptoFavoris = request.params.cryptos;
+        const newCryptoFavoris = request.params.cryptosId;
         const checkUserId = request.params.userId;
 
         // eslint-disable-next-line max-len
@@ -12,7 +12,7 @@ module.exports = {
         return response.json(CryptoNameForUserId);
     },
     async deleteOneCryptoFavoris(request, response) {
-        const cryptoDelete = request.params.cryptos;
+        const cryptoDelete = request.params.cryptosId;
         const checkUserId = request.params.userId;
         // eslint-disable-next-line max-len
         const cryptoName = await cryptoDataMapper.deleteOneCryptoFavoris(cryptoDelete, checkUserId);

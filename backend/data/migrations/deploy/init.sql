@@ -69,7 +69,7 @@ CREATE TABLE answer (
 
 CREATE TABLE favoris (
     user_id int NOT NULL,
-    cryptoName text NOT NULL,
+    cryptoId text NOT NULL,
     created_at timestamptz NOT NULL DEFAULT now(),
     delete_at timestamptz     
 );
