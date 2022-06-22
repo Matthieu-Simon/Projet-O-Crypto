@@ -13,60 +13,55 @@ import './coinStyles.scss';
 function Coin({
   id, name, image, symbol, price, volume, priceChange, marketcap, rank, onClick
 }) {
-  // // get favorites from local storage or empty array
-  // const navigate = useNavigate();
-  // const [favorites, setFavorites] = useState(JSON.parse(localStorage.getItem('favorites')) || []);
+  // get favorites from local storage or empty array
+  const navigate = useNavigate();
+  const [favorites, setFavorites] = useState(JSON.parse(localStorage.getItem('favorites')) || []);
 
+  const user = authService.getCurrentUser();
+
+  const isFavorite = favorites.some((coin) => coin.name === name);
+
+  const handleClick = () => {
+    if (isFavorite) {
+      // remove coin from favorites
+      setFavorites(favorites.filter((coin) => coin.name !== name));
+    }
+    else {
+      // add coin to favorites
+      setFavorites([...favorites, {
+        id, name, image, symbol, price, volume, priceChange, marketcap, rank
+      }]);
+    }
+    window.location.reload();
+  };
+
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+  console.log(localStorage.getItem('favorite'));
+
+  // const [isFavorite, setIsFavorite] = useState(false);
   // const user = authService.getCurrentUser();
-
-  // const isFavorite = favorites.some((coin) => coin.name === name);
-
-  // const handleClick = () => {
-  //   if (isFavorite) {
-  //     // remove coin from favorites
-  //     setFavorites(favorites.filter((coin) => coin.name !== name));
-  //   }
-  //   else {
-  //     // add coin to favorites
-  //     setFavorites([...favorites, {
-  //       name, image, symbol, price, volume, priceChange, marketcap, rank
-  //     }]);
-  //   }
+  // const coin = {
+  //   id, name, image, symbol, price, volume, priceChange, marketcap, rank
+  // };
+  // const addFavorite = async (event) => {
+  //   const response = await heroku.post(`/favoris/${user.user.id}/${coin.id}`);
+  //   setIsFavorite(true);
+  //   console.log(response);
   // };
 
-  // localStorage.setItem('favorites', JSON.stringify(favorites));
-  // console.log(localStorage.getItem('favorite'));
-
-  // i want to add favorite to api and then get it from api
-  const [isFavorite, setIsFavorite] = useState(false);
-  const user = authService.getCurrentUser();
-  const coin = {
-    id, name, image, symbol, price, volume, priceChange, marketcap, rank
-  };
-  const addFavorite = async (event) => {
-    const response = await heroku.post(`/favoris/${user.user.id}/${coin.id}`);
-    setIsFavorite(true);
-    console.log(response);
-  };
-
-  const deleteFavorite = async (event) => {
-    const response = await heroku.post(`/deleteFavoris/${user.user.id}/${coin.id}`);
-    setIsFavorite(false);
-    console.log(response);
-  };
-
-  const getFavorites = async () => {
-    const response = await heroku.get(`/favoris/${user.user.id}/cryptos`);
-    console.log(response.data);
-  };
+  // const deleteFavorite = async (event) => {
+  //   const response = await heroku.post(`/deleteFavoris/${user.user.id}/${coin.id}`);
+  //   setIsFavorite(false);
+  //   console.log(response);
+  // };
   return (
     <div className="coin-cointainer">
       <div className="coin-row">
         <div className="add-favourite">
           {isFavorite && user ? (
-            <StarIcon onClick={deleteFavorite} style={{ color: '#EC8B35' }} />
+            <StarIcon onClick={handleClick} style={{ color: '#EC8B35' }} />
           ) : (
-            <StarBorderIcon onClick={addFavorite} />
+            <StarBorderIcon onClick={handleClick} />
           )}
         </div>
         <div className="coin">

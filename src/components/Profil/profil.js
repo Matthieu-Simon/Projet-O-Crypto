@@ -1,32 +1,31 @@
 /* eslint-disable max-len */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './profilStyles.scss';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import ProfilLogo from '../../assets/images/profilLogo.png';
 import Update from './Update/update';
 import authService from '../LoginForm/auth.service';
-import heroku from '../../config/api/heroku';
+// import heroku from '../../config/api/heroku';
 
 function Profil() {
   const user = authService.getCurrentUser();
 
-  const [favorites, setFavorites] = useState([]);
+  // const [favorites, setFavorites] = useState([]);
 
-  const getFavorites = async () => {
-    const response = await heroku.get(`/favoris/${user.user.id}/cryptos`);
-    setFavorites(response.data[0]);
-    console.log(response.data[0].cryptoname);
-  };
+  // const getFavorites = async () => {
+  //   const response = await heroku.get(`/favoris/${user.user.id}/cryptos`);
+  //   setFavorites(response.data);
+  //   console.log(response.data);
+  // };
 
-  useEffect(() => {
-    getFavorites();
-  }, []);
+  // useEffect(() => {
+  //   getFavorites();
+  // }, []);
+  // console.log(favorites);
 
-  console.log(favorites);
-
-  // const coin = JSON.parse(localStorage.getItem('favorites'));
-  // console.log(coin);
+  const coin = JSON.parse(localStorage.getItem('favorites'));
+  console.log(coin);
 
   return (
     <div className="profil-container">
@@ -53,12 +52,12 @@ function Profil() {
           <h3 className="profil-scoreState">Points : {user.user.reward}</h3>
         </div>
       </div>
-      {/* <div className="profil-favorites">
+      <div className="profil-favorites">
         <h1 className="profil-favorites-title">Mes favoris</h1>
-        {favorites === null ? (<h1 className="profil-favorites-title">Vous n'avez pas de favoris</h1>) : (
+        {coin === null ? (<h1 className="profil-favorites-title">Vous n'avez pas de favoris</h1>) : (
 
           <div className="coin-cointainer-profil">
-            {favorites.map((coins) => (
+            {coin.map((coins) => (
               <div key={coins.name} className="coin-row-profil">
                 <div className="coin">
                   <p className="coin-rank">{coins.rank}</p>
@@ -79,7 +78,7 @@ function Profil() {
             ))}
           </div>
         )}
-      </div> */}
+      </div>
     </div>
   );
 }
