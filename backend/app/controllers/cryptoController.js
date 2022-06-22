@@ -19,5 +19,10 @@ module.exports = {
         const CryptoNameDeleteForUserId = cryptoName;
         return response.json(CryptoNameDeleteForUserId);
     },
+    async getListCryptoFavoris(request, response) {
+        const checkUserId = request.params.userId;
+        const listCryptoFavoris = await cryptoDataMapper.getListCryptoFavoris(checkUserId);
+        return response.json(listCryptoFavoris);
+    },
 
 };

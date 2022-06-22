@@ -2,6 +2,8 @@
 
 BEGIN;
 
+INSERT INTO "user"(pseudo, email, password) VALUES
+('test', 'test@outlook.fr', 'test');
 
 INSERT INTO article(name, author, abstract, image) VALUES
 ('BNP Paribas rejoint la blockchain de J.P. Morgan', 'Antoinette Ramires', 'La banque française a rejoint la solution blockchain de la banque américaine J.P. Morgan. 
