@@ -42,7 +42,7 @@ export default function Update() {
     }).then((res) => {
       console.log(res);
       console.log(user.user.pseudo);
-      setAlert('Votre pseudo à bien été modifié');
+      setAlert('Votre pseudo a bien été modifié');
     }).catch((err) => {
       console.log(err);
     });
@@ -55,7 +55,7 @@ export default function Update() {
     }).then((res) => {
       console.log(res);
       console.log(user.user.email);
-      setAlert('Votre adresse email à bien été modifié');
+      setAlert('Votre adresse email a bien été modifié');
     }).catch((err) => {
       console.log(err);
     });
@@ -68,7 +68,7 @@ export default function Update() {
     })
       .then((res) => {
         console.log(res);
-        setAlert('Votre mot de passe à bien été modifié');
+        setAlert('Votre mot de passe a bien été modifié');
       })
       .catch((err) => {
         console.log(err);
@@ -77,7 +77,7 @@ export default function Update() {
 
   const handleDeleteAccount = (e) => {
     e.preventDefault();
-    if (window.confirm('Voulez-vous vraiment supprimer votre compte ?')) {
+    if (window.confirm('Souhaitez-vous vraiment supprimer votre compte ?')) {
       heroku.delete(`/profile/update/${user.user.id}`)
         .then((res) => {
           console.log(res);

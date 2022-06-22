@@ -12,7 +12,6 @@ import authService from '../LoginForm/auth.service';
 function Profil() {
   const user = authService.getCurrentUser();
   const navigate = useNavigate();
-
   // const [favorites, setFavorites] = useState([]);
 
   // const getFavorites = async () => {
