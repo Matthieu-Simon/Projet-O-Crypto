@@ -3,36 +3,187 @@
 BEGIN;
 
 
+
 INSERT INTO "user"(pseudo, email, password) VALUES
 ('hugo', 'hugo@outlook.fr', 'azerty'),
 ('papi', 'papi@hotmail.fr', 'azerty123'),
 ('cryptoman', 'cryptoman@outlook.fr', 'azertycrypt'),
 ('quentin', 'quentin@hotmail.fr', '123456');
 
-INSERT INTO article(name, author, abstract) VALUES
-('btc info', 'jean Raconte', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'),
-('hécatombe', 'jean Raconte', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'),
-('News', 'jean Raconte', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'),
-('marché haussier', 'jean Raconte', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae pellentesque urna, id mollis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eros magna, convallis non pretium quis, eleifend at arcu. Cras a mi sed velit maximus maximus. Mauris in suscipit risus. Ut sit amet aliquam augue. Nunc sit amet arcu magna. Morbi semper tortor nec dui efficitur maximus. Nulla a lacus lorem. Maecenas eget gravida metus. Integer eget nunc purus. Etiam viverra massa non enim condimentum, id consectetur sem dictum. Vivamus maximus luctus luctus. Integer nec tincidunt tellus. Suspendisse imperdiet porttitor faucibus. In pretium, ipsum non porta semper, sem arcu consequat lorem, vel hendrerit arcu ligula id neque.
-
-Aliquam pretium aliquet magna eu efficitur. Ut pretium lorem vitae condimentum pretium. Donec ac urna a mauris tempor commodo vitae et velit. Etiam arcu sapien, tempor eget euismod semper, facilisis quis massa. Etiam a enim vel elit sodales semper. Vestibulum id rutrum purus, non commodo tortor. Suspendisse tincidunt tincidunt accumsan. Vivamus augue massa, finibus in laoreet et, finibus eget massa. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Phasellus in tortor a ipsum scelerisque bibendum. Cras eget urna in erat vestibulum ullamcorper quis pellentesque ex. Phasellus pretium purus elit, vel sollicitudin ligula venenatis at.
-
-Nullam rutrum ligula eget tortor tempus, quis rutrum diam aliquam. Ut et rhoncus nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus maximus lorem in leo facilisis tristique. Curabitur nec egestas mauris, id accumsan dui. Vestibulum ultricies turpis a ante pretium ultricies. Sed elit nunc, finibus et odio non, fermentum viverra sapien. Donec placerat fermentum convallis. Nulla congue nibh at quam egestas vestibulum.
-
-Ut rutrum nisi ac dapibus volutpat. Sed luctus sapien at tortor volutpat, id posuere mi maximus. Mauris facilisis tellus a nisi finibus vehicula. Aenean sed lectus quis arcu efficitur bibendum. Nam blandit ultrices nisi, ac mattis enim egestas et. Nullam tempor, lorem a dignissim malesuada, tellus mauris lobortis ex, sit amet faucibus urna dui sed ex. Fusce fringilla ipsum metus. Morbi pretium ipsum enim, quis iaculis urna fringilla nec. Nam at erat vel tellus sodales posuere eu ut sapien. Sed eu risus vitae turpis dapibus cursus. Mauris tempor convallis suscipit. Duis non rhoncus ipsum.
-
-Etiam eleifend mollis commodo. Nunc laoreet feugiat mollis. Vivamus placerat et nulla et posuere. Curabitur pharetra sollicitudin ligula, et pretium justo ultricies in. Phasellus posuere laoreet urna, a dictum quam fringilla quis. Nullam ultrices, lectus vitae fringilla imperdiet, massa mauris scelerisque ante, ac interdum justo dui sed nulla. Quisque ultricies tortor leo, vel lacinia lacus aliquam nec. Vivamus vel tortor tincidunt, rhoncus leo eget, ultricies nibh. Integer aliquet nibh sit amet ante posuere, dictum efficitur massa ullamcorper.
-
-Donec faucibus facilisis turpis, sed tincidunt purus pulvinar nec. Maecenas non justo vel est tempus semper. Donec et tellus a augue tincidunt aliquam. Suspendisse nec ex vel odio fermentum consectetur. Praesent fermentum egestas mi sed convallis. Nunc pulvinar pulvinar nulla et tempor. Sed pellentesque dolor velit, at accumsan nisl facilisis vel. Aenean nec dolor a nisl auctor eleifend et eget sem. Vestibulum consequat arcu mauris, sit amet lobortis lorem molestie non. Morbi et vehicula ipsum. Quisque quis tellus commodo, accumsan metus euismod, rutrum dolor. Nunc lobortis, leo in eleifend mattis, eros urna sollicitudin urna, sit amet vestibulum leo eros non nunc.'),
-('web 3.0', 'jean Raconte', 'What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ''Content here, content here'', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ''lorem ipsum'' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
-Where does it come from?
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.');
+INSERT INTO article(name, author, abstract, image) VALUES
+('BNP Paribas rejoint la blockchain de J.P. Morgan', 'Antoinette Ramires', 'La banque française a rejoint la solution blockchain de la banque américaine J.P. Morgan. 
+Ce partenariat permettra à la BNP de négocier des tokens numériques sur ce réseau pour 
+des prêts d’actifs à court terme.
+Onyx est la blockchain utilisée par la banque américaine J.P Morgan. Elle s’occupe 
+seulement du marché des rachats journaliers. Au travers de ce marché, les banques 
+peuvent prêter des bons symboliques du Trésor américain durant quelques jours sans 
+que les actifs quittent leurs bilans. Par la suite, les emprunteurs peuvent échanger les 
+tokens contre des liquidités. De la sorte, ils peuvent augmenter leur garantie pour l’utiliser 
+notamment sur les marchés dérivés. Ce marché est évalué à plus de 12 000 milliards de 
+dollars.
+J.P. Morgan a donc adopté la technologie blockchain bien qu’ayant déjà montré sa 
+réticence surtout face au Bitcoin. Cela se résume d’ailleurs par le slogan entonné par le 
+PDG Jamie Dimon « blockchain, pas Bitcoin ». C’est pourquoi, il apparait naturel de voir 
+cette grande banque se dirigeait vers une blockchain privée ou la validation des 
+transactions est contrôlée par J.P Morgan à l’inverse d’une blockchain publique comme 
+Bitcoin ou Ethereum.
+Toutefois, malgré son opposition aux blockchains publiques, tout du moins en façade, la 
+banque propose déjà à ses clients les plus fortunés l’accès à quelques fonds cryptos. On 
+ne peut pas décemment renoncer aux profits gigantesques permis par ce marché riche 
+en opportunités…
+BNP Paribas n’est pas la première banque à rejoindre ce réseau puisque Goldman Sachs 
+a déjà rejoint Onyx, l’été dernier.
+Un pas de plus vers l’adoption blockchain de BNP Paribas
+Pour BNP Paribas, le second groupe bancaire en Europe, il s’agit d’un pas de plus en 
+faveur de l’adoption de la technologie blockchain.
+En outre, la banque française est membre d’une alliance de banques françaises 
+expérimentant un projet de blockchain de la banque centrale.
+BNP renforce donc son utilisation de la technologie blockchain en rejoignant le réseau 
+Onyx de J.P. Morgan. Si nous sommes bien loin des idéaux d’origine et de la 
+décentralisation sacrée des blockchains publiques, cela peut tout de même marquer une 
+progression dans l’adoption de cette innovation technologique majeure. Nous verrons 
+dans l’avenir si d’autres géants du secteur montent dans le train de la blockchain et 
+participent à son adoption par le plus grand nombre.', 'BNP_JP'),
+('Durant le bear market, les baleines achètent du Bitcoin en 
+masse', 'Fred Raven', 'Selon les données de l’entreprise IntoTheBlock, les baleines (whales) Bitcoin semblent 
+revenir dans la partie. On note un retour des plus gros portefeuilles dans la bataille, signe 
+d’un potentiel bottom pour le Bitcoin.
+Cette semaine a marqué le plus gros afflux depuis février avec près de 116 000 BTC 
+transférés sur les walllets des plus gros comptes de l’écosystème crypto.
+On a aussi repéré des transactions majeures sur le portefeuille d’une des plus grosses 
+baleines. En effet, elle aurait acheté pas moins de 927 btc sur ce mois de juin. Une 
+stratégie d’accumulation en vue d’un potentiel retournement des cours pour certains 
+analystes.
+Pour de nombreux analystes, les cryptos préfigurent l’état du marché financier en général. 
+Tant qu’un bottom n’a pas été trouvé, il est difficile d’imaginer que les marchés 
+traditionnels repartent à la hausse.
+Le Bitcoin a chuté de près de 30 % cette semaine et stagne aux alentours des 20 000 
+dollars. Selon le site spécialisé Glassnode, le Bitcoin se trade environ 3 000 dollars en 
+dessous de son « realized price » de 23 430. C’est un indicateur qui permet de calculer 
+l’achat moyen de tous les bitcoin en circulation. Cela illustre bien les conditions de 
+marché compliqué notamment pour les nouveaux arrivants, qui se retrouvent pour l’heure 
+en perte.
+Le Bitcoin continue de bataille dans la zone des 20 000 dollars et malgré quelques 
+signaux encourageant en milieu de semaine, ne parvient pas à s’extirper de cette zone. 
+Nous sommes ici sur un support clé qui doit tenir. En cas de cassure à la baisse, il est fort 
+probable que le bitcoin ira chercher plus bas vers la zone des 17 000 dollars.
+', 'bitcoin-whale'),
+('ApeCoin prêt à quitter la blockchain Ethereum ?', 'Luc Bordeau', 'Suite à l’engorgement de la blockchain Ethereum lors de la vente “Otherdeed”, Yuga Labs 
+et la DAO Apecoin laissent entendre une possible migration de l’écosystème d’ApeCoin 
+sur une nouvelle blockchain.
+Le 30 avril, Yuga Labs, créateur (entre autres) de la collection de NFT Bored Ape Yacht 
+Club, mettait en vente des terrains virtuels de son futur métavers, Otherside. La vente fut 
+un succès, la demande étant telle que la blockchain Ethereum n’a pas pu suivre.
+Certains utilisateurs ont ainsi fait l’expérience d’échecs de leur transaction à cause d’une 
+surcharge de la blockchain, mais surtout, les prix du gaz Ethereum ont atteint des 
+sommets, dépassant même le prix des NFT. Ce phénomène se produit lorsque de 
+nombreux utilisateurs tentent de se procurer les tokens au même moment, et 
+surenchérissent sur les frais de transaction du réseau.
+Plus de 100 millions de dollars se sont ainsi évaporés en frais de transaction, et Yuga 
+Labs a fini par rembourser les frais de gaz à tous les utilisateurs qui n’avaient pas vu leur 
+mint de NFT Otherdeed aboutir.
+Les avantages pour Yuga Labs d’une migration vers une autre blockchain sont multiples. 
+On observerait alors des frais de transaction réduits, la possibilité de les payer en 
+ApeCoin et un réseau plus rapide. Néanmoins, une telle migration risque de poser 
+certains problèmes concernant la gestion de ses actifs actuellement sur Ethereum, qui 
+représentent une capitalisation boursière de plus d’un milliard de dollars.
+Yuga Labs affirme ne pas contrôler la DAO (Decentralized Autonomous 
+Organization) d’ApeCoin. À l’origine, la DAO n’avait pas prévu d’envisager une telle 
+migration. Mais le tweet de Yuga Labs semble bien avoir initié une discussion autour du 
+sujet entre ses membres. De plus, ceux-ci souhaitent avant tout respecter les désirs de 
+ses utilisateurs. Leur choix semble aujourd’hui se porter vers les blockchains Flow ou 
+Avalanche.
+Du côté de chez Avalanche, un important travail a été mené pour le développement des 
+sous-réseaux. Yuga Labs pourrait ainsi disposer de son propre sous-réseau sur lequel 
+ses transactions pourraient être menées sans impacter le réseau global.
+La blockchain Flow, créée par Dapper Labs, s’est quant à elle déjà montrée apte à gérer 
+de grosses transactions avec le mint NBA Top Shot. Elle a d’ailleurs vu le jour à la suite 
+d’un problème similaire sur Ethereum, où l’engouement pour les NFT Cryptokitties avaient 
+provoqué un engorgement de la blockchain.
+Quoi qu’il en soit, la décision reste entre les mains de la DAO Apecoin et de Yuga Labs.
+Si vous souhaitez acheter de l’ApeCoin, nous vous recommandons Capital.com. Il s’agit 
+d’une plateforme fiable et sécurisée en France.
+', 'APECOIN-explained'),
+('Ethereum 2.0 plus proche que jamais ? ', 'Steve Comitein', 'L’Ethereum 2.0… vous en entendez parler depuis des mois, voire des années ! 
+Longtemps annoncée, toujours repoussée, l’arrivée de l’Ethereum 2.0 avec le protocole 
+de Proof-of-Stake ressemble un peu à l’Arlésienne ! Pourtant, le 8 juin 2022, un 
+évènement très important s’est déroulé. Qu’on se le dise, l’Ethereum 2.0 est en bonne 
+voie !
+L’annonce est venue par Twitter via Tim Beiko en personne, l’un des développeurs de 
+l’Ethereum. Le 9 juin 2022, il a ainsi envoyé un tweet dans lequel il annonce que le réseau 
+Ropsten a fusionné ! Les développeurs de l’Ethereum ont longtemps attendu cette étape 
+en vue de l’arrivée de la version 2.0.
+Ropsten est le nom d’un testnet. Comme son nom l’indique, un testnet est un réseau 
+créé uniquement à des fins de tests. S’il fonctionne comme un réseau blockchain 
+classique, un testnet ne met pas en jeu de véritables fonds. De cette manière, les 
+développeurs peuvent réaliser autant de tests qu’ils souhaitent sans aucun impact. Créé 
+en 2016, Ropsten est le plus vieux testnet sur Ethereum.
+Le fait que le réseau Ropsten a fusionné le 8 juin est déjà en soi un succès. Pourquoi ? Le 
+18 mai 2022, les développeurs de l’Ethereum avait avancé la date du Merge au 8 juin. 
+Pari tenu !
+Pour rappel, l’Ethereum 2.0 va quitter le modèle trop énergivore de la Proof-Of-Work 
+(POW) pour adopter la Proof-Of-Stake (POS). Ce changement va permettre de rendre la 
+blockchain Ethereum plus vertueuse du point de vue environnemental. Par ailleurs, cela 
+va booster la capacité du réseau à gérer des transactions. A l’heure actuelle, en l’absence 
+de solutions de seconde couche du type Polygon, la scalabilité de la blockchain 
+Ethereum n’est que de 30 TPS (Transactions Par Seconde).
+Or, c’est cette transition qui vient justement d’être testée avec succès à petite échelle sur 
+le testnet Ropsten. Le testnet Ropsten a fusionné (« merge ») avec la beacon Chain POS 
+de l’Ethereum. Concrètement depuis cette fusion, il n’y a plus de mineurs sur Ropsten. 
+Ces mineurs ont été « remplacés » par des valideurs comme c’est le cas dans les 
+blockchains qui utilisent la Proof-Of-Stake (POS).
+Après cette étape majeure, quid de l’arrivée de l’Ethereum 2.0 ? Deux mises à jour 
+importantes restent encore à venir. Lors du sommet des développeurs du web 3.0 à 
+Shanghai, Vitalik Buterin en personne a évoqué une arrivée de l’Ethereum 2.0 à l’été 
+2022 ! Patience donc… l’Ethereum 2.0 devrait bien arriver en 2022 !
+', 'Ethereum-2'),
+('Cours de l’Ethereum : le niveau le plus bas depuis 15 mois a 
+été atteint !', 'Mel Bacciart', 'Ce samedi, le prix de l’Ethereum a enregistré un recul de près de 8 %, passant ainsi à 
+son plus bas niveau depuis 15 mois. L’Ethereum est en effet passé sous la barre des 1
+600 $, juste après les premiers tests de fusion sur son réseau Ropsten. Rappelons que 
+ces tests sont nécessaires avant la mise à jour The Merge, prévue pour cet été. Pire 
+encore, à l’heure où nous écrivons ces lignes, le cours de l’Ethereum est passé à 1 267 $, 
+jusqu’où peut-il aller ?
+Le marché des crypto-monnaies, porté par la forte volatilité de l’Ether et du Bitcoin, a 
+connu ces derniers temps une mauvaise passe. Les marchés boursiers ont également 
+chuté vendredi à la suite de la publication d’un rapport sur l’inflation démontrant que les 
+hausses de prix sont bien plus élevées que prévu.
+En décembre dernier, l’Ethereum a dépassé les 4100 $ pour ensuite osciller entre 2100 et 
+4000 $ au cours des jours suivants. En janvier, la cryptomonnaie est passée sous la barre 
+des 2200 $ et cette semaine, le schéma se reproduit, car le prix de l’actif se situe entre 1
+600 et 2000 $.
+Rappelons que la fin de l’année 2021 a été plutôt positive pour l’actif qui a établi un 
+nouveau record lorsqu’il a dépassé les 4850 $ le 10 novembre. La tendance à la hausse a 
+perduré jusqu’au début décembre avant de retomber à la fin du mois. L’Ethereum a tout 
+de même clôturé l’année au-dessus de son niveau de départ avant de repasser au-dessus de 1 000 $ en janvier 2022.
+Comme pour tout investissement à long terme, les experts recommandent de ne pas tenir 
+compte des hauts et des bas. En effet, le dernier prix à la hausse ne signifie aucunement 
+que la volatilité de l’Ethereum a entièrement disparu.
+En résumé, pour s’éviter des migraines, il vaut mieux ignorer le battage médiatique autour 
+des nouveaux records à la hausse ou à la baisse de l’Ethereum et plutôt viser une 
+stratégie sur le long terme telle que la DCA.', 'ethereum-down-1'),
+('Pizza au Bitcoin. Un gout de richesse ! ', 'Kevin Witter', 'Le 22 mai 2010, le développeur Laszlo Hanyecz a payé le petite somme de 10.000 
+bitcoins pour se faire livrer 2 pizzas. Ce jour est connu comme le « Bitcoin Pizza Day ». 
+Une des premières fois que la cryptomonnaie a pu acquérir un bien réel.
+Même après 12 ans, l’histoire de l’achat de deux pizzas contre 10.000 bitcoins continue 
+d’étonner les fans et adeptes du monde de la cryptomonnaie.
+Compte tenu du prix actuel du bitcoin, il est difficile de croire que Laszlo ait demandé si le 
+prix était trop bas pour acheter deux pizzas. Aujourd’hui, 10 000 BTC valent plus de 294 
+millions de dollars, loin des 41 dollars de l’époque.
+Cet épisode, connu comme le “Bitcoin Pizza Day”, est célébré chaque année par la 
+communauté Bitcoin et offre à certains l’occasion de se moquer du sort de celui qui a 
+perdu une fortune en souhaitant se sustenter. À peine trois mois plus tard, en août 2010, 
+un internaute lui fait remarquer sur Bitcoin Talk que ses pizzas sont désormais évaluées à 
+600 dollars. D’autres lui demandent ironiquement si son offre tient toujours. Laszlo 
+Hanyecz écrit alors : “Eh bien, je ne m’attendais pas à ce que cette initiative devienne 
+aussi populaire mais je ne peux plus me permettre de le refaire. Je ne suis plus capable 
+de générer des milliers de bitcoins par jour. Merci à tous ceux qui m’ont acheté des 
+pizzas, mais je préfère garder mes bitcoins pour le moment.”
+De simple protocole expérimental, elle est devenue une monnaie potentielle et peut-être 
+que rien ne se serait passé comme tel s’il n’avait pas eu un petit creux. Depuis, les 
+utilisateurs de Bitcoin sont à leur tour invités à s’offrir une pizza le 22 mai pour célébrer 
+cet événement.
+', 'bitcoin-pizza-day');
 
 
 INSERT INTO lexicon(letter, name, abstract)VALUES
@@ -382,13 +533,6 @@ INSERT INTO "level"(name)VALUES
 ('intermediate'),
 ('junior');
 
-INSERT INTO challenge(name, level_id, article_id, abstract) VALUES
-('challenge 1', 1, 1, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
-('challenge 2', 2, 1, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
-('challenge 3', 2, 1, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
-('challenge 4', 3, 1, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
-('challenge 5', 3, 1, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. ');
-
 INSERT INTO question (description)
 VALUES 
 ('Qu’est-ce que la Blockchain ?'),
@@ -494,6 +638,124 @@ VALUES
 UPDATE question
 SET answer_id = 40
 WHERE id=10;
+
+INSERT INTO challenge(name, level_id, abstract) VALUES
+('Blockchain', 1, 'La blockchain (chaîne de blocs) est une technologie de stockage et de transmission 
+d’informations, sécurisée par des outils cryptographiques, infalsifiable, transparente car distribuée 
+chez tous ses utilisateurs et sans organe central de contrôle. C’est une sorte de registre mondial
+de données, qui contient l’historique de tous les échanges réalisés entre ses utilisateurs depuis sa 
+création.
+Les actifs peuvent être des biens corporels (maison, voiture, espèces, terrain) ou des actifs 
+incorporels tels que des éléments de propriété intellectuelle tels que des brevets, des droits 
+d''auteur ou des marques.
+Les réseaux blockchain permettent de suivre et d''échanger pratiquement n''importe quel produit 
+de valeur, réduisant ainsi les risques et les coûts pour toutes les parties impliquées.
+Une blockchain constitue une base de données qui contient l’historique de tous les échanges 
+effectués entre ses utilisateurs, et ce, depuis sa création. Pour se la représenter, l’image du grand 
+livre est fréquemment utilisée : la blockchain peut être comparée à un vaste registre public 
+intégrant l’ensemble des échanges effectués par ses utilisateurs depuis sa création. Une de ses 
+caractéristiques principales est qu’elle ne peut pas être modifiée. Les blocs sont protégés par 
+plusieurs procédés cryptographiques innovants qui rendent la modification impossible a 
+posteriori. C’est ce qui donne à cette technologie son caractère transparent : on peut uniquement 
+ajouter des opérations, mais pas les modifier ni les supprimer, elles sont infalsifiables.
+Cette technologie repose sur un système de pair-à-pair décentralisé : les données ne sont pas 
+hébergées par un serveur unique mais distribuées entre les utilisateurs, sans intermédiaire. Une 
+partie des utilisateurs détient des copies de la blockchain, qui se trouve donc présente partout 
+dans le monde. Ces centaines de copies sont sans cesse mises à jour simultanément. 
+Contrairement aux bases de données traditionnelles, qui sont administrées par des opérateurs 
+centralisés, la blockchain est administrée collectivement, par tous les nœuds du réseau. Ces 
+nœuds obéissent tous à un même protocole informatique, qui définit les procédures à suivre, ainsi 
+que les conditions à respecter pour mettre à jour la base de données.
+Concrètement, la technologie blockchain prend la forme d’un registre qui recense des données, 
+généralement des transactions, regroupées dans des blocs reliés entre eux. Un bloc est 
+simplement un ensemble d’informations mis ensemble, et les blocs sont reliés entre eux de 
+manière irréversible (par les chaînes). Chaque bloc est validé par les nœuds du réseau, des 
+utilisateurs-validateurs appelés les “mineurs”. Une fois validés, les blocs sont horodatés et 
+intégrés à la chaîne de blocs, accessible à tous les utilisateurs. La transaction est alors visible 
+pour le récepteur ainsi que l’ensemble du réseau. Les mineurs sont rémunérés via des tokens. Le 
+seul moyen de modifier la blockchain est d''ajouter un bloc : il n''est pas possible de changer un 
+bloc existant ou de modifier les chaînes.
+Plusieurs caractéristiques sont associées à la blockchain : désintermédiation, traçabilité, 
+transparence, consensus distribué, ineffaçable, structure distribuée, résilience, sécurité et 
+confiance. Toutes ces caractéristiques constituent le potentiel innovateur de la blockchain.
+Les caractéristiques principales de la technologie blockchain sont :
+- La désintermédiation 
+La technologie blockchain permet d’échanger sans le contrôle d’un tiers. La validation et l’ajout 
+d’un bloc résultent d’un consensus entre les utilisateurs-validateurs, qui repose sur la possibilité
+de vérifier leur travail de validation et qui rend inutile le contrôle par une institution de référence. 
+Tout est effectué sans l’intervention d’une autorité centrale, les utilisateurs opèrent la surveillance, 
+et se contrôlent mutuellement, assurant la certification des sauvegardes et leurs cohérences.
+Le tiers de confiance, une banque par exemple, est traditionnellement le seul moyen de s’assurer 
+qu’une transaction est valide, c’est-à-dire que les données (de la monnaie le plus souvent) ont 
+effectivement été transférées d’une personne A à une personne B, et que la personne A n’est 
+donc plus en possession des données initiales. La blockchain permet de faire reposer la 
+confiance uniquement sur la technologie et sur la possibilité pour tous et à tout moment de 
+contrôler les opérations et leur validation. La confiance est ici distribuée et ne nécessite plus 
+d’intermédiaire.
+La blockchain est ainsi décentralisée tant sur le plan politique (personne ne la contrôle) que sur le 
+plan architectural (pas d’infrastructure centrale).
+Cependant, aussi prometteuse soit-elle, cette désintermédiation poussée à l’extrême peut poser 
+de nombreux problèmes. L’absence de contrôle et de régulation par un tiers facilite des 
+comportements litigieux comme par exemple le blanchiment d’activités illégales. De même, se 
+pose la question de l’arbitrage en cas de litige, étant donné qu’il n’y a personne, aucune 
+institution vers laquelle se tourner en cas de dysfonctionnement.
+- La transparence 
+Une fois qu’un document est inscrit sur la blockchain, cela suffit à prouver que ce dernier existe 
+bien à l’instant T et qu’il n’a pas été modifié. La blockchain est qualifiée de transparente car tout 
+le monde peut la télécharger dans son intégralité et vérifier à tout moment son honnêteté. Tous 
+les utilisateurs de la blockchain peuvent ainsi voir les transactions présentes et passées.
+Si la transparence est assurée pour les transactions, l’anonymisation des utilisateurs remet 
+cependant en cause cette caractéristique. En effet, l’anonymat possible sur la blockchain peut 
+être utilisé pour des activités frauduleuses, difficiles voire impossibles à détecter et à réguler.
+- La sécurité
+L’hébergement décentralisé fait également de la blockchain une technologie sûre : elle rend 
+quasi- impossible la suppression de toutes les copies des documents, qui existent sur une 
+multitude de serveurs à travers le monde. La blockchain a une grande résistance, car toutes les 
+données sont copiées dans les différents serveurs. Cela la rend résistante aux cyber-attaques ou 
+au contrôle de l’État. En effet, s’il est possible de s’attaquer à un ou plusieurs ordinateurs, il est 
+plus compliqué de s’attaquer aux blocs d’informations copiés dans l’ensemble des ordinateurs 
+connectés au réseau. Cela offre à la blockchain un haut niveau de sécurité. La blockchain est 
+donc considérée comme inattaquable et inviolable. Cependant, cela la rend également 
+difficilement régulable.
+- L’autonomie 
+La puissance de calcul et l’espace d’hébergement sont fournis par les nœuds du réseau, c’est-à-
+dire les utilisateurs eux-mêmes. Il n’y a donc pas besoin d’infrastructures centrales. Au sein d’une 
+blockchain, l’infrastructure n’est plus concentrée dans les mains d’une organisation mais est, au 
+contraire, éclatée dans l’ensemble des points du réseau. Une blockchain est donc autoportante et 
+indépendante de services tiers.
+La blockchain est l’architecture sous-jacente de la cryptomonnaie bitcoin, qui reste aujourd’hui le 
+cas d’usage le plus connu. La première fonction de la blockchain a donc été le transfert d’actifs 
+financiers. Mais cette technologie ne cesse d’évoluer et est à la base de bien d’autres 
+applications qu’un réseau de paiement. Elle est aujourd’hui utilisée aussi par d’autres acteurs et 
+les opérations et données ne sont pas nécessairement financières.
+Son potentiel peut en effet s’appliquer à tous les domaines qui impliquent un échange, une 
+sauvegarde ou même une preuve et pourrait donner lieu à des usages révolutionnaires pour la 
+santé, l’énergie, l’industrie musicale, les politiques publiques, l’agriculture etc. Parmi les 
+applications possibles :
+- Les « smart contract » exécutent automatiquement des actions validées au préalable par les 
+parties prenantes : le groupe d’assurance Axa a par exemple testé le remboursement 
+automatique des vols retardés via ce type de contrat.
+- Le vote électronique a été testé par la ville de Zoug (Suisse) en 2018.
+- La certification des droits d’auteurs, comme le propose la start-up Mediachain qui permet aux 
+artistes de déposer leurs créations sur la base de données, et tout en gardant le contrôle
+sur elles et sur leur authenticité.
+- La traçabilité des produits proposée par la plateforme Provenance.
+- La blockchain peut être un outil pour la mise en œuvre de monnaies locales complémentaires
+(MLC) numériques, à l’image du Léman, une MLC utilisée dans plusieurs communes françaises et 
+suisses. Cela permet de mieux répondre aux besoins spécifiques des entreprises du réseau et de 
+garantir une meilleure traçabilité.
+- Elle peut également être utilisée pour mettre en place des systèmes de collaboration et de 
+gouvernance plus démocratiques, comme nous le verrons plus loin dans cette note.'),
+('challenge 2', 2, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
+('challenge 3', 2, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
+('challenge 4', 3, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. '),
+('challenge 5', 3, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. ');
+
+INSERT INTO favoris("user_id", cryptoName)VALUES
+('1', 'bitcoin'),
+('1', 'xrp');
+
+
 
 
 COMMIT;
