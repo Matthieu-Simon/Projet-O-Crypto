@@ -32,7 +32,6 @@ function dashBoard() {
   const moreResult = () => {
     setSlice(slice + 10);
   };
-
   return (
     <div className="coin-app">
       <h1 className="coin-text">COURS DES CRYPTOMONNAIES</h1>
@@ -52,6 +51,7 @@ function dashBoard() {
       {filteredCoins.slice(0, slice).map((coin) => (
         <Coin
           key={coin.id}
+          id={coin.id}
           onClick={() => navigate(`/coin/${coin.id}`)}
           name={coin.name}
           image={coin.image}

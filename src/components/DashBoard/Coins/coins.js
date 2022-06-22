@@ -11,7 +11,7 @@ import authService from '../../LoginForm/auth.service';
 import './coinStyles.scss';
 
 function Coin({
-  name, image, symbol, price, volume, priceChange, marketcap, rank, onClick
+  id, name, image, symbol, price, volume, priceChange, marketcap, rank, onClick
 }) {
   // // get favorites from local storage or empty array
   // const navigate = useNavigate();
@@ -41,20 +41,24 @@ function Coin({
   const [isFavorite, setIsFavorite] = useState(false);
   const user = authService.getCurrentUser();
   const coin = {
-    name, image, symbol, price, volume, priceChange, marketcap, rank
+    id, name, image, symbol, price, volume, priceChange, marketcap, rank
   };
   const addFavorite = async (event) => {
-    const response = await heroku.post(`/favoris/${user.user.id}/${coin.name}`);
+    const response = await heroku.post(`/favoris/${user.user.id}/${coin.id}`);
     setIsFavorite(true);
     console.log(response);
   };
 
   const deleteFavorite = async (event) => {
-    const response = await heroku.post(`/deleteFavoris/${user.user.id}/${coin.name}`);
+    const response = await heroku.post(`/deleteFavoris/${user.user.id}/${coin.id}`);
     setIsFavorite(false);
     console.log(response);
   };
 
+  const getFavorites = async () => {
+    const response = await heroku.get(`/favoris/${user.user.id}/cryptos`);
+    console.log(response.data);
+  };
   return (
     <div className="coin-cointainer">
       <div className="coin-row">

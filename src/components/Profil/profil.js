@@ -12,10 +12,11 @@ function Profil() {
   const user = authService.getCurrentUser();
 
   const [favorites, setFavorites] = useState([]);
+
   const getFavorites = async () => {
     const response = await heroku.get(`/favoris/${user.user.id}/cryptos`);
-    setFavorites(response.data);
-    console.log(response.data);
+    setFavorites(response.data[0]);
+    console.log(response.data[0].cryptoname);
   };
 
   useEffect(() => {
@@ -54,10 +55,10 @@ function Profil() {
       </div>
       {/* <div className="profil-favorites">
         <h1 className="profil-favorites-title">Mes favoris</h1>
-        {coin === null ? (<h1 className="profil-favorites-title">Vous n'avez pas de favoris</h1>) : (
+        {favorites === null ? (<h1 className="profil-favorites-title">Vous n'avez pas de favoris</h1>) : (
 
           <div className="coin-cointainer-profil">
-            {coin.map((coins) => (
+            {favorites.map((coins) => (
               <div key={coins.name} className="coin-row-profil">
                 <div className="coin">
                   <p className="coin-rank">{coins.rank}</p>

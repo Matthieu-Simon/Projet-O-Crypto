@@ -34,6 +34,15 @@ const logout = () => {
   localStorage.removeItem('favorites');
 };
 
+const forgottenPwd = (email) => heroku.post('/forgotten-password', {
+  email,
+}).then((response) => {
+  if (response.data.message) {
+    console.log(response.data.message);
+  }
+  return response.data;
+});
+
 const getCurrentUser = () => JSON.parse(localStorage.getItem('user'));
 
 const authService = {
@@ -41,6 +50,7 @@ const authService = {
   login,
   logout,
   getCurrentUser,
+  forgottenPwd,
 };
 
 export default authService;

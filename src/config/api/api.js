@@ -4,4 +4,6 @@ export const CoinList = (currency) => `https://api.coingecko.com/api/v3/coins/ma
 
 export const SingleCoin = (id) => `https://api.coingecko.com/api/v3/coins/${id}`;
 
+export const SingleCoinName = (name) => `https://api.coingecko.com/api/v3/coins/${name}`;
+
 export const HistoricalChart = (id, days = 365) => `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=eur&days=${days}`;
