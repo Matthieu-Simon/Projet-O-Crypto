@@ -36,7 +36,7 @@ function CoinPage() {
             <p className="coin-page-description">{htmlToParse}</p>
             <p className="coin-page-rank">Rang: {coin?.market_cap_rank}</p>
             <p className="coin-page-price">Prix actuel: {coin?.market_data?.current_price.eur} €</p>
-            <a href={coin?.links?.homepage[0]} className="coin-page-link">More infos</a>
+            <a href={coin?.links?.homepage[0]} className="coin-page-link">Plus d'informations</a>
           </div>
         )}
         <CoinChart />

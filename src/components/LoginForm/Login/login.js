@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import AuthService from '../auth.service';
+import ForgottenPassword from '../ForgottenPassword/forgottenPassword';
 
 function Login() {
   const navigate = useNavigate();
@@ -22,20 +23,6 @@ function Login() {
         else {
           setMessage('Le mot de passe ou l\'adresse email est incorrect');
         }
-      }, (error) => {
-        console.log(error);
-      });
-    }
-    catch (error) {
-      console.log(error);
-    }
-  };
-
-  const sendUserMail = async (e) => {
-    e.preventDefault();
-    try {
-      await AuthService.forgottenPwd(email).then(() => {
-        setMessage('Un email vous a été envoyé');
       }, (error) => {
         console.log(error);
       });
@@ -79,18 +66,7 @@ function Login() {
         <button className="btn-form" type="submit">Connexion</button>
       </form>
       <p className="message">{message}</p>
-
-      {/* TODO FAIRE UNE MODALE POUR LE MOT DE PASSE OUBLIE  */}
-      <form onSubmit={sendUserMail} className="forgotten-pwd">
-        <input
-          type="text"
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          className="forgotten-pwd"
-        />
-        <button className="forgotten-pwd" type="submit">test</button>
-      </form>
+      <ForgottenPassword />
     </div>
   );
 }
