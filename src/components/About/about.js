@@ -6,7 +6,7 @@ import team2 from '../../assets/images/team2.png';
 
 function About() {
   return (
-    <div className="title">
+    <div className="about-container">
       <h1 className="about">A propos de nous</h1>
 
       <div className="container1">

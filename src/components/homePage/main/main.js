@@ -55,7 +55,7 @@ function main() {
                 </h2>
               </div>
               <div className="App-article-preview-text">
-                <p>
+                <p className="App-article-preview-description">
                   {article.abstract.slice(0, 100)}...
                 </p>
               </div>

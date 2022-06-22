@@ -1,5 +1,9 @@
 
 
+.about-container { 
+    width: 90%;
+    margin: auto;
+}
 .about-title{
     font-weight: bold;
     padding-bottom: 20px;
@@ -37,14 +41,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5%;
+    padding-bottom: 50px;
 }
 
 .container2{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10%;
 }
 
 .text{
@@ -60,17 +63,23 @@
 //RESPONSIVE 
 @media all and (max-width: 991px) {
     
-    h1{
-        font-size: 3rem;
+    .about-container {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
     }
-    .team1 {
-        width: 200px;
+    .about-title{
+        font-weight: bold;
+        padding-bottom: 20px;
     }
-    .team2 {
-        width: 200px;
+    .container1, .container2{
+        flex-direction: column;
     }
-    .text1 {
-        font-size: 0.9rem;
+
+    .image1, .image2{
+        display: none;
     }
 
 }
