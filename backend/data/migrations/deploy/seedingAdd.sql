@@ -3,13 +3,6 @@
 BEGIN;
 
 
-
-INSERT INTO "user"(pseudo, email, password) VALUES
-('hugo', 'hugo@outlook.fr', 'azerty'),
-('papi', 'papi@hotmail.fr', 'azerty123'),
-('cryptoman', 'cryptoman@outlook.fr', 'azertycrypt'),
-('quentin', 'quentin@hotmail.fr', '123456');
-
 INSERT INTO article(name, author, abstract, image) VALUES
 ('BNP Paribas rejoint la blockchain de J.P. Morgan', 'Antoinette Ramires', 'La banque française a rejoint la solution blockchain de la banque américaine J.P. Morgan. 
 Ce partenariat permettra à la BNP de négocier des tokens numériques sur ce réseau pour 
@@ -746,11 +739,6 @@ suisses. Cela permet de mieux répondre aux besoins spécifiques des entrepris
 garantir une meilleure traçabilité.
 - Elle peut également être utilisée pour mettre en place des systèmes de collaboration et de 
 gouvernance plus démocratiques, comme nous le verrons plus loin dans cette note.');
-
-
-INSERT INTO favoris("user_id", cryptoName)VALUES
-('1', 'bitcoin'),
-('1', 'xrp');
 
 
 
