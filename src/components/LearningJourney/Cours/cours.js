@@ -1,34 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Menu from '../Menu/menu';
-import ChangeBar from '../ChangeBar/changeBar';
+// import ChangeBar from '../ChangeBar/changeBar';
+import heroku from '../../../config/api/heroku';
 import './coursStyles.scss';
 
 function Cours() {
+  const [challenge, setChallenge] = useState([]);
+
+  const fetchChallenge = async () => {
+    const { data } = await heroku.get('/challenge/Blockchain');
+    setChallenge(data);
+    console.log(data);
+  };
+
+  useEffect(() => {
+    fetchChallenge();
+  }, []);
+
   return (
     <main className="main-cours">
       <Menu />
       <div className="homepage-cours">
         <div className="title-cours">
-          <h5>Comment investir au bon moment ?</h5>
+          <h5>{challenge.name}</h5>
         </div>
         <p className="lesson">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Dicta porro obcaecati saepe ratione eligendi reprehenderit,
-          eius voluptatem sint expedita.
-          Unde cum animi vero maxime amet cupiditate eligendi,
-          assumenda aliquam ab odio libero sapiente voluptas perspiciatis minima,
-          fugiat eaque atque in doloribus hic, porro nulla.
-          Voluptate animi veniam maiores sit velit.
-          Vel fugiat assumenda quod ullam! Quibusdam tenetur,
-          amet dolore dolores error similique adipisci impedit,
-          quos cumque facilis asperiores earum quasi ut reprehenderit libero!
-          Magni alias eum, impedit fuga veritatis facilis?
-          Vitae a aliquid dolores qui expedita veritatis quos,
-          beatae illo numquam debitis,
-          dolorum quaerat veniam. Eum cumque nisi non asperiores!
+          {challenge.abstract}
         </p>
       </div>
-      <ChangeBar />
+      {/* <ChangeBar /> */}
     </main>
   );
 }

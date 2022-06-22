@@ -2,8 +2,8 @@
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import heroku from '../../config/api/heroku';
 import './articlesStyles.scss';
 
 function Articles() {
@@ -12,7 +12,7 @@ function Articles() {
   const [search, setSearch] = useState('');
 
   const fetchArticles = async () => {
-    const { data } = await axios.get('https://ocrypto-backend.herokuapp.com/articles');
+    const { data } = await heroku.get('/articles');
     setArticles(data);
   };
 

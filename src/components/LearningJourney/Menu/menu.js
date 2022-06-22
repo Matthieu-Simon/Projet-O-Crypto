@@ -8,7 +8,6 @@ function Menu() {
       <div className="head-menu">
         <div>
           <a className="btn-menu" href="/learning">Quitter le cours</a>
-          <button className="btn-menu" type="submit">Menu</button>
         </div>
         <div>
           <h3 className="title-head-menu">Expert trader - niveau 3 (2022)</h3>
