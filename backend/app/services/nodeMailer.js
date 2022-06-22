@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-async function forgottenPassword (user_email, userData) {
+async function forgottenPassword (user_email, password) {
 
     const adminAccount = await nodemailer.createTransport({
         service: 'gmail',
@@ -13,10 +13,10 @@ async function forgottenPassword (user_email, userData) {
     const mailDescription = {
         from: process.env.ADMIN_EMAIL,
         to: user_email,
-        subject: 'Obtenir mon mot de passe oublié',
+        subject: 'Obtenir un mot de passe provisoire',
         text: ` Bonjour !
                 Suite à votre demande, vous trouverez ci-joint le mot de passe
-                lié à votre compte utilisateur : ${userData.password}
+                lié à votre compte utilisateur : ${password}
 
                 Cordialement.
 
