@@ -63,7 +63,7 @@ module.exports = {
             // get the list crypto favoris
             const listUserCryptos = await client.query(`SELECT * FROM favoris WHERE "user_id" = ${checkUserId}`);
 
-            return listUserCryptos.rows[0];
+            return listUserCryptos.rows;
         } catch (error) {
             return error;
         }
