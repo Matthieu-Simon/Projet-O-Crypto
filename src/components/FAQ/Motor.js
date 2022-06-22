@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import PropTypes from 'prop-types';
 import './FAQ.scss';
 
 function Motor({ faq, index, toggleFAQ }) {
@@ -18,12 +18,5 @@ function Motor({ faq, index, toggleFAQ }) {
     </div>
   );
 }
-Motor.propTypes = {
-
-  faq: PropTypes.string,
-  index: PropTypes.string,
-  toggleFAQ: PropTypes.func
-
-};
 
 export default React.memo(Motor);

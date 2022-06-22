@@ -2,6 +2,7 @@
 import './updateStyles.scss';
 import * as React from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -24,9 +25,10 @@ const style = {
 };
 
 export default function Update() {
-  const { user } = authService.getCurrentUser();
-  const [nickname, setNickname] = useState(user?.pseudo);
-  const [email, setEmail] = useState(user?.email);
+  const user = authService.getCurrentUser();
+  const navigate = useNavigate();
+  const [pseudo, setPseudo] = useState(user?.user.pseudo);
+  const [email, setEmail] = useState(user?.user.email);
   const [password, setPassword] = useState('');
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -34,11 +36,12 @@ export default function Update() {
 
   const handleSubmitNickname = (e) => {
     e.preventDefault();
-    heroku.patch(`/profile/${user.id}`, {
-      nickname,
+    heroku.patch(`/profile/update/${user.user.id}`, {
+      pseudo,
     }).then((res) => {
       console.log(res);
-      console.log(res.data.user.pseudo);
+      console.log(user.user.pseudo);
+      alert('Votre pseudo à bien été modifié');
     }).catch((err) => {
       console.log(err);
     });
@@ -46,24 +49,28 @@ export default function Update() {
 
   const handleSubmitEmail = (e) => {
     e.preventDefault();
-    heroku.patch(`profile/${user.id}`, {
-      email,
-    })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    heroku.patch(
+      `/profile/update/${user.user.id}`,
+      {
+        email,
+      }
+    ).then((res) => {
+      console.log(res);
+      console.log(user.user.email);
+      alert('Votre adresse email à bien été modifié');
+    }).catch((err) => {
+      console.log(err);
+    });
   };
 
   const handleSubmitPassword = (e) => {
     e.preventDefault();
-    heroku.patch(`profile/${user.id}`, {
+    heroku.patch(`/profile/update/${user.user.id}`, {
       password,
     })
       .then((res) => {
         console.log(res);
+        alert('Votre mot de passe à bien été modifié');
       })
       .catch((err) => {
         console.log(err);
@@ -72,20 +79,25 @@ export default function Update() {
 
   const handleDeleteAccount = (e) => {
     e.preventDefault();
-    heroku.delete(`/profile/${user.id}`)
+    heroku.delete(`/profile/update/${user.user.id}`)
       .then((res) => {
         console.log(res);
+        alert('Votre compte à bien été supprimé');
+        authService.logout();
+        navigate('/');
+        window.location.reload();
       }).catch((err) => {
         console.log(err);
       });
   };
+
+  console.log(email);
 
   return (
     <div>
       <Button onClick={handleOpen}>Modifier</Button>
       <Modal
         open={open}
-        onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
@@ -94,23 +106,21 @@ export default function Update() {
             Modifier vos informations personnelles
           </Typography>
           <Typography component="h3" id="modal-modal-description" sx={{ mt: 2 }}>
-            <p>
-              <form>
-                <input className="input-modifier" type="text" placeholder="Pseudo" onChange={(e) => setNickname(e.target.value)} onSubmit={handleSubmitNickname} />
-                <button className="button-modifier" type="submit">Valider</button>
-              </form>
-              <form>
-                <input className="input-modifier" type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} onSubmit={handleSubmitEmail} />
-                <button className="button-modifier" type="submit">Valider</button>
-              </form>
-              <form>
-                <input className="input-modifier" type="password" placeholder="Mot de passe" onChange={(e) => setPassword(e.target.value)} onSubmit={handleSubmitPassword} />
-                <button className="button-modifier" type="submit">Valider</button>
-              </form>
-              <form>
-                <button className="button-modifier delete-account" type="submit" onClick={handleDeleteAccount}>Supprimer mon compte</button>
-              </form>
-            </p>
+            <form onSubmit={handleSubmitNickname}>
+              <input className="input-modifier" type="text" placeholder="Pseudo" onChange={(e) => setPseudo(e.target.value)} />
+              <button className="button-modifier" type="submit">Valider</button>
+            </form>
+            <form onSubmit={handleSubmitEmail}>
+              <input className="input-modifier" type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+              <button className="button-modifier" type="submit">Valider</button>
+            </form>
+            <form onSubmit={handleSubmitPassword}>
+              <input className="input-modifier" type="password" placeholder="Mot de passe" onChange={(e) => setPassword(e.target.value)} />
+              <button className="button-modifier" type="submit">Valider</button>
+            </form>
+            <form>
+              <button className="button-modifier delete-account" type="submit" onClick={handleDeleteAccount}>Supprimer mon compte</button>
+            </form>
           </Typography>
           <Button onClick={handleClose}>Fermer</Button>
         </Box>
