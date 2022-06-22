@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 async function forgottenPassword (user_email, password) {
 
@@ -23,8 +24,16 @@ async function forgottenPassword (user_email, password) {
                 L'équipe Ocrypto
             `
     };
+    console.log(process.env.ADMIN_EMAIL)
+    console.log(process.env.ADMIN_PASSWORD)
 
-    adminAccount.sendMail(mailDescription);
+    adminAccount.sendMail(mailDescription, function (err, data) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('Email sent successfully');
+        }
+    });
 };
 
 module.exports = forgottenPassword;

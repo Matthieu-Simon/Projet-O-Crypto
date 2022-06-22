@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
 
-
 module.exports = {
     async recoveryPassword (randomPassword, user_email) {
         /*Password encryption*/
