@@ -43,7 +43,7 @@ export default function ForgottenPassword() {
   };
   return (
     <div className="forgotten-pwd-container">
-      <Button style={{ color: 'rgb(0, 0, 82)', bgcolor: '#424C7C' }} onClick={handleOpen}>Mot de passe oublié ?</Button>
+      <Button style={{ color: 'rgb(0, 0, 82)', bgcolor: '#424C7C', width: '100%' }} onClick={handleOpen}>Mot de passe oublié ?</Button>
       <Modal
         open={open}
         aria-labelledby="modal-modal-title"

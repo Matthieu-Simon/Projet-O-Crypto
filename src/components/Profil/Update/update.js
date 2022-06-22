@@ -17,11 +17,11 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 600,
   textAlign: 'center',
-  bgcolor: 'background.paper',
+  bgcolor: '#424C7C',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
-  color: '#424C7C',
+  color: 'white',
 };
 
 export default function Update() {
@@ -92,7 +92,7 @@ export default function Update() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Modifier</Button>
+      <Button style={{ color: 'rgb(0, 0, 82)', bgcolor: '#424C7C', width: '100%' }} onClick={handleOpen}>Modifier</Button>
       <Modal
         open={open}
         aria-labelledby="modal-modal-title"
@@ -120,7 +120,7 @@ export default function Update() {
               <button className="button-modifier delete-account" type="submit" onClick={handleDeleteAccount}>Supprimer mon compte</button>
             </form>
           </Typography>
-          <Button onClick={handleClose}>Fermer</Button>
+          <Button style={{ color: 'white ' }} onClick={handleClose}>Fermer</Button>
         </Box>
       </Modal>
     </div>
