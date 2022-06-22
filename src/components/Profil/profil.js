@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import './profilStyles.scss';
 import Avatar from '@mui/material/Avatar';
@@ -5,9 +6,23 @@ import Stack from '@mui/material/Stack';
 import ProfilLogo from '../../assets/images/profilLogo.png';
 import Update from './Update/update';
 import authService from '../LoginForm/auth.service';
+// import heroku from '../../config/api/heroku';
 
 function Profil() {
   const user = authService.getCurrentUser();
+
+  // const [favorites, setFavorites] = useState([]);
+
+  // const getFavorites = async () => {
+  //   const response = await heroku.get(`/favoris/${user.user.id}/cryptos`);
+  //   setFavorites(response.data);
+  //   console.log(response.data);
+  // };
+
+  // useEffect(() => {
+  //   getFavorites();
+  // }, []);
+  // console.log(favorites);
 
   const coin = JSON.parse(localStorage.getItem('favorites'));
   console.log(coin);

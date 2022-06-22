@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
@@ -5,11 +6,12 @@ import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import StarIcon from '@mui/icons-material/Star';
-import './coinStyles.scss';
+import heroku from '../../../config/api/heroku';
 import authService from '../../LoginForm/auth.service';
+import './coinStyles.scss';
 
 function Coin({
-  name, image, symbol, price, volume, priceChange, marketcap, rank, onClick
+  id, name, image, symbol, price, volume, priceChange, marketcap, rank, onClick
 }) {
   // get favorites from local storage or empty array
   const navigate = useNavigate();
@@ -27,15 +29,31 @@ function Coin({
     else {
       // add coin to favorites
       setFavorites([...favorites, {
-        name, image, symbol, price, volume, priceChange, marketcap, rank
+        id, name, image, symbol, price, volume, priceChange, marketcap, rank
       }]);
     }
+    window.location.reload();
   };
 
   localStorage.setItem('favorites', JSON.stringify(favorites));
-
   console.log(localStorage.getItem('favorite'));
 
+  // const [isFavorite, setIsFavorite] = useState(false);
+  // const user = authService.getCurrentUser();
+  // const coin = {
+  //   id, name, image, symbol, price, volume, priceChange, marketcap, rank
+  // };
+  // const addFavorite = async (event) => {
+  //   const response = await heroku.post(`/favoris/${user.user.id}/${coin.id}`);
+  //   setIsFavorite(true);
+  //   console.log(response);
+  // };
+
+  // const deleteFavorite = async (event) => {
+  //   const response = await heroku.post(`/deleteFavoris/${user.user.id}/${coin.id}`);
+  //   setIsFavorite(false);
+  //   console.log(response);
+  // };
   return (
     <div className="coin-cointainer">
       <div className="coin-row">

@@ -25,10 +25,6 @@ function Articles() {
 
   const filteredArtciles = articles.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()));
 
-  const randomArticles = articles.sort(() => Math.random() - 0.5);
-
-  console.log(randomArticles);
-
   return (
     <div className="App-main-content">
       <div className="App-main-header">

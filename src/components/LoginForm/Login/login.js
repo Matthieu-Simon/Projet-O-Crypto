@@ -31,6 +31,20 @@ function Login() {
     }
   };
 
+  const sendUserMail = async (e) => {
+    e.preventDefault();
+    try {
+      await AuthService.forgottenPwd(email).then(() => {
+        setMessage('Un email vous a été envoyé');
+      }, (error) => {
+        console.log(error);
+      });
+    }
+    catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
 
     <div className="register-right">
@@ -43,6 +57,7 @@ function Login() {
             name="email"
             placeholder="Email"
             value={email}
+            required
             onChange={(e) => {
               setEmail(e.target.value);
             }}
@@ -55,6 +70,7 @@ function Login() {
             name="password"
             value={password}
             placeholder="Mot de passe"
+            required
             onChange={(e) => {
               setPassword(e.target.value);
             }}
@@ -63,10 +79,18 @@ function Login() {
         <button className="btn-form" type="submit">Connexion</button>
       </form>
       <p className="message">{message}</p>
-      <div className="input-reset">
-        <input type="checkbox" id="memories" />
-        <a className="a-form" href="#">Mot de passe oublié ?</a>
-      </div>
+
+      {/* TODO FAIRE UNE MODALE POUR LE MOT DE PASSE OUBLIE  */}
+      <form onSubmit={sendUserMail} className="forgotten-pwd">
+        <input
+          type="text"
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+          className="forgotten-pwd"
+        />
+        <button className="forgotten-pwd" type="submit">test</button>
+      </form>
     </div>
   );
 }
