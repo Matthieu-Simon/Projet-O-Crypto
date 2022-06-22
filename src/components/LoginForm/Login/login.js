@@ -43,6 +43,7 @@ function Login() {
             name="email"
             placeholder="Email"
             value={email}
+            required
             onChange={(e) => {
               setEmail(e.target.value);
             }}
@@ -55,6 +56,7 @@ function Login() {
             name="password"
             value={password}
             placeholder="Mot de passe"
+            required
             onChange={(e) => {
               setPassword(e.target.value);
             }}
@@ -64,7 +66,6 @@ function Login() {
       </form>
       <p className="message">{message}</p>
       <div className="input-reset">
-        <input type="checkbox" id="memories" />
         <a className="a-form" href="#">Mot de passe oublié ?</a>
       </div>
     </div>

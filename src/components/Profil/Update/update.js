@@ -30,6 +30,7 @@ export default function Update() {
   const [pseudo, setPseudo] = useState(user?.user.pseudo);
   const [email, setEmail] = useState(user?.user.email);
   const [password, setPassword] = useState('');
+  const [alert, setAlert] = useState('');
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -41,7 +42,7 @@ export default function Update() {
     }).then((res) => {
       console.log(res);
       console.log(user.user.pseudo);
-      alert('Votre pseudo à bien été modifié');
+      setAlert('Votre pseudo à bien été modifié');
     }).catch((err) => {
       console.log(err);
     });
@@ -49,15 +50,12 @@ export default function Update() {
 
   const handleSubmitEmail = (e) => {
     e.preventDefault();
-    heroku.patch(
-      `/profile/update/${user.user.id}`,
-      {
-        email,
-      }
-    ).then((res) => {
+    heroku.patch(`/profile/update/${user.user.id}`, {
+      email,
+    }).then((res) => {
       console.log(res);
       console.log(user.user.email);
-      alert('Votre adresse email à bien été modifié');
+      setAlert('Votre adresse email à bien été modifié');
     }).catch((err) => {
       console.log(err);
     });
@@ -70,7 +68,7 @@ export default function Update() {
     })
       .then((res) => {
         console.log(res);
-        alert('Votre mot de passe à bien été modifié');
+        setAlert('Votre mot de passe à bien été modifié');
       })
       .catch((err) => {
         console.log(err);
@@ -79,19 +77,18 @@ export default function Update() {
 
   const handleDeleteAccount = (e) => {
     e.preventDefault();
-    heroku.delete(`/profile/update/${user.user.id}`)
-      .then((res) => {
-        console.log(res);
-        alert('Votre compte à bien été supprimé');
-        authService.logout();
-        navigate('/');
-        window.location.reload();
-      }).catch((err) => {
-        console.log(err);
-      });
+    if (window.confirm('Voulez-vous vraiment supprimer votre compte ?')) {
+      heroku.delete(`/profile/update/${user.user.id}`)
+        .then((res) => {
+          console.log(res);
+          authService.logout();
+          navigate('/');
+          window.location.reload();
+        }).catch((err) => {
+          console.log(err);
+        });
+    }
   };
-
-  console.log(email);
 
   return (
     <div>
@@ -105,6 +102,7 @@ export default function Update() {
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Modifier vos informations personnelles
           </Typography>
+          <p className="modifier-alert">{alert}</p>
           <Typography component="h3" id="modal-modal-description" sx={{ mt: 2 }}>
             <form onSubmit={handleSubmitNickname}>
               <input className="input-modifier" type="text" placeholder="Pseudo" onChange={(e) => setPseudo(e.target.value)} />
