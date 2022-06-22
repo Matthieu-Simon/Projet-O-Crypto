@@ -5,9 +5,9 @@ import './ourTeamStyles.scss';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MailIcon from '@mui/icons-material/Mail';
-import mec1 from '../../assets/images/mec1.jpg';
-import mec2 from '../../assets/images/mec2.jpg';
-import mec3 from '../../assets/images/mec3.png';
+import fabiano from '../../assets/images/fabiano.jpg';
+import florent from '../../assets/images/florent.jpg';
+import hugo from '../../assets/images/hugo.png';
 import mec4 from '../../assets/images/mec4.png';
 import mec5 from '../../assets/images/mec5.png';
 
@@ -24,7 +24,7 @@ function ourTeam() {
           </div>
           <div className="team-preview-image">
             <div className="box box1">
-              <img src={mec1} alt="Fabiano" />
+              <img src={fabiano} alt="Fabiano" />
             </div>
           </div>
           <nav className="team-social-links">
@@ -50,7 +50,7 @@ function ourTeam() {
           </div>
           <div className="team-preview-image">
             <div className="box box2">
-              <img src={mec2} alt="Florent" />
+              <img src={florent} alt="Florent" />
             </div>
           </div>
           <nav className="team-social-links">
@@ -79,7 +79,7 @@ function ourTeam() {
           </div>
           <div className="team-preview-image">
             <div className="box box2">
-              <img src={mec3} alt="Hugo" />
+              <img src={hugo} alt="Hugo" />
             </div>
           </div>
           <nav className="team-social-links">
