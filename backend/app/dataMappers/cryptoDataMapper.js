@@ -58,5 +58,14 @@ module.exports = {
             return error;
         }
     },
+    async getListCryptoFavoris(checkUserId) {
+        try {
+            // get the list crypto favoris
+            const listUserCryptos = await client.query(`SELECT cryptoName FROM favoris WHERE "user_id" = ${checkUserId}`);
+            return listUserCryptos.rows;
+        } catch (error) {
+            return error;
+        }
+    },
 
 };
