@@ -1,10 +1,11 @@
+/* eslint-disable global-require */
+/* eslint-disable import/no-dynamic-require */
 /* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import authService from '../../LoginForm/auth.service';
 import './mainStyles.scss';
-import btclogo from '../../../assets/images/btc.png';
 import dashboardlogo from '../../../assets/images/Dashboard.png';
 
 function main() {
@@ -45,13 +46,13 @@ function main() {
         <div className="App-articles">
           {randomArticles.slice(3).map((article) => (
             <div key={article.name} onClick={() => navigate(`/article/${article.id}`)} className="App-article-preview">
+              <div className="App-article-preview-image">
+                <img src={require(`../../../assets/images/${article.image}.png`)} alt="bitcoin" className="article-img" />
+              </div>
               <div className="App-article-preview-title">
                 <h2 className="App-article-preview-title-text">
                   {article.name.toUpperCase()}
                 </h2>
-              </div>
-              <div className="App-article-preview-image">
-                <img src={btclogo} alt="bitcoin" className="article-img" />
               </div>
               <div className="App-article-preview-text">
                 <p>

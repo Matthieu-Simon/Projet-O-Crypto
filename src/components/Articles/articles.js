@@ -1,9 +1,10 @@
+/* eslint-disable global-require */
+/* eslint-disable import/no-dynamic-require */
 /* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './articlesStyles.scss';
-import btclogo from '../../assets/images/btc.png';
 
 function Articles() {
   const navigate = useNavigate();
@@ -40,16 +41,16 @@ function Articles() {
       <div className="App-articles">
         {filteredArtciles.map((article) => (
           <div key={article.id} onClick={() => navigate(`/article/${article.id}`)} className="App-article-preview">
+            <div className="App-article-preview-image">
+              <img src={require(`../../assets/images/${article.image}.png`)} alt="img" className="article-img" />
+            </div>
             <div className="App-article-preview-title">
               <h2 className="App-article-preview-title-text">
                 {article.name.toUpperCase()}
               </h2>
             </div>
-            <div className="App-article-preview-image">
-              <img src={btclogo} alt="img" className="article-img" />
-            </div>
             <div className="App-article-preview-text">
-              <p>
+              <p className="App-article-preview-text">
                 {article.abstract.slice(0, 100)}...
               </p>
             </div>

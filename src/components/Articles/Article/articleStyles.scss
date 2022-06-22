@@ -40,7 +40,7 @@
     align-items: center;
 }
 .article-image {
-    width: 20%;
+    width: 50%;
     height: auto;
     margin: 20px 0; 
 }
@@ -117,3 +117,19 @@
     transition: ease-in .1s;
 }
 
+@media screen and (max-width: 900px) {
+    .App-article-title{
+        font-size: 2rem;
+    }
+    .App-article-image {
+        width: 100%;
+    }
+    .article-image {
+        width: 80%;
+        height: auto;
+    }
+    .article-text {
+        width: 100%;
+    }
+    
+}
