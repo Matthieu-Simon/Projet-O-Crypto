@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import './profilStyles.scss';
+import { useNavigate } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import ProfilLogo from '../../assets/images/profilLogo.png';
@@ -10,6 +11,7 @@ import authService from '../LoginForm/auth.service';
 
 function Profil() {
   const user = authService.getCurrentUser();
+  const navigate = useNavigate();
 
   // const [favorites, setFavorites] = useState([]);
 
@@ -59,7 +61,7 @@ function Profil() {
           <div className="coin-cointainer-profil">
             {coin.map((coins) => (
               <div key={coins.name} className="coin-row-profil">
-                <div className="coin">
+                <div className="coin" onClick={() => navigate(`/coin/${coins.id}`)}>
                   <p className="coin-rank">{coins.rank}</p>
                   <img src={coins.image} alt="crypto" />
                   <h1 className="coin-name">{coins.name}</h1>

@@ -60,13 +60,9 @@ function ourTeam() {
           </nav>
           <div className="team-preview-text">
             <p>
-              I am a junior Web Developer, interested in learning Blockchain Development.
+              Développeur Front, désireux d'apprendre la programmation sur la Blockchain.
               <br />
-              I'm based in Paris, FRANCE - willing to move anywhere.
-              <br />
-              I'm learning React - Next.js - Typescript.
-              <br />
-              I'm open to collaborating on any project.
+              Basé à Paris, je suis ouvert à des propositions internationales.
               <br />
             </p>
           </div>
