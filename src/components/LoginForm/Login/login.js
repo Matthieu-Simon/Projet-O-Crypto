@@ -56,6 +56,7 @@ function Login() {
             type="password"
             name="password"
             value={password}
+            pattern="^(?:(?=.*[a-z])(?:(?=.*[A-Z])(?=.*[\d\W])|(?=.*\W)(?=.*\d))|(?=.*\W)(?=.*[A-Z])(?=.*\d)).{8,}$"
             placeholder="Mot de passe"
             required
             onChange={(e) => {
