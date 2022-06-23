@@ -8,7 +8,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import fabiano from '../../assets/images/fabiano.jpg';
 import florent from '../../assets/images/florent.jpg';
 import hugo from '../../assets/images/hugo.png';
-import mec4 from '../../assets/images/mec4.png';
+import matthieu from '../../assets/images/matthieu.jpg';
 import mec5 from '../../assets/images/mec5.png';
 
 function ourTeam() {
@@ -97,7 +97,7 @@ function ourTeam() {
           </div>
           <div className="team-preview-image">
             <div className="box box2">
-              <img src={mec4} alt="Matthieu" />
+              <img src={matthieu} alt="Matthieu" />
             </div>
           </div>
           <nav className="team-social-links">
