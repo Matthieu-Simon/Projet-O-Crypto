@@ -83,7 +83,7 @@ function ourTeam() {
             </div>
           </div>
           <nav className="team-social-links">
-            <a className="linkdin" href="https://www.linkedin.com" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+            <a className="linkdin" href="https://www.linkedin.com/in/ugo-b-302152243/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
             <a className="mail" href="gobrancatelli@gmail.com" target="_blank"><MailIcon /></a>
             <a className="github" href="https://github.com/Hugo-Brancatelli" target="_blank" rel="noreferrer"><GitHubIcon /></a>
           </nav>
