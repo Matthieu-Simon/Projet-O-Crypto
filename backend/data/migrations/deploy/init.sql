@@ -5,7 +5,7 @@ BEGIN;
 
 CREATE TABLE "user" (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    pseudo text NOT NULL,      
+    pseudo varchar(20) NOT NULL,      
     email text NOT NULL UNIQUE,
     password text NOT NULL,    
     level text NOT NULL DEFAULT 'novice',
