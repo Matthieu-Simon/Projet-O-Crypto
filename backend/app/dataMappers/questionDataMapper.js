@@ -16,5 +16,22 @@ module.exports = {
         catch (error) {
             return error;
         }
+    },
+
+    async getAllQuestions () {
+        try{
+            const question = await client.query(`
+                SELECT * FROM question;                
+            `);
+            if (question.rows.length==0) {
+                return 'There is no question';
+            }
+            return question.rows;
+
+        }
+        catch (error) {
+            return error;
+        }
+
     }
 }

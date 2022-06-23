@@ -1,5 +1,11 @@
-const randomPassword = require('random-words');
+const randomPassword = require('generate-password');
 
-/*Get a random word to set a temporary password */
-module.exports = randomPassword({exactly:1, maxLength:10});
+/*Get a random password */
+const generatedPassowrd = randomPassword.generate({
+	length: 8,
+	numbers: true
+});
+
+
+module.exports = generatedPassowrd;
 
