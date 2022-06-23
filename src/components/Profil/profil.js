@@ -7,23 +7,15 @@ import { useNavigate } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import Update from './Update/update';
+import UpdateImg from './UpdateImg/updateImg';
 import heroku from '../../config/api/heroku';
 import authService from '../LoginForm/auth.service';
-// import heroku from '../../config/api/heroku';
+import profilLogo from '../../assets/images/profilLogo.png';
 
 function Profil() {
   const user = authService.getCurrentUser();
   const navigate = useNavigate();
-  const [file, setFile] = React.useState(null);
-  const [image, setImage] = React.useState(user?.user.image);
-
-  const handleChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setFile(file);
-      setImage(URL.createObjectURL(file));
-    }
-  };
+  const [image, setImage] = React.useState('');
 
   const handleSubmitImage = (e) => {
     e.preventDefault();
@@ -36,7 +28,8 @@ function Profil() {
       console.log(err);
     });
   };
-
+  const coin = JSON.parse(localStorage.getItem('favorites'));
+  console.log(image);
   // const [favorites, setFavorites] = useState([]);
 
   // const getFavorites = async () => {
@@ -50,9 +43,6 @@ function Profil() {
   // }, []);
   // console.log(favorites);
 
-  const coin = JSON.parse(localStorage.getItem('favorites'));
-  console.log(user.user.image);
-
   return (
     <div className="profil-container">
       <div className="profil-title">
@@ -61,17 +51,14 @@ function Profil() {
       <div className="profil-header">
         <div className="profil-card">
           <Stack direction="row" spacing={2}>
-            <form onSubmit={handleSubmitImage}>
-              <label htmlFor="profilePhoto">
-                <input accept="image/*" type="file" id="profilePhoto" style={{ display: 'none' }} onChange={handleChange} />
-                <Avatar
-                  sx={{ width: 180, height: 180 }}
-                  src={image}
-                />
-              </label>
-              <button type="submit">Modifier</button>
-            </form>
+            <label htmlFor="profilePhoto">
+              <Avatar
+                sx={{ width: 180, height: 180 }}
+                src={user.user.image}
+              />
+            </label>
           </Stack>
+          <UpdateImg />
           <div className="profil-card-username">
             <h3 className="profil-username">{user.user.pseudo}</h3>
           </div>

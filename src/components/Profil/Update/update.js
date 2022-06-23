@@ -27,7 +27,7 @@ const style = {
 };
 
 export default function Update() {
-  const notify = () => toast('Votre profil a bien été mis à jour, les changements seront effecitf lors de votre prochaine connexion !');
+  const notify = () => toast('Votre profil a bien été mis à jour, les changements seront effectif lors de votre prochaine connexion !');
   const user = authService.getCurrentUser();
   const navigate = useNavigate();
   const [pseudo, setPseudo] = useState(user?.user.pseudo);
