@@ -92,8 +92,7 @@ function ourTeam() {
               <p>
                 Développeur Full Stack, Libre d'esprit et polyvalent.
                 <br />
-                Ouvert à tout projet.
-                <br />
+                Heureux de travailler sur des tâches très diverses et de manière autonome.
               </p>
             </div>
           </div>
@@ -119,8 +118,7 @@ function ourTeam() {
               <p>
                 Développeur Full Stack, front, back, je suis prêt à tout.
                 <br />
-                Je m'apprête à tranformer vos envies en réalité.
-                <br />
+                Je m'apprête à tranformer vos envies en réalité et je peux intervenir sur des missions très variées.
               </p>
             </div>
           </div>
