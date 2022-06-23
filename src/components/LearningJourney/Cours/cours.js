@@ -5,16 +5,22 @@ import heroku from '../../../config/api/heroku';
 import './coursStyles.scss';
 
 function Cours() {
-  const [challenge, setChallenge] = useState([]);
+  const [lesson, setLesson] = useState([]);
 
-  const fetchChallenge = async () => {
+  const fetchLesson = async () => {
     const { data } = await heroku.get('/challenge/Blockchain');
-    setChallenge(data);
-    console.log(data);
+    setLesson(data);
+    // console.log(data);
+
+    const myLesson = [];
+    myLesson.push(data.abstract);
+    // console.log(myLesson);
+    const text = myLesson.slice(0, 5);
+    console.log(text[0].slice(0, 806));
   };
 
   useEffect(() => {
-    fetchChallenge();
+    fetchLesson();
   }, []);
 
   return (
@@ -22,10 +28,10 @@ function Cours() {
       <Menu />
       <div className="homepage-cours">
         <div className="title-cours">
-          <h5>{challenge.name}</h5>
+          <h5>{lesson.name}</h5>
         </div>
         <p className="lesson">
-          {challenge.abstract}
+          {lesson.abstract}
         </p>
       </div>
       {/* <ChangeBar /> */}
