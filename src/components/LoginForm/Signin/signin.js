@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 import AuthService from '../auth.service';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Signin() {
+  const notify = () => toast('Votre inscription a bien été prise en compte');
   const [username, setUserName] = useState('');
   const [email, setUserMail] = useState('');
   const [password, setPassword] = useState('');
@@ -16,8 +19,11 @@ function Signin() {
       await AuthService.signup(username, email, password).then(
         (response) => {
           console.log('Bien enregistré', response);
-          navigate('/');
-          window.location.reload();
+          navigate('/log-in');
+          notify();
+          setPassword('');
+          setUserMail('');
+          setUserName('');
         },
         (error) => {
           console.log(error);
@@ -76,6 +82,17 @@ function Signin() {
           type="submit"
         >S'enregistrer
         </button>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </form>
     </div>
   );
