@@ -32,13 +32,20 @@
     color: white;
 }
 
-.App-article-image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    align-items: center;
+// .App-article-image {
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     margin: auto;
+//     align-items: center;
+// }
+.box img {
+    width: 230px;
+    height: 230px;
+    border-radius: 10%;
+    margin: 10px;
 }
+
 .article-image {
     width: 50%;
     height: auto;

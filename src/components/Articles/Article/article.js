@@ -34,7 +34,9 @@ function Article() {
               </h1>
             </div>
             <div className="App-article-image">
-              <img src={require(`../../../assets/images/${article.image}.png`)} alt="bitcoin" className="article-image" />
+              <div className="box box1">
+                <img src={require(`../../../assets/images/${article.image}.png`)} alt="bitcoin" className="article-image" />
+              </div>
             </div>
             <div className="App-article-author">
               <h3 className="App-article-author-name">

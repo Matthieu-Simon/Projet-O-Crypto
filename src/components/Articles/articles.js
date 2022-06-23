@@ -42,7 +42,9 @@ function Articles() {
         {filteredArtciles.map((article) => (
           <div key={article.id} onClick={() => navigate(`/article/${article.id}`)} className="App-article-preview">
             <div className="App-article-preview-image">
-              <img src={require(`../../assets/images/${article.image}.png`)} alt="img" className="article-img" />
+              <div className="big-box big-box1">
+                <img src={require(`../../assets/images/${article.image}.png`)} alt="img" className="article-img" />
+              </div>
             </div>
             <div className="App-article-preview-title">
               <h2 className="App-article-preview-title-text">
