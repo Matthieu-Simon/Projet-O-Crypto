@@ -93,6 +93,25 @@
   color: red;
   text-align: center;
 }
+
+.regex-message-pwd {
+  margin-top: 10px;
+  font-size: 0.5rem;
+  color: red;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.form-example:hover .hide {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.6rem;
+  color: red;
+  text-align: center;
+}
 // Responsive
 @media screen and (max-width: 991px) {
   .container {
