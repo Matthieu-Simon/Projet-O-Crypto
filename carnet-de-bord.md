@@ -124,3 +124,32 @@ Prochaines étapes :
 
 * Mise en place d'un parcours d'apprentissage fonctionnel
 * Intégration du calcul de points et de l'évolution du niveau de l'utilisateur
+
+### Jour 3 - 20/06/22
+Après notre meeting quotidien, l'équipe front s'est occupé de finaliser le dark mode ainsi que le responsive des différentes vues du site.
+Ils opnt également corrigé différents bugs d'affichage que ce soit sur le mode desktop ou sur le mode mobile.
+Quand à l'équipe back,  elle s'est affairé commencer le traitement des questions et des réponses liées aux challenges. En plus de cela, elle s'est aussi occupée de modifier le seeding de la bdd.
+
+Prochaines étapes : 
+
+* Finaliser la gestion du challenge
+* Correction des bugs d'affichage lié au front
+
+### Jour 4 - 21/06/22
+L'équipe front a continué dans sa lancé en terme de résolution de bugs, de gestion du responsive des pages mobile et du menu burger.
+De son côté le back a continué  à réaliser l'intégration de la logique liées aux questions, réponses, au calcul des points pour un utilisateur et la modification du niveau de ce dernier.
+Quelques modification aux données en bdd ont aussi été faites. En particulier vis à vis des articles, des questions et des réponses.
+
+Prochaines étapes : 
+
+* Finaliser la gestion du challenge côté back pour fournir une logique valide au front
+
+
+### Jour 5 - 22/06/22
+Lors du meeting quotidien, nous nous sommes rendu compte qu'il manquait la gestion des mots de passe oublié.
+L'équipe back s'est occupé une fois la logique des challenges finie, de réaliser un module d'envoie de mot de passe généré aléatoirement dans le cas ou l'utilisateur venait à oublier son mot de passe.
+L'équipe front s'est occupée de réaliser une modale pour la gestion de mot de passe oublié mais aussi de la réalisation de la partie challenge ainsi que la finalisation de la page "notre équipe".
+
+Prochaines étapes : 
+
+* Revoir la logique back des challenge pour faciliter l'intégartion dans le front
