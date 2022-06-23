@@ -9,7 +9,7 @@ import fabiano from '../../assets/images/fabiano.jpg';
 import florent from '../../assets/images/florent.jpg';
 import hugo from '../../assets/images/hugo.png';
 import matthieu from '../../assets/images/matthieu.jpg';
-import mec5 from '../../assets/images/mec5.png';
+import quentin from '../../assets/images/Quentin.png';
 
 function ourTeam() {
   return (
@@ -33,13 +33,15 @@ function ourTeam() {
             <a className="github" href="https://github.com/falbuquerquecode" target="_blank" rel="noreferrer"><GitHubIcon /></a>
           </nav>
           <div className="team-preview-text">
-            <p>
-              Développeur Full Stack.
-              <br />
-              Passionné de games de simulation, de la voile, la bonne littérature et des cryptos.
-              <br />
-              Ouvert à des bonnes idées !
-            </p>
+            <div className="text-standard">
+              <p>
+                Développeur Full Stack.
+                <br />
+                Passionné de games de simulation, de la voile, la bonne littérature et des cryptos.
+                <br />
+                Ouvert à des bonnes idées !
+              </p>
+            </div>
           </div>
         </div>
         <div className="team-preview">
@@ -59,12 +61,14 @@ function ourTeam() {
             <a className="github" href="https://github.com/FlorentZz" target="_blank" rel="noreferrer"><GitHubIcon /></a>
           </nav>
           <div className="team-preview-text">
-            <p>
-              Développeur Front, désireux d'apprendre la programmation sur la Blockchain.
-              <br />
-              Basé à Paris, je suis ouvert à des propositions internationales.
-              <br />
-            </p>
+            <div className="text-standard">
+              <p>
+                Développeur Front, désireux d'apprendre la programmation sur la Blockchain.
+                <br />
+                Basé à Paris, je suis ouvert à des propositions internationales.
+                <br />
+              </p>
+            </div>
           </div>
         </div>
         <div className="team-preview">
@@ -79,14 +83,19 @@ function ourTeam() {
             </div>
           </div>
           <nav className="team-social-links">
-            <a className="linkdin" href="" target="_blank"><LinkedInIcon /></a>
-            <a className="mail" href="" target="_blank"><MailIcon /></a>
-            <a className="github" href="" target="_blank"><GitHubIcon /></a>
+            <a className="linkdin" href="https://www.linkedin.com" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+            <a className="mail" href="gobrancatelli@gmail.com" target="_blank"><MailIcon /></a>
+            <a className="github" href="https://github.com/Hugo-Brancatelli" target="_blank" rel="noreferrer"><GitHubIcon /></a>
           </nav>
           <div className="team-preview-text">
-            <p>
-              La première cryptomonnaies largement adoptée dans le monde. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            <div className="text-standard">
+              <p>
+                Développeur Full Stack, Libre d'esprit et polyvalent.
+                <br />
+                Ouvert à tout projet.
+                <br />
+              </p>
+            </div>
           </div>
         </div>
         <div className="team-preview">
@@ -101,14 +110,19 @@ function ourTeam() {
             </div>
           </div>
           <nav className="team-social-links">
-            <a className="linkdin" href="" target="_blank"><LinkedInIcon /></a>
-            <a className="mail" href="" target="_blank"><MailIcon /></a>
-            <a className="github" href="" target="_blank"><GitHubIcon /></a>
+            <a className="linkdin" href="https://www.linkedin.com/in/matthieu-simon-8a9210222/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+            <a className="mail" href="simon.matthieu89@gmail.com" target="_blank"><MailIcon /></a>
+            <a className="github" href="https://github.com/Matthieu-Simon" target="_blank" rel="noreferrer"><GitHubIcon /></a>
           </nav>
           <div className="team-preview-text">
-            <p>
-              La première cryptomonnaies largement adoptée dans le monde. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            <div className="text-standard">
+              <p>
+                Développeur Full Stack, front, back, je suis prêt à tout.
+                <br />
+                Je m'apprête à tranformer vos envies en réalité.
+                <br />
+              </p>
+            </div>
           </div>
         </div>
         <div className="team-preview">
@@ -119,18 +133,22 @@ function ourTeam() {
           </div>
           <div className="team-preview-image">
             <div className="box box2">
-              <img src={mec5} alt="Quentin" />
+              <img src={quentin} alt="Quentin" />
             </div>
           </div>
           <nav className="team-social-links">
-            <a className="linkdin" href="" target="_blank"><LinkedInIcon /></a>
-            <a className="mail" href="" target="_blank"><MailIcon /></a>
-            <a className="github" href="" target="_blank"><GitHubIcon /></a>
+            <a className="linkdin" href="https://www.linkedin.com/in/quentin-bouquet-935158243/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+            <a className="mail" href="quentin00bouquet@gmail.com" target="_blank"><MailIcon /></a>
+            <a className="github" href="https://github.com/QuentinBouquet" target="_blank" rel="noreferrer"><GitHubIcon /></a>
           </nav>
           <div className="team-preview-text">
-            <p>
-              La première cryptomonnaies largement adoptée dans le monde. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            <div className="text-standard">
+              <p>
+                Développeur Full Stack, passioné du backend, et des nouvelles technologies.
+                <br />
+                Je me tiens à votre disposition pour tout projet ou question que me seront envoyés.
+              </p>
+            </div>
           </div>
         </div>
       </div>
