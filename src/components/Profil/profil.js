@@ -1,17 +1,42 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-shadow */
 /* eslint-disable max-len */
 import React from 'react';
 import './profilStyles.scss';
 import { useNavigate } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-import ProfilLogo from '../../assets/images/profilLogo.png';
 import Update from './Update/update';
+import heroku from '../../config/api/heroku';
 import authService from '../LoginForm/auth.service';
 // import heroku from '../../config/api/heroku';
 
 function Profil() {
   const user = authService.getCurrentUser();
   const navigate = useNavigate();
+  const [file, setFile] = React.useState(null);
+  const [image, setImage] = React.useState(user?.user.image);
+
+  const handleChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFile(file);
+      setImage(URL.createObjectURL(file));
+    }
+  };
+
+  const handleSubmitImage = (e) => {
+    e.preventDefault();
+    heroku.patch(`/profile/update/${user.user.id}`, {
+      image,
+    }).then((res) => {
+      console.log(res);
+      console.log(user.user.email);
+    }).catch((err) => {
+      console.log(err);
+    });
+  };
+
   // const [favorites, setFavorites] = useState([]);
 
   // const getFavorites = async () => {
@@ -26,7 +51,7 @@ function Profil() {
   // console.log(favorites);
 
   const coin = JSON.parse(localStorage.getItem('favorites'));
-  console.log(coin);
+  console.log(user.user.image);
 
   return (
     <div className="profil-container">
@@ -36,10 +61,16 @@ function Profil() {
       <div className="profil-header">
         <div className="profil-card">
           <Stack direction="row" spacing={2}>
-            <Avatar
-              sx={{ width: 180, height: 180 }}
-              src={ProfilLogo}
-            />
+            <form onSubmit={handleSubmitImage}>
+              <label htmlFor="profilePhoto">
+                <input accept="image/*" type="file" id="profilePhoto" style={{ display: 'none' }} onChange={handleChange} />
+                <Avatar
+                  sx={{ width: 180, height: 180 }}
+                  src={image}
+                />
+              </label>
+              <button type="submit">Modifier</button>
+            </form>
           </Stack>
           <div className="profil-card-username">
             <h3 className="profil-username">{user.user.pseudo}</h3>

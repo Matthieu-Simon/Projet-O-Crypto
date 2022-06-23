@@ -7,8 +7,10 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { ToastContainer, toast } from 'react-toastify';
 import heroku from '../../../config/api/heroku';
 import authService from '../../LoginForm/auth.service';
+import 'react-toastify/dist/ReactToastify.css';
 
 const style = {
   position: 'absolute',
@@ -25,6 +27,7 @@ const style = {
 };
 
 export default function Update() {
+  const notify = () => toast('Votre profil a bien été mis à jour, les changements seront effecitf lors de votre prochaine connexion !');
   const user = authService.getCurrentUser();
   const navigate = useNavigate();
   const [pseudo, setPseudo] = useState(user?.user.pseudo);
@@ -43,6 +46,7 @@ export default function Update() {
       console.log(res);
       console.log(user.user.pseudo);
       setAlert('Votre pseudo a bien été modifié');
+      notify();
     }).catch((err) => {
       console.log(err);
     });
@@ -56,6 +60,7 @@ export default function Update() {
       console.log(res);
       console.log(user.user.email);
       setAlert('Votre adresse email a bien été modifié');
+      notify();
     }).catch((err) => {
       console.log(err);
     });
@@ -69,6 +74,7 @@ export default function Update() {
       .then((res) => {
         console.log(res);
         setAlert('Votre mot de passe a bien été modifié');
+        notify();
       })
       .catch((err) => {
         console.log(err);
@@ -123,6 +129,17 @@ export default function Update() {
           <Button style={{ color: 'white ' }} onClick={handleClose}>Fermer</Button>
         </Box>
       </Modal>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
 
   );
