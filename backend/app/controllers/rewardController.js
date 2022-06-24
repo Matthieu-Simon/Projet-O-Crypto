@@ -18,7 +18,7 @@ module.exports = {
             await rewardDataMapper.insertReward(newUserReward, 4);
 
             /*Change the user level*/
-            const levels = ['Novice','Confirmé', 'Expert', 'Tech Fibre'];
+            const levels = ['Novice','Confirmé', 'Expert'];
     
             if (newUserReward>0 && newUserReward<299) { 
                 await rewardDataMapper.insertLevel(levels[0], 4);
@@ -26,12 +26,10 @@ module.exports = {
             } else if (newUserReward>299 && newUserReward<899) {
                 await rewardDataMapper.insertLevel(levels[1], 4);
     
-            } else if (newUserReward>899 && newUserReward<1199) {
+            } else if (newUserReward>899 && newUserReward<999999999) {
                 await rewardDataMapper.insertLevel(levels[2], 4);
     
-            } else if (newUserReward>1199 && newUserReward<999999999) {
-                await rewardDataMapper.insertLevel(levels[3], 4);
-            }
+            } 
         }
 
     },    

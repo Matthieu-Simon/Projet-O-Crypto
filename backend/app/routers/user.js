@@ -2,29 +2,67 @@ const express = require('express');
 
 const router = express.Router();
 
-const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-require('dotenv').config();
-
-
 const userController = require('../controllers/userController');
 
-/* Route to sign in a new user */
-router.route('/sign-in').post(userController.insertNewUser);
 
-/* Route to login a user */
+router.route('/sign-in')
+/**
+ * POST /sign-in
+ * @summary  Route to sign in a new user
+ * @tags user
+ * @param {user} request.body.required user information
+ * @return {user} 200 - success response - application/json
+ */
+.post(userController.insertNewUser);
+
+
 router.route('/log-in')
+/**
+ * POST /log-in
+ * @summary  Route to login a registered user
+ * @tags user
+ * @param {user} request.body.required user information
+ * @return {user} 200 - success response - application/json
+ */
     .post(userController.loginUser)
+
+/**
+ * GET /log-in
+ * @summary  Route to login a registered user
+ * @tags user
+ * @param {user} request.body.required - user information - application/json
+ * @return {user} 200 - success response - application/json
+ */
     .get(userController.loginUser);
 
-/* Route to get profile information from a connected user */
-router.route('/profile').get(userController.loginUser);
+router.route('/profile')
+/**
+ * GET /profile
+ * @summary  Route to get user's data information
+ * @tags user
+ * @param {user} request.body.required - user information - application/json
+ * @return {user} 200 - success response - application/json
+ */
+    .get(userController.loginUser);
 
 /* Route to delete or modify a user */
 router.route('/profile/update')
+/**
+ * DELETE /profile/update
+ * @summary  Route to delete a user
+ * @tags user
+ * @param {user} request.body.required user information
+ * @return {user} 200 - success response - application/json
+ */
     .delete(userController.deleteUser)
+
+/**
+ * PATCH /profile/update
+ * @summary  Route to modify user's information
+ * @tags user
+ * @param {user} request.body.required user information
+ * @return {user} 200 - success response - application/json
+ */
     .patch(userController.updateUser);
 
 module.exports = router;
