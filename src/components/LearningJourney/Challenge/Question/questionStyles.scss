@@ -1,0 +1,69 @@
+@import '/src/styles/vars';
+
+#root{
+  height: 100vh;
+}
+.main-challenge {
+  border: 1px solid $grey;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+}
+.title-question {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 20px;
+  color: $blueLogo;
+}
+#dark .title-question {
+  color: white;
+}
+.question {
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  color: $blueLogo;
+  padding-bottom: 20px
+}
+.answer-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.input-answer {
+  margin-right: 20px;
+}
+.btn-response {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: $blueLogo;
+  border-radius: 5px;
+  border: 1px solid white;
+  width: 15%;
+}
+#dark .question {
+  color: white;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+// Responsive Challenge
+@media screen and (max-width: 991px) {
+  .main-challenge {
+    width: 90%;
+    padding: 10px;
+  }
+}

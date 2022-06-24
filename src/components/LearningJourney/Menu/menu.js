@@ -10,7 +10,7 @@ function Menu() {
           <a className="btn-menu" href="/learning">Quitter le cours</a>
         </div>
         <div>
-          <h3 className="title-head-menu">Expert trader - niveau 3 (2022)</h3>
+          <h3 className="title-head-menu">Blockchain (2022)</h3>
         </div>
         <div className="leftHead-container">
           <p className="titleProgress">Progression du cours</p>
