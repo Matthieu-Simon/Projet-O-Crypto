@@ -7,6 +7,9 @@
   width: auto;
   margin: 10px 0;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .title-cours {
   display: flex;
@@ -20,6 +23,9 @@
   font-weight: 400;
   color: black;
   margin: 30px;
+}
+.btn-cours {
+  border: 1px solid white;
 }
 #dark .homepage-cours {
   color: white;
