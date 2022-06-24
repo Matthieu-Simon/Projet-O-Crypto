@@ -3,6 +3,14 @@ const client = require('../services/database');
 
 const saltRounds = 10;
 
+/**
+ * User
+ * @typedef {object} user
+ * @property {string} pseudo
+ * @property {string} email
+ * @property {string} password
+ */
+
 module.exports = {
     async createUser(newUser) {
         try {
@@ -22,6 +30,7 @@ module.exports = {
                 VALUES ('${newUser.pseudo}', '${newUser.email}', '${hashedPassword}');
             `);
             const result = await client.query(`SELECT * FROM "user" WHERE email= '${newUser.email}';`);
+            return result.rows[0];
         } catch (error) {
             return error;
         }
