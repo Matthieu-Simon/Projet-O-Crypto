@@ -83,8 +83,8 @@ function ourTeam() {
             </div>
           </div>
           <nav className="team-social-links">
-            <a className="linkdin" href="https://www.linkedin.com/in/ugo-b-302152243/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
-            <a className="mail" href="gobrancatelli@gmail.com" target="_blank"><MailIcon /></a>
+            <a className="linkdin" href="https://www.linkedin.com/in/hugo-brancatelli-302152243/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+            <a className="mail" href="mailto: gobrancatelli@gmail.com" target="_blank" rel="noreferrer"><MailIcon /></a>
             <a className="github" href="https://github.com/Hugo-Brancatelli" target="_blank" rel="noreferrer"><GitHubIcon /></a>
           </nav>
           <div className="team-preview-text">
@@ -110,7 +110,7 @@ function ourTeam() {
           </div>
           <nav className="team-social-links">
             <a className="linkdin" href="https://www.linkedin.com/in/matthieu-simon-8a9210222/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
-            <a className="mail" href="simon.matthieu89@gmail.com" target="_blank"><MailIcon /></a>
+            <a className="mail" href="mailto: simon.matthieu89@gmail.com" target="_blank" rel="noreferrer"><MailIcon /></a>
             <a className="github" href="https://github.com/Matthieu-Simon" target="_blank" rel="noreferrer"><GitHubIcon /></a>
           </nav>
           <div className="team-preview-text">
@@ -136,15 +136,15 @@ function ourTeam() {
           </div>
           <nav className="team-social-links">
             <a className="linkdin" href="https://www.linkedin.com/in/quentin-bouquet-935158243/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
-            <a className="mail" href="quentin00bouquet@gmail.com" target="_blank"><MailIcon /></a>
+            <a className="mail" href="mailto: quentin00bouquet@gmail.com" target="_blank" rel="noreferrer"><MailIcon /></a>
             <a className="github" href="https://github.com/QuentinBouquet" target="_blank" rel="noreferrer"><GitHubIcon /></a>
           </nav>
           <div className="team-preview-text">
             <div className="text-standard">
               <p>
-                Développeur Full Stack, passioné du backend, et des nouvelles technologies.
+                Développeur Full Stack, passionné du backend, et des nouvelles technologies.
                 <br />
-                Je me tiens à votre disposition pour tout projet ou question que me seront envoyés.
+                Je me tiens à votre disposition pour tous projets ou questions qui me seront envoyés.
               </p>
             </div>
           </div>
