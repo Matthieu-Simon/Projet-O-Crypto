@@ -7,6 +7,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import heroku from '../../../../config/api/heroku';
 import Menu from '../../Menu/menu';
+import authService from '../../../LoginForm/auth.service';
 
 import './questionStyles.scss';
 
@@ -15,7 +16,9 @@ function Question() {
   const [answers, setAnswers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [idQuestion, setIdQuestion] = useState(1);
-  const [idAnswer, setIdAnswer] = useState(null);
+  const [idAnswer, setIdAnswer] = useState();
+
+  const user = authService.getCurrentUser();
 
   const fetchQuestion = async () => {
     setLoading(true);
@@ -43,8 +46,7 @@ function Question() {
 
   const handleSumbitAnswer = (e) => {
     e.preventDefault();
-    heroku.patch(`/answer/${idQuestion}/${idAnswer}`, {
-      idAnswer,
+    heroku.post(`/answer/checking/${user.id}/${idQuestion}`, {
     }).then((res) => {
       console.log(res);
     }).catch((err) => {
@@ -53,6 +55,7 @@ function Question() {
   };
 
   console.log(idQuestion);
+  console.log(answers);
   console.log(idAnswer);
   return (
     <main className="main-cours">
@@ -70,16 +73,16 @@ function Question() {
               <form className="form-answers" onSubmit={handleSumbitAnswer}>
                 <ul className="answers">
                   <div className="answer-container">
-                    <li onClick={(e) => setIdAnswer(e.target.id)}>{answers[0]?.description}</li>
+                    <li onClick={(e) => setIdAnswer(e.target)}>{answers[0]?.description}</li>
                   </div>
                   <div className="answer-container">
-                    <li onClick={(e) => setIdAnswer(e.target.id)}>{answers[1]?.description}</li>
+                    <li onClick={(e) => setIdAnswer(e.target)}>{answers[1]?.description}</li>
                   </div>
                   <div className="answer-container">
-                    <li onClick={(e) => setIdAnswer(e.target.id)}>{answers[2]?.description}</li>
+                    <li onClick={(e) => setIdAnswer(e.target)}>{answers[2]?.description}</li>
                   </div>
                   <div className="answer-container">
-                    <li onClick={(e) => setIdAnswer(e.target.id)}>{answers[3]?.description}</li>
+                    <li onClick={(e) => setIdAnswer(e.target)}>{answers[3]?.description}</li>
                   </div>
                 </ul>
               </form>
