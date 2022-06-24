@@ -65,18 +65,16 @@ export default function UpdateImg() {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Selectionné une image de profil
+            Selectionner une image de profil
           </Typography>
-          <p className="modifier-alert">{alert}</p>
           <Typography component="h3" id="modal-modal-description" sx={{ mt: 2 }}>
             <form className="profil-image-choice" onSubmit={handleSubmitImage}>
               <label className="profil-image-choice" htmlFor="profilePhoto">
-                <img src={profilWoman} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
-                <img src={profilWoman1} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
-                <img src={profilMan} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
-                <img src={profilMan1} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
+                <input type="image" src={profilWoman} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
+                <input type="image" src={profilWoman1} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
+                <input type="image" src={profilMan} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
+                <input type="image" src={profilMan1} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
               </label>
-              <button className="button-modifier-image" type="submit">Modifier</button>
             </form>
           </Typography>
           <Button style={{ color: 'white ' }} onClick={handleClose}>Fermer</Button>

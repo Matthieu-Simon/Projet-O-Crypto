@@ -1,88 +1,48 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable no-undef */
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import heroku from '../../../config/api/heroku';
-import Menu from '../Menu/menu';
-import ChangeBar from '../ChangeBar/changeBar';
+import { useNavigate } from 'react-router-dom';
 import './challengeStyles.scss';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import heroku from '../../../config/api/heroku';
 
 function Challenge() {
-  const { id } = useParams();
+  const [challenges, setChallenges] = useState([]);
   const navigate = useNavigate();
-  const [question, setQuestions] = useState([]);
-  /* const [answers, setAnswers] = useState([]);
-  const [answer, setAnswer] = useState([]); */
+  const [loading, setLoading] = useState(true);
 
-  const fetchQuestion = async () => {
-    const { data } = await heroku.get(`/question/${id}`);
-    setQuestions(data);
+  const fetchChallenges = async () => {
+    setLoading(true);
+    const { data } = await heroku.get('/challenge/Blockchain');
+    setChallenges(data);
+    setLoading(false);
   };
-  /* const fetchAnswers = async () => {
-    const { data } = await heroku.get(`/answers/${id}`);
-    setAnswers(data);
-  };
-  const fetchAnswer = async () => {
-    const { data } = await heroku.get(`/answer/${id}`);
-    setAnswer(data);
-  }; */
 
   useEffect(() => {
-    fetchQuestion();
+    fetchChallenges();
   }, []);
 
-  /* useEffect(() => {
-    fetchAnswers();
-  }, []);
-
-  useEffect(() => {
-    fetchAnswer();
-  }, []); */
-
-  const handleChange = (e) => {
-    setQuestions(e.target.value);
-    /* setAnswers(e.target.value);
-    setAnswer(e.target.value); */
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
+  console.log(challenges.level_id);
   return (
-    <main className="main-cours">
-      <Menu />
-      <div key={id} onClick={() => navigate(`/question/${id}`)} className="main-challenge">
-        <div className="title-cours">
-          <h5>Question</h5>
-        </div>
-        <div>
-          <p key={question.id} onChange={handleChange} className="question">
-            {question.description}
-          </p>
-          <div className="answer-container">
-            <input className="input-answer" type="radio" id="answer1" name="answer" value="1" onChange={handleChange} />
-            <label htmlFor="answer1" />
-            <p>{question.id}</p>
+    <div className="challenge-container">
+      <h1 className="title-container">CHALLENGE</h1>
+      {loading ? (<div className="loading">Loading...</div>) : (
+        <>
+          <div className="challenge-choice-text">
+            <h2 className="Choice">Sur quel sujet voulez-vous testez vos connaissances ?</h2>
           </div>
-          <div className="answer-container">
-            <input className="input-answer" type="radio" id="answer2" name="answer" value="2" onChange={handleChange} />
-            <label htmlFor="answer2" />
-            <p>{question.id}</p>
+          <div className="challenge-content">
+            <div className="challenge-content-title">
+              <ul className="challenge-choice">
+                <ArrowForwardIcon />
+                <li className="challenge-name" onClick={() => navigate(`/question/${challenges.level_id}`)}>{challenges.name}</li>
+                <ArrowBackIcon />
+              </ul>
+            </div>
           </div>
-          <div className="answer-container">
-            <input className="input-answer" type="radio" id="answer3" name="answer" value="3" onChange={handleChange} />
-            <label htmlFor="answer1" />
-            <p>{question.id}</p>
-          </div>
-          <div className="answer-container">
-            <input className="input-answer" type="radio" id="answer4" name="answer" value="4" onChange={handleChange} />
-            <label htmlFor="answer1" />
-            <p>{question.id}</p>
-          </div>
-        </div>
-        <button className="btn-response" type="submit" onClick={handleSubmit}>Suivant</button>
-      </div>
-      <ChangeBar />
-    </main>
+        </>
+      )}
+    </div>
   );
 }
 
