@@ -116,9 +116,9 @@ function ourTeam() {
           <div className="team-preview-text">
             <div className="text-standard">
               <p>
-                Développeur Full Stack, front, back, je suis prêt à tout.
+                Développeur Front-end
                 <br />
-                Je m'apprête à tranformer vos envies en réalité et je peux intervenir sur des missions très variées.
+                Je me tiens à votre disposition pour tout projets et je suis ouvert à des propositions à l'internationales.
               </p>
             </div>
           </div>
