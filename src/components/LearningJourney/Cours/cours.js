@@ -7,7 +7,8 @@ import './coursStyles.scss';
 function Cours() {
   const [lesson, setLesson] = useState([]);
   const [firstSlice, setFirstSlice] = useState(0);
-  const [slice, setSlice] = useState(2000);
+  const [slice, setSlice] = useState(807);
+  // const [disable, setDisable] = useState(false);
 
   const fetchLesson = async () => {
     const { data } = await heroku.get('/challenge/Blockchain');
@@ -25,11 +26,13 @@ function Cours() {
     fetchLesson([]);
   };
 
-  /* const return = () => {
+  const lessText = () => {
     setFirstSlice(firstSlice - 1000);
     setSlice(slice - 1000);
-    fetchLesson();
-  } */
+    // setDisable(false);
+    fetchLesson([]);
+  };
+
   /* console.log(slice);
   console.log(lesson); */
 
@@ -43,7 +46,10 @@ function Cours() {
         <p className="lesson">
           {lesson.slice(firstSlice, slice)}...
         </p>
-        <button className="btn-cours" type="button" onClick={moreText}>Suivant</button>
+        <div className="footer-cours-lesson">
+          <button className="btn-cours" type="button" onClick={lessText}>Retour</button>
+          <button className="btn-cours" type="button" onClick={moreText}>Suivant</button>
+        </div>
       </div>
       {/* <ChangeBar /> */}
     </main>
