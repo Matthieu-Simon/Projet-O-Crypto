@@ -13,12 +13,10 @@ function Profil() {
   const user = authService.getCurrentUser();
   const navigate = useNavigate();
 
+  // update user profile on re-render
   useEffect(() => {
-    if (!user) {
-      navigate('/login');
-    }
-  }, [user, navigate]);
-
+    authService.getCurrentUser();
+  }, [user]);
   console.log(user);
 
   const coin = JSON.parse(localStorage.getItem('favorites'));

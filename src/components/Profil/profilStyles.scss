@@ -91,3 +91,37 @@
     color: red;
     padding: 10px;
 }
+@media screen and (max-width: 768px) {
+    .profil-container {
+        width: 100%;
+    }
+    .profil-header {
+        width: 100%;
+    }
+    .profil-title {
+        width: 100%;
+    }
+    .profil-card {
+        width: 100%;
+    }
+    .profil-update {
+        width: 100%;
+    }
+    .profil-scoreState {
+        width: 100%;
+    }
+    .coin-cointainer-profil {
+        width: 100%;
+    }
+    .coin-row-profil { 
+        overflow: scroll;
+        width: 80%;
+    }
+    .profil-favorites {
+        width: 100%;
+    }
+    .profil-favorites-title {
+        width: 100%;
+    }
+}
+    
