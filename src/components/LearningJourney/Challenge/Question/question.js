@@ -19,6 +19,8 @@ function Question() {
   const [idQuestion, setIdQuestion] = useState(1);
   const [idAnswer, setIdAnswer] = useState();
   const [message, setMessage] = useState('');
+  const [isEnd, setIsEnd] = useState(false);
+  const [goodAnswer, setGoodAnswer] = useState(0);
 
   const [color, setColor] = useState('green', 'red');
 
@@ -54,6 +56,9 @@ function Question() {
     for (let i = 1; i < questions.length; i++) {
       if (i === idQuestion) {
         setIdQuestion(i + 1);
+        if (i === questions.length - 1) {
+          setIsEnd(true);
+        }
       }
     }
     fetchAnswers();
@@ -70,6 +75,7 @@ function Question() {
       if (res.data === true) {
         setMessage('Bravo, vous avez répondu correctement');
         setColor('green');
+        setGoodAnswer(goodAnswer + 1);
       }
       else {
         setMessage('Désolé, vous avez répondu faux');
@@ -82,36 +88,46 @@ function Question() {
 
   console.log(idAnswer);
   console.log(idQuestion);
+  console.log(goodAnswer);
   return (
     <main className="main-cours">
       {loading ? (<div className="loading">Loading...</div>) : (
         <>
           <Menu />
           <div className="main-challenge">
-            <div className="title-question">
-              <h5 className="title-question">Question</h5>
+            {isEnd && (
+            <div className="end-challenge">
+              <h1 className="challenge-score">Vous avez terminé le challenge, votre score est de {goodAnswer}/10 bonnes réponses</h1>
             </div>
-            <div>
-              <p className="question">
-                {question.description}
-              </p>
-              <form className="form-answers" onSubmit={handleSubmitAnswer}>
-                <ul className="answers">
-                  <label className="profil-image-choice" htmlFor="profilePhoto">
-                    <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[0])} value={answers[0]?.description} />
-                    <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[1])} value={answers[1]?.description} />
-                    <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[2])} value={answers[2]?.description} />
-                    <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[3])} value={answers[3]?.description} />
-                    <p className="answer-message" style={{ color, padding: '10px' }}>{message}</p>
-                  </label>
-                </ul>
-                <div className="button-container">
-                  <p className="button-container-text"> Question {idQuestion}/{questions.length}</p>
-                  {/* <ArrowBackIcon className="btn-response" type="button" onClick={handleClick}>Précedent</ArrowBackIcon> */}
-                  <ArrowForwardIcon className="btn-response" type="button" onClick={handleClick} />
-                </div>
-              </form>
-            </div>
+            )}
+            {!isEnd && (
+            <>
+              <div className="title-question">
+                <h5 className="title-question">Question</h5>
+              </div>
+              <div>
+                <p className="question">
+                  {question.description}
+                </p>
+                <form className="form-answers" onSubmit={handleSubmitAnswer}>
+                  <ul className="answers">
+                    <label className="profil-image-choice" htmlFor="profilePhoto">
+                      <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[0])} value={answers[0]?.description} />
+                      <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[1])} value={answers[1]?.description} />
+                      <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[2])} value={answers[2]?.description} />
+                      <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[3])} value={answers[3]?.description} />
+                      <p className="answer-message" style={{ color, padding: '10px' }}>{message}</p>
+                    </label>
+                  </ul>
+                  <div className="button-container">
+                    <p className="button-container-text"> Question {idQuestion}/{questions.length}</p>
+                    {/* <ArrowBackIcon className="btn-response" type="button" onClick={handleClick}>Précedent</ArrowBackIcon> */}
+                    <ArrowForwardIcon className="btn-response" type="button" onClick={handleClick} />
+                  </div>
+                </form>
+              </div>
+            </>
+            )}
           </div>
         </>
       )}

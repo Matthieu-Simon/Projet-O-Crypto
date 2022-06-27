@@ -12,14 +12,8 @@ function Menu() {
         <div>
           <h3 className="title-head-menu">Blockchain (2022)</h3>
         </div>
-        <div className="leftHead-container">
-          <p className="titleProgress">Progression du cours</p>
-          <div className="progressBar">
-            <div className="levelBar" />
-          </div>
-          <div>
-            <p className="score">50%</p>
-          </div>
+        <div>
+          <a className="btn-menu" href="/challenge">Challenge</a>
         </div>
       </div>
     </div>
