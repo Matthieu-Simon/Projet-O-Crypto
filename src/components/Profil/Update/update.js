@@ -44,9 +44,9 @@ export default function Update() {
       pseudo,
     }).then((res) => {
       console.log(res);
-      console.log(user.user.pseudo);
       setAlert('Votre pseudo a bien été modifié');
       notify();
+      setPseudo(user.user.pseudo);
     }).catch((err) => {
       console.log(err);
     });

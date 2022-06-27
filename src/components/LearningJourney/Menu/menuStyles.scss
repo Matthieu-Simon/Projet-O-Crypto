@@ -17,8 +17,13 @@
 }
 .btn-menu {
   margin-right: 10px;
-  border: none;
+  padding: 5px;
   background-color: white;
+  border-radius: 5px;
+}
+#dark .btn-menu {
+  background-color: white;
+  color: $blueLogo;
 }
 .btn-menu:hover {
   box-shadow: inset 250px 0 0 0 $blueLogo;
@@ -48,3 +53,9 @@
   height: 10px;
   border-radius: 10px;
 }
+@media screen and (max-width: 768px) {
+.btn-menu {
+  padding: 0;
+}
+}
+  

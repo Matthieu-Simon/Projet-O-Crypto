@@ -1,35 +1,25 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-shadow */
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useEffect } from 'react';
 import './profilStyles.scss';
 import { useNavigate } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import Update from './Update/update';
 import UpdateImg from './UpdateImg/updateImg';
-import heroku from '../../config/api/heroku';
 import authService from '../LoginForm/auth.service';
-import profilLogo from '../../assets/images/profilLogo.png';
 
 function Profil() {
   const user = authService.getCurrentUser();
   const navigate = useNavigate();
-  const [image, setImage] = React.useState('');
 
-  const handleSubmitImage = (e) => {
-    e.preventDefault();
-    heroku.patch(`/profile/update/${user.user.id}`, {
-      image,
-    }).then((res) => {
-      console.log(res);
-      console.log(user.user.email);
-    }).catch((err) => {
-      console.log(err);
-    });
-  };
+  // update user profile on re-render
+  useEffect(() => {
+    authService.getCurrentUser();
+  }, [user]);
+  console.log(user);
+
   const coin = JSON.parse(localStorage.getItem('favorites'));
-  console.log(image);
   // const [favorites, setFavorites] = useState([]);
 
   // const getFavorites = async () => {

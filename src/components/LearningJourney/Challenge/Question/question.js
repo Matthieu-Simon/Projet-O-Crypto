@@ -4,7 +4,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useEffect } from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+// import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import heroku from '../../../../config/api/heroku';
 import Menu from '../../Menu/menu';
 import authService from '../../../LoginForm/auth.service';
@@ -13,12 +13,25 @@ import './questionStyles.scss';
 
 function Question() {
   const [question, setQuestion] = useState([]);
+  const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [idQuestion, setIdQuestion] = useState(1);
   const [idAnswer, setIdAnswer] = useState();
+  const [message, setMessage] = useState('');
+  const [isEnd, setIsEnd] = useState(false);
+  const [goodAnswer, setGoodAnswer] = useState(0);
+
+  const [color, setColor] = useState('green', 'red');
 
   const user = authService.getCurrentUser();
+
+  const fetchQuestions = async () => {
+    setLoading(true);
+    const { data } = await heroku.get('/questions');
+    setQuestions(data);
+    setLoading(false);
+  };
 
   const fetchQuestion = async () => {
     setLoading(true);
@@ -36,61 +49,85 @@ function Question() {
   useEffect(() => {
     fetchQuestion();
     fetchAnswers();
+    fetchQuestions();
   }, [idQuestion]);
 
   const handleClick = () => {
-    setIdQuestion(idQuestion + 1);
+    for (let i = 1; i < questions.length; i++) {
+      if (i === idQuestion) {
+        setIdQuestion(i + 1);
+        if (i === questions.length - 1) {
+          setIsEnd(true);
+        }
+      }
+    }
     fetchAnswers();
     fetchQuestion();
+    setMessage('');
   };
 
-  const handleSumbitAnswer = (e) => {
+  const handleSubmitAnswer = (e) => {
     e.preventDefault();
-    heroku.post(`/answer/checking/${user.id}/${idQuestion}`, {
+    heroku.post(`/answer/checking/${user.user.id}/${idQuestion}`, {
+      idAnswer,
     }).then((res) => {
       console.log(res);
+      if (res.data === true) {
+        setMessage('Bravo, vous avez répondu correctement');
+        setColor('green');
+        setGoodAnswer(goodAnswer + 1);
+      }
+      else {
+        setMessage('Désolé, vous avez répondu faux');
+        setColor('red');
+      }
     }).catch((err) => {
       console.log(err);
     });
   };
 
-  console.log(idQuestion);
-  console.log(answers);
   console.log(idAnswer);
+  console.log(idQuestion);
+  console.log(goodAnswer);
   return (
     <main className="main-cours">
       {loading ? (<div className="loading">Loading...</div>) : (
         <>
           <Menu />
           <div className="main-challenge">
-            <div className="title-question">
-              <h5 className="title-question">Question</h5>
+            {isEnd && (
+            <div className="end-challenge">
+              <h1 className="challenge-score">Vous avez terminé le challenge, votre score est de {goodAnswer}/10 bonnes réponses</h1>
             </div>
-            <div>
-              <p className="question">
-                {question.description}
-              </p>
-              <form className="form-answers" onSubmit={handleSumbitAnswer}>
-                <ul className="answers">
-                  <div className="answer-container">
-                    <li onClick={(e) => setIdAnswer(e.target)}>{answers[0]?.description}</li>
+            )}
+            {!isEnd && (
+            <>
+              <div className="title-question">
+                <h5 className="title-question">Question</h5>
+              </div>
+              <div>
+                <p className="question">
+                  {question.description}
+                </p>
+                <form className="form-answers" onSubmit={handleSubmitAnswer}>
+                  <ul className="answers">
+                    <label className="profil-image-choice" htmlFor="profilePhoto">
+                      <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[0])} value={answers[0]?.description} />
+                      <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[1])} value={answers[1]?.description} />
+                      <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[2])} value={answers[2]?.description} />
+                      <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[3])} value={answers[3]?.description} />
+                      <p className="answer-message" style={{ color, padding: '10px' }}>{message}</p>
+                    </label>
+                  </ul>
+                  <div className="button-container">
+                    <p className="button-container-text"> Question {idQuestion}/{questions.length}</p>
+                    {/* <ArrowBackIcon className="btn-response" type="button" onClick={handleClick}>Précedent</ArrowBackIcon> */}
+                    <ArrowForwardIcon className="btn-response" type="button" onClick={handleClick} />
                   </div>
-                  <div className="answer-container">
-                    <li onClick={(e) => setIdAnswer(e.target)}>{answers[1]?.description}</li>
-                  </div>
-                  <div className="answer-container">
-                    <li onClick={(e) => setIdAnswer(e.target)}>{answers[2]?.description}</li>
-                  </div>
-                  <div className="answer-container">
-                    <li onClick={(e) => setIdAnswer(e.target)}>{answers[3]?.description}</li>
-                  </div>
-                </ul>
-              </form>
-            </div>
-            <div className="button-container">
-              <ArrowBackIcon className="btn-response" type="button" onClick={handleClick}>Précedent</ArrowBackIcon>
-              <ArrowForwardIcon className="btn-response" type="button" onClick={handleClick}>Suivant</ArrowForwardIcon>
-            </div>
+                </form>
+              </div>
+            </>
+            )}
           </div>
         </>
       )}
