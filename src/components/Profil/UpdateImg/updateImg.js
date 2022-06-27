@@ -49,7 +49,6 @@ export default function UpdateImg() {
       console.log(err);
     });
   };
-  console.log(image);
   return (
     <div>
       <AddPhotoAlternateIcon

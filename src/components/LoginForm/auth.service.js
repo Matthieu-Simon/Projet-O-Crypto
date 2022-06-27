@@ -31,7 +31,6 @@ const login = (email, password) => heroku
 
 const logout = () => {
   localStorage.removeItem('user');
-  localStorage.removeItem('favorites');
 };
 
 const forgottenPwd = (email) => heroku.post('/forgotten-password', {

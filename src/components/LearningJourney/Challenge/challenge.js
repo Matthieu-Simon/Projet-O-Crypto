@@ -33,9 +33,9 @@ function Challenge() {
           </div>
           <div className="challenge-content">
             <div className="challenge-content-title">
-              <ul className="challenge-choice">
+              <ul className="challenge-choice" onClick={() => navigate(`/question/${challenges.level_id}`)}>
                 <ArrowForwardIcon />
-                <li className="challenge-name" onClick={() => navigate(`/question/${challenges.level_id}`)}>{challenges.name}</li>
+                <li className="challenge-name">{challenges.name}</li>
                 <ArrowBackIcon />
               </ul>
             </div>
