@@ -4,11 +4,13 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import { ToastContainer, toast } from 'react-toastify';
 import heroku from '../../../config/api/heroku';
 import authService from '../../LoginForm/auth.service';
 import './updateImgStyles.scss';
 import 'react-toastify/dist/ReactToastify.css';
+
 import profilMan from '../../../assets/images/profilMan.png';
 import profilWoman from '../../../assets/images/profilWoman.png';
 import profilMan1 from '../../../assets/images/profilMan1.png';
@@ -50,7 +52,12 @@ export default function UpdateImg() {
   console.log(image);
   return (
     <div>
-      <Button style={{ color: 'rgb(0, 0, 82)', bgcolor: '#424C7C', width: '100%' }} onClick={handleOpen}>Modifier</Button>
+      <AddPhotoAlternateIcon
+        style={{
+          color: 'rgb(0, 0, 82)', bgcolor: '#424C7C', width: '100%', cursor: 'pointer'
+        }}
+        onClick={handleOpen}
+      />
       <Modal
         open={open}
         aria-labelledby="modal-modal-title"
@@ -58,18 +65,16 @@ export default function UpdateImg() {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Selectionné une image de profil et valider
+            Selectionner une image de profil
           </Typography>
-          <p className="modifier-alert">{alert}</p>
           <Typography component="h3" id="modal-modal-description" sx={{ mt: 2 }}>
             <form className="profil-image-choice" onSubmit={handleSubmitImage}>
-              <label htmlFor="profilePhoto">
-                <img src={profilWoman} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
-                <img src={profilWoman1} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
-                <img src={profilMan} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
-                <img src={profilMan1} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
+              <label className="profil-image-choice" htmlFor="profilePhoto">
+                <input type="image" src={profilWoman} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
+                <input type="image" src={profilWoman1} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
+                <input type="image" src={profilMan} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
+                <input type="image" src={profilMan1} alt="btc" className="img-modify" onClick={(e) => setImage(e.target.src)} />
               </label>
-              <button className="button-modifier-image" type="submit">Modifier</button>
             </form>
           </Typography>
           <Button style={{ color: 'white ' }} onClick={handleClose}>Fermer</Button>

@@ -25,3 +25,24 @@
         margin: 10px;
     }
 }
+
+.profil-image-choice{ 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.img-modify {
+    width: 50%
+}
+
+.img-modify:hover {
+    transform: scale(1.2);
+}
+.img-modify:focus {
+    transform: scale(1.2);
+}
+
