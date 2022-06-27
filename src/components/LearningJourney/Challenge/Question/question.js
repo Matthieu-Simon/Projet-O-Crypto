@@ -53,12 +53,13 @@ function Question() {
   }, [idQuestion]);
 
   const handleClick = () => {
-    for (let i = 1; i < questions.length; i++) {
+    for (let i = 1; i < questions.length + 1; i++) {
       if (i === idQuestion) {
         setIdQuestion(i + 1);
-        if (i === questions.length - 1) {
+        if (i === 10) {
           setIsEnd(true);
         }
+        console.log(i);
       }
     }
     fetchAnswers();
@@ -85,10 +86,8 @@ function Question() {
       console.log(err);
     });
   };
-
-  console.log(idAnswer);
   console.log(idQuestion);
-  console.log(goodAnswer);
+  console.log(isEnd);
   return (
     <main className="main-cours">
       {loading ? (<div className="loading">Loading...</div>) : (
@@ -97,7 +96,7 @@ function Question() {
           <div className="main-challenge">
             {isEnd && (
             <div className="end-challenge">
-              <h1 className="challenge-score">Vous avez terminé le challenge, votre score est de {goodAnswer}/10 bonnes réponses</h1>
+              <h1 className="challenge-score">Vous avez terminé le challenge, votre score est de {goodAnswer} sur 10 bonnes réponses possible</h1>
             </div>
             )}
             {!isEnd && (
