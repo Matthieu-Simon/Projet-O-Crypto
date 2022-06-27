@@ -13,7 +13,7 @@ import quentin from '../../assets/images/Quentin.png';
 
 function ourTeam() {
   return (
-    <div className="title-container">
+    <div className="title-container-team">
       <h1 className="title-page">Notre équipe</h1>
       <div className="container-team">
         <div className="team-preview">
@@ -118,7 +118,7 @@ function ourTeam() {
               <p>
                 Développeur Front-end
                 <br />
-                Je me tiens à votre disposition pour tout projets et je suis ouvert à des propositions à l'internationales.
+                Souhaitant parfaire mes connaissances, je me tiens à votre disposition pour tout projets et je suis ouvert à des propositions à l'internationales.
               </p>
             </div>
           </div>
