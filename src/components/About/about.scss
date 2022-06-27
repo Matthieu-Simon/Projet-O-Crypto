@@ -41,13 +41,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 .container2{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .text{
@@ -62,6 +63,10 @@
 }
 //RESPONSIVE 
 @media all and (max-width: 991px) {
+
+    .about{
+        padding: 35px;
+    }
     
     .about-container {
         width: 90%;

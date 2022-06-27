@@ -134,15 +134,17 @@
   width: 100%;
   text-align: center;
   background-color: $greyLight;
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 #dark .cours-container {
   background-color: rgb(0, 0, 82);
 }
-.title-footer {
-  color: $blueLogo;
+.title-footer-learning {
+  text-align: center;
+  //color: $blueLogo;
   font-size: 1.5rem;
+  padding-bottom: 5px;
 }
 #dark .title-footer {
   color: white;

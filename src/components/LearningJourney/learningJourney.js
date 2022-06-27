@@ -71,7 +71,7 @@ function LearningJourney() {
       </div>
       <div className="cours-container">
         <div className="title-cours">
-          <h3 className="title-footer">Parcourir les cours</h3>
+          <h3 className="title-footer-learning">Parcourir les cours</h3>
         </div>
         <div className="link-container">
           <a className="lien" href="/Cours/">Cours</a>
