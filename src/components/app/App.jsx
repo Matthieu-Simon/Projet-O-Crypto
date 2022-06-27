@@ -47,17 +47,21 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {isLogged && (<Route path="/profile" element={<Profil />} />)}
+        {isLogged && (
+        <>
+          <Route path="/profile" element={<Profil />} />
+          <Route path="/challenge" element={<Challenge />} />
+          <Route path="/Cours" element={<Cours />} />
+          <Route path="/learning" element={<LearningJourney />} />
+        </>
+        )}
+        <Route path="/question/:id" element={<Question />} />
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/coin/:id" element={<CoinPage />} />
         <Route path="/log-in" element={<LoginForm />} />
-        <Route path="/learning" element={<LearningJourney />} />
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/Cours" element={<Cours />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<OurTeam />} />
-        <Route path="/question/:id" element={<Question />} />
-        <Route path="/challenge" element={<Challenge />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/article/:id" element={<Article />} />
         <Route path="/lexicon" element={<Lexicon />} />
