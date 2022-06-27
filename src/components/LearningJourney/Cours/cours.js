@@ -7,7 +7,7 @@ import './coursStyles.scss';
 function Cours() {
   const [lesson, setLesson] = useState([]);
   const [firstSlice, setFirstSlice] = useState(0);
-  const [slice, setSlice] = useState(807);
+  const [slice, setSlice] = useState(2000);
 
   const fetchLesson = async () => {
     const { data } = await heroku.get('/challenge/Blockchain');
@@ -22,7 +22,7 @@ function Cours() {
   const moreText = () => {
     setFirstSlice(firstSlice + 1000);
     setSlice(slice + 1000);
-    fetchLesson();
+    fetchLesson([]);
   };
 
   /* const return = () => {
@@ -34,7 +34,7 @@ function Cours() {
   console.log(lesson); */
 
   return (
-    <main className="main-cours">
+    <main className="main-cours-lesson">
       <Menu />
       <div className="homepage-cours">
         <div className="title-cours">
