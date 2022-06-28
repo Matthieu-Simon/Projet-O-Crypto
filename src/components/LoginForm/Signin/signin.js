@@ -10,7 +10,6 @@ function Signin() {
   const [username, setUserName] = useState('');
   const [email, setUserMail] = useState('');
   const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
 
@@ -21,7 +20,6 @@ function Signin() {
         (response) => {
           if (response.name === 'error') {
             console.log(response.detail);
-            setMessage('Veuillez respectez le format des champs');
           }
           else {
             console.log('Bien enregistré', response);
@@ -30,7 +28,6 @@ function Signin() {
             setPassword('');
             setUserMail('');
             setUserName('');
-            setMessage('');
           }
         },
         (error) => {
@@ -53,6 +50,7 @@ function Signin() {
             type="text"
             value={username}
             placeholder="Pseudo"
+            pattern="[a-zA-Z0-9]{4,20}"
             required
             onChange={(e) => {
               setUserName(e.target.value);
@@ -91,7 +89,6 @@ function Signin() {
           type="submit"
         >S'enregistrer
         </button>
-        <p className="message-error">{message}</p>
         <ToastContainer
           position="top-center"
           autoClose={5000}
