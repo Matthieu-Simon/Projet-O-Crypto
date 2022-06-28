@@ -1,11 +1,11 @@
-const client = require('../services/database');
 const bcrypt = require('bcrypt');
+const client = require('../services/database');
+
 const saltRounds = 10;
 
-
 module.exports = {
-    async recoveryPassword (randomPassword, user_email) {
-        /*Password encryption*/
+    async recoveryPassword(randomPassword, user_email) {
+        /* Password encryption */
         const hashedPassword = await bcrypt.hash(randomPassword, saltRounds);
         await client.query(`
             UPDATE "user"
@@ -13,7 +13,6 @@ module.exports = {
             WHERE email='${user_email}';
         `);
         return 'Profile updated';
-
-    }
+    },
 
 };

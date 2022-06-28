@@ -4,7 +4,6 @@ const router = express.Router();
 
 const userController = require('../controllers/userController');
 
-
 router.route('/sign-in')
 /**
  * POST /sign-in
@@ -13,8 +12,7 @@ router.route('/sign-in')
  * @param {user} request.body.required user information
  * @return {user} 200 - success response - application/json
  */
-.post(userController.insertNewUser);
-
+    .post(userController.insertNewUser);
 
 router.route('/log-in')
 /**
