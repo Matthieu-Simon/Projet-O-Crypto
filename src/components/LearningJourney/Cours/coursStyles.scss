@@ -19,12 +19,16 @@
   align-items: center; */
   color: $grey;
   font-size: 1.8rem;
+  color: $blueLogo;
+}
+#dark .title-cours {
+  color: white;
 }
 .lesson {
   letter-spacing: 2px;
   font-size: medium;
   font-weight: 400;
-  color: black;
+  color: $blueLogo;
   margin: 30px;
 }
 .btn-cours {

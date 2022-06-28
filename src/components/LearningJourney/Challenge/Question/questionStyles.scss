@@ -45,7 +45,11 @@
   background-color: white;
   color: $blueLogo;
 }
-
+.answer-choice {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
 #dark .answers-description {
   background-color: $blueLogo;
   color: white;
@@ -97,6 +101,12 @@ input[type="submit"]:focus {
 }
 .challenge-score {
   font-size: 1.2rem;
+  color: $blueLogo;
+  background-color: white;
+}
+#dark .challenge-score {
+  color: white;
+  background-color: $blueLogo;
 }
 
 // Responsive Challenge
@@ -104,5 +114,9 @@ input[type="submit"]:focus {
   .main-challenge {
     width: 90%;
     padding: 10px;
+  }
+  .answer-choice {
+    width: 100%;
+    font-size: 0.4rem;
   }
 }

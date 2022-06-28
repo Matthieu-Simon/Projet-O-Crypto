@@ -1,41 +1,39 @@
 import React, { useState, useEffect } from 'react';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Menu from '../Menu/menu';
-// import ChangeBar from '../ChangeBar/changeBar';
 import heroku from '../../../config/api/heroku';
 import './coursStyles.scss';
 
 function Cours() {
   const [lesson, setLesson] = useState([]);
   const [firstSlice, setFirstSlice] = useState(0);
-  const [slice, setSlice] = useState(807);
+  const [slice, setSlice] = useState(808);
   // const [disable, setDisable] = useState(false);
 
   const fetchLesson = async () => {
     const { data } = await heroku.get('/challenge/Blockchain');
-    setLesson(data?.abstract?.slice(firstSlice, slice));
-    // console.log(data);
+    setLesson(data.abstract);
   };
 
   useEffect(() => {
     fetchLesson();
-  }, [firstSlice, slice]);
+  }, []);
 
   const moreText = () => {
-    setFirstSlice(firstSlice + 1000);
-    setSlice(slice + 1000);
-    fetchLesson([]);
+    setFirstSlice(firstSlice + 807);
+    setSlice(slice + 807);
+    fetchLesson();
   };
 
   const lessText = () => {
-    setFirstSlice(firstSlice - 1000);
-    setSlice(slice - 1000);
+    setFirstSlice(firstSlice - 807);
+    setSlice(slice - 807);
     // setDisable(false);
     fetchLesson([]);
   };
 
-  /* console.log(slice);
-  console.log(lesson); */
-
+  console.log(lesson);
   return (
     <main className="main-cours-lesson">
       <Menu />
@@ -47,11 +45,10 @@ function Cours() {
           {lesson.slice(firstSlice, slice)}...
         </p>
         <div className="footer-cours-lesson">
-          <button className="btn-cours" type="button" onClick={lessText}>Retour</button>
-          <button className="btn-cours" type="button" onClick={moreText}>Suivant</button>
+          <ArrowBackIcon className="btn-cours" type="button" onClick={lessText}>Retour</ArrowBackIcon>
+          <ArrowForwardIcon className="btn-cours" type="button" onClick={moreText}>Suivant</ArrowForwardIcon>
         </div>
       </div>
-      {/* <ChangeBar /> */}
     </main>
   );
 }

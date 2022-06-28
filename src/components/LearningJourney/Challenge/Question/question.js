@@ -110,7 +110,7 @@ function Question() {
                 </p>
                 <form className="form-answers" onSubmit={handleSubmitAnswer}>
                   <ul className="answers">
-                    <label className="profil-image-choice" htmlFor="profilePhoto">
+                    <label className="answer-choice" htmlFor="profilePhoto">
                       <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[0])} value={answers[0]?.description} />
                       <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[1])} value={answers[1]?.description} />
                       <input type="submit" className="answers-description" onClick={() => setIdAnswer(answers[2])} value={answers[2]?.description} />

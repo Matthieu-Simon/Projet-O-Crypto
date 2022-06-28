@@ -107,13 +107,19 @@
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1050px) {
     .coin-app {
         width: 80%;
         overflow: scroll;
     }
+    .coin-text { 
+        font-size: 1.8rem;
+    }
     .coin-search {
         margin: 64px;
+    }
+    .coin-input {
+       font-size: 0.9rem;
     }
     .row-description {
       visibility: hidden;
