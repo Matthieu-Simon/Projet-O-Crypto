@@ -78,10 +78,9 @@ module.exports = {
     /* Modify one value in table user */
     async modifyUser(userModification) {
         try {
-
-            /*Case if the user try password modification*/
-            if (Object.keys(userModification)[0]== 'password') {
-                /*Password encryption*/
+            /* Case if the user try password modification */
+            if (Object.keys(userModification)[0] == 'password') {
+                /* Password encryption */
                 const hashedPassword = await bcrypt.hash(Object.values(userModification)[0], saltRounds);
                 await client.query(`
                     UPDATE "user"
@@ -104,6 +103,6 @@ module.exports = {
         }
     },
 
-    /*Recovery password*/
-    
+    /* Recovery password */
+
 };

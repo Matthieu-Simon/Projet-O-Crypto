@@ -14,7 +14,6 @@ const rewardRouter = require('./reward');
 const cryptoRouter = require('./crypto');
 const recoveryPasswordRouter = require('./recoveryPassword');
 
-
 router.use(homepageRouter);
 router.use(userRouter);
 router.use(articleRouter);
@@ -26,6 +25,5 @@ router.use(answerRouter);
 router.use(rewardRouter);
 router.use(cryptoRouter);
 router.use(recoveryPasswordRouter);
-
 
 module.exports = router;

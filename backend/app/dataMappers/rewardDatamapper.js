@@ -1,7 +1,7 @@
 const client = require('../services/database');
 
 module.exports = {
-    async goodAnswerChecking (question_id, checking) {
+    async goodAnswerChecking(question_id, checking) {
         const goodAnswerChecking = await client.query(`
             SELECT answer.id, answer.description, answer.question_id
             FROM answer, question
@@ -23,16 +23,16 @@ module.exports = {
         return getUserRewardById.rows[0];
     },
 
-    async getQuestionRewardById (question_id) {
+    async getQuestionRewardById(question_id) {
         const getQuestionRewardById = await client.query(`
             SELECT question.id, question.description, question.reward
             FROM question
             WHERE id= ${question_id};
         `);
-        return getQuestionRewardById.rows[0]
+        return getQuestionRewardById.rows[0];
     },
 
-    async insertReward (newUserReward, user_id) {
+    async insertReward(newUserReward, user_id) {
         await client.query(`
             UPDATE "user"
             SET reward= ${newUserReward}
@@ -40,12 +40,12 @@ module.exports = {
         `);
     },
 
-    async insertLevel (newUserLevel, user_id) {
-        console.log(newUserLevel)
+    async insertLevel(newUserLevel, user_id) {
+        console.log(newUserLevel);
         await client.query(`
             UPDATE "user"
             SET level= '${newUserLevel}'
             WHERE id= ${user_id};
         `);
-    }
-}
+    },
+};
