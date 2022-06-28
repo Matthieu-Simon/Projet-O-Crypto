@@ -8,7 +8,7 @@ import './coursStyles.scss';
 function Cours() {
   const [lesson, setLesson] = useState([]);
   const [firstSlice, setFirstSlice] = useState(0);
-  const [slice, setSlice] = useState(808);
+  const [slice, setSlice] = useState(2400);
   // const [disable, setDisable] = useState(false);
 
   const fetchLesson = async () => {
@@ -21,19 +21,20 @@ function Cours() {
   }, []);
 
   const moreText = () => {
-    setFirstSlice(firstSlice + 807);
-    setSlice(slice + 807);
+    setFirstSlice(firstSlice + 2400);
+    setSlice(slice + 2400);
     fetchLesson();
   };
 
   const lessText = () => {
-    setFirstSlice(firstSlice - 807);
-    setSlice(slice - 807);
+    setFirstSlice(firstSlice - 2400);
+    setSlice(slice - 2400);
     // setDisable(false);
     fetchLesson([]);
   };
 
   console.log(lesson);
+  console.log(firstSlice, slice);
   return (
     <main className="main-cours-lesson">
       <Menu />

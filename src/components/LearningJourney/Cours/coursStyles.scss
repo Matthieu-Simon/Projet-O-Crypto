@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 60vh;
 }
 .main-cours-lesson {
   height: 100%;
@@ -30,6 +31,7 @@
   font-weight: 400;
   color: $blueLogo;
   margin: 30px;
+  height: 60vh;
 }
 .btn-cours {
   border: 1px solid white;
@@ -65,10 +67,14 @@
   .homepage-cours {
     width: 100%;
     padding: 10px;
+    height: 100%;
     border: none;
     box-shadow: none;
   }
   .btn-cours {
    margin-bottom: 50px;
+  }
+  .lesson {
+    height: auto;
   }
 }
