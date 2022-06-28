@@ -10,6 +10,7 @@ function Signin() {
   const [username, setUserName] = useState('');
   const [email, setUserMail] = useState('');
   const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
 
@@ -18,12 +19,19 @@ function Signin() {
     try {
       await AuthService.signup(username, email, password).then(
         (response) => {
-          console.log('Bien enregistré', response);
-          navigate('/log-in');
-          notify();
-          setPassword('');
-          setUserMail('');
-          setUserName('');
+          if (response.name === 'error') {
+            console.log(response.detail);
+            setMessage('Veuillez respectez le format des champs');
+          }
+          else {
+            console.log('Bien enregistré', response);
+            navigate('/log-in');
+            notify();
+            setPassword('');
+            setUserMail('');
+            setUserName('');
+            setMessage('');
+          }
         },
         (error) => {
           console.log(error);
@@ -50,6 +58,7 @@ function Signin() {
               setUserName(e.target.value);
             }}
           />
+          <p className="hide">Le pseudo doit contenir au moins 4 et au maximum 20 caractères</p>
         </div>
         <div className="form-example">
           <input
@@ -82,6 +91,7 @@ function Signin() {
           type="submit"
         >S'enregistrer
         </button>
+        <p className="message-error">{message}</p>
         <ToastContainer
           position="top-center"
           autoClose={5000}

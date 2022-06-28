@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 /* eslint-disable max-len */
-import React, { useEffect } from 'react';
+import React from 'react';
 import './profilStyles.scss';
 import { useNavigate } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
@@ -14,9 +14,6 @@ function Profil() {
   const navigate = useNavigate();
 
   // update user profile on re-render
-  useEffect(() => {
-    authService.getCurrentUser();
-  }, [user]);
   console.log(user);
 
   const coin = JSON.parse(localStorage.getItem('favorites'));

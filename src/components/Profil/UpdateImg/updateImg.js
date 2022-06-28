@@ -33,6 +33,7 @@ const style = {
 export default function UpdateImg() {
   const notify = () => toast('Votre image de profil a bien été mise à jour, les changements seront effectif lors de votre prochaine connexion !');
   const user = authService.getCurrentUser();
+
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -43,6 +44,7 @@ export default function UpdateImg() {
     heroku.patch(`/profile/update/${user.user.id}`, {
       image,
     }).then((res) => {
+      console.log(user);
       console.log(res);
       notify();
     }).catch((err) => {
