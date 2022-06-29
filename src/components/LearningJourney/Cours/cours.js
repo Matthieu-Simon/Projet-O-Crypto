@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import parse from 'html-react-parser';
 import Menu from '../Menu/menu';
 import heroku from '../../../config/api/heroku';
 import './coursStyles.scss';
 
 function Cours() {
-  const [lesson, setLesson] = useState([]);
+  const [lesson, setLesson] = useState('');
   const [firstSlice, setFirstSlice] = useState(0);
   const [slice, setSlice] = useState(2400);
   // const [disable, setDisable] = useState(false);
@@ -33,6 +34,9 @@ function Cours() {
     fetchLesson([]);
   };
 
+  const parsedLesson = parse(lesson?.slice(firstSlice, slice));
+  console.log(parsedLesson);
+
   console.log(lesson);
   console.log(firstSlice, slice);
   return (
@@ -43,7 +47,7 @@ function Cours() {
           <h5>Blockchain</h5>
         </div>
         <p className="lesson">
-          {lesson.slice(firstSlice, slice)}...
+          {parsedLesson}...
         </p>
         <div className="footer-cours-lesson">
           <ArrowBackIcon className="btn-cours" type="button" onClick={lessText}>Retour</ArrowBackIcon>
