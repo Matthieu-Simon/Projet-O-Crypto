@@ -55,7 +55,9 @@ function Question() {
   const handleClick = () => {
     for (let i = 1; i < questions.length + 1; i++) {
       if (i === idQuestion) {
+        setLoading(true);
         setIdQuestion(i + 1);
+        setLoading(false);
         if (i === 10) {
           setIsEnd(true);
         }
