@@ -655,14 +655,14 @@ simplement un ensemble d’informations mis ensemble, et les blocs sont reliés
 manière irréversible (par les chaînes). Chaque bloc est validé par les nœuds du réseau, des 
 utilisateurs-validateurs appelés les “mineurs”. Une fois validés, les blocs sont horodatés et 
 intégrés à la chaîne de blocs, accessible à tous les utilisateurs. La transaction est alors visible 
-pour le récepteur ainsi que l’ensemble du réseau. Les mineurs sont rémunérés via des tokens. Le 
+pour le récepteur ainsi que l’ensemble du réseau. Les mineurs sont rémunérés via des tokens.<br> Le 
 seul moyen de modifier la blockchain est d''ajouter un bloc : il n''est pas possible de changer un 
 bloc existant ou de modifier les chaînes.<br>
 Plusieurs caractéristiques sont associées à la blockchain : désintermédiation, traçabilité, 
 transparence, consensus distribué, ineffaçable, structure distribuée, résilience, sécurité et 
-confiance.<br> Toutes ces caractéristiques constituent le potentiel innovateur de la blockchain.
+confiance.<br> Toutes ces caractéristiques constituent le potentiel innovateur de la blockchain.<br>
 Les caractéristiques principales de la technologie blockchain sont :<br>
-- La désintermédiation 
+- La désintermédiation <br>
 La technologie blockchain permet d’échanger sans le contrôle d’un tiers. La validation et l’ajout 
 d’un bloc résultent d’un consensus entre les utilisateurs-validateurs, qui repose sur la possibilité
 de vérifier leur travail de validation et qui rend inutile le contrôle par une institution de référence. 
@@ -671,7 +671,7 @@ et se contrôlent mutuellement, assurant la certification des sauvegardes et le
 Le tiers de confiance, une banque par exemple, est traditionnellement le seul moyen de s’assurer 
 qu’une transaction est valide, c’est-à-dire que les données (de la monnaie le plus souvent) ont 
 effectivement été transférées d’une personne A à une personne B, et que la personne A n’est 
-donc plus en possession des données initiales. La blockchain permet de faire reposer la 
+donc plus en possession des données initiales.<br> La blockchain permet de faire reposer la 
 confiance uniquement sur la technologie et sur la possibilité pour tous et à tout moment de 
 contrôler les opérations et leur validation. La confiance est ici distribuée et ne nécessite plus 
 d’intermédiaire.<br>
@@ -699,7 +699,7 @@ au contrôle de l’État. En effet, s’il est possible de s’attaquer à u
 plus compliqué de s’attaquer aux blocs d’informations copiés dans l’ensemble des ordinateurs 
 connectés au réseau. Cela offre à la blockchain un haut niveau de sécurité. La blockchain est 
 donc considérée comme inattaquable et inviolable. Cependant, cela la rend également 
-difficilement régulable.
+difficilement régulable.<br>
 - L’autonomie <br>
 La puissance de calcul et l’espace d’hébergement sont fournis par les nœuds du réseau, c’est-à-
 dire les utilisateurs eux-mêmes. Il n’y a donc pas besoin d’infrastructures centrales. Au sein d’une 
@@ -716,13 +716,13 @@ sauvegarde ou même une preuve et pourrait donner lieu à des usages révolut
 santé, l’énergie, l’industrie musicale, les politiques publiques, l’agriculture etc. Parmi les 
 applications possibles :<br>
 - Les « smart contract » exécutent automatiquement des actions validées au préalable par les 
-parties prenantes : le groupe d’assurance Axa a par exemple testé le remboursement 
+parties prenantes :<br> le groupe d’assurance Axa a par exemple testé le remboursement 
 automatique des vols retardés via ce type de contrat.<br>
-- Le vote électronique a été testé par la ville de Zoug (Suisse) en 2018.
+- Le vote électronique a été testé par la ville de Zoug (Suisse) en 2018.<br>
 - La certification des droits d’auteurs, comme le propose la start-up Mediachain qui permet aux 
 artistes de déposer leurs créations sur la base de données, et tout en gardant le contrôle
 sur elles et sur leur authenticité.<br>
-- La traçabilité des produits proposée par la plateforme Provenance.
+- La traçabilité des produits proposée par la plateforme Provenance.<br>
 - La blockchain peut être un outil pour la mise en œuvre de monnaies locales complémentaires
 (MLC) numériques, à l’image du Léman, une MLC utilisée dans plusieurs communes françaises et 
 suisses. Cela permet de mieux répondre aux besoins spécifiques des entreprises du réseau et de 
