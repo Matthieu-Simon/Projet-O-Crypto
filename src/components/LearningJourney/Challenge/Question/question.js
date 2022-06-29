@@ -12,20 +12,20 @@ import authService from '../../../LoginForm/auth.service';
 import './questionStyles.scss';
 
 function Question() {
-  const [question, setQuestion] = useState([]);
-  const [questions, setQuestions] = useState([]);
-  const [answers, setAnswers] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [idQuestion, setIdQuestion] = useState(1);
-  const [idAnswer, setIdAnswer] = useState();
-  const [message, setMessage] = useState('');
-  const [isEnd, setIsEnd] = useState(false);
-  const [goodAnswer, setGoodAnswer] = useState(0);
-
-  const [color, setColor] = useState('green', 'red');
+  const [question, setQuestion] = useState([]); // state for one question
+  const [questions, setQuestions] = useState([]); // state for all questions
+  const [answers, setAnswers] = useState([]); // state for all answers
+  const [loading, setLoading] = useState(true); // state for loading
+  const [idQuestion, setIdQuestion] = useState(1); // state for id question to increment result (starting at 1)
+  const [idAnswer, setIdAnswer] = useState(); // state to send answer to db
+  const [message, setMessage] = useState(''); // state to send message if answer is wrong of right
+  const [isEnd, setIsEnd] = useState(false); // state to know if the quiz is finished
+  const [goodAnswer, setGoodAnswer] = useState(0); // state to know how many answers are good
+  const [color, setColor] = useState('green', 'red'); // state to change color of the answer
 
   const user = authService.getCurrentUser();
 
+  // fetch all questions
   const fetchQuestions = async () => {
     setLoading(true);
     const { data } = await heroku.get('/questions');
@@ -33,6 +33,7 @@ function Question() {
     setLoading(false);
   };
 
+  // fetch one question
   const fetchQuestion = async () => {
     setLoading(true);
     const { data } = await heroku.get(`/question/${idQuestion}`);
@@ -40,35 +41,36 @@ function Question() {
     setLoading(false);
   };
 
+  // fetch all answers
   const fetchAnswers = async () => {
     setLoading(true);
     const { data } = await heroku.get(`/answers/${idQuestion}`);
     setAnswers(data);
     setLoading(false);
   };
+
+  // useEffect to fetch all questions and answers depending on the idQuestion
   useEffect(() => {
     fetchQuestion();
     fetchAnswers();
     fetchQuestions();
   }, [idQuestion]);
 
+  // handle click to increment idQuestion, change page and fetch new question
   const handleClick = () => {
     for (let i = 1; i < questions.length + 1; i++) {
       if (i === idQuestion) {
-        setLoading(true);
         setIdQuestion(i + 1);
-        setLoading(false);
         if (i === 10) {
           setIsEnd(true);
         }
         console.log(i);
       }
     }
-    fetchAnswers();
-    fetchQuestion();
     setMessage('');
   };
 
+  // handleSubmit to send answer to db, change the message and color and increment goodAnswer
   const handleSubmitAnswer = (e) => {
     e.preventDefault();
     heroku.post(`/answer/checking/${user.user.id}/${idQuestion}`, {
@@ -88,8 +90,10 @@ function Question() {
       console.log(err);
     });
   };
+
   console.log(idQuestion);
-  console.log(isEnd);
+  console.log(question);
+
   return (
     <main className="main-cours">
       {loading ? (<div className="loading">Loading...</div>) : (
@@ -98,7 +102,7 @@ function Question() {
           <div className="main-challenge">
             {isEnd && (
             <div className="end-challenge">
-              <h1 className="challenge-score">Vous avez terminé le challenge, votre score est de {goodAnswer} sur 10 bonnes réponses possible</h1>
+              <h1 className="challenge-score">Vous avez terminé le challenge, votre score est de {goodAnswer} sur 10 bonnes réponses.</h1>
             </div>
             )}
             {!isEnd && (
