@@ -10,7 +10,6 @@ function Cours() {
   const [lesson, setLesson] = useState('');
   const [firstSlice, setFirstSlice] = useState(0);
   const [slice, setSlice] = useState(2400);
-  // const [disable, setDisable] = useState(false);
 
   const fetchLesson = async () => {
     const { data } = await heroku.get('/challenge/Blockchain');
@@ -30,7 +29,6 @@ function Cours() {
   const lessText = () => {
     setFirstSlice(firstSlice - 2400);
     setSlice(slice - 2400);
-    // setDisable(false);
     fetchLesson([]);
   };
 
